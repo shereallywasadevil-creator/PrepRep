@@ -24,7 +24,7 @@
 
   /* ---- the brain (prepwise.py, built by the Local AI) ---- */
   const STEP = {bmr: "s1", start_tdee: "s2", daily_target: "s3", estimate_tdee: "s4", macros: "s5", plan_meals: "s6",
-    grocery_list: "s7", build_workout: "s8", schedule: "s9", adherence: "s10"};
+    grocery_list: "s7", build_workout: "s8", parse_equipment: "s8b", swap_options: "s8c", review_workout: "s8d", schedule: "s9", adherence: "s10"};
   class Missing extends Error {}
   async function brain(fn, ...args) {
     const r = await titan.call("logic", {fn, args});
@@ -184,15 +184,52 @@
     } catch (e) { main.append(oops(e, "Your combined shopping list")); }
   };
 
-  /* ---- Workouts ---- */
-  let selDay = todayIdx();
+  /* ---- Workouts ----
+     People choose: tell PrepRep their equipment (chips, or in their own words), then either let it build the week
+     or pick every exercise themselves. Swap any exercise, and "Check my workout" gives plain tips.
+     The thinking is prepwise.py (Local AI): build_workout, parse_equipment, swap_options, review_workout. */
+  let selDay = todayIdx(), swapFor = null;
+  const EQUIP = [["dumbbells", "Dumbbells"], ["barbell", "Barbell"], ["pull-up bar", "Pull-up bar"], ["bands", "Bands"],
+    ["kettlebell", "Kettlebell"], ["bench", "Bench"], ["machines", "Gym machines"]];
+  const exList = () => EXERCISES.map(({name, muscle, equipment, minutes}) => ({name, muscle, equipment, minutes}));
+  const setW = patch => S.set("workout", {...S.get("workout"), ...patch});
+  function setupCard(w) {
+    const chips = h("div", {class: "chips", role: "group", "aria-label": "Your equipment"},
+      h("span", {class: "chip on fixed", title: "Always included", text: "Bodyweight"}),
+      ...EQUIP.map(([k, label]) => { const on = w.equipment.includes(k);
+        return h("button", {class: "chip" + (on ? " on" : ""), "aria-pressed": String(on), onclick: () => {
+          const eq = new Set(S.get("workout").equipment); on ? eq.delete(k) : eq.add(k); setW({equipment: EQUIP.map(x => x[0]).filter(x => eq.has(x))}); go("train", null, false); }, text: label}); }));
+    const say = h("input", {id: "eqtext", placeholder: "Or just tell us: \"dumbbells and a pull-up bar\", \"I go to the gym\"", "aria-label": "Describe your equipment"});
+    const use = h("button", {class: "btn small", text: "Use this", onclick: async () => {
+      const t = say.value.trim(); if (!t) return say.focus();
+      try { const tags = await brain("parse_equipment", t); setW({equipment: tags}); titan.toast(tags.length ? "Got it: " + tags.map(x => EQUIP.find(e => e[0] === x)[1]).join(", ") : "Got it: bodyweight only"); go("train", null, false); }
+      catch (e) { titan.toast(e instanceof Missing ? "Your Local AI is still building this (step s8b). Use the buttons for now." : String(e.message || e)); } }});
+    say.addEventListener("keydown", e => { if (e.key === "Enter") use.click(); });
+    const sel = (id, opts, v, key) => { const s = h("select", {id, "aria-label": id}, ...opts.map(([val, t]) => { const o = h("option", {value: val, text: t}); o.selected = String(val) === String(v); return o; }));
+      s.addEventListener("change", () => { setW({[key]: +s.value}); go("train", null, false); }); return s; };
+    return h("div", {class: "setup"},
+      h("div", {class: "setuprow"}, h("b", {text: "What you have"}), chips),
+      h("div", {class: "setuprow say"}, say, use),
+      h("div", {class: "setuprow"}, h("b", {text: "Your week"}),
+        sel("Workouts a week", [1, 2, 3, 4, 5, 6].map(n => [n, `${n} day${n > 1 ? "s" : ""}`]), w.days, "days"),
+        sel("Minutes a workout", [20, 30, 40, 45, 50, 60, 75, 90].map(n => [n, `${n} min`]), w.minutes, "minutes")),
+      h("div", {class: "seg", role: "tablist", "aria-label": "Who picks the exercises"},
+        ...[["auto", "Build it for me"], ["custom", "I'll pick my own"]].map(([k, t]) => h("button", {role: "tab", "aria-selected": String((w.mode || "auto") === k), class: (w.mode || "auto") === k ? "on" : "",
+          onclick: () => { const cur = S.get("workout"); if (k === "custom" && !(cur.custom || []).length && lastAuto) setW({mode: k, custom: lastAuto.map(d => [...d])}); else setW({mode: k}); go("train", null, false); }, text: t}))));
+  }
+  let lastAuto = null;
   VIEWS.train = async main => {
     const w = S.get("workout"), when = WORKOUT_DAYS[w.days] || [];
     const FOCUS = w.days <= 2 ? () => "Full body" : i => ["Push", "Pull", "Legs"][i % 3];
-    main.append(h("h1", {text: "Workouts"}));
+    main.append(h("h1", {text: "Workouts"}), setupCard(w));
+    const custom = (w.mode || "auto") === "custom";
     let plan;
-    try { plan = await brain("build_workout", EXERCISES.map(({name, muscle, equipment, minutes}) => ({name, muscle, equipment, minutes})), w.days, w.equipment, w.minutes); }
-    catch (e) { main.append(oops(e, "Your weekly workout")); return; }
+    if (custom) {
+      plan = Array.from({length: when.length}, (_, i) => [...((w.custom || [])[i] || [])]);
+    } else {
+      try { plan = await brain("build_workout", exList(), w.days, w.equipment, w.minutes); lastAuto = plan; }
+      catch (e) { main.append(oops(e, "Your weekly workout"), h("p", {class: "muted", text: "Meanwhile you can pick your own exercises: choose \"I'll pick my own\" above."})); return; }
+    }
     let times = [];
     try { times = await placeWeek(when, FOCUS); } catch (e) { /* schedule step not built yet */ }
     const strip = h("div", {class: "days", role: "list"});
@@ -200,21 +237,54 @@
       const wi = when.indexOf(i), f = wi >= 0 ? FOCUS(wi) : null, [c1, c2] = f ? FOCUS_COLORS[f] : ["", ""];
       const at = times.find(p => p.day === d && p.task.startsWith("Workout"));
       strip.append(h("button", {class: "daycard" + (f ? "" : " rest") + (i === selDay ? " sel" : ""), style: f ? `--c1:${c1};--c2:${c2}` : "", "aria-pressed": String(i === selDay),
-        onclick: () => { selDay = i; go("train", null, false); }}, h("small", {text: i === todayIdx() ? `${d} · Today` : d}), h("b", {text: f || "Rest"}),
+        onclick: () => { selDay = i; swapFor = null; go("train", null, false); }}, h("small", {text: i === todayIdx() ? `${d} · Today` : d}), h("b", {text: f || "Rest"}),
         f ? h("span", {class: "mins", text: at ? `${at.start}–${at.end}` : `${w.minutes} min`}) : null));
     });
     main.append(strip);
     const wi = when.indexOf(selDay);
-    main.append(h("div", {class: "sec"}, h("h2", {text: wi >= 0 ? `${DAYNAMES[selDay]} · ${FOCUS(wi)}` : `${DAYNAMES[selDay]} · Rest day`}),
-      h("button", {class: "seeall", onclick: () => goTab("you"), text: "Change plan"})));
+    main.append(h("div", {class: "sec"}, h("h2", {text: wi >= 0 ? `${DAYNAMES[selDay]} · ${FOCUS(wi)}` : `${DAYNAMES[selDay]} · Rest day`})));
+    const saveCustom = p => setW({mode: "custom", custom: p});
     if (wi < 0) { main.append(h("p", {class: "muted", text: "Recovery is part of training. Walk, stretch, sleep well."})); }
     else {
       const names = plan[wi] || [];
       const id = `workout-${selDay}`, done = (S.get("done")[weekKey()] || []).includes(id);
-      main.append(h("div", {class: "list"}, ...names.map((n, k) => { const ex = EXERCISES.find(x => x.name === n) || {};
-        return h("div", {class: "li"}, h("span", {class: "ic", style: `--c:${FOCUS_COLORS[FOCUS(wi)][0]}`, text: k + 1}), h("div", {class: "tx"}, h("b", {text: n}), h("small", {text: ex.how || ""})), h("span", {class: "muted", text: `${ex.minutes} min`})); })),
-        h("button", {class: done ? "btn line" : "btn", style: "margin-top:18px", onclick: () => { setDone(id, !done); if (!done) titan.toast("Workout done. Strong work."); go("train", null, false); }, text: done ? "Done ✓" : "Mark workout done"}));
+      const total = names.reduce((t, n) => t + ((EXERCISES.find(x => x.name === n) || {}).minutes || 0), 0);
+      const list = h("div", {class: "list"});
+      names.forEach((n, k) => {
+        const ex = EXERCISES.find(x => x.name === n) || {};
+        const row = h("div", {class: "li"}, h("span", {class: "ic", style: `--c:${FOCUS_COLORS[FOCUS(wi)][0]}`, text: k + 1}),
+          h("div", {class: "tx"}, h("b", {text: n}), h("small", {text: ex.how || ""})), h("span", {class: "muted", text: `${ex.minutes || "?"} min`}),
+          h("button", {class: "mini", "aria-label": "Swap " + n, onclick: () => { swapFor = swapFor === n ? null : n; go("train", null, false); }, text: "Swap"}),
+          custom ? h("button", {class: "mini x", "aria-label": "Remove " + n, onclick: () => { const p = plan.map(d => [...d]); p[wi].splice(k, 1); saveCustom(p); go("train", null, false); }, text: "✕"}) : null);
+        list.append(row);
+        if (swapFor === n) {
+          const box = h("div", {class: "swapbox"}, h("small", {class: "muted", text: "Loading swaps…"})); list.append(box);
+          brain("swap_options", exList(), n, w.equipment).then(opts => {
+            box.replaceChildren(opts.length ? h("small", {class: "muted", text: "Swap for (same muscles, your equipment):"}) : h("small", {class: "muted", text: "No other exercise for these muscles with your equipment. Add equipment above for more choices."}),
+              ...opts.filter(o => !names.includes(o)).map(o => h("button", {class: "chip", onclick: () => { const p = plan.map(d => [...d]); p[wi][k] = o; swapFor = null; saveCustom(p); titan.toast("Swapped. Your changes are kept as your own plan."); go("train", null, false); }, text: o})));
+          }).catch(e => box.replaceChildren(h("small", {class: "muted", text: e instanceof Missing ? "Swaps switch on when your Local AI finishes step s8c." : String(e.message || e)})));
+        }
+      });
+      if (!names.length) list.append(h("p", {class: "muted", style: "padding:14px 0", text: custom ? "Nothing here yet. Add exercises below." : "Nothing fits this day with your time and equipment. Try more minutes or add equipment."}));
+      main.append(list, h("p", {class: total > w.minutes ? "warn" : "muted", style: "margin:8px 0 0", text: `${total} of your ${w.minutes} minutes`}));
+      if (custom) {
+        const muscle = FOCUS(wi) === "Full body" ? null : FOCUS(wi).toLowerCase();
+        const have = new Set(["none", ...w.equipment]);
+        const pool = EXERCISES.filter(x => have.has(x.equipment) && !names.includes(x.name));
+        const groups = ["push", "pull", "legs"].map(m => [m, pool.filter(x => x.muscle === m)]).filter(([m, xs]) => xs.length);
+        main.append(h("div", {class: "addbox"}, h("b", {text: "Add an exercise"}), h("small", {class: "muted", text: muscle ? ` Today is ${FOCUS(wi)}; those come first.` : " Full body: mix push, pull and legs."}),
+          ...groups.sort(([a], [b]) => (b === muscle) - (a === muscle)).map(([m, xs]) => h("div", {class: "addgrp"}, h("small", {class: "lab", text: m[0].toUpperCase() + m.slice(1)}),
+            ...xs.map(x => h("button", {class: "chip", onclick: () => { const p = plan.map(d => [...d]); p[wi].push(x.name); saveCustom(p); go("train", null, false); }, text: `+ ${x.name} · ${x.minutes}m`}))))));
+      }
+      main.append(h("button", {class: done ? "btn line" : "btn", style: "margin-top:18px", onclick: () => { setDone(id, !done); if (!done) titan.toast("Workout done. Strong work."); go("train", null, false); }, text: done ? "Done ✓" : "Mark workout done"}));
     }
+    // check the whole week
+    const rev = h("div", {class: "review"}, h("h2", {text: "Check my workout"}), h("small", {class: "muted", text: "Checking your week…"}));
+    main.append(rev);
+    brain("review_workout", exList(), plan, w.minutes).then(tips => {
+      rev.replaceChildren(h("h2", {text: "Check my workout"}), tips.length ? h("ul", {class: "tips"}, ...tips.map(t => h("li", {text: t})))
+        : h("p", {class: "good", text: "✓ Looks balanced: push, pull and legs are covered and every day fits your time."}));
+    }).catch(e => rev.replaceChildren(h("h2", {text: "Check my workout"}), h("p", {class: "muted", text: e instanceof Missing ? "Tips switch on when your Local AI finishes step s8d." : String(e.message || e)})));
     const prep = times.find(p => p.task === "Meal prep");
     if (prep) main.append(h("p", {class: "muted", style: "margin-top:22px", text: `Meal prep is set for ${prep.day} ${prep.start}–${prep.end}.`}));
   };
@@ -288,7 +358,6 @@
       h("label", {for: "portions"}, "Servings to prep a week", h("input", {id: "portions", type: "number", value: S.get("portions")})),
       h("label", {for: "w-days"}, "Workouts a week", sel("w-days", [1, 2, 3, 4, 5, 6].map(n => [n, `${n} day${n > 1 ? "s" : ""}`]), w.days)),
       h("label", {for: "w-min"}, "Minutes a workout", sel("w-min", [20, 30, 40, 50, 60].map(n => [n, `${n} min`]), w.minutes)),
-      h("label", {for: "eq"}, "Equipment", sel("eq", [["", "Just my body"], ["dumbbells", "Dumbbells"], ["dumbbells,barbell", "Dumbbells + barbell"]], w.equipment.join(","))),
       h("label", {}, " ", h("button", {class: "btn", text: first ? "Get started" : "Save"})));
     form.addEventListener("submit", e => {
       e.preventDefault();
@@ -299,7 +368,7 @@
       const all = {}; form.querySelectorAll("input[id], select[id]").forEach(el => { all[el.id] = el.value; });
       S.set("profile", {name: all.name, sex: all.sex, age: +all.age, height_cm: +all.height_cm, weight_kg: +all.weight_kg, goal: all.goal, activity: all.activity, rate: +all.rate});
       S.set("budget", Math.round(+all.budget * 100)); S.set("portions", Math.round(+all.portions));
-      S.set("workout", {days: +all["w-days"], minutes: +all["w-min"], equipment: all.eq ? all.eq.split(",") : []});
+      S.set("workout", {...S.get("workout"), days: +all["w-days"], minutes: +all["w-min"]});   // equipment is set on the Workouts tab
       titan.toast(first ? "You're all set." : "Saved"); targets().catch(() => {}); goTab("plans");
     });
     main.append(form);

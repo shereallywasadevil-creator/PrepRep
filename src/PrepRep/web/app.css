@@ -109,3 +109,23 @@ input:focus,select:focus{border-color:var(--green);outline:none}
 .credits{font-size:12.5px;color:var(--dim)}.credits a{color:inherit}
 @media(max-width:760px){.hero{grid-template-columns:1fr}.hero .ph{min-height:200px}.tabs button{min-width:60px}.tabs span{font-size:11px}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* workouts: setup, swaps, own picks, review */
+.setup{background:var(--green-soft,#eef7ea);border-radius:20px;padding:16px 18px;display:grid;gap:12px;margin:6px 0 22px}
+.setuprow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.setuprow>b{min-width:120px;font-family:var(--head)}
+.setuprow.say input{flex:1;min-width:220px;min-height:42px;border-radius:999px;border:1px solid var(--line);padding:0 16px;font:inherit;background:#fff}
+.setuprow select{min-height:40px;border-radius:999px;border:1px solid var(--line);padding:0 12px;font:inherit;background:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;min-height:36px;padding:0 14px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink);font:600 14px var(--font);cursor:pointer;transition:background .15s,border-color .15s}
+.chip:hover{border-color:var(--green)}.chip.on{background:var(--green);border-color:var(--green);color:#fff}.chip.fixed{cursor:default;opacity:.85}
+.btn.small{min-height:42px;padding:0 18px;font-size:14px}
+.seg{display:inline-flex;background:#fff;border-radius:999px;padding:4px;border:1px solid var(--line);justify-self:start}
+.seg button{border:0;background:none;border-radius:999px;min-height:38px;padding:0 18px;font:600 14px var(--font);color:var(--dim);cursor:pointer}
+.seg button.on{background:var(--green);color:#fff}
+.mini{min-height:32px;padding:0 12px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font:600 13px var(--font);cursor:pointer;margin-left:6px}
+.mini:hover{border-color:var(--green)}.mini.x{padding:0 10px;color:var(--dim)}
+.swapbox{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 0 14px 46px;border-bottom:1px solid var(--line)}
+.addbox{margin-top:18px;display:grid;gap:8px}.addgrp{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.addgrp .lab{min-width:44px;color:var(--dim);font-weight:700}
+.warn{color:#c2410c;font-weight:600}
+.review{margin-top:30px;border:1.5px solid var(--line);border-radius:20px;padding:16px 18px}
+.review h2{font:700 20px var(--head);margin:0 0 8px}.tips{margin:0;padding-left:20px;line-height:1.6}.good{color:var(--green-dark);font-weight:600;margin:0}
