@@ -132,9 +132,10 @@
     "Whisk the eggs with garlic powder, salt and pepper, pour over the vegetables, and top with cheddar.",
     "Bake 20 to 22 minutes until set in the middle. Cool, then refrigerate 3 per serving."
    ],
-   "photo": "egg muffins",
-   "photo_must": "egg|muffin|frittata",
-   "cost_note": "estimate"
+   "photo": "egg muffin cups",
+   "photo_must": "frittata|egg (muffin|cup|bite)",
+   "cost_note": "estimate",
+   "photo_not": "mcmuffin"
   },
   {
    "id": "breakfast_burritos",
@@ -270,8 +271,9 @@
     "Bake about 30 minutes until golden and set. Cut into 6 squares."
    ],
    "photo": "baked oatmeal",
-   "photo_must": "oat",
-   "cost_note": "estimate"
+   "photo_must": "baked oat|oatmeal",
+   "cost_note": "estimate",
+   "photo_not": "cookie"
   },
   {
    "id": "sweet_potato_hash",
@@ -333,9 +335,10 @@
     "Make 8 wells, crack in the eggs, cover and cook 5 to 7 minutes until the whites set.",
     "Split into 4 containers, 2 eggs each."
    ],
-   "photo": "sweet potato hash",
-   "photo_must": "hash|sweet potato",
-   "cost_note": "estimate"
+   "photo": "sweet potato hash egg",
+   "photo_must": "hash",
+   "cost_note": "estimate",
+   "photo_not": "duck|waffle"
   },
   {
    "id": "yogurt_parfait_jars",
@@ -399,9 +402,10 @@
     "Layer yogurt, berries, oats and chia in 5 jars, with a spoon of peanut butter on top.",
     "Refrigerate. Keep the oats on top so they stay a bit crunchy."
    ],
-   "photo": "yogurt parfait",
-   "photo_must": "parfait|yogurt",
-   "cost_note": "estimate"
+   "photo": "yogurt parfait berries",
+   "photo_must": "yogh?urt",
+   "cost_note": "estimate",
+   "photo_not": "glac"
   },
   {
    "id": "chicken_burrito_bowls",
@@ -475,9 +479,10 @@
     "Warm the drained beans and the corn together.",
     "Divide rice, beans and corn, chicken and salsa into 6 containers; squeeze lime over."
    ],
-   "photo": "burrito bowl",
-   "photo_must": "burrito|bowl",
-   "cost_note": "estimate"
+   "photo": "chicken burrito bowl",
+   "photo_must": "burrito",
+   "cost_note": "estimate",
+   "photo_not": "steak"
   },
   {
    "id": "sheet_pan_chicken_sweet_potato",
@@ -538,9 +543,10 @@
     "Add both to the pan and roast 15 to 18 minutes more, until the chicken is cooked through.",
     "Divide between 5 containers."
    ],
-   "photo": "sheet pan chicken",
+   "photo": "roasted chicken sweet potatoes",
    "photo_must": "chicken",
-   "cost_note": "estimate"
+   "cost_note": "estimate",
+   "photo_not": "tandoori|wing"
   },
   {
    "id": "honey_garlic_chicken",
@@ -608,9 +614,10 @@
     "Pour in the sauce and simmer 5 minutes until sticky and the chicken reaches 165°F.",
     "Steam the green beans. Pack rice, chicken with sauce, and green beans into 6 containers."
    ],
-   "photo": "honey garlic chicken",
+   "photo": "honey garlic chicken thighs",
    "photo_must": "chicken",
-   "cost_note": "estimate"
+   "cost_note": "estimate",
+   "photo_not": "wing"
   },
   {
    "id": "chicken_veggie_stir_fry",
@@ -1010,9 +1017,10 @@
     "Add the chicken and green beans to the pan and roast 18 to 20 minutes.",
     "Squeeze the lemons over everything and divide into 5 containers."
    ],
-   "photo": "lemon pepper chicken",
-   "photo_must": "chicken",
-   "cost_note": "estimate"
+   "photo": "lemon chicken potatoes",
+   "photo_must": "lemon.*chicken|chicken.*lemon",
+   "cost_note": "estimate",
+   "photo_not": "wing"
   },
   {
    "id": "buffalo_chicken_potatoes",
@@ -1072,9 +1080,10 @@
     "Stir the yogurt with garlic powder and a pinch of salt for a cool sauce.",
     "Split each potato, fill with buffalo chicken, and top with sauce and green onions."
    ],
-   "photo": "buffalo chicken",
-   "photo_must": "buffalo|chicken",
-   "cost_note": "estimate"
+   "photo": "stuffed sweet potato",
+   "photo_must": "sweet potato",
+   "cost_note": "estimate",
+   "photo_not": "burger|wing|fries"
   },
   {
    "id": "chicken_spinach_pasta",
@@ -1149,9 +1158,10 @@
     "Add garlic and halved tomatoes for 3 minutes, then the spinach until it wilts.",
     "Toss in the pasta, parmesan and a splash of pasta water. Divide into 6."
    ],
-   "photo": "chicken pasta spinach",
-   "photo_must": "pasta",
-   "cost_note": "estimate"
+   "photo": "chicken pasta",
+   "photo_must": "chicken.*(pasta|penne)|(pasta|penne).*chicken",
+   "cost_note": "estimate",
+   "photo_not": ""
   },
   {
    "id": "teriyaki_chicken_bowls",
@@ -1448,9 +1458,10 @@
     "Tear the tortillas into pieces and fold them in.",
     "Top with cheddar, cover 3 minutes to melt, and portion into 6."
    ],
-   "photo": "enchilada",
+   "photo": "chicken enchiladas",
    "photo_must": "enchilada",
-   "cost_note": "estimate"
+   "cost_note": "estimate",
+   "photo_not": "festival"
   },
   {
    "id": "turkey_chili",
@@ -2145,9 +2156,10 @@
     "Add the pork to the pan and roast 20 to 25 minutes, to 145°F inside. Rest 5 minutes and slice.",
     "Divide into 6."
    ],
-   "photo": "pork tenderloin",
-   "photo_must": "pork",
-   "cost_note": "estimate"
+   "photo": "roast pork tenderloin",
+   "photo_must": "pork (tenderloin|loin|roast)|roast pork",
+   "cost_note": "estimate",
+   "photo_not": "sandwich"
   },
   {
    "id": "pork_carnitas_bowls",
@@ -2448,9 +2460,10 @@
     "Toss the broccoli with the oil around the fish and bake 12 to 15 minutes.",
     "Pack salmon, broccoli and rice into 4 containers."
    ],
-   "photo": "salmon broccoli rice",
+   "photo": "salmon fillet",
    "photo_must": "salmon",
-   "cost_note": "estimate"
+   "cost_note": "estimate",
+   "photo_not": "sushi|smoked"
   },
   {
    "id": "garlic_shrimp_pasta",
@@ -3120,9 +3133,10 @@
     "Cover and simmer on low 20 minutes.",
     "Stir in the peas, rest 5 minutes covered, and portion into 6."
    ],
-   "photo": "spanish rice chickpeas",
-   "photo_must": "rice|chickpea|paella",
-   "cost_note": "estimate"
+   "photo": "chickpeas rice",
+   "photo_must": "chickpea|garbanzo",
+   "cost_note": "estimate",
+   "photo_not": ""
   },
   {
    "id": "veggie_egg_fried_rice",
@@ -3192,8 +3206,9 @@
     "Add the rice, soy sauce and sesame oil; fry 4 minutes and finish with green onions."
    ],
    "photo": "egg fried rice",
-   "photo_must": "fried rice",
-   "cost_note": "estimate"
+   "photo_must": "egg fried rice|fried rice",
+   "cost_note": "estimate",
+   "photo_not": "bilao|seafood|pork"
   },
   {
    "id": "greek_chickpea_quinoa_jars",
@@ -3747,9 +3762,10 @@
     "Stir in diced zucchini, cover, and cook 5 more minutes.",
     "Portion into 5."
    ],
-   "photo": "quinoa skillet",
+   "photo": "quinoa vegetables",
    "photo_must": "quinoa",
-   "cost_note": "estimate"
+   "cost_note": "estimate",
+   "photo_not": ""
   },
   {
    "id": "chicken_quinoa_bowls",
@@ -3829,9 +3845,10 @@
     "Whisk the rest of the oil with lemon juice, salt and pepper.",
     "Pack spinach, quinoa, chicken, tomatoes, cucumber and feta; dress when eating."
    ],
-   "photo": "chicken quinoa bowl",
-   "photo_must": "quinoa|chicken",
-   "cost_note": "estimate"
+   "photo": "quinoa salad chicken",
+   "photo_must": "quinoa",
+   "cost_note": "estimate",
+   "photo_not": "lamb|beef|wrap"
   }
  ],
  "about": "Costs use 2026 US average prices (BLS where available, store-brand otherwise) for the amount each recipe uses; nutrition from USDA FoodData Central values. Both are estimates."

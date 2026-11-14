@@ -31,9 +31,12 @@ def get(url, tries=5):
             time.sleep(int(e.headers.get("Retry-After") or 0) or 5 * (i + 1))
 
 
-def search(query, must):
+NEVER = re.compile(r"\b(wings?|burgers?|cookies?|mcmuffin|waffles?|sandwich)\b", re.I)   # never the dish we mean
+
+
+def search(query, must, avoid=""):
     q = {"action": "query", "format": "json", "generator": "search", "gsrsearch": f"{query} filetype:bitmap", "gsrnamespace": 6,
-         "gsrlimit": 15, "prop": "imageinfo", "iiprop": "url|extmetadata|size", "iiurlwidth": 720}
+         "gsrlimit": 30, "prop": "imageinfo", "iiprop": "url|extmetadata|size", "iiurlwidth": 720}
     data = json.loads(get(API + "?" + urllib.parse.urlencode(q)))
     pages = sorted((data.get("query") or {}).get("pages", {}).values(), key=lambda p: p.get("index", 99))
     for p in pages:
@@ -42,6 +45,8 @@ def search(query, must):
         lic = (meta.get("LicenseShortName") or {}).get("value", "")
         if not re.search(must, p.get("title", ""), re.I):
             continue                                   # the file name must actually name the dish
+        if NEVER.search(p.get("title", "")) or (avoid and re.search(avoid, p.get("title", ""), re.I)):
+            continue                                   # a near miss (wings for a chicken dinner, a cookie for oatmeal)
         if not OK.match(lic.strip()) or info.get("width", 0) < 600 or info.get("width", 0) < info.get("height", 1) * 0.9:
             continue                                   # free licence, big enough, landscape-ish for a card
         artist = re.sub(r"<[^>]+>", "", html.unescape((meta.get("Artist") or {}).get("value", "Unknown"))).strip()
@@ -51,12 +56,16 @@ def search(query, must):
 
 
 def main():
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")       # titles with accents crashed the print on Windows runners
+    except Exception:
+        pass
     recipes = json.loads((WEB / "data" / "recipes.json").read_text(encoding="utf-8"))["recipes"]
     OUT.mkdir(exist_ok=True)
     credits, got = {}, 0
     for r in recipes:
         try:
-            hit = search(r["photo"], r["photo_must"]) or search(r["name"], r["photo_must"])
+            hit = search(r["photo"], r["photo_must"], r.get("photo_not", "")) or search(r["name"], r["photo_must"], r.get("photo_not", ""))
             if hit:
                 (OUT / f"{r['id']}.jpg").write_bytes(get(hit["thumb"]))
                 credits[r["id"]] = {k: hit[k] for k in ("artist", "license", "page", "title")}

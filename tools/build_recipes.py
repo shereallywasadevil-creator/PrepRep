@@ -384,6 +384,27 @@ R = [
       "Pack spinach, quinoa, chicken, tomatoes, cucumber and feta; dress when eating."], "chicken quinoa bowl", r"quinoa|chicken"),
 ]
 
+# better photo searches where the first try matched the wrong dish: id -> (search, must match, must NOT match)
+PHOTO = {
+    "egg_muffins": ("egg muffin cups", r"frittata|egg (muffin|cup|bite)", r"mcmuffin"),
+    "pb_banana_baked_oats": ("baked oatmeal", r"baked oat|oatmeal", r"cookie"),
+    "sweet_potato_hash": ("sweet potato hash egg", r"hash", r"duck|waffle"),
+    "yogurt_parfait_jars": ("yogurt parfait berries", r"yogh?urt", r"glac"),
+    "sheet_pan_chicken_sweet_potato": ("roasted chicken sweet potatoes", r"chicken", r"tandoori|wing"),
+    "honey_garlic_chicken": ("honey garlic chicken thighs", r"chicken", r"wing"),
+    "lemon_pepper_chicken": ("lemon chicken potatoes", r"lemon.*chicken|chicken.*lemon", r"wing"),
+    "buffalo_chicken_potatoes": ("stuffed sweet potato", r"sweet potato", r"burger|wing|fries"),
+    "pork_tenderloin_roast": ("roast pork tenderloin", r"pork (tenderloin|loin|roast)|roast pork", r"sandwich"),
+    "veggie_egg_fried_rice": ("egg fried rice", r"egg fried rice|fried rice", r"bilao|seafood|pork"),
+    "chicken_quinoa_bowls": ("quinoa salad chicken", r"quinoa", r"lamb|beef|wrap"),
+    "chicken_spinach_pasta": ("chicken pasta", r"chicken.*(pasta|penne)|(pasta|penne).*chicken", r""),
+    "salmon_rice_broccoli": ("salmon fillet", r"salmon", r"sushi|smoked"),
+    "spanish_chickpeas_rice": ("chickpeas rice", r"chickpea|garbanzo", r""),
+    "turkey_quinoa_skillet": ("quinoa vegetables", r"quinoa", r""),
+    "chicken_enchilada_skillet": ("chicken enchiladas", r"enchilada", r"festival"),
+    "chicken_burrito_bowls": ("chicken burrito bowl", r"burrito", r"steak"),
+}
+
 # health guardrails a recipe must pass (per serving)
 LIMITS = {"kcal": (250, 750), "protein": (12, 75)}
 
@@ -410,6 +431,8 @@ def build():
              "cost_cents": int(round(tot["cost"])), "kcal": int(round(per["kcal"])), "protein": int(round(per["protein"])),
              "carbs": int(round(per["carbs"])), "fat": int(round(per["fat"])), "fiber": int(round(per["fiber"])),
              "ingredients": rows, "steps": steps, "photo": photo, "photo_must": must, "cost_note": "estimate"}
+        if rid in PHOTO:
+            r["photo"], r["photo_must"], r["photo_not"] = PHOTO[rid]
         for k, (lo, hi) in LIMITS.items():
             if not lo <= r[k] <= hi:
                 bad.append(f"{rid}: {k} per serving {r[k]} outside {lo}-{hi}")
