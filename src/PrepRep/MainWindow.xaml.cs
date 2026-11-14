@@ -35,6 +35,7 @@ public partial class MainWindow : Window
             core.NewWindowRequested += (_, a) =>
             {
                 a.Handled = true;   // links to other sites open in the normal browser
+                if (!a.Uri.StartsWith("https://", StringComparison.OrdinalIgnoreCase)) return;   // web pages only, never files or programs
                 try { System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(a.Uri) { UseShellExecute = true }); } catch { }
             };
             Web.KeyDown += (_, k) => { if (k.Key == System.Windows.Input.Key.F11) ToggleFullScreen(); };

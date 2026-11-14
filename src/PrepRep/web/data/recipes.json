@@ -1,73 +1,424 @@
 {
- "note": "Prices are rough US estimates for the whole batch; change them in Settings to match your store. Calories and protein are approximate, per serving.",
  "recipes": [
   {
-   "id": "turkey_chili",
-   "name": "Turkey & Black Bean Chili",
+   "id": "berry_overnight_oats",
+   "name": "Berry Greek Yogurt Overnight Oats",
    "tags": [
-    "high-protein",
-    "budget"
+    "breakfast",
+    "vegetarian",
+    "budget",
+    "quick",
+    "classic prep"
    ],
-   "minutes": 45,
-   "servings": 6,
-   "cost_cents": 1250,
-   "kcal": 430,
-   "protein": 38,
-   "photo": "chili con carne",
+   "minutes": 10,
+   "servings": 5,
+   "cost_cents": 781,
+   "kcal": 368,
+   "protein": 23,
+   "carbs": 54,
+   "fat": 8,
+   "fiber": 8,
    "ingredients": [
     {
-     "item": "ground turkey",
-     "qty": 1,
-     "unit": "lb",
-     "aisle": "meat"
+     "item": "rolled oats",
+     "qty": 2.5,
+     "unit": "cup",
+     "aisle": "grains & pasta"
     },
     {
-     "item": "black beans",
+     "item": "plain nonfat Greek yogurt",
+     "qty": 2.5,
+     "unit": "cup",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "milk (2%)",
+     "qty": 2.5,
+     "unit": "cup",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "frozen mixed berries (16 oz)",
+     "qty": 0.6,
+     "unit": "bag",
+     "aisle": "frozen"
+    },
+    {
+     "item": "chia seeds",
+     "qty": 2.5,
+     "unit": "tbsp",
+     "aisle": "baking"
+    },
+    {
+     "item": "honey",
      "qty": 2,
-     "unit": "can",
-     "aisle": "canned"
+     "unit": "tbsp",
+     "aisle": "sauces"
     },
     {
-     "item": "crushed tomatoes",
+     "item": "ground cinnamon",
      "qty": 1,
-     "unit": "can",
-     "aisle": "canned"
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Stir the oats, Greek yogurt, milk, chia seeds, honey and cinnamon together in a big bowl.",
+    "Split into 5 jars and top each with a handful of frozen berries (they thaw overnight).",
+    "Lid and refrigerate. Eat cold, straight from the jar, within 5 days."
+   ],
+   "photo": "overnight oats",
+   "photo_must": "oat",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "egg_muffins",
+   "name": "Veggie Cheddar Egg Muffins",
+   "tags": [
+    "breakfast",
+    "vegetarian",
+    "budget",
+    "quick"
+   ],
+   "minutes": 30,
+   "servings": 4,
+   "cost_cents": 570,
+   "kcal": 324,
+   "protein": 25,
+   "carbs": 6,
+   "fat": 21,
+   "fiber": 2,
+   "ingredients": [
+    {
+     "item": "eggs",
+     "qty": 12,
+     "unit": "egg",
+     "aisle": "dairy & eggs"
     },
     {
-     "item": "onion",
-     "qty": 1,
-     "unit": "pc",
+     "item": "baby spinach",
+     "qty": 3,
+     "unit": "oz",
      "aisle": "produce"
     },
     {
      "item": "bell pepper",
      "qty": 1,
-     "unit": "pc",
+     "unit": "pepper",
      "aisle": "produce"
     },
     {
-     "item": "chili powder",
-     "qty": 2,
-     "unit": "tbsp",
-     "aisle": "spices"
+     "item": "yellow onion",
+     "qty": 0.5,
+     "unit": "onion",
+     "aisle": "produce"
+    },
+    {
+     "item": "shredded cheddar",
+     "qty": 3,
+     "unit": "oz",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "garlic powder",
+     "qty": 0.5,
+     "unit": "tsp",
+     "aisle": "oils & spices"
     }
    ],
-   "cost_note": "estimate",
-   "photo_must": "chili"
+   "steps": [
+    "Heat the oven to 350°F and grease a 12-cup muffin tin.",
+    "Chop the spinach, pepper and onion small and divide them between the cups.",
+    "Whisk the eggs with garlic powder, salt and pepper, pour over the vegetables, and top with cheddar.",
+    "Bake 20 to 22 minutes until set in the middle. Cool, then refrigerate 3 per serving."
+   ],
+   "photo": "egg muffins",
+   "photo_must": "egg|muffin|frittata",
+   "cost_note": "estimate"
   },
   {
-   "id": "chicken_rice_bowls",
-   "name": "Chicken, Rice & Broccoli Bowls",
+   "id": "breakfast_burritos",
+   "name": "Black Bean Breakfast Burritos",
    "tags": [
-    "high-protein",
+    "breakfast",
+    "vegetarian",
+    "budget",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 25,
+   "servings": 6,
+   "cost_cents": 769,
+   "kcal": 371,
+   "protein": 22,
+   "carbs": 32,
+   "fat": 18,
+   "fiber": 6,
+   "ingredients": [
+    {
+     "item": "eggs",
+     "qty": 10,
+     "unit": "egg",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "canned black beans (15 oz)",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "salsa",
+     "qty": 0.75,
+     "unit": "cup",
+     "aisle": "canned"
+    },
+    {
+     "item": "shredded cheddar",
+     "qty": 4,
+     "unit": "oz",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "whole wheat tortillas (8 in)",
+     "qty": 6,
+     "unit": "tortilla",
+     "aisle": "bakery"
+    },
+    {
+     "item": "ground cumin",
+     "qty": 0.5,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Scramble the eggs over medium-low heat until just set; season with cumin, salt and pepper.",
+    "Warm the drained black beans with the salsa for 2 minutes.",
+    "Fill each tortilla with eggs, beans and cheese, roll tightly, and wrap in foil.",
+    "Refrigerate up to 4 days or freeze. Reheat 1 to 2 minutes in the microwave (foil off)."
+   ],
+   "photo": "breakfast burrito",
+   "photo_must": "burrito",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "pb_banana_baked_oats",
+   "name": "Peanut Butter Banana Baked Oatmeal",
+   "tags": [
+    "breakfast",
+    "vegetarian",
+    "budget",
     "classic prep"
    ],
    "minutes": 40,
+   "servings": 6,
+   "cost_cents": 290,
+   "kcal": 336,
+   "protein": 13,
+   "carbs": 48,
+   "fat": 11,
+   "fiber": 6,
+   "ingredients": [
+    {
+     "item": "rolled oats",
+     "qty": 3,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "eggs",
+     "qty": 2,
+     "unit": "egg",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "milk (2%)",
+     "qty": 2,
+     "unit": "cup",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "bananas",
+     "qty": 2,
+     "unit": "banana",
+     "aisle": "produce"
+    },
+    {
+     "item": "peanut butter",
+     "qty": 4,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "honey",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "ground cinnamon",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Heat the oven to 375°F and grease an 8x8 baking dish.",
+    "Mash the bananas, then whisk in the eggs, milk, peanut butter, honey and cinnamon.",
+    "Stir in the oats and pour into the dish.",
+    "Bake about 30 minutes until golden and set. Cut into 6 squares."
+   ],
+   "photo": "baked oatmeal",
+   "photo_must": "oat",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "sweet_potato_hash",
+   "name": "Sweet Potato & Egg Breakfast Hash",
+   "tags": [
+    "breakfast",
+    "vegetarian",
+    "budget"
+   ],
+   "minutes": 35,
+   "servings": 4,
+   "cost_cents": 564,
+   "kcal": 375,
+   "protein": 16,
+   "carbs": 41,
+   "fat": 17,
+   "fiber": 7,
+   "ingredients": [
+    {
+     "item": "sweet potatoes",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "produce"
+    },
+    {
+     "item": "eggs",
+     "qty": 8,
+     "unit": "egg",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "yellow onion",
+     "qty": 1,
+     "unit": "onion",
+     "aisle": "produce"
+    },
+    {
+     "item": "bell pepper",
+     "qty": 1,
+     "unit": "pepper",
+     "aisle": "produce"
+    },
+    {
+     "item": "olive oil",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "smoked paprika",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Dice the sweet potatoes small and cook them in the oil over medium heat, covered, for 10 minutes.",
+    "Add the diced onion and pepper and the paprika; cook uncovered 8 more minutes until browned.",
+    "Make 8 wells, crack in the eggs, cover and cook 5 to 7 minutes until the whites set.",
+    "Split into 4 containers, 2 eggs each."
+   ],
+   "photo": "sweet potato hash",
+   "photo_must": "hash|sweet potato",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "yogurt_parfait_jars",
+   "name": "High-Protein Yogurt Parfait Jars",
+   "tags": [
+    "breakfast",
+    "vegetarian",
+    "budget",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 10,
    "servings": 5,
-   "cost_cents": 1400,
-   "kcal": 520,
+   "cost_cents": 1062,
+   "kcal": 333,
+   "protein": 26,
+   "carbs": 41,
+   "fat": 8,
+   "fiber": 6,
+   "ingredients": [
+    {
+     "item": "plain nonfat Greek yogurt",
+     "qty": 4,
+     "unit": "cup",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "frozen mixed berries (16 oz)",
+     "qty": 1,
+     "unit": "bag",
+     "aisle": "frozen"
+    },
+    {
+     "item": "rolled oats",
+     "qty": 1,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "peanut butter",
+     "qty": 3,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "honey",
+     "qty": 2.5,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "chia seeds",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "baking"
+    }
+   ],
+   "steps": [
+    "Toast the oats in a dry pan for 3 minutes and let them cool.",
+    "Stir the honey into the Greek yogurt.",
+    "Layer yogurt, berries, oats and chia in 5 jars, with a spoon of peanut butter on top.",
+    "Refrigerate. Keep the oats on top so they stay a bit crunchy."
+   ],
+   "photo": "yogurt parfait",
+   "photo_must": "parfait|yogurt",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "chicken_burrito_bowls",
+   "name": "Chicken Burrito Bowls",
+   "tags": [
+    "high-protein",
+    "budget",
+    "classic prep"
+   ],
+   "minutes": 35,
+   "servings": 6,
+   "cost_cents": 1470,
+   "kcal": 516,
    "protein": 45,
-   "photo": "chicken rice broccoli",
+   "carbs": 68,
+   "fat": 7,
+   "fiber": 9,
    "ingredients": [
     {
      "item": "chicken breast",
@@ -76,425 +427,1834 @@
      "aisle": "meat"
     },
     {
-     "item": "rice",
-     "qty": 0.5,
-     "unit": "kg",
-     "aisle": "grains"
-    },
-    {
-     "item": "broccoli",
-     "qty": 2,
-     "unit": "head",
-     "aisle": "produce"
-    },
-    {
-     "item": "soy sauce",
-     "qty": 3,
-     "unit": "tbsp",
-     "aisle": "sauces"
-    }
-   ],
-   "cost_note": "estimate",
-   "photo_must": "chicken"
-  },
-  {
-   "id": "egg_muffins",
-   "name": "Spinach & Cheese Egg Muffins",
-   "tags": [
-    "breakfast",
-    "vegetarian",
-    "quick"
-   ],
-   "minutes": 25,
-   "servings": 6,
-   "cost_cents": 650,
-   "kcal": 220,
-   "protein": 17,
-   "photo": "egg muffins",
-   "ingredients": [
-    {
-     "item": "eggs",
-     "qty": 12,
-     "unit": "pc",
-     "aisle": "dairy"
-    },
-    {
-     "item": "spinach",
-     "qty": 1,
-     "unit": "bag",
-     "aisle": "produce"
-    },
-    {
-     "item": "shredded cheese",
-     "qty": 1,
-     "unit": "cup",
-     "aisle": "dairy"
-    }
-   ],
-   "cost_note": "estimate",
-   "photo_must": "egg"
-  },
-  {
-   "id": "overnight_oats",
-   "name": "Peanut Butter Overnight Oats",
-   "tags": [
-    "breakfast",
-    "vegetarian",
-    "budget",
-    "quick"
-   ],
-   "minutes": 10,
-   "servings": 5,
-   "cost_cents": 450,
-   "kcal": 410,
-   "protein": 20,
-   "photo": "overnight oats",
-   "ingredients": [
-    {
-     "item": "rolled oats",
-     "qty": 0.5,
-     "unit": "kg",
-     "aisle": "grains"
-    },
-    {
-     "item": "milk",
-     "qty": 1,
-     "unit": "l",
-     "aisle": "dairy"
-    },
-    {
-     "item": "peanut butter",
-     "qty": 0.5,
-     "unit": "cup",
-     "aisle": "pantry"
-    },
-    {
-     "item": "banana",
-     "qty": 3,
-     "unit": "pc",
-     "aisle": "produce"
-    }
-   ],
-   "cost_note": "estimate",
-   "photo_must": "oat"
-  },
-  {
-   "id": "lentil_curry",
-   "name": "Red Lentil Coconut Curry",
-   "tags": [
-    "vegetarian",
-    "budget"
-   ],
-   "minutes": 35,
-   "servings": 6,
-   "cost_cents": 800,
-   "kcal": 450,
-   "protein": 19,
-   "photo": "red lentil curry",
-   "ingredients": [
-    {
-     "item": "red lentils",
-     "qty": 0.5,
-     "unit": "kg",
-     "aisle": "grains"
-    },
-    {
-     "item": "coconut milk",
-     "qty": 1,
-     "unit": "can",
-     "aisle": "canned"
-    },
-    {
-     "item": "crushed tomatoes",
-     "qty": 1,
-     "unit": "can",
-     "aisle": "canned"
-    },
-    {
-     "item": "onion",
-     "qty": 1,
-     "unit": "pc",
-     "aisle": "produce"
-    },
-    {
-     "item": "curry powder",
-     "qty": 2,
-     "unit": "tbsp",
-     "aisle": "spices"
-    },
-    {
-     "item": "rice",
-     "qty": 0.4,
-     "unit": "kg",
-     "aisle": "grains"
-    }
-   ],
-   "cost_note": "estimate",
-   "photo_must": "lentil|dal|dhal"
-  },
-  {
-   "id": "beef_stir_fry",
-   "name": "Beef & Veggie Stir-Fry",
-   "tags": [
-    "high-protein",
-    "quick"
-   ],
-   "minutes": 25,
-   "servings": 4,
-   "cost_cents": 1600,
-   "kcal": 540,
-   "protein": 40,
-   "photo": "beef stir fry",
-   "ingredients": [
-    {
-     "item": "flank steak",
+     "item": "long-grain white rice",
      "qty": 1.5,
-     "unit": "lb",
-     "aisle": "meat"
+     "unit": "cup",
+     "aisle": "grains & pasta"
     },
     {
-     "item": "frozen stir-fry vegetables",
+     "item": "canned black beans (15 oz)",
+     "qty": 2,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "frozen corn (12 oz)",
      "qty": 1,
      "unit": "bag",
      "aisle": "frozen"
     },
     {
-     "item": "rice",
-     "qty": 0.4,
-     "unit": "kg",
-     "aisle": "grains"
-    },
-    {
-     "item": "soy sauce",
-     "qty": 3,
-     "unit": "tbsp",
-     "aisle": "sauces"
-    }
-   ],
-   "cost_note": "estimate",
-   "photo_must": "stir"
-  },
-  {
-   "id": "salmon_traybake",
-   "name": "Salmon, Potatoes & Green Beans",
-   "tags": [
-    "high-protein"
-   ],
-   "minutes": 35,
-   "servings": 4,
-   "cost_cents": 2200,
-   "kcal": 510,
-   "protein": 36,
-   "photo": "baked salmon",
-   "ingredients": [
-    {
-     "item": "salmon fillets",
-     "qty": 4,
-     "unit": "pc",
-     "aisle": "seafood"
-    },
-    {
-     "item": "baby potatoes",
-     "qty": 1.5,
-     "unit": "lb",
-     "aisle": "produce"
-    },
-    {
-     "item": "green beans",
-     "qty": 1,
-     "unit": "lb",
-     "aisle": "produce"
-    },
-    {
-     "item": "lemon",
-     "qty": 1,
-     "unit": "pc",
-     "aisle": "produce"
-    }
-   ],
-   "cost_note": "estimate",
-   "photo_must": "salmon"
-  },
-  {
-   "id": "tuna_pasta",
-   "name": "Tuna Pasta Salad",
-   "tags": [
-    "budget",
-    "quick"
-   ],
-   "minutes": 20,
-   "servings": 5,
-   "cost_cents": 750,
-   "kcal": 470,
-   "protein": 30,
-   "photo": "tuna pasta salad",
-   "ingredients": [
-    {
-     "item": "pasta",
-     "qty": 0.5,
-     "unit": "kg",
-     "aisle": "grains"
-    },
-    {
-     "item": "canned tuna",
-     "qty": 3,
-     "unit": "can",
-     "aisle": "canned"
-    },
-    {
-     "item": "sweetcorn",
-     "qty": 1,
-     "unit": "can",
-     "aisle": "canned"
-    },
-    {
-     "item": "greek yogurt",
+     "item": "salsa",
      "qty": 1,
      "unit": "cup",
-     "aisle": "dairy"
+     "aisle": "canned"
+    },
+    {
+     "item": "lime",
+     "qty": 1,
+     "unit": "lime",
+     "aisle": "produce"
+    },
+    {
+     "item": "taco seasoning",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "olive oil",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "oils & spices"
     }
    ],
-   "cost_note": "estimate",
-   "photo_must": "pasta"
+   "steps": [
+    "Cook the rice. Toss the chicken in the taco seasoning and oil.",
+    "Sear the chicken 6 to 7 minutes a side until 165°F inside; rest, then slice.",
+    "Warm the drained beans and the corn together.",
+    "Divide rice, beans and corn, chicken and salsa into 6 containers; squeeze lime over."
+   ],
+   "photo": "burrito bowl",
+   "photo_must": "burrito|bowl",
+   "cost_note": "estimate"
   },
   {
-   "id": "burrito_bowls",
-   "name": "Chicken Burrito Bowls",
+   "id": "sheet_pan_chicken_sweet_potato",
+   "name": "Sheet-Pan Chicken, Sweet Potatoes & Broccoli",
    "tags": [
     "high-protein",
     "classic prep"
    ],
    "minutes": 40,
    "servings": 5,
-   "cost_cents": 1450,
-   "kcal": 560,
-   "protein": 42,
-   "photo": "burrito bowl",
+   "cost_cents": 1490,
+   "kcal": 496,
+   "protein": 48,
+   "carbs": 46,
+   "fat": 14,
+   "fiber": 9,
    "ingredients": [
     {
-     "item": "chicken thighs",
+     "item": "chicken breast",
      "qty": 2,
      "unit": "lb",
      "aisle": "meat"
     },
     {
-     "item": "rice",
-     "qty": 0.4,
-     "unit": "kg",
-     "aisle": "grains"
+     "item": "sweet potatoes",
+     "qty": 2,
+     "unit": "lb",
+     "aisle": "produce"
     },
     {
-     "item": "black beans",
-     "qty": 1,
-     "unit": "can",
-     "aisle": "canned"
+     "item": "broccoli",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "produce"
     },
     {
-     "item": "salsa",
+     "item": "olive oil",
+     "qty": 3,
+     "unit": "tbsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "smoked paprika",
+     "qty": 2,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "garlic powder",
      "qty": 1,
-     "unit": "jar",
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Heat the oven to 425°F. Cube the sweet potatoes, toss with half the oil and spices, and roast 15 minutes.",
+    "Cut the chicken into chunks and the broccoli into florets; toss with the rest of the oil and spices.",
+    "Add both to the pan and roast 15 to 18 minutes more, until the chicken is cooked through.",
+    "Divide between 5 containers."
+   ],
+   "photo": "sheet pan chicken",
+   "photo_must": "chicken",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "honey_garlic_chicken",
+   "name": "Honey Garlic Chicken, Rice & Green Beans",
+   "tags": [
+    "high-protein",
+    "budget",
+    "classic prep"
+   ],
+   "minutes": 35,
+   "servings": 6,
+   "cost_cents": 1300,
+   "kcal": 481,
+   "protein": 44,
+   "carbs": 57,
+   "fat": 8,
+   "fiber": 4,
+   "ingredients": [
+    {
+     "item": "boneless chicken thighs",
+     "qty": 2.5,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "long-grain white rice",
+     "qty": 1.5,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "frozen green beans (12 oz)",
+     "qty": 2,
+     "unit": "bag",
+     "aisle": "frozen"
+    },
+    {
+     "item": "honey",
+     "qty": 3,
+     "unit": "tbsp",
      "aisle": "sauces"
     },
     {
-     "item": "sweetcorn",
+     "item": "low-sodium soy sauce",
+     "qty": 4,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "garlic",
+     "qty": 4,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "cornstarch",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "baking"
+    }
+   ],
+   "steps": [
+    "Cook the rice. Mix honey, soy sauce, minced garlic, cornstarch and 1/4 cup water.",
+    "Brown the chicken thighs 5 minutes a side in a hot pan.",
+    "Pour in the sauce and simmer 5 minutes until sticky and the chicken reaches 165°F.",
+    "Steam the green beans. Pack rice, chicken with sauce, and green beans into 6 containers."
+   ],
+   "photo": "honey garlic chicken",
+   "photo_must": "chicken",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "chicken_veggie_stir_fry",
+   "name": "Chicken & Veggie Stir-Fry",
+   "tags": [
+    "high-protein",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 30,
+   "servings": 5,
+   "cost_cents": 1297,
+   "kcal": 481,
+   "protein": 39,
+   "carbs": 66,
+   "fat": 6,
+   "fiber": 5,
+   "ingredients": [
+    {
+     "item": "chicken breast",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "broccoli",
+     "qty": 1,
+     "unit": "lb",
+     "aisle": "produce"
+    },
+    {
+     "item": "bell pepper",
+     "qty": 2,
+     "unit": "pepper",
+     "aisle": "produce"
+    },
+    {
+     "item": "carrots",
+     "qty": 2,
+     "unit": "carrot",
+     "aisle": "produce"
+    },
+    {
+     "item": "long-grain white rice",
+     "qty": 1.5,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "low-sodium soy sauce",
+     "qty": 4,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "honey",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "fresh ginger (grated)",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "produce"
+    },
+    {
+     "item": "garlic",
+     "qty": 3,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "cornstarch",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "baking"
+    },
+    {
+     "item": "toasted sesame oil",
+     "qty": 2,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Cook the rice. Slice the chicken thin and toss it with the cornstarch.",
+    "Stir-fry the chicken in a very hot pan for 5 minutes; take it out.",
+    "Stir-fry the broccoli, sliced peppers and carrots 4 minutes, then add garlic and ginger.",
+    "Return the chicken, add soy sauce, honey and sesame oil, toss 1 minute, and pack over rice."
+   ],
+   "photo": "chicken stir fry",
+   "photo_must": "stir|chicken",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "greek_chicken_bowls",
+   "name": "Greek Chicken Bowls with Yogurt Sauce",
+   "tags": [
+    "high-protein",
+    "classic prep"
+   ],
+   "minutes": 35,
+   "servings": 5,
+   "cost_cents": 1566,
+   "kcal": 530,
+   "protein": 51,
+   "carbs": 54,
+   "fat": 11,
+   "fiber": 3,
+   "ingredients": [
+    {
+     "item": "chicken breast",
+     "qty": 2,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "long-grain white rice",
+     "qty": 1.5,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "cucumber",
+     "qty": 1,
+     "unit": "cucumber",
+     "aisle": "produce"
+    },
+    {
+     "item": "cherry tomatoes",
+     "qty": 1,
+     "unit": "pint",
+     "aisle": "produce"
+    },
+    {
+     "item": "red onion",
+     "qty": 0.5,
+     "unit": "onion",
+     "aisle": "produce"
+    },
+    {
+     "item": "plain nonfat Greek yogurt",
+     "qty": 1,
+     "unit": "cup",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "lemon",
+     "qty": 1,
+     "unit": "lemon",
+     "aisle": "produce"
+    },
+    {
+     "item": "garlic",
+     "qty": 2,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "dried oregano",
+     "qty": 2,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "olive oil",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Cook the rice. Rub the chicken with oil, oregano, half the lemon juice, salt and pepper.",
+    "Cook the chicken 6 to 7 minutes a side until 165°F; rest and slice.",
+    "Stir the Greek yogurt with grated garlic, the rest of the lemon juice, a little grated cucumber and salt.",
+    "Pack rice, chicken, chopped cucumber, tomatoes and red onion, with the sauce on the side."
+   ],
+   "photo": "greek chicken",
+   "photo_must": "chicken|souvlaki|greek",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "chicken_fajitas",
+   "name": "Sheet-Pan Chicken Fajitas",
+   "tags": [
+    "high-protein",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 30,
+   "servings": 5,
+   "cost_cents": 1733,
+   "kcal": 575,
+   "protein": 50,
+   "carbs": 56,
+   "fat": 18,
+   "fiber": 9,
+   "ingredients": [
+    {
+     "item": "chicken breast",
+     "qty": 2,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "bell pepper",
+     "qty": 3,
+     "unit": "pepper",
+     "aisle": "produce"
+    },
+    {
+     "item": "yellow onion",
+     "qty": 1,
+     "unit": "onion",
+     "aisle": "produce"
+    },
+    {
+     "item": "whole wheat tortillas (8 in)",
+     "qty": 10,
+     "unit": "tortilla",
+     "aisle": "bakery"
+    },
+    {
+     "item": "taco seasoning",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "lime",
+     "qty": 1,
+     "unit": "lime",
+     "aisle": "produce"
+    },
+    {
+     "item": "olive oil",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Heat the oven to 425°F. Slice the chicken, peppers and onion into strips.",
+    "Toss everything with oil and taco seasoning on a big sheet pan.",
+    "Roast 20 minutes, stirring once, until the chicken is cooked and the peppers char at the edges.",
+    "Squeeze lime over. Pack with 2 tortillas per serving."
+   ],
+   "photo": "chicken fajitas",
+   "photo_must": "fajita",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "chicken_tikka_curry",
+   "name": "Easy Chicken Tikka-Style Curry",
+   "tags": [
+    "high-protein",
+    "budget",
+    "classic prep"
+   ],
+   "minutes": 40,
+   "servings": 6,
+   "cost_cents": 1356,
+   "kcal": 515,
+   "protein": 41,
+   "carbs": 59,
+   "fat": 12,
+   "fiber": 6,
+   "ingredients": [
+    {
+     "item": "boneless chicken thighs",
+     "qty": 2,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "crushed tomatoes (28 oz)",
      "qty": 1,
      "unit": "can",
      "aisle": "canned"
-    }
-   ],
-   "cost_note": "estimate",
-   "photo_must": "burrito"
-  },
-  {
-   "id": "greek_yogurt_bowls",
-   "name": "Greek Yogurt Berry Bowls",
-   "tags": [
-    "breakfast",
-    "vegetarian",
-    "high-protein",
-    "quick"
-   ],
-   "minutes": 5,
-   "servings": 5,
-   "cost_cents": 900,
-   "kcal": 300,
-   "protein": 25,
-   "photo": "yogurt berries",
-   "ingredients": [
-    {
-     "item": "greek yogurt",
-     "qty": 1,
-     "unit": "kg",
-     "aisle": "dairy"
     },
     {
-     "item": "frozen berries",
+     "item": "light coconut milk (13.5 oz)",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "yellow onion",
+     "qty": 1,
+     "unit": "onion",
+     "aisle": "produce"
+    },
+    {
+     "item": "garlic",
+     "qty": 4,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "fresh ginger (grated)",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "produce"
+    },
+    {
+     "item": "curry powder",
+     "qty": 3,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "frozen peas (12 oz)",
      "qty": 1,
      "unit": "bag",
      "aisle": "frozen"
     },
     {
-     "item": "granola",
-     "qty": 1,
-     "unit": "bag",
-     "aisle": "pantry"
+     "item": "long-grain white rice",
+     "qty": 1.5,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "plain nonfat Greek yogurt",
+     "qty": 0.5,
+     "unit": "cup",
+     "aisle": "dairy & eggs"
     }
    ],
-   "cost_note": "estimate",
-   "photo_must": "yogurt|yoghurt"
+   "steps": [
+    "Cook the rice. Soften the chopped onion in a big pot for 5 minutes, then add garlic, ginger and curry powder for 1 minute.",
+    "Add the chicken in chunks and cook 5 minutes.",
+    "Pour in the crushed tomatoes and coconut milk and simmer 15 minutes.",
+    "Stir in the peas and the yogurt off the heat. Serve over rice."
+   ],
+   "photo": "chicken tikka masala",
+   "photo_must": "tikka|curry",
+   "cost_note": "estimate"
   },
   {
-   "id": "pork_sweet_potato",
-   "name": "Pork Tenderloin & Sweet Potato",
+   "id": "lemon_pepper_chicken",
+   "name": "Lemon Pepper Chicken, Potatoes & Green Beans",
+   "tags": [
+    "high-protein",
+    "classic prep"
+   ],
+   "minutes": 40,
+   "servings": 5,
+   "cost_cents": 1490,
+   "kcal": 486,
+   "protein": 47,
+   "carbs": 45,
+   "fat": 13,
+   "fiber": 9,
+   "ingredients": [
+    {
+     "item": "chicken breast",
+     "qty": 2,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "potatoes",
+     "qty": 2,
+     "unit": "lb",
+     "aisle": "produce"
+    },
+    {
+     "item": "frozen green beans (12 oz)",
+     "qty": 2,
+     "unit": "bag",
+     "aisle": "frozen"
+    },
+    {
+     "item": "lemon",
+     "qty": 2,
+     "unit": "lemon",
+     "aisle": "produce"
+    },
+    {
+     "item": "olive oil",
+     "qty": 3,
+     "unit": "tbsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "garlic powder",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Heat the oven to 425°F. Cut the potatoes into chunks, toss with half the oil, and roast 20 minutes.",
+    "Rub the chicken with the rest of the oil, lemon zest, garlic powder and lots of black pepper.",
+    "Add the chicken and green beans to the pan and roast 18 to 20 minutes.",
+    "Squeeze the lemons over everything and divide into 5 containers."
+   ],
+   "photo": "lemon pepper chicken",
+   "photo_must": "chicken",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "buffalo_chicken_potatoes",
+   "name": "Buffalo Chicken Stuffed Sweet Potatoes",
    "tags": [
     "high-protein"
    ],
-   "minutes": 40,
+   "minutes": 45,
    "servings": 4,
-   "cost_cents": 1300,
-   "kcal": 480,
-   "protein": 40,
-   "photo": "pork tenderloin",
+   "cost_cents": 1049,
+   "kcal": 435,
+   "protein": 47,
+   "carbs": 49,
+   "fat": 5,
+   "fiber": 7,
    "ingredients": [
     {
-     "item": "pork tenderloin",
+     "item": "chicken breast",
      "qty": 1.5,
      "unit": "lb",
      "aisle": "meat"
     },
     {
      "item": "sweet potatoes",
-     "qty": 3,
-     "unit": "pc",
+     "qty": 2,
+     "unit": "lb",
      "aisle": "produce"
     },
     {
-     "item": "broccoli",
+     "item": "hot sauce",
+     "qty": 4,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "plain nonfat Greek yogurt",
+     "qty": 0.75,
+     "unit": "cup",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "green onions",
+     "qty": 0.5,
+     "unit": "bunch",
+     "aisle": "produce"
+    },
+    {
+     "item": "garlic powder",
      "qty": 1,
-     "unit": "head",
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Pierce the sweet potatoes and bake at 400°F for 40 minutes (or microwave 10 to 12).",
+    "Meanwhile poach the chicken in simmering water 15 minutes, then shred it and toss with the hot sauce.",
+    "Stir the yogurt with garlic powder and a pinch of salt for a cool sauce.",
+    "Split each potato, fill with buffalo chicken, and top with sauce and green onions."
+   ],
+   "photo": "buffalo chicken",
+   "photo_must": "buffalo|chicken",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "chicken_spinach_pasta",
+   "name": "Chicken, Spinach & Tomato Pasta",
+   "tags": [
+    "high-protein",
+    "budget",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 30,
+   "servings": 6,
+   "cost_cents": 1352,
+   "kcal": 474,
+   "protein": 39,
+   "carbs": 57,
+   "fat": 11,
+   "fiber": 8,
+   "ingredients": [
+    {
+     "item": "chicken breast",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "whole wheat pasta",
+     "qty": 1,
+     "unit": "lb",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "baby spinach",
+     "qty": 5,
+     "unit": "oz",
+     "aisle": "produce"
+    },
+    {
+     "item": "cherry tomatoes",
+     "qty": 1,
+     "unit": "pint",
+     "aisle": "produce"
+    },
+    {
+     "item": "garlic",
+     "qty": 4,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "grated parmesan",
+     "qty": 4,
+     "unit": "tbsp",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "olive oil",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "Italian seasoning",
+     "qty": 2,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Boil the pasta; save a cup of the water before draining.",
+    "Cook bite-size chicken with Italian seasoning in the oil for 7 minutes.",
+    "Add garlic and halved tomatoes for 3 minutes, then the spinach until it wilts.",
+    "Toss in the pasta, parmesan and a splash of pasta water. Divide into 6."
+   ],
+   "photo": "chicken pasta spinach",
+   "photo_must": "pasta",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "teriyaki_chicken_bowls",
+   "name": "Teriyaki Chicken & Broccoli Bowls",
+   "tags": [
+    "high-protein",
+    "budget",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 30,
+   "servings": 6,
+   "cost_cents": 1146,
+   "kcal": 431,
+   "protein": 38,
+   "carbs": 54,
+   "fat": 7,
+   "fiber": 4,
+   "ingredients": [
+    {
+     "item": "boneless chicken thighs",
+     "qty": 2,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "frozen broccoli (12 oz)",
+     "qty": 2,
+     "unit": "bag",
+     "aisle": "frozen"
+    },
+    {
+     "item": "long-grain white rice",
+     "qty": 1.5,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "low-sodium soy sauce",
+     "qty": 5,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "honey",
+     "qty": 3,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "garlic",
+     "qty": 3,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "fresh ginger (grated)",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "produce"
+    },
+    {
+     "item": "cornstarch",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "baking"
+    }
+   ],
+   "steps": [
+    "Cook the rice. Whisk soy sauce, honey, garlic, ginger, cornstarch and 1/2 cup water.",
+    "Cook the chicken in chunks 7 to 8 minutes until browned.",
+    "Pour in the sauce and simmer 2 minutes until glossy.",
+    "Steam the broccoli and pack it with rice and teriyaki chicken."
+   ],
+   "photo": "teriyaki chicken",
+   "photo_must": "teriyaki",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "chicken_noodle_soup",
+   "name": "Hearty Chicken Noodle Soup",
+   "tags": [
+    "high-protein",
+    "budget",
+    "classic prep"
+   ],
+   "minutes": 40,
+   "servings": 6,
+   "cost_cents": 1332,
+   "kcal": 317,
+   "protein": 35,
+   "carbs": 35,
+   "fat": 5,
+   "fiber": 5,
+   "ingredients": [
+    {
+     "item": "chicken breast",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "carrots",
+     "qty": 3,
+     "unit": "carrot",
+     "aisle": "produce"
+    },
+    {
+     "item": "celery",
+     "qty": 3,
+     "unit": "stalk",
+     "aisle": "produce"
+    },
+    {
+     "item": "yellow onion",
+     "qty": 1,
+     "unit": "onion",
+     "aisle": "produce"
+    },
+    {
+     "item": "low-sodium broth",
+     "qty": 8,
+     "unit": "cup",
+     "aisle": "canned"
+    },
+    {
+     "item": "whole wheat pasta",
+     "qty": 0.5,
+     "unit": "lb",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "garlic",
+     "qty": 3,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "Italian seasoning",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Soften the chopped onion, carrots and celery in a big pot for 6 minutes; add garlic.",
+    "Add the broth, whole chicken breasts and Italian seasoning; simmer 20 minutes.",
+    "Lift out the chicken and shred it. Add the pasta and cook 8 minutes.",
+    "Return the chicken, season with salt and pepper, and portion into 6."
+   ],
+   "photo": "chicken noodle soup",
+   "photo_must": "noodle soup|chicken soup",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "bbq_chicken_potatoes",
+   "name": "BBQ Chicken, Corn & Roasted Potatoes",
+   "tags": [
+    "high-protein",
+    "classic prep"
+   ],
+   "minutes": 40,
+   "servings": 5,
+   "cost_cents": 1263,
+   "kcal": 501,
+   "protein": 47,
+   "carbs": 54,
+   "fat": 11,
+   "fiber": 6,
+   "ingredients": [
+    {
+     "item": "chicken breast",
+     "qty": 2,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "potatoes",
+     "qty": 2,
+     "unit": "lb",
+     "aisle": "produce"
+    },
+    {
+     "item": "frozen corn (12 oz)",
+     "qty": 1,
+     "unit": "bag",
+     "aisle": "frozen"
+    },
+    {
+     "item": "BBQ sauce",
+     "qty": 6,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "olive oil",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "smoked paprika",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Heat the oven to 425°F. Roast the potato chunks with oil and paprika for 20 minutes.",
+    "Add the chicken to the pan, brush it with half the BBQ sauce, and roast 18 minutes.",
+    "Warm the corn. Brush the chicken with the rest of the sauce and slice.",
+    "Divide chicken, potatoes and corn into 5 containers."
+   ],
+   "photo": "barbecue chicken",
+   "photo_must": "chicken",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "chicken_enchilada_skillet",
+   "name": "Chicken Enchilada Skillet",
+   "tags": [
+    "high-protein",
+    "budget",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 30,
+   "servings": 6,
+   "cost_cents": 1386,
+   "kcal": 434,
+   "protein": 39,
+   "carbs": 44,
+   "fat": 13,
+   "fiber": 9,
+   "ingredients": [
+    {
+     "item": "chicken breast",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "canned black beans (15 oz)",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "frozen corn (12 oz)",
+     "qty": 1,
+     "unit": "bag",
+     "aisle": "frozen"
+    },
+    {
+     "item": "tomato sauce (15 oz)",
+     "qty": 2,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "chili powder",
+     "qty": 3,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "ground cumin",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "shredded cheddar",
+     "qty": 4,
+     "unit": "oz",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "whole wheat tortillas (8 in)",
+     "qty": 4,
+     "unit": "tortilla",
+     "aisle": "bakery"
+    },
+    {
+     "item": "yellow onion",
+     "qty": 1,
+     "unit": "onion",
      "aisle": "produce"
     }
    ],
-   "cost_note": "estimate",
-   "photo_must": "pork"
+   "steps": [
+    "Brown diced chicken and onion in a large skillet for 7 minutes.",
+    "Stir in the tomato sauce, chili powder, cumin, beans and corn; simmer 5 minutes.",
+    "Tear the tortillas into pieces and fold them in.",
+    "Top with cheddar, cover 3 minutes to melt, and portion into 6."
+   ],
+   "photo": "enchilada",
+   "photo_must": "enchilada",
+   "cost_note": "estimate"
   },
   {
-   "id": "chickpea_salad",
-   "name": "Mediterranean Chickpea Salad",
+   "id": "turkey_chili",
+   "name": "Turkey & Three-Bean Chili",
    "tags": [
-    "vegetarian",
     "budget",
+    "classic prep"
+   ],
+   "minutes": 45,
+   "servings": 8,
+   "cost_cents": 1692,
+   "kcal": 301,
+   "protein": 29,
+   "carbs": 26,
+   "fat": 10,
+   "fiber": 9,
+   "ingredients": [
+    {
+     "item": "lean ground turkey (93%)",
+     "qty": 2,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "canned black beans (15 oz)",
+     "qty": 2,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "canned kidney beans (15 oz)",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "crushed tomatoes (28 oz)",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "yellow onion",
+     "qty": 1,
+     "unit": "onion",
+     "aisle": "produce"
+    },
+    {
+     "item": "bell pepper",
+     "qty": 1,
+     "unit": "pepper",
+     "aisle": "produce"
+    },
+    {
+     "item": "garlic",
+     "qty": 3,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "chili powder",
+     "qty": 4,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "ground cumin",
+     "qty": 2,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Brown the turkey with the chopped onion and pepper for 8 minutes.",
+    "Add the garlic, chili powder and cumin for 1 minute.",
+    "Add the beans (drained), crushed tomatoes and 1 cup water; simmer 25 minutes.",
+    "Taste for salt. Portion into 8; it freezes well."
+   ],
+   "photo": "chili con carne",
+   "photo_must": "chili",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "turkey_taco_rice",
+   "name": "One-Pot Turkey Taco Rice",
+   "tags": [
+    "high-protein",
+    "classic prep"
+   ],
+   "minutes": 35,
+   "servings": 6,
+   "cost_cents": 1523,
+   "kcal": 509,
+   "protein": 34,
+   "carbs": 60,
+   "fat": 15,
+   "fiber": 6,
+   "ingredients": [
+    {
+     "item": "lean ground turkey (93%)",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "long-grain white rice",
+     "qty": 1.5,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "salsa",
+     "qty": 1,
+     "unit": "cup",
+     "aisle": "canned"
+    },
+    {
+     "item": "canned black beans (15 oz)",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "frozen corn (12 oz)",
+     "qty": 1,
+     "unit": "bag",
+     "aisle": "frozen"
+    },
+    {
+     "item": "shredded cheddar",
+     "qty": 3,
+     "unit": "oz",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "taco seasoning",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "low-sodium broth",
+     "qty": 3,
+     "unit": "cup",
+     "aisle": "canned"
+    }
+   ],
+   "steps": [
+    "Brown the turkey with the taco seasoning in a deep pan.",
+    "Stir in the rice, salsa and broth; bring to a boil.",
+    "Cover and simmer on low 18 minutes until the rice is tender.",
+    "Stir in the beans and corn, top with cheddar, and portion into 6."
+   ],
+   "photo": "taco rice",
+   "photo_must": "rice",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "egg_roll_bowl",
+   "name": "Egg Roll in a Bowl (Turkey & Cabbage)",
+   "tags": [
+    "high-protein",
+    "budget",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 25,
+   "servings": 6,
+   "cost_cents": 1341,
+   "kcal": 400,
+   "protein": 33,
+   "carbs": 35,
+   "fat": 14,
+   "fiber": 4,
+   "ingredients": [
+    {
+     "item": "lean ground turkey (93%)",
+     "qty": 2,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "green cabbage",
+     "qty": 0.6,
+     "unit": "head",
+     "aisle": "produce"
+    },
+    {
+     "item": "carrots",
+     "qty": 2,
+     "unit": "carrot",
+     "aisle": "produce"
+    },
+    {
+     "item": "green onions",
+     "qty": 1,
+     "unit": "bunch",
+     "aisle": "produce"
+    },
+    {
+     "item": "low-sodium soy sauce",
+     "qty": 4,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "fresh ginger (grated)",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "produce"
+    },
+    {
+     "item": "garlic",
+     "qty": 3,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "sriracha",
+     "qty": 2,
+     "unit": "tsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "toasted sesame oil",
+     "qty": 2,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "long-grain white rice",
+     "qty": 1,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    }
+   ],
+   "steps": [
+    "Cook the rice. Brown the turkey in a large pan.",
+    "Add garlic and ginger for 1 minute, then the shredded cabbage and grated carrots.",
+    "Stir-fry 6 minutes until the cabbage softens. Add soy sauce, sriracha and sesame oil.",
+    "Top with green onions and pack with a scoop of rice."
+   ],
+   "photo": "cabbage stir fry",
+   "photo_must": "cabbage|stir",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "turkey_meatballs_spaghetti",
+   "name": "Turkey Meatballs & Whole Wheat Spaghetti",
+   "tags": [
+    "high-protein",
+    "budget",
+    "classic prep"
+   ],
+   "minutes": 40,
+   "servings": 6,
+   "cost_cents": 1190,
+   "kcal": 548,
+   "protein": 37,
+   "carbs": 68,
+   "fat": 15,
+   "fiber": 10,
+   "ingredients": [
+    {
+     "item": "lean ground turkey (93%)",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "eggs",
+     "qty": 1,
+     "unit": "egg",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "rolled oats",
+     "qty": 0.5,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "grated parmesan",
+     "qty": 4,
+     "unit": "tbsp",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "Italian seasoning",
+     "qty": 2,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "garlic",
+     "qty": 2,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "marinara sauce (24 oz)",
+     "qty": 1,
+     "unit": "jar",
+     "aisle": "canned"
+    },
+    {
+     "item": "whole wheat pasta",
+     "qty": 1,
+     "unit": "lb",
+     "aisle": "grains & pasta"
+    }
+   ],
+   "steps": [
+    "Heat the oven to 400°F. Mix the turkey, egg, oats, parmesan, Italian seasoning and garlic; roll 24 meatballs.",
+    "Bake 18 minutes. Boil the pasta.",
+    "Simmer the meatballs in the marinara 5 minutes.",
+    "Toss with the pasta and divide into 6."
+   ],
+   "photo": "spaghetti meatballs",
+   "photo_must": "meatball",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "beef_broccoli",
+   "name": "Beef & Broccoli Rice Bowls",
+   "tags": [
+    "high-protein",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 25,
+   "servings": 6,
+   "cost_cents": 1787,
+   "kcal": 455,
+   "protein": 31,
+   "carbs": 55,
+   "fat": 12,
+   "fiber": 5,
+   "ingredients": [
+    {
+     "item": "lean ground beef (90%)",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "broccoli",
+     "qty": 2,
+     "unit": "lb",
+     "aisle": "produce"
+    },
+    {
+     "item": "long-grain white rice",
+     "qty": 1.5,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "low-sodium soy sauce",
+     "qty": 4,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "honey",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "garlic",
+     "qty": 3,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "fresh ginger (grated)",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "produce"
+    },
+    {
+     "item": "cornstarch",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "baking"
+    }
+   ],
+   "steps": [
+    "Cook the rice. Whisk soy sauce, honey, cornstarch and 1/3 cup water.",
+    "Brown the beef with garlic and ginger, breaking it up.",
+    "Add the broccoli florets and 2 tablespoons water; cover and steam 4 minutes.",
+    "Pour in the sauce, toss until glossy, and pack over rice."
+   ],
+   "photo": "beef and broccoli",
+   "photo_must": "broccoli",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "veggie_bolognese",
+   "name": "Hidden-Veggie Beef Bolognese",
+   "tags": [
+    "budget",
+    "classic prep"
+   ],
+   "minutes": 45,
+   "servings": 6,
+   "cost_cents": 1321,
+   "kcal": 479,
+   "protein": 30,
+   "carbs": 69,
+   "fat": 11,
+   "fiber": 11,
+   "ingredients": [
+    {
+     "item": "lean ground beef (90%)",
+     "qty": 1,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "carrots",
+     "qty": 2,
+     "unit": "carrot",
+     "aisle": "produce"
+    },
+    {
+     "item": "zucchini",
+     "qty": 1,
+     "unit": "zucchini",
+     "aisle": "produce"
+    },
+    {
+     "item": "yellow onion",
+     "qty": 1,
+     "unit": "onion",
+     "aisle": "produce"
+    },
+    {
+     "item": "garlic",
+     "qty": 3,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "crushed tomatoes (28 oz)",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "whole wheat pasta",
+     "qty": 1,
+     "unit": "lb",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "Italian seasoning",
+     "qty": 2,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "grated parmesan",
+     "qty": 3,
+     "unit": "tbsp",
+     "aisle": "dairy & eggs"
+    }
+   ],
+   "steps": [
+    "Grate the carrots and zucchini and chop the onion.",
+    "Brown the beef, then add the vegetables and garlic and cook 8 minutes.",
+    "Add crushed tomatoes and Italian seasoning; simmer 20 minutes. Boil the pasta meanwhile.",
+    "Toss pasta with sauce, add parmesan, and divide into 6."
+   ],
+   "photo": "spaghetti bolognese",
+   "photo_must": "bolognese|spaghetti",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "turkey_stuffed_peppers",
+   "name": "Turkey & Rice Stuffed Peppers",
+   "tags": [
+    "classic prep"
+   ],
+   "minutes": 50,
+   "servings": 6,
+   "cost_cents": 1748,
+   "kcal": 406,
+   "protein": 29,
+   "carbs": 40,
+   "fat": 15,
+   "fiber": 5,
+   "ingredients": [
+    {
+     "item": "bell pepper",
+     "qty": 6,
+     "unit": "pepper",
+     "aisle": "produce"
+    },
+    {
+     "item": "lean ground turkey (93%)",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "long-grain white rice",
+     "qty": 1,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "tomato sauce (15 oz)",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "yellow onion",
+     "qty": 1,
+     "unit": "onion",
+     "aisle": "produce"
+    },
+    {
+     "item": "shredded cheddar",
+     "qty": 3,
+     "unit": "oz",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "Italian seasoning",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Cook the rice. Heat the oven to 375°F. Cut the tops off the peppers and scoop out the seeds.",
+    "Brown the turkey with chopped onion; stir in the rice, most of the tomato sauce and the seasoning.",
+    "Stuff the peppers, spoon the rest of the sauce on top, cover with foil, and bake 30 minutes.",
+    "Add cheddar and bake 5 more minutes uncovered."
+   ],
+   "photo": "stuffed peppers",
+   "photo_must": "stuffed pepper",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "turkey_shepherds_pie",
+   "name": "Turkey Shepherd's Pie",
+   "tags": [
+    "high-protein",
+    "classic prep"
+   ],
+   "minutes": 55,
+   "servings": 6,
+   "cost_cents": 1704,
+   "kcal": 513,
+   "protein": 38,
+   "carbs": 60,
+   "fat": 14,
+   "fiber": 11,
+   "ingredients": [
+    {
+     "item": "lean ground turkey (93%)",
+     "qty": 2,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "frozen mixed vegetables (12 oz)",
+     "qty": 2,
+     "unit": "bag",
+     "aisle": "frozen"
+    },
+    {
+     "item": "potatoes",
+     "qty": 3,
+     "unit": "lb",
+     "aisle": "produce"
+    },
+    {
+     "item": "milk (2%)",
+     "qty": 0.5,
+     "unit": "cup",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "yellow onion",
+     "qty": 1,
+     "unit": "onion",
+     "aisle": "produce"
+    },
+    {
+     "item": "low-sodium broth",
+     "qty": 1,
+     "unit": "cup",
+     "aisle": "canned"
+    },
+    {
+     "item": "tomato sauce (15 oz)",
+     "qty": 0.5,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "cornstarch",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "baking"
+    },
+    {
+     "item": "garlic",
+     "qty": 2,
+     "unit": "clove",
+     "aisle": "produce"
+    }
+   ],
+   "steps": [
+    "Boil the peeled potato chunks 15 minutes, then mash with the milk and salt.",
+    "Brown the turkey with the onion and garlic; add the frozen vegetables, broth and tomato sauce and simmer 5 minutes.",
+    "Stir in the cornstarch mixed with a little water to thicken.",
+    "Spread in a baking dish, top with mash, and bake at 400°F for 20 minutes."
+   ],
+   "photo": "shepherd's pie",
+   "photo_must": "shepherd|cottage pie",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "pork_tenderloin_roast",
+   "name": "Pork Tenderloin with Roasted Carrots & Potatoes",
+   "tags": [
+    "high-protein",
+    "budget",
+    "classic prep"
+   ],
+   "minutes": 45,
+   "servings": 6,
+   "cost_cents": 1235,
+   "kcal": 399,
+   "protein": 36,
+   "carbs": 35,
+   "fat": 12,
+   "fiber": 5,
+   "ingredients": [
+    {
+     "item": "pork tenderloin",
+     "qty": 2,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "potatoes",
+     "qty": 2,
+     "unit": "lb",
+     "aisle": "produce"
+    },
+    {
+     "item": "carrots",
+     "qty": 6,
+     "unit": "carrot",
+     "aisle": "produce"
+    },
+    {
+     "item": "olive oil",
+     "qty": 3,
+     "unit": "tbsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "garlic",
+     "qty": 4,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "Dijon mustard",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "honey",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    }
+   ],
+   "steps": [
+    "Heat the oven to 425°F. Toss potato chunks and carrot sticks with 2 tablespoons oil and roast 15 minutes.",
+    "Rub the pork with mustard, honey, garlic and the rest of the oil.",
+    "Add the pork to the pan and roast 20 to 25 minutes, to 145°F inside. Rest 5 minutes and slice.",
+    "Divide into 6."
+   ],
+   "photo": "pork tenderloin",
+   "photo_must": "pork",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "pork_carnitas_bowls",
+   "name": "Cilantro-Lime Pork Carnitas Bowls",
+   "tags": [
+    "high-protein",
+    "budget",
+    "classic prep"
+   ],
+   "minutes": 45,
+   "servings": 7,
+   "cost_cents": 1605,
+   "kcal": 448,
+   "protein": 42,
+   "carbs": 54,
+   "fat": 6,
+   "fiber": 7,
+   "ingredients": [
+    {
+     "item": "pork tenderloin",
+     "qty": 2.5,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "lime",
+     "qty": 2,
+     "unit": "lime",
+     "aisle": "produce"
+    },
+    {
+     "item": "garlic",
+     "qty": 4,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "ground cumin",
+     "qty": 2,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "dried oregano",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "long-grain white rice",
+     "qty": 1.75,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "canned black beans (15 oz)",
+     "qty": 2,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "salsa",
+     "qty": 1,
+     "unit": "cup",
+     "aisle": "canned"
+    },
+    {
+     "item": "cilantro",
+     "qty": 1,
+     "unit": "bunch",
+     "aisle": "produce"
+    }
+   ],
+   "steps": [
+    "Cut the pork into 2-inch chunks and rub with cumin, oregano, garlic and salt.",
+    "Simmer covered in 1 cup water and the juice of 1 lime for 30 minutes, then shred and crisp in a hot pan.",
+    "Cook the rice and stir in chopped cilantro and the other lime's juice.",
+    "Pack rice, beans, pork and salsa into 7 containers."
+   ],
+   "photo": "carnitas",
+   "photo_must": "carnitas|pork",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "tuna_white_bean_salad",
+   "name": "Lemony Tuna & White Bean Salad",
+   "tags": [
+    "high-protein",
     "quick"
    ],
    "minutes": 15,
    "servings": 4,
-   "cost_cents": 700,
-   "kcal": 380,
-   "protein": 14,
-   "photo": "chickpea salad",
+   "cost_cents": 1219,
+   "kcal": 366,
+   "protein": 39,
+   "carbs": 35,
+   "fat": 8,
+   "fiber": 8,
    "ingredients": [
     {
-     "item": "chickpeas",
+     "item": "canned tuna in water (5 oz)",
+     "qty": 4,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "canned white beans (15 oz)",
      "qty": 2,
      "unit": "can",
      "aisle": "canned"
@@ -502,198 +2262,1577 @@
     {
      "item": "cucumber",
      "qty": 1,
-     "unit": "pc",
+     "unit": "cucumber",
      "aisle": "produce"
     },
     {
      "item": "cherry tomatoes",
      "qty": 1,
-     "unit": "box",
+     "unit": "pint",
      "aisle": "produce"
     },
     {
-     "item": "feta",
-     "qty": 1,
-     "unit": "block",
-     "aisle": "dairy"
-    }
-   ],
-   "cost_note": "estimate",
-   "photo_must": "chickpea"
-  },
-  {
-   "id": "turkey_meatballs",
-   "name": "Turkey Meatballs & Pasta",
-   "tags": [
-    "high-protein",
-    "budget"
-   ],
-   "minutes": 40,
-   "servings": 5,
-   "cost_cents": 1100,
-   "kcal": 550,
-   "protein": 38,
-   "photo": "spaghetti meatballs",
-   "ingredients": [
-    {
-     "item": "ground turkey",
-     "qty": 1.5,
-     "unit": "lb",
-     "aisle": "meat"
-    },
-    {
-     "item": "pasta",
+     "item": "red onion",
      "qty": 0.5,
-     "unit": "kg",
-     "aisle": "grains"
-    },
-    {
-     "item": "marinara sauce",
-     "qty": 1,
-     "unit": "jar",
-     "aisle": "sauces"
-    },
-    {
-     "item": "eggs",
-     "qty": 1,
-     "unit": "pc",
-     "aisle": "dairy"
-    }
-   ],
-   "cost_note": "estimate",
-   "photo_must": "meatball"
-  },
-  {
-   "id": "black_bean_tacos",
-   "name": "Black Bean & Sweet Potato Tacos",
-   "tags": [
-    "vegetarian",
-    "budget"
-   ],
-   "minutes": 30,
-   "servings": 4,
-   "cost_cents": 750,
-   "kcal": 420,
-   "protein": 15,
-   "photo": "bean tacos",
-   "ingredients": [
-    {
-     "item": "black beans",
-     "qty": 2,
-     "unit": "can",
-     "aisle": "canned"
-    },
-    {
-     "item": "sweet potatoes",
-     "qty": 2,
-     "unit": "pc",
+     "unit": "onion",
      "aisle": "produce"
     },
     {
-     "item": "tortillas",
+     "item": "lemon",
      "qty": 1,
-     "unit": "pack",
-     "aisle": "bakery"
+     "unit": "lemon",
+     "aisle": "produce"
     },
     {
-     "item": "salsa",
+     "item": "olive oil",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "dried oregano",
      "qty": 1,
-     "unit": "jar",
-     "aisle": "sauces"
+     "unit": "tsp",
+     "aisle": "oils & spices"
     }
    ],
-   "cost_note": "estimate",
-   "photo_must": "taco"
+   "steps": [
+    "Drain the tuna and beans.",
+    "Chop the cucumber, halve the tomatoes and slice the red onion thin.",
+    "Toss everything with lemon juice, olive oil, oregano, salt and pepper.",
+    "Keeps 3 days in the fridge; no cooking needed."
+   ],
+   "photo": "tuna salad beans",
+   "photo_must": "tuna",
+   "cost_note": "estimate"
   },
   {
    "id": "shrimp_fried_rice",
    "name": "Shrimp Fried Rice",
    "tags": [
     "high-protein",
-    "quick"
+    "budget",
+    "quick",
+    "classic prep"
    ],
    "minutes": 25,
-   "servings": 4,
-   "cost_cents": 1500,
-   "kcal": 470,
-   "protein": 32,
-   "photo": "shrimp fried rice",
+   "servings": 5,
+   "cost_cents": 1118,
+   "kcal": 413,
+   "protein": 31,
+   "carbs": 56,
+   "fat": 7,
+   "fiber": 4,
    "ingredients": [
     {
-     "item": "frozen shrimp",
+     "item": "frozen raw shrimp",
      "qty": 1,
      "unit": "lb",
-     "aisle": "frozen"
+     "aisle": "seafood"
     },
     {
-     "item": "rice",
-     "qty": 0.4,
-     "unit": "kg",
-     "aisle": "grains"
+     "item": "long-grain white rice",
+     "qty": 1.5,
+     "unit": "cup",
+     "aisle": "grains & pasta"
     },
     {
-     "item": "frozen peas and carrots",
+     "item": "eggs",
+     "qty": 4,
+     "unit": "egg",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "frozen mixed vegetables (12 oz)",
      "qty": 1,
      "unit": "bag",
      "aisle": "frozen"
     },
     {
-     "item": "eggs",
-     "qty": 3,
-     "unit": "pc",
-     "aisle": "dairy"
-    },
-    {
-     "item": "soy sauce",
-     "qty": 3,
+     "item": "low-sodium soy sauce",
+     "qty": 4,
      "unit": "tbsp",
      "aisle": "sauces"
+    },
+    {
+     "item": "green onions",
+     "qty": 1,
+     "unit": "bunch",
+     "aisle": "produce"
+    },
+    {
+     "item": "garlic",
+     "qty": 3,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "toasted sesame oil",
+     "qty": 2,
+     "unit": "tsp",
+     "aisle": "oils & spices"
     }
    ],
-   "cost_note": "estimate",
-   "photo_must": "fried rice"
+   "steps": [
+    "Cook the rice ahead and let it cool (day-old rice fries best).",
+    "Cook the shrimp 2 minutes a side and set aside.",
+    "Scramble the eggs, push aside, then stir-fry the vegetables and garlic 3 minutes.",
+    "Add the rice, soy sauce and sesame oil; fry 4 minutes. Return the shrimp and add green onions."
+   ],
+   "photo": "shrimp fried rice",
+   "photo_must": "fried rice",
+   "cost_note": "estimate"
   },
   {
-   "id": "cottage_cheese_wraps",
-   "name": "Chicken & Hummus Wraps",
+   "id": "salmon_rice_broccoli",
+   "name": "Soy-Honey Salmon, Rice & Broccoli",
    "tags": [
     "high-protein",
     "quick"
    ],
-   "minutes": 15,
+   "minutes": 30,
    "servings": 4,
-   "cost_cents": 1000,
-   "kcal": 430,
-   "protein": 35,
-   "photo": "chicken wrap",
+   "cost_cents": 1366,
+   "kcal": 651,
+   "protein": 43,
+   "carbs": 58,
+   "fat": 27,
+   "fiber": 5,
    "ingredients": [
     {
-     "item": "rotisserie chicken",
-     "qty": 1,
-     "unit": "pc",
-     "aisle": "deli"
+     "item": "frozen salmon fillets",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "seafood"
     },
     {
-     "item": "tortillas",
+     "item": "long-grain white rice",
      "qty": 1,
-     "unit": "pack",
-     "aisle": "bakery"
+     "unit": "cup",
+     "aisle": "grains & pasta"
     },
     {
-     "item": "hummus",
-     "qty": 1,
-     "unit": "tub",
-     "aisle": "deli"
+     "item": "broccoli",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "produce"
     },
     {
-     "item": "spinach",
+     "item": "low-sodium soy sauce",
+     "qty": 3,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "honey",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "garlic",
+     "qty": 2,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "olive oil",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Cook the rice. Heat the oven to 400°F.",
+    "Mix soy sauce, honey and garlic; brush it over the salmon on a sheet pan.",
+    "Toss the broccoli with the oil around the fish and bake 12 to 15 minutes.",
+    "Pack salmon, broccoli and rice into 4 containers."
+   ],
+   "photo": "salmon broccoli rice",
+   "photo_must": "salmon",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "garlic_shrimp_pasta",
+   "name": "Garlic Shrimp & Spinach Pasta",
+   "tags": [
+    "high-protein",
+    "budget",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 25,
+   "servings": 5,
+   "cost_cents": 1142,
+   "kcal": 398,
+   "protein": 30,
+   "carbs": 52,
+   "fat": 9,
+   "fiber": 7,
+   "ingredients": [
+    {
+     "item": "frozen raw shrimp",
+     "qty": 1,
+     "unit": "lb",
+     "aisle": "seafood"
+    },
+    {
+     "item": "whole wheat pasta",
+     "qty": 0.75,
+     "unit": "lb",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "baby spinach",
+     "qty": 5,
+     "unit": "oz",
+     "aisle": "produce"
+    },
+    {
+     "item": "garlic",
+     "qty": 5,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "lemon",
+     "qty": 1,
+     "unit": "lemon",
+     "aisle": "produce"
+    },
+    {
+     "item": "grated parmesan",
+     "qty": 4,
+     "unit": "tbsp",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "olive oil",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Boil the pasta; keep a cup of the water.",
+    "Cook the garlic in the oil 1 minute, add the shrimp and cook 2 minutes a side.",
+    "Add the spinach until wilted, then the pasta, lemon juice, parmesan and a splash of pasta water.",
+    "Toss and divide into 5."
+   ],
+   "photo": "shrimp pasta",
+   "photo_must": "shrimp|prawn",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "tuna_pasta_salad",
+   "name": "Greek Yogurt Tuna Pasta Salad",
+   "tags": [
+    "high-protein",
+    "budget",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 20,
+   "servings": 5,
+   "cost_cents": 830,
+   "kcal": 415,
+   "protein": 36,
+   "carbs": 63,
+   "fat": 3,
+   "fiber": 10,
+   "ingredients": [
+    {
+     "item": "whole wheat pasta",
+     "qty": 0.75,
+     "unit": "lb",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "canned tuna in water (5 oz)",
+     "qty": 3,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "plain nonfat Greek yogurt",
+     "qty": 1,
+     "unit": "cup",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "frozen peas (12 oz)",
      "qty": 1,
      "unit": "bag",
+     "aisle": "frozen"
+    },
+    {
+     "item": "celery",
+     "qty": 2,
+     "unit": "stalk",
+     "aisle": "produce"
+    },
+    {
+     "item": "red onion",
+     "qty": 0.5,
+     "unit": "onion",
+     "aisle": "produce"
+    },
+    {
+     "item": "lemon",
+     "qty": 1,
+     "unit": "lemon",
+     "aisle": "produce"
+    },
+    {
+     "item": "Dijon mustard",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    }
+   ],
+   "steps": [
+    "Boil the pasta, adding the frozen peas for the last 2 minutes; rinse under cold water.",
+    "Stir the yogurt with mustard, lemon juice, salt and pepper.",
+    "Fold in the drained tuna, chopped celery and red onion, pasta and peas.",
+    "Chill and divide into 5."
+   ],
+   "photo": "tuna pasta salad",
+   "photo_must": "pasta salad|tuna",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "red_lentil_curry",
+   "name": "Red Lentil Coconut Curry",
+   "tags": [
+    "vegetarian",
+    "budget",
+    "classic prep"
+   ],
+   "minutes": 35,
+   "servings": 6,
+   "cost_cents": 820,
+   "kcal": 511,
+   "protein": 22,
+   "carbs": 92,
+   "fat": 7,
+   "fiber": 11,
+   "ingredients": [
+    {
+     "item": "red lentils (dry)",
+     "qty": 2,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "light coconut milk (13.5 oz)",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "crushed tomatoes (28 oz)",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "yellow onion",
+     "qty": 1,
+     "unit": "onion",
+     "aisle": "produce"
+    },
+    {
+     "item": "garlic",
+     "qty": 4,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "fresh ginger (grated)",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "produce"
+    },
+    {
+     "item": "curry powder",
+     "qty": 3,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "baby spinach",
+     "qty": 5,
+     "unit": "oz",
+     "aisle": "produce"
+    },
+    {
+     "item": "long-grain white rice",
+     "qty": 1.5,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    }
+   ],
+   "steps": [
+    "Cook the rice. Soften the onion 5 minutes, then add garlic, ginger and curry powder for 1 minute.",
+    "Add the rinsed lentils, crushed tomatoes, coconut milk and 3 cups water; simmer 20 minutes, stirring.",
+    "Stir in the spinach until wilted and season with salt.",
+    "Serve over rice; it thickens as it cools."
+   ],
+   "photo": "lentil curry dal",
+   "photo_must": "dal|dhal|lentil",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "lentil_sweet_potato_soup",
+   "name": "Lentil & Sweet Potato Soup",
+   "tags": [
+    "vegetarian",
+    "budget",
+    "classic prep"
+   ],
+   "minutes": 45,
+   "servings": 6,
+   "cost_cents": 1032,
+   "kcal": 314,
+   "protein": 18,
+   "carbs": 60,
+   "fat": 2,
+   "fiber": 10,
+   "ingredients": [
+    {
+     "item": "brown lentils (dry)",
+     "qty": 1.5,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "sweet potatoes",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "produce"
+    },
+    {
+     "item": "carrots",
+     "qty": 2,
+     "unit": "carrot",
+     "aisle": "produce"
+    },
+    {
+     "item": "yellow onion",
+     "qty": 1,
+     "unit": "onion",
+     "aisle": "produce"
+    },
+    {
+     "item": "low-sodium broth",
+     "qty": 8,
+     "unit": "cup",
+     "aisle": "canned"
+    },
+    {
+     "item": "ground cumin",
+     "qty": 2,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "smoked paprika",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "baby spinach",
+     "qty": 4,
+     "unit": "oz",
+     "aisle": "produce"
+    },
+    {
+     "item": "garlic",
+     "qty": 3,
+     "unit": "clove",
      "aisle": "produce"
     }
    ],
-   "cost_note": "estimate",
-   "photo_must": "wrap"
+   "steps": [
+    "Soften the chopped onion and carrots 5 minutes; add the garlic and spices.",
+    "Add the lentils, diced sweet potatoes and broth; simmer 30 minutes until tender.",
+    "Stir in the spinach, season with salt and pepper.",
+    "Portion into 6; freezes well."
+   ],
+   "photo": "lentil soup",
+   "photo_must": "lentil",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "black_bean_sweet_potato_bowls",
+   "name": "Black Bean & Sweet Potato Burrito Bowls",
+   "tags": [
+    "vegetarian",
+    "budget",
+    "classic prep"
+   ],
+   "minutes": 40,
+   "servings": 6,
+   "cost_cents": 1281,
+   "kcal": 563,
+   "protein": 20,
+   "carbs": 97,
+   "fat": 13,
+   "fiber": 19,
+   "ingredients": [
+    {
+     "item": "sweet potatoes",
+     "qty": 2,
+     "unit": "lb",
+     "aisle": "produce"
+    },
+    {
+     "item": "canned black beans (15 oz)",
+     "qty": 3,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "long-grain white rice",
+     "qty": 1,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "plain nonfat Greek yogurt",
+     "qty": 1,
+     "unit": "cup",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "frozen corn (12 oz)",
+     "qty": 1,
+     "unit": "bag",
+     "aisle": "frozen"
+    },
+    {
+     "item": "salsa",
+     "qty": 1,
+     "unit": "cup",
+     "aisle": "canned"
+    },
+    {
+     "item": "lime",
+     "qty": 1,
+     "unit": "lime",
+     "aisle": "produce"
+    },
+    {
+     "item": "avocado",
+     "qty": 2,
+     "unit": "avocado",
+     "aisle": "produce"
+    },
+    {
+     "item": "ground cumin",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "chili powder",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "olive oil",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Heat the oven to 425°F. Roast cubed sweet potatoes with oil, cumin and chili powder for 25 minutes.",
+    "Cook the rice. Warm the drained beans with the corn.",
+    "Pack rice, sweet potatoes, beans and corn, and salsa into 6 containers, with a spoon of Greek yogurt as sour cream.",
+    "Add sliced avocado and lime just before eating."
+   ],
+   "photo": "sweet potato black bean",
+   "photo_must": "sweet potato|black bean",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "chickpea_spinach_curry",
+   "name": "Chickpea & Spinach Curry",
+   "tags": [
+    "vegetarian",
+    "budget",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 30,
+   "servings": 6,
+   "cost_cents": 966,
+   "kcal": 449,
+   "protein": 15,
+   "carbs": 79,
+   "fat": 9,
+   "fiber": 12,
+   "ingredients": [
+    {
+     "item": "canned chickpeas (15 oz)",
+     "qty": 3,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "crushed tomatoes (28 oz)",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "light coconut milk (13.5 oz)",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "yellow onion",
+     "qty": 1,
+     "unit": "onion",
+     "aisle": "produce"
+    },
+    {
+     "item": "garlic",
+     "qty": 4,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "fresh ginger (grated)",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "produce"
+    },
+    {
+     "item": "curry powder",
+     "qty": 3,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "baby spinach",
+     "qty": 5,
+     "unit": "oz",
+     "aisle": "produce"
+    },
+    {
+     "item": "long-grain white rice",
+     "qty": 1.5,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    }
+   ],
+   "steps": [
+    "Cook the rice. Soften the onion 5 minutes; add garlic, ginger and curry powder.",
+    "Add the drained chickpeas, crushed tomatoes and coconut milk; simmer 15 minutes.",
+    "Stir in the spinach and season with salt.",
+    "Serve over rice."
+   ],
+   "photo": "chickpea curry",
+   "photo_must": "chickpea|chana",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "peanut_tofu_stir_fry",
+   "name": "Peanut Tofu & Veggie Stir-Fry",
+   "tags": [
+    "vegetarian",
+    "budget",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 30,
+   "servings": 5,
+   "cost_cents": 1172,
+   "kcal": 552,
+   "protein": 28,
+   "carbs": 74,
+   "fat": 17,
+   "fiber": 8,
+   "ingredients": [
+    {
+     "item": "extra-firm tofu (14 oz)",
+     "qty": 2,
+     "unit": "block",
+     "aisle": "produce"
+    },
+    {
+     "item": "broccoli",
+     "qty": 1,
+     "unit": "lb",
+     "aisle": "produce"
+    },
+    {
+     "item": "bell pepper",
+     "qty": 2,
+     "unit": "pepper",
+     "aisle": "produce"
+    },
+    {
+     "item": "carrots",
+     "qty": 2,
+     "unit": "carrot",
+     "aisle": "produce"
+    },
+    {
+     "item": "peanut butter",
+     "qty": 4,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "low-sodium soy sauce",
+     "qty": 3,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "honey",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "lime",
+     "qty": 1,
+     "unit": "lime",
+     "aisle": "produce"
+    },
+    {
+     "item": "long-grain white rice",
+     "qty": 1.5,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "cornstarch",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "baking"
+    },
+    {
+     "item": "garlic",
+     "qty": 3,
+     "unit": "clove",
+     "aisle": "produce"
+    }
+   ],
+   "steps": [
+    "Cook the rice. Press the tofu dry, cube it, and toss with the cornstarch.",
+    "Fry the tofu in a non-stick pan until golden on all sides, about 10 minutes.",
+    "Stir-fry the vegetables and garlic 5 minutes.",
+    "Whisk peanut butter, soy sauce, honey, lime juice and 1/4 cup hot water; toss everything and pack over rice."
+   ],
+   "photo": "tofu stir fry",
+   "photo_must": "tofu",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "spanish_chickpeas_rice",
+   "name": "Spanish Chickpeas & Rice",
+   "tags": [
+    "vegetarian",
+    "budget",
+    "classic prep"
+   ],
+   "minutes": 40,
+   "servings": 6,
+   "cost_cents": 888,
+   "kcal": 386,
+   "protein": 14,
+   "carbs": 71,
+   "fat": 5,
+   "fiber": 10,
+   "ingredients": [
+    {
+     "item": "canned chickpeas (15 oz)",
+     "qty": 2,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "long-grain white rice",
+     "qty": 1.5,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "canned diced tomatoes (14.5 oz)",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "yellow onion",
+     "qty": 1,
+     "unit": "onion",
+     "aisle": "produce"
+    },
+    {
+     "item": "bell pepper",
+     "qty": 1,
+     "unit": "pepper",
+     "aisle": "produce"
+    },
+    {
+     "item": "smoked paprika",
+     "qty": 2,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "low-sodium broth",
+     "qty": 3,
+     "unit": "cup",
+     "aisle": "canned"
+    },
+    {
+     "item": "frozen peas (12 oz)",
+     "qty": 1,
+     "unit": "bag",
+     "aisle": "frozen"
+    },
+    {
+     "item": "garlic",
+     "qty": 3,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "olive oil",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Soften the onion and pepper in the oil 5 minutes; add garlic and smoked paprika.",
+    "Stir in the rice to coat, then the tomatoes, chickpeas and broth.",
+    "Cover and simmer on low 20 minutes.",
+    "Stir in the peas, rest 5 minutes covered, and portion into 6."
+   ],
+   "photo": "spanish rice chickpeas",
+   "photo_must": "rice|chickpea|paella",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "veggie_egg_fried_rice",
+   "name": "Veggie Egg Fried Rice",
+   "tags": [
+    "vegetarian",
+    "budget",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 20,
+   "servings": 5,
+   "cost_cents": 599,
+   "kcal": 477,
+   "protein": 18,
+   "carbs": 80,
+   "fat": 9,
+   "fiber": 7,
+   "ingredients": [
+    {
+     "item": "long-grain white rice",
+     "qty": 2,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "eggs",
+     "qty": 6,
+     "unit": "egg",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "frozen mixed vegetables (12 oz)",
+     "qty": 2,
+     "unit": "bag",
+     "aisle": "frozen"
+    },
+    {
+     "item": "low-sodium soy sauce",
+     "qty": 4,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "green onions",
+     "qty": 1,
+     "unit": "bunch",
+     "aisle": "produce"
+    },
+    {
+     "item": "garlic",
+     "qty": 3,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "toasted sesame oil",
+     "qty": 2,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Cook the rice ahead and let it cool.",
+    "Scramble the eggs in a hot pan and push them aside.",
+    "Stir-fry the frozen vegetables and garlic 4 minutes.",
+    "Add the rice, soy sauce and sesame oil; fry 4 minutes and finish with green onions."
+   ],
+   "photo": "egg fried rice",
+   "photo_must": "fried rice",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "greek_chickpea_quinoa_jars",
+   "name": "Greek Chickpea Quinoa Salad Jars",
+   "tags": [
+    "vegetarian",
+    "budget",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 25,
+   "servings": 5,
+   "cost_cents": 1143,
+   "kcal": 421,
+   "protein": 16,
+   "carbs": 52,
+   "fat": 18,
+   "fiber": 10,
+   "ingredients": [
+    {
+     "item": "quinoa",
+     "qty": 1,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "canned chickpeas (15 oz)",
+     "qty": 2,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "cucumber",
+     "qty": 1,
+     "unit": "cucumber",
+     "aisle": "produce"
+    },
+    {
+     "item": "cherry tomatoes",
+     "qty": 1,
+     "unit": "pint",
+     "aisle": "produce"
+    },
+    {
+     "item": "red onion",
+     "qty": 0.5,
+     "unit": "onion",
+     "aisle": "produce"
+    },
+    {
+     "item": "crumbled feta",
+     "qty": 4,
+     "unit": "oz",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "lemon",
+     "qty": 1,
+     "unit": "lemon",
+     "aisle": "produce"
+    },
+    {
+     "item": "olive oil",
+     "qty": 3,
+     "unit": "tbsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "dried oregano",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Cook the quinoa in 2 cups water for 15 minutes; cool.",
+    "Whisk lemon juice, olive oil, oregano, salt and pepper in the bottom of 5 jars.",
+    "Layer chickpeas, cucumber, red onion, tomatoes, quinoa and feta.",
+    "Shake into a bowl to eat. Keeps 4 days."
+   ],
+   "photo": "quinoa salad",
+   "photo_must": "quinoa|chickpea salad",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "white_bean_kale_soup",
+   "name": "White Bean & Kale Soup",
+   "tags": [
+    "vegetarian",
+    "budget",
+    "classic prep"
+   ],
+   "minutes": 35,
+   "servings": 5,
+   "cost_cents": 1244,
+   "kcal": 311,
+   "protein": 21,
+   "carbs": 53,
+   "fat": 3,
+   "fiber": 13,
+   "ingredients": [
+    {
+     "item": "canned white beans (15 oz)",
+     "qty": 4,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "kale",
+     "qty": 1,
+     "unit": "bunch",
+     "aisle": "produce"
+    },
+    {
+     "item": "carrots",
+     "qty": 2,
+     "unit": "carrot",
+     "aisle": "produce"
+    },
+    {
+     "item": "yellow onion",
+     "qty": 1,
+     "unit": "onion",
+     "aisle": "produce"
+    },
+    {
+     "item": "garlic",
+     "qty": 4,
+     "unit": "clove",
+     "aisle": "produce"
+    },
+    {
+     "item": "canned diced tomatoes (14.5 oz)",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "low-sodium broth",
+     "qty": 6,
+     "unit": "cup",
+     "aisle": "canned"
+    },
+    {
+     "item": "grated parmesan",
+     "qty": 4,
+     "unit": "tbsp",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "Italian seasoning",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Soften the onion and carrots 6 minutes; add garlic and Italian seasoning.",
+    "Add the beans, tomatoes and broth; simmer 15 minutes. Mash a few beans to thicken.",
+    "Add the chopped kale for 5 minutes.",
+    "Serve with parmesan on top."
+   ],
+   "photo": "white bean soup kale",
+   "photo_must": "bean soup|kale",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "black_bean_quesadillas",
+   "name": "Black Bean & Spinach Quesadillas",
+   "tags": [
+    "vegetarian",
+    "quick"
+   ],
+   "minutes": 20,
+   "servings": 4,
+   "cost_cents": 1014,
+   "kcal": 602,
+   "protein": 28,
+   "carbs": 78,
+   "fat": 22,
+   "fiber": 17,
+   "ingredients": [
+    {
+     "item": "canned black beans (15 oz)",
+     "qty": 2,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "frozen corn (12 oz)",
+     "qty": 0.5,
+     "unit": "bag",
+     "aisle": "frozen"
+    },
+    {
+     "item": "shredded cheddar",
+     "qty": 6,
+     "unit": "oz",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "whole wheat tortillas (8 in)",
+     "qty": 8,
+     "unit": "tortilla",
+     "aisle": "bakery"
+    },
+    {
+     "item": "salsa",
+     "qty": 1,
+     "unit": "cup",
+     "aisle": "canned"
+    },
+    {
+     "item": "baby spinach",
+     "qty": 3,
+     "unit": "oz",
+     "aisle": "produce"
+    },
+    {
+     "item": "ground cumin",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    }
+   ],
+   "steps": [
+    "Mash half the beans with cumin, then stir in the rest with the corn and chopped spinach.",
+    "Spread on 4 tortillas, top with cheese, and close with the other 4.",
+    "Toast in a dry pan 3 minutes a side until golden and melted.",
+    "Cut into wedges and pack with salsa."
+   ],
+   "photo": "quesadilla",
+   "photo_must": "quesadilla",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "lentil_sloppy_joes",
+   "name": "Lentil Sloppy Joes",
+   "tags": [
+    "vegetarian",
+    "budget",
+    "classic prep"
+   ],
+   "minutes": 35,
+   "servings": 6,
+   "cost_cents": 713,
+   "kcal": 369,
+   "protein": 19,
+   "carbs": 68,
+   "fat": 3,
+   "fiber": 11,
+   "ingredients": [
+    {
+     "item": "brown lentils (dry)",
+     "qty": 1.5,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "yellow onion",
+     "qty": 1,
+     "unit": "onion",
+     "aisle": "produce"
+    },
+    {
+     "item": "bell pepper",
+     "qty": 1,
+     "unit": "pepper",
+     "aisle": "produce"
+    },
+    {
+     "item": "tomato sauce (15 oz)",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "honey",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "Dijon mustard",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    },
+    {
+     "item": "chili powder",
+     "qty": 2,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "whole wheat buns",
+     "qty": 6,
+     "unit": "bun",
+     "aisle": "bakery"
+    },
+    {
+     "item": "garlic",
+     "qty": 2,
+     "unit": "clove",
+     "aisle": "produce"
+    }
+   ],
+   "steps": [
+    "Simmer the lentils in 3 cups water 20 minutes until tender; drain.",
+    "Soften the onion and pepper 5 minutes with the garlic.",
+    "Add the lentils, tomato sauce, honey, mustard and chili powder; simmer 10 minutes until thick.",
+    "Pack with buns on the side."
+   ],
+   "photo": "sloppy joe",
+   "photo_must": "sloppy",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "pasta_fagioli",
+   "name": "Pasta e Fagioli",
+   "tags": [
+    "vegetarian",
+    "budget",
+    "classic prep"
+   ],
+   "minutes": 35,
+   "servings": 6,
+   "cost_cents": 1000,
+   "kcal": 293,
+   "protein": 17,
+   "carbs": 53,
+   "fat": 3,
+   "fiber": 10,
+   "ingredients": [
+    {
+     "item": "whole wheat pasta",
+     "qty": 0.5,
+     "unit": "lb",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "canned white beans (15 oz)",
+     "qty": 2,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "canned diced tomatoes (14.5 oz)",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "carrots",
+     "qty": 2,
+     "unit": "carrot",
+     "aisle": "produce"
+    },
+    {
+     "item": "celery",
+     "qty": 2,
+     "unit": "stalk",
+     "aisle": "produce"
+    },
+    {
+     "item": "yellow onion",
+     "qty": 1,
+     "unit": "onion",
+     "aisle": "produce"
+    },
+    {
+     "item": "low-sodium broth",
+     "qty": 6,
+     "unit": "cup",
+     "aisle": "canned"
+    },
+    {
+     "item": "baby spinach",
+     "qty": 3,
+     "unit": "oz",
+     "aisle": "produce"
+    },
+    {
+     "item": "grated parmesan",
+     "qty": 4,
+     "unit": "tbsp",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "garlic",
+     "qty": 3,
+     "unit": "clove",
+     "aisle": "produce"
+    }
+   ],
+   "steps": [
+    "Soften the onion, carrots and celery 6 minutes; add garlic.",
+    "Add the beans, tomatoes and broth; simmer 10 minutes.",
+    "Add the pasta and cook 9 minutes, then the spinach.",
+    "Top with parmesan; add a splash of water when reheating."
+   ],
+   "photo": "pasta e fagioli",
+   "photo_must": "fagioli|bean soup",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "spinach_baked_ziti",
+   "name": "Cottage Cheese & Spinach Baked Ziti",
+   "tags": [
+    "vegetarian",
+    "budget",
+    "classic prep"
+   ],
+   "minutes": 45,
+   "servings": 8,
+   "cost_cents": 1230,
+   "kcal": 411,
+   "protein": 28,
+   "carbs": 54,
+   "fat": 9,
+   "fiber": 8,
+   "ingredients": [
+    {
+     "item": "whole wheat pasta",
+     "qty": 1,
+     "unit": "lb",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "marinara sauce (24 oz)",
+     "qty": 1.5,
+     "unit": "jar",
+     "aisle": "canned"
+    },
+    {
+     "item": "low-fat cottage cheese",
+     "qty": 3,
+     "unit": "cup",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "shredded part-skim mozzarella",
+     "qty": 8,
+     "unit": "oz",
+     "aisle": "dairy & eggs"
+    },
+    {
+     "item": "baby spinach",
+     "qty": 5,
+     "unit": "oz",
+     "aisle": "produce"
+    },
+    {
+     "item": "Italian seasoning",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "eggs",
+     "qty": 1,
+     "unit": "egg",
+     "aisle": "dairy & eggs"
+    }
+   ],
+   "steps": [
+    "Heat the oven to 375°F. Boil the pasta 2 minutes short of done.",
+    "Stir the cottage cheese with the egg, chopped spinach and Italian seasoning.",
+    "Layer pasta, marinara, the cottage cheese mix and mozzarella in a 9x13 dish.",
+    "Bake 25 minutes until bubbling. Cut into 8."
+   ],
+   "photo": "baked ziti",
+   "photo_must": "ziti|baked pasta",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "turkey_quinoa_skillet",
+   "name": "Turkey, Zucchini & Quinoa Skillet",
+   "tags": [
+    "high-protein",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 30,
+   "servings": 5,
+   "cost_cents": 1320,
+   "kcal": 383,
+   "protein": 34,
+   "carbs": 32,
+   "fat": 14,
+   "fiber": 5,
+   "ingredients": [
+    {
+     "item": "lean ground turkey (93%)",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "quinoa",
+     "qty": 1,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "zucchini",
+     "qty": 2,
+     "unit": "zucchini",
+     "aisle": "produce"
+    },
+    {
+     "item": "canned diced tomatoes (14.5 oz)",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "yellow onion",
+     "qty": 1,
+     "unit": "onion",
+     "aisle": "produce"
+    },
+    {
+     "item": "low-sodium broth",
+     "qty": 2,
+     "unit": "cup",
+     "aisle": "canned"
+    },
+    {
+     "item": "ground cumin",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "smoked paprika",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "garlic",
+     "qty": 2,
+     "unit": "clove",
+     "aisle": "produce"
+    }
+   ],
+   "steps": [
+    "Brown the turkey with onion and garlic.",
+    "Add the rinsed quinoa, tomatoes, broth and spices; cover and simmer 15 minutes.",
+    "Stir in diced zucchini, cover, and cook 5 more minutes.",
+    "Portion into 5."
+   ],
+   "photo": "quinoa skillet",
+   "photo_must": "quinoa",
+   "cost_note": "estimate"
+  },
+  {
+   "id": "chicken_quinoa_bowls",
+   "name": "Herby Lemon Chicken Quinoa Bowls",
+   "tags": [
+    "high-protein",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 30,
+   "servings": 5,
+   "cost_cents": 1680,
+   "kcal": 461,
+   "protein": 45,
+   "carbs": 29,
+   "fat": 18,
+   "fiber": 4,
+   "ingredients": [
+    {
+     "item": "chicken breast",
+     "qty": 1.75,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "quinoa",
+     "qty": 1,
+     "unit": "cup",
+     "aisle": "grains & pasta"
+    },
+    {
+     "item": "cherry tomatoes",
+     "qty": 1,
+     "unit": "pint",
+     "aisle": "produce"
+    },
+    {
+     "item": "cucumber",
+     "qty": 1,
+     "unit": "cucumber",
+     "aisle": "produce"
+    },
+    {
+     "item": "baby spinach",
+     "qty": 3,
+     "unit": "oz",
+     "aisle": "produce"
+    },
+    {
+     "item": "lemon",
+     "qty": 1,
+     "unit": "lemon",
+     "aisle": "produce"
+    },
+    {
+     "item": "olive oil",
+     "qty": 3,
+     "unit": "tbsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "Italian seasoning",
+     "qty": 2,
+     "unit": "tsp",
+     "aisle": "oils & spices"
+    },
+    {
+     "item": "crumbled feta",
+     "qty": 3,
+     "unit": "oz",
+     "aisle": "dairy & eggs"
+    }
+   ],
+   "steps": [
+    "Cook the quinoa. Season the chicken with Italian seasoning and 1 tablespoon oil.",
+    "Cook the chicken 6 to 7 minutes a side; rest and slice.",
+    "Whisk the rest of the oil with lemon juice, salt and pepper.",
+    "Pack spinach, quinoa, chicken, tomatoes, cucumber and feta; dress when eating."
+   ],
+   "photo": "chicken quinoa bowl",
+   "photo_must": "quinoa|chicken",
+   "cost_note": "estimate"
   }
- ]
+ ],
+ "about": "Costs use 2026 US average prices (BLS where available, store-brand otherwise) for the amount each recipe uses; nutrition from USDA FoodData Central values. Both are estimates."
 }
