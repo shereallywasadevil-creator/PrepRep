@@ -36,10 +36,17 @@
     e instanceof Missing ? `Your Local AI is still building this part of PrepRep's brain (step ${STEP[e.message]}). It switches on by itself once that step passes.` : String(e.message || e));
 
   /* ---- data ---- */
-  const S = titan.store("prepwise", {profile: null, budget: 6000, portions: 10, picks: [], plan: null, got: [],
+  const S = titan.store("prepwise", {profile: null, units: "us", budget: 6000, portions: 10, picks: [], plan: null, got: [],
     workout: {days: 3, equipment: [], minutes: 40}, free: [["Mon", "18:00", "19:30"], ["Wed", "18:00", "19:30"], ["Fri", "18:00", "19:30"], ["Sun", "10:00", "14:00"]],
     weighins: [], done: {}, prices: {}});
   let RECIPES = [], EXERCISES = [], CREDITS = {};
+  /* units: everything is stored metric (the brain works in kg and cm); people see and type pounds and feet if they like */
+  const US = () => (S.get("units") || "us") === "us";
+  const LB = 2.20462;
+  const showW = kg => US() ? Math.round(kg * LB * 10) / 10 : Math.round(kg * 10) / 10;
+  const wUnit = () => US() ? "lb" : "kg";
+  const toKg = v => US() ? +v / LB : +v;
+  const ftIn = cm => { const t = Math.round(cm / 2.54); return [Math.floor(t / 12), t % 12]; };
   const byName = n => RECIPES.find(r => r.name === n), byId = id => RECIPES.find(r => r.id === id);
   const cost = r => S.get("prices")[r.id] ?? r.cost_cents;
   const colorOf = r => COLORS[RECIPES.indexOf(r) % COLORS.length];
@@ -323,20 +330,20 @@
       catch (e) { if (!(e instanceof Missing)) top.append(oops(e, "Macros")); }
     } catch (e) { top.append(oops(e, "Your daily calories")); }
     const form = h("form", {class: "form panel", style: "margin-top:20px", novalidate: true},
-      h("label", {for: "weight"}, "Weight this morning (kg)", h("input", {id: "weight", type: "number", step: "0.1"})),
+      h("label", {for: "weight"}, `Weight this morning (${wUnit()})`, h("input", {id: "weight", type: "number", step: "0.1"})),
       h("label", {for: "eaten"}, "Calories eaten yesterday", h("input", {id: "eaten", type: "number", step: "10"})),
       h("label", {}, " ", h("button", {class: "btn", text: "Save weigh-in"})));
     form.addEventListener("submit", e => {
       e.preventDefault();
-      const v = titan.validate(form, {weight: s => +s >= 30 && +s <= 300 ? "" : "Weight in kg, 30 to 300.", eaten: s => +s >= 500 && +s <= 8000 ? "" : "A rough number, 500 to 8000."});
+      const v = titan.validate(form, {weight: s => toKg(s) >= 30 && toKg(s) <= 300 ? "" : US() ? "Weight in pounds, 66 to 660." : "Weight in kg, 30 to 300.", eaten: s => +s >= 500 && +s <= 8000 ? "" : "A rough number, 500 to 8000."});
       if (!v) return;
-      const log = S.get("weighins").filter(w => w.date !== iso(new Date())); log.push({date: iso(new Date()), weight: +v.weight, kcal: +v.eaten}); S.set("weighins", log);
+      const log = S.get("weighins").filter(w => w.date !== iso(new Date())); log.push({date: iso(new Date()), weight: Math.round(toKg(v.weight) * 100) / 100, kcal: +v.eaten}); S.set("weighins", log);
       titan.toast("Saved. Consistency beats perfection."); go("progress", null, false);
     });
     main.append(form, h("div", {class: "sec"}, h("h2", {text: "Weight trend"})), h("div", {class: "chart panel", id: "wchart"}));
     const log = S.get("weighins");
     if (log.length < 2) titan.state($("wchart"), "empty", {title: "Two weigh-ins and your trend appears here"});
-    else titan.chart($("wchart"), {type: "line", title: "Weight (kg)", data: log.slice(-30).map(w => ({label: w.date.slice(5), value: w.weight}))});
+    else titan.chart($("wchart"), {type: "line", title: `Weight (${wUnit()})`, data: log.slice(-30).map(w => ({label: w.date.slice(5), value: showW(w.weight)}))});
     main.append(h("p", {class: "muted", text: log.length >= 7 ? "A week of data: your calories now use your real burn." : `${7 - log.length} more weigh-in${7 - log.length === 1 ? "" : "s"} until PrepRep learns your real burn.`}));
   };
 
@@ -349,11 +356,18 @@
       h("label", {for: "name"}, "First name (optional)", h("input", {id: "name", value: p.name || ""})),
       h("label", {for: "sex"}, "Body (for the calorie formula)", sel("sex", [["male", "Male"], ["female", "Female"]], p.sex)),
       h("label", {for: "age"}, "Age", h("input", {id: "age", type: "number", value: p.age})),
-      h("label", {for: "height_cm"}, "Height (cm)", h("input", {id: "height_cm", type: "number", value: p.height_cm})),
-      h("label", {for: "weight_kg"}, "Weight (kg)", h("input", {id: "weight_kg", type: "number", step: "0.1", value: p.weight_kg})),
+      h("label", {for: "units"}, "Units", (() => { const u = sel("units", [["us", "Pounds, feet and inches"], ["metric", "Kilograms and centimetres"]], S.get("units") || "us");
+        u.addEventListener("change", () => { S.set("units", u.value); go("you", null, false); }); return u; })()),
+      US() ? h("label", {for: "height_ft"}, "Height", h("span", {class: "pair"},
+          h("input", {id: "height_ft", type: "number", min: "3", max: "8", value: p.height_cm ? ftIn(p.height_cm)[0] : "", "aria-label": "Feet"}), h("span", {class: "unit", text: "ft"}),
+          h("input", {id: "height_in", type: "number", min: "0", max: "11", value: p.height_cm ? ftIn(p.height_cm)[1] : "", "aria-label": "Inches"}), h("span", {class: "unit", text: "in"})))
+        : h("label", {for: "height_cm"}, "Height (cm)", h("input", {id: "height_cm", type: "number", value: p.height_cm})),
+      h("label", {for: "weight_kg"}, `Weight (${wUnit()})`, h("input", {id: "weight_kg", type: "number", step: "0.1", value: p.weight_kg ? showW(p.weight_kg) : ""})),
       h("label", {for: "goal"}, "Goal", sel("goal", [["lose", "Lose fat"], ["maintain", "Stay the same"], ["gain", "Build muscle"]], p.goal)),
       h("label", {for: "activity"}, "Daily activity", sel("activity", [["sedentary", "Mostly sitting"], ["light", "Light (some walking)"], ["moderate", "On my feet / training 3x"], ["active", "Training most days"], ["very", "Physical job + training"]], p.activity)),
-      h("label", {for: "rate"}, "If losing: how fast", sel("rate", [[0.25, "Gently (0.25 kg/wk)"], [0.5, "Steady (0.5 kg/wk)"], [0.75, "Faster (0.75 kg/wk)"]], p.rate)),
+      h("label", {for: "rate"}, "If losing: how fast", (() => { const opts = US() ? [[0.227, "Gently (0.5 lb a week)"], [0.454, "Steady (1 lb a week)"], [0.68, "Faster (1.5 lb a week)"]]
+          : [[0.25, "Gently (0.25 kg a week)"], [0.5, "Steady (0.5 kg a week)"], [0.75, "Faster (0.75 kg a week)"]];
+        const near = opts.reduce((a, o) => Math.abs(o[0] - (+p.rate || 0.5)) < Math.abs(a[0] - (+p.rate || 0.5)) ? o : a)[0]; return sel("rate", opts, near); })()),
       h("label", {for: "budget"}, "Weekly grocery budget ($)", h("input", {id: "budget", type: "number", value: S.get("budget") / 100})),
       h("label", {for: "portions"}, "Servings to prep a week", h("input", {id: "portions", type: "number", value: S.get("portions")})),
       h("label", {for: "w-days"}, "Workouts a week", sel("w-days", [1, 2, 3, 4, 5, 6].map(n => [n, `${n} day${n > 1 ? "s" : ""}`]), w.days)),
@@ -362,11 +376,14 @@
     form.addEventListener("submit", e => {
       e.preventDefault();
       const v = titan.validate(form, {age: s => +s >= 13 && +s <= 100 && Number.isInteger(+s) ? "" : "Age must be a whole number from 13 to 100.",
-        height_cm: s => +s >= 100 && +s <= 250 ? "" : "Height in cm, 100 to 250.", weight_kg: s => +s >= 30 && +s <= 300 ? "" : "Weight in kg, 30 to 300.",
+        ...(US() ? {height_ft: s => +s >= 3 && +s <= 8 && Number.isInteger(+s) ? "" : "Feet: a whole number from 3 to 8.", height_in: s => s === "" || (+s >= 0 && +s < 12) ? "" : "Inches: 0 to 11."}
+                 : {height_cm: s => +s >= 100 && +s <= 250 ? "" : "Height in cm, 100 to 250."}),
+        weight_kg: s => toKg(s) >= 30 && toKg(s) <= 300 ? "" : US() ? "Weight in pounds, 66 to 660." : "Weight in kg, 30 to 300.",
         budget: s => +s >= 5 ? "" : "At least $5.", portions: s => +s >= 1 && +s <= 21 ? "" : "1 to 21 servings."});
       if (!v) return;
       const all = {}; form.querySelectorAll("input[id], select[id]").forEach(el => { all[el.id] = el.value; });
-      S.set("profile", {name: all.name, sex: all.sex, age: +all.age, height_cm: +all.height_cm, weight_kg: +all.weight_kg, goal: all.goal, activity: all.activity, rate: +all.rate});
+      const cm = US() ? Math.round(((+all.height_ft) * 12 + (+all.height_in || 0)) * 2.54) : +all.height_cm;
+      S.set("profile", {name: all.name, sex: all.sex, age: +all.age, height_cm: cm, weight_kg: Math.round(toKg(all.weight_kg) * 10) / 10, goal: all.goal, activity: all.activity, rate: +all.rate});
       S.set("budget", Math.round(+all.budget * 100)); S.set("portions", Math.round(+all.portions));
       S.set("workout", {...S.get("workout"), days: +all["w-days"], minutes: +all["w-min"]});   // equipment is set on the Workouts tab
       titan.toast(first ? "You're all set." : "Saved"); targets().catch(() => {}); goTab("plans");
