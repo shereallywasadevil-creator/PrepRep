@@ -1,0 +1,683 @@
+{
+ "note": "Prices are rough US estimates for the whole batch; change them in Settings to match your store. Calories and protein are approximate, per serving.",
+ "recipes": [
+  {
+   "id": "turkey_chili",
+   "name": "Turkey & Black Bean Chili",
+   "tags": [
+    "high-protein",
+    "budget"
+   ],
+   "minutes": 45,
+   "servings": 6,
+   "cost_cents": 1250,
+   "kcal": 430,
+   "protein": 38,
+   "photo": "turkey chili bowl",
+   "ingredients": [
+    {
+     "item": "ground turkey",
+     "qty": 1,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "black beans",
+     "qty": 2,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "crushed tomatoes",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "onion",
+     "qty": 1,
+     "unit": "pc",
+     "aisle": "produce"
+    },
+    {
+     "item": "bell pepper",
+     "qty": 1,
+     "unit": "pc",
+     "aisle": "produce"
+    },
+    {
+     "item": "chili powder",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "spices"
+    }
+   ],
+   "cost_note": "estimate"
+  },
+  {
+   "id": "chicken_rice_bowls",
+   "name": "Chicken, Rice & Broccoli Bowls",
+   "tags": [
+    "high-protein",
+    "classic prep"
+   ],
+   "minutes": 40,
+   "servings": 5,
+   "cost_cents": 1400,
+   "kcal": 520,
+   "protein": 45,
+   "photo": "chicken rice broccoli meal prep",
+   "ingredients": [
+    {
+     "item": "chicken breast",
+     "qty": 2,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "rice",
+     "qty": 0.5,
+     "unit": "kg",
+     "aisle": "grains"
+    },
+    {
+     "item": "broccoli",
+     "qty": 2,
+     "unit": "head",
+     "aisle": "produce"
+    },
+    {
+     "item": "soy sauce",
+     "qty": 3,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    }
+   ],
+   "cost_note": "estimate"
+  },
+  {
+   "id": "egg_muffins",
+   "name": "Spinach & Cheese Egg Muffins",
+   "tags": [
+    "breakfast",
+    "vegetarian",
+    "quick"
+   ],
+   "minutes": 25,
+   "servings": 6,
+   "cost_cents": 650,
+   "kcal": 220,
+   "protein": 17,
+   "photo": "egg muffins spinach",
+   "ingredients": [
+    {
+     "item": "eggs",
+     "qty": 12,
+     "unit": "pc",
+     "aisle": "dairy"
+    },
+    {
+     "item": "spinach",
+     "qty": 1,
+     "unit": "bag",
+     "aisle": "produce"
+    },
+    {
+     "item": "shredded cheese",
+     "qty": 1,
+     "unit": "cup",
+     "aisle": "dairy"
+    }
+   ],
+   "cost_note": "estimate"
+  },
+  {
+   "id": "overnight_oats",
+   "name": "Peanut Butter Overnight Oats",
+   "tags": [
+    "breakfast",
+    "vegetarian",
+    "budget",
+    "quick"
+   ],
+   "minutes": 10,
+   "servings": 5,
+   "cost_cents": 450,
+   "kcal": 410,
+   "protein": 20,
+   "photo": "overnight oats jar",
+   "ingredients": [
+    {
+     "item": "rolled oats",
+     "qty": 0.5,
+     "unit": "kg",
+     "aisle": "grains"
+    },
+    {
+     "item": "milk",
+     "qty": 1,
+     "unit": "l",
+     "aisle": "dairy"
+    },
+    {
+     "item": "peanut butter",
+     "qty": 0.5,
+     "unit": "cup",
+     "aisle": "pantry"
+    },
+    {
+     "item": "banana",
+     "qty": 3,
+     "unit": "pc",
+     "aisle": "produce"
+    }
+   ],
+   "cost_note": "estimate"
+  },
+  {
+   "id": "lentil_curry",
+   "name": "Red Lentil Coconut Curry",
+   "tags": [
+    "vegetarian",
+    "budget"
+   ],
+   "minutes": 35,
+   "servings": 6,
+   "cost_cents": 800,
+   "kcal": 450,
+   "protein": 19,
+   "photo": "red lentil curry",
+   "ingredients": [
+    {
+     "item": "red lentils",
+     "qty": 0.5,
+     "unit": "kg",
+     "aisle": "grains"
+    },
+    {
+     "item": "coconut milk",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "crushed tomatoes",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "onion",
+     "qty": 1,
+     "unit": "pc",
+     "aisle": "produce"
+    },
+    {
+     "item": "curry powder",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "spices"
+    },
+    {
+     "item": "rice",
+     "qty": 0.4,
+     "unit": "kg",
+     "aisle": "grains"
+    }
+   ],
+   "cost_note": "estimate"
+  },
+  {
+   "id": "beef_stir_fry",
+   "name": "Beef & Veggie Stir-Fry",
+   "tags": [
+    "high-protein",
+    "quick"
+   ],
+   "minutes": 25,
+   "servings": 4,
+   "cost_cents": 1600,
+   "kcal": 540,
+   "protein": 40,
+   "photo": "beef stir fry vegetables",
+   "ingredients": [
+    {
+     "item": "flank steak",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "frozen stir-fry vegetables",
+     "qty": 1,
+     "unit": "bag",
+     "aisle": "frozen"
+    },
+    {
+     "item": "rice",
+     "qty": 0.4,
+     "unit": "kg",
+     "aisle": "grains"
+    },
+    {
+     "item": "soy sauce",
+     "qty": 3,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    }
+   ],
+   "cost_note": "estimate"
+  },
+  {
+   "id": "salmon_traybake",
+   "name": "Salmon, Potatoes & Green Beans",
+   "tags": [
+    "high-protein"
+   ],
+   "minutes": 35,
+   "servings": 4,
+   "cost_cents": 2200,
+   "kcal": 510,
+   "protein": 36,
+   "photo": "baked salmon potatoes green beans",
+   "ingredients": [
+    {
+     "item": "salmon fillets",
+     "qty": 4,
+     "unit": "pc",
+     "aisle": "seafood"
+    },
+    {
+     "item": "baby potatoes",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "produce"
+    },
+    {
+     "item": "green beans",
+     "qty": 1,
+     "unit": "lb",
+     "aisle": "produce"
+    },
+    {
+     "item": "lemon",
+     "qty": 1,
+     "unit": "pc",
+     "aisle": "produce"
+    }
+   ],
+   "cost_note": "estimate"
+  },
+  {
+   "id": "tuna_pasta",
+   "name": "Tuna Pasta Salad",
+   "tags": [
+    "budget",
+    "quick"
+   ],
+   "minutes": 20,
+   "servings": 5,
+   "cost_cents": 750,
+   "kcal": 470,
+   "protein": 30,
+   "photo": "tuna pasta salad",
+   "ingredients": [
+    {
+     "item": "pasta",
+     "qty": 0.5,
+     "unit": "kg",
+     "aisle": "grains"
+    },
+    {
+     "item": "canned tuna",
+     "qty": 3,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "sweetcorn",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "greek yogurt",
+     "qty": 1,
+     "unit": "cup",
+     "aisle": "dairy"
+    }
+   ],
+   "cost_note": "estimate"
+  },
+  {
+   "id": "burrito_bowls",
+   "name": "Chicken Burrito Bowls",
+   "tags": [
+    "high-protein",
+    "classic prep"
+   ],
+   "minutes": 40,
+   "servings": 5,
+   "cost_cents": 1450,
+   "kcal": 560,
+   "protein": 42,
+   "photo": "burrito bowl",
+   "ingredients": [
+    {
+     "item": "chicken thighs",
+     "qty": 2,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "rice",
+     "qty": 0.4,
+     "unit": "kg",
+     "aisle": "grains"
+    },
+    {
+     "item": "black beans",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "salsa",
+     "qty": 1,
+     "unit": "jar",
+     "aisle": "sauces"
+    },
+    {
+     "item": "sweetcorn",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned"
+    }
+   ],
+   "cost_note": "estimate"
+  },
+  {
+   "id": "greek_yogurt_bowls",
+   "name": "Greek Yogurt Berry Bowls",
+   "tags": [
+    "breakfast",
+    "vegetarian",
+    "high-protein",
+    "quick"
+   ],
+   "minutes": 5,
+   "servings": 5,
+   "cost_cents": 900,
+   "kcal": 300,
+   "protein": 25,
+   "photo": "greek yogurt berries granola",
+   "ingredients": [
+    {
+     "item": "greek yogurt",
+     "qty": 1,
+     "unit": "kg",
+     "aisle": "dairy"
+    },
+    {
+     "item": "frozen berries",
+     "qty": 1,
+     "unit": "bag",
+     "aisle": "frozen"
+    },
+    {
+     "item": "granola",
+     "qty": 1,
+     "unit": "bag",
+     "aisle": "pantry"
+    }
+   ],
+   "cost_note": "estimate"
+  },
+  {
+   "id": "pork_sweet_potato",
+   "name": "Pork Tenderloin & Sweet Potato",
+   "tags": [
+    "high-protein"
+   ],
+   "minutes": 40,
+   "servings": 4,
+   "cost_cents": 1300,
+   "kcal": 480,
+   "protein": 40,
+   "photo": "pork tenderloin sweet potato",
+   "ingredients": [
+    {
+     "item": "pork tenderloin",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "sweet potatoes",
+     "qty": 3,
+     "unit": "pc",
+     "aisle": "produce"
+    },
+    {
+     "item": "broccoli",
+     "qty": 1,
+     "unit": "head",
+     "aisle": "produce"
+    }
+   ],
+   "cost_note": "estimate"
+  },
+  {
+   "id": "chickpea_salad",
+   "name": "Mediterranean Chickpea Salad",
+   "tags": [
+    "vegetarian",
+    "budget",
+    "quick"
+   ],
+   "minutes": 15,
+   "servings": 4,
+   "cost_cents": 700,
+   "kcal": 380,
+   "protein": 14,
+   "photo": "chickpea salad cucumber tomato",
+   "ingredients": [
+    {
+     "item": "chickpeas",
+     "qty": 2,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "cucumber",
+     "qty": 1,
+     "unit": "pc",
+     "aisle": "produce"
+    },
+    {
+     "item": "cherry tomatoes",
+     "qty": 1,
+     "unit": "box",
+     "aisle": "produce"
+    },
+    {
+     "item": "feta",
+     "qty": 1,
+     "unit": "block",
+     "aisle": "dairy"
+    }
+   ],
+   "cost_note": "estimate"
+  },
+  {
+   "id": "turkey_meatballs",
+   "name": "Turkey Meatballs & Pasta",
+   "tags": [
+    "high-protein",
+    "budget"
+   ],
+   "minutes": 40,
+   "servings": 5,
+   "cost_cents": 1100,
+   "kcal": 550,
+   "protein": 38,
+   "photo": "meatballs pasta tomato sauce",
+   "ingredients": [
+    {
+     "item": "ground turkey",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "meat"
+    },
+    {
+     "item": "pasta",
+     "qty": 0.5,
+     "unit": "kg",
+     "aisle": "grains"
+    },
+    {
+     "item": "marinara sauce",
+     "qty": 1,
+     "unit": "jar",
+     "aisle": "sauces"
+    },
+    {
+     "item": "eggs",
+     "qty": 1,
+     "unit": "pc",
+     "aisle": "dairy"
+    }
+   ],
+   "cost_note": "estimate"
+  },
+  {
+   "id": "black_bean_tacos",
+   "name": "Black Bean & Sweet Potato Tacos",
+   "tags": [
+    "vegetarian",
+    "budget"
+   ],
+   "minutes": 30,
+   "servings": 4,
+   "cost_cents": 750,
+   "kcal": 420,
+   "protein": 15,
+   "photo": "sweet potato black bean tacos",
+   "ingredients": [
+    {
+     "item": "black beans",
+     "qty": 2,
+     "unit": "can",
+     "aisle": "canned"
+    },
+    {
+     "item": "sweet potatoes",
+     "qty": 2,
+     "unit": "pc",
+     "aisle": "produce"
+    },
+    {
+     "item": "tortillas",
+     "qty": 1,
+     "unit": "pack",
+     "aisle": "bakery"
+    },
+    {
+     "item": "salsa",
+     "qty": 1,
+     "unit": "jar",
+     "aisle": "sauces"
+    }
+   ],
+   "cost_note": "estimate"
+  },
+  {
+   "id": "shrimp_fried_rice",
+   "name": "Shrimp Fried Rice",
+   "tags": [
+    "high-protein",
+    "quick"
+   ],
+   "minutes": 25,
+   "servings": 4,
+   "cost_cents": 1500,
+   "kcal": 470,
+   "protein": 32,
+   "photo": "shrimp fried rice",
+   "ingredients": [
+    {
+     "item": "frozen shrimp",
+     "qty": 1,
+     "unit": "lb",
+     "aisle": "frozen"
+    },
+    {
+     "item": "rice",
+     "qty": 0.4,
+     "unit": "kg",
+     "aisle": "grains"
+    },
+    {
+     "item": "frozen peas and carrots",
+     "qty": 1,
+     "unit": "bag",
+     "aisle": "frozen"
+    },
+    {
+     "item": "eggs",
+     "qty": 3,
+     "unit": "pc",
+     "aisle": "dairy"
+    },
+    {
+     "item": "soy sauce",
+     "qty": 3,
+     "unit": "tbsp",
+     "aisle": "sauces"
+    }
+   ],
+   "cost_note": "estimate"
+  },
+  {
+   "id": "cottage_cheese_wraps",
+   "name": "Chicken & Hummus Wraps",
+   "tags": [
+    "high-protein",
+    "quick"
+   ],
+   "minutes": 15,
+   "servings": 4,
+   "cost_cents": 1000,
+   "kcal": 430,
+   "protein": 35,
+   "photo": "chicken wrap hummus",
+   "ingredients": [
+    {
+     "item": "rotisserie chicken",
+     "qty": 1,
+     "unit": "pc",
+     "aisle": "deli"
+    },
+    {
+     "item": "tortillas",
+     "qty": 1,
+     "unit": "pack",
+     "aisle": "bakery"
+    },
+    {
+     "item": "hummus",
+     "qty": 1,
+     "unit": "tub",
+     "aisle": "deli"
+    },
+    {
+     "item": "spinach",
+     "qty": 1,
+     "unit": "bag",
+     "aisle": "produce"
+    }
+   ],
+   "cost_note": "estimate"
+  }
+ ]
+}

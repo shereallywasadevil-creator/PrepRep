@@ -1,0 +1,8 @@
+bin/
+obj/
+out/
+dist/
+.titan/
+__pycache__/
+.vs/
+src/PrepRep/embed/

@@ -1,0 +1,58 @@
+name: Build PrepRep
+
+# Builds "PrepRep.exe" on GitHub's Windows machines. Every successful push to main publishes a numbered release.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Tests
+        run: python -m unittest discover -s tests -v
+      - name: Free-licensed food photos (Wikimedia Commons, with credits)
+        run: python tools/fetch_photos.py
+      - name: Python to carry inside the app (official embeddable package from python.org)
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force src/PrepRep/embed | Out-Null
+          Invoke-WebRequest https://www.python.org/ftp/python/3.12.7/python-3.12.7-embed-amd64.zip -OutFile src/PrepRep/embed/python.zip
+          if ((Get-Item src/PrepRep/embed/python.zip).Length -lt 5mb) { throw "Python download looks wrong" }
+      - name: Build single-file exe
+        shell: pwsh
+        run: |
+          dotnet publish src/PrepRep/PrepRep.csproj -c Release -r win-x64 --self-contained true `
+            -p:PublishSingleFile=true -p:IncludeNativeLibrariesForSelfExtract=true -p:EnableCompressionInSingleFile=true `
+            -p:Version="0.1.$env:GITHUB_RUN_NUMBER" -o out
+          New-Item -ItemType Directory -Force dist | Out-Null
+          Copy-Item "out/PrepRep.exe" "dist/PrepRep.exe"
+          $h = (Get-FileHash "dist/PrepRep.exe" -Algorithm SHA256).Hash.ToLower()
+          "$h  PrepRep.exe" | Out-File dist/SHA256SUMS.txt -Encoding ascii
+      - uses: actions/upload-artifact@v4
+        with:
+          name: PrepRep
+          path: dist/
+      - name: Publish release
+        if: github.event_name == 'push'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v0.1.${{ github.run_number }}
+          name: PrepRep 0.1.${{ github.run_number }}
+          target_commitish: ${{ github.sha }}
+          make_latest: true
+          files: |
+            dist/PrepRep.exe
+            dist/SHA256SUMS.txt

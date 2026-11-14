@@ -1,0 +1,12 @@
+<Window x:Class="PrepRep.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
+        Title="PrepRep" Width="1280" Height="820" MinWidth="720" MinHeight="520"
+        WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="#0F1416" Icon="app.ico">
+    <Grid>
+        <TextBlock x:Name="Loading" Text="Opening PrepRep…" Foreground="#9FB0B8" FontSize="16"
+                   HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Segoe UI Variable Text, Segoe UI"/>
+        <wv2:WebView2 x:Name="Web" DefaultBackgroundColor="#0F1416"/>
+    </Grid>
+</Window>
