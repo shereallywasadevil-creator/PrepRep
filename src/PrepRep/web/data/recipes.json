@@ -13,7 +13,7 @@
    "cost_cents": 1250,
    "kcal": 430,
    "protein": 38,
-   "photo": "turkey chili bowl",
+   "photo": "chili con carne",
    "ingredients": [
     {
      "item": "ground turkey",
@@ -52,7 +52,8 @@
      "aisle": "spices"
     }
    ],
-   "cost_note": "estimate"
+   "cost_note": "estimate",
+   "photo_must": "chili"
   },
   {
    "id": "chicken_rice_bowls",
@@ -66,7 +67,7 @@
    "cost_cents": 1400,
    "kcal": 520,
    "protein": 45,
-   "photo": "chicken rice broccoli meal prep",
+   "photo": "chicken rice broccoli",
    "ingredients": [
     {
      "item": "chicken breast",
@@ -93,7 +94,8 @@
      "aisle": "sauces"
     }
    ],
-   "cost_note": "estimate"
+   "cost_note": "estimate",
+   "photo_must": "chicken"
   },
   {
    "id": "egg_muffins",
@@ -108,7 +110,7 @@
    "cost_cents": 650,
    "kcal": 220,
    "protein": 17,
-   "photo": "egg muffins spinach",
+   "photo": "egg muffins",
    "ingredients": [
     {
      "item": "eggs",
@@ -129,7 +131,8 @@
      "aisle": "dairy"
     }
    ],
-   "cost_note": "estimate"
+   "cost_note": "estimate",
+   "photo_must": "egg"
   },
   {
    "id": "overnight_oats",
@@ -145,7 +148,7 @@
    "cost_cents": 450,
    "kcal": 410,
    "protein": 20,
-   "photo": "overnight oats jar",
+   "photo": "overnight oats",
    "ingredients": [
     {
      "item": "rolled oats",
@@ -172,7 +175,8 @@
      "aisle": "produce"
     }
    ],
-   "cost_note": "estimate"
+   "cost_note": "estimate",
+   "photo_must": "oat"
   },
   {
    "id": "lentil_curry",
@@ -225,7 +229,8 @@
      "aisle": "grains"
     }
    ],
-   "cost_note": "estimate"
+   "cost_note": "estimate",
+   "photo_must": "lentil|dal|dhal"
   },
   {
    "id": "beef_stir_fry",
@@ -239,7 +244,7 @@
    "cost_cents": 1600,
    "kcal": 540,
    "protein": 40,
-   "photo": "beef stir fry vegetables",
+   "photo": "beef stir fry",
    "ingredients": [
     {
      "item": "flank steak",
@@ -266,7 +271,8 @@
      "aisle": "sauces"
     }
    ],
-   "cost_note": "estimate"
+   "cost_note": "estimate",
+   "photo_must": "stir"
   },
   {
    "id": "salmon_traybake",
@@ -279,7 +285,7 @@
    "cost_cents": 2200,
    "kcal": 510,
    "protein": 36,
-   "photo": "baked salmon potatoes green beans",
+   "photo": "baked salmon",
    "ingredients": [
     {
      "item": "salmon fillets",
@@ -306,7 +312,8 @@
      "aisle": "produce"
     }
    ],
-   "cost_note": "estimate"
+   "cost_note": "estimate",
+   "photo_must": "salmon"
   },
   {
    "id": "tuna_pasta",
@@ -347,7 +354,8 @@
      "aisle": "dairy"
     }
    ],
-   "cost_note": "estimate"
+   "cost_note": "estimate",
+   "photo_must": "pasta"
   },
   {
    "id": "burrito_bowls",
@@ -394,7 +402,8 @@
      "aisle": "canned"
     }
    ],
-   "cost_note": "estimate"
+   "cost_note": "estimate",
+   "photo_must": "burrito"
   },
   {
    "id": "greek_yogurt_bowls",
@@ -410,7 +419,7 @@
    "cost_cents": 900,
    "kcal": 300,
    "protein": 25,
-   "photo": "greek yogurt berries granola",
+   "photo": "yogurt berries",
    "ingredients": [
     {
      "item": "greek yogurt",
@@ -431,7 +440,8 @@
      "aisle": "pantry"
     }
    ],
-   "cost_note": "estimate"
+   "cost_note": "estimate",
+   "photo_must": "yogurt|yoghurt"
   },
   {
    "id": "pork_sweet_potato",
@@ -444,7 +454,7 @@
    "cost_cents": 1300,
    "kcal": 480,
    "protein": 40,
-   "photo": "pork tenderloin sweet potato",
+   "photo": "pork tenderloin",
    "ingredients": [
     {
      "item": "pork tenderloin",
@@ -465,7 +475,8 @@
      "aisle": "produce"
     }
    ],
-   "cost_note": "estimate"
+   "cost_note": "estimate",
+   "photo_must": "pork"
   },
   {
    "id": "chickpea_salad",
@@ -480,7 +491,7 @@
    "cost_cents": 700,
    "kcal": 380,
    "protein": 14,
-   "photo": "chickpea salad cucumber tomato",
+   "photo": "chickpea salad",
    "ingredients": [
     {
      "item": "chickpeas",
@@ -507,7 +518,8 @@
      "aisle": "dairy"
     }
    ],
-   "cost_note": "estimate"
+   "cost_note": "estimate",
+   "photo_must": "chickpea"
   },
   {
    "id": "turkey_meatballs",
@@ -521,7 +533,7 @@
    "cost_cents": 1100,
    "kcal": 550,
    "protein": 38,
-   "photo": "meatballs pasta tomato sauce",
+   "photo": "spaghetti meatballs",
    "ingredients": [
     {
      "item": "ground turkey",
@@ -548,7 +560,8 @@
      "aisle": "dairy"
     }
    ],
-   "cost_note": "estimate"
+   "cost_note": "estimate",
+   "photo_must": "meatball"
   },
   {
    "id": "black_bean_tacos",
@@ -562,7 +575,7 @@
    "cost_cents": 750,
    "kcal": 420,
    "protein": 15,
-   "photo": "sweet potato black bean tacos",
+   "photo": "bean tacos",
    "ingredients": [
     {
      "item": "black beans",
@@ -589,7 +602,8 @@
      "aisle": "sauces"
     }
    ],
-   "cost_note": "estimate"
+   "cost_note": "estimate",
+   "photo_must": "taco"
   },
   {
    "id": "shrimp_fried_rice",
@@ -636,7 +650,8 @@
      "aisle": "sauces"
     }
    ],
-   "cost_note": "estimate"
+   "cost_note": "estimate",
+   "photo_must": "fried rice"
   },
   {
    "id": "cottage_cheese_wraps",
@@ -650,7 +665,7 @@
    "cost_cents": 1000,
    "kcal": 430,
    "protein": 35,
-   "photo": "chicken wrap hummus",
+   "photo": "chicken wrap",
    "ingredients": [
     {
      "item": "rotisserie chicken",
@@ -677,7 +692,8 @@
      "aisle": "produce"
     }
    ],
-   "cost_note": "estimate"
+   "cost_note": "estimate",
+   "photo_must": "wrap"
   }
  ]
 }

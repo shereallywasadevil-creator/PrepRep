@@ -9,6 +9,7 @@ import re
 import sys
 import time
 import urllib.parse
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -19,12 +20,18 @@ UA = {"User-Agent": "PrepRepBuild/1.0 (personal app; github.com/shereallywasadev
 OK = re.compile(r"^(public domain|pd|cc0|cc by(-sa)? [0-9.]+)", re.I)
 
 
-def get(url):
-    with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
-        return r.read()
+def get(url, tries=5):
+    for i in range(tries):                         # Wikimedia asks callers to slow down with 429: wait and retry
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
+                return r.read()
+        except urllib.error.HTTPError as e:
+            if e.code != 429 or i == tries - 1:
+                raise
+            time.sleep(int(e.headers.get("Retry-After") or 0) or 5 * (i + 1))
 
 
-def search(query):
+def search(query, must):
     q = {"action": "query", "format": "json", "generator": "search", "gsrsearch": f"{query} filetype:bitmap", "gsrnamespace": 6,
          "gsrlimit": 15, "prop": "imageinfo", "iiprop": "url|extmetadata|size", "iiurlwidth": 720}
     data = json.loads(get(API + "?" + urllib.parse.urlencode(q)))
@@ -33,6 +40,8 @@ def search(query):
         info = (p.get("imageinfo") or [{}])[0]
         meta = info.get("extmetadata", {})
         lic = (meta.get("LicenseShortName") or {}).get("value", "")
+        if not re.search(must, p.get("title", ""), re.I):
+            continue                                   # the file name must actually name the dish
         if not OK.match(lic.strip()) or info.get("width", 0) < 600 or info.get("width", 0) < info.get("height", 1) * 0.9:
             continue                                   # free licence, big enough, landscape-ish for a card
         artist = re.sub(r"<[^>]+>", "", html.unescape((meta.get("Artist") or {}).get("value", "Unknown"))).strip()
@@ -47,7 +56,7 @@ def main():
     credits, got = {}, 0
     for r in recipes:
         try:
-            hit = search(r["photo"]) or search(r["name"])
+            hit = search(r["photo"], r["photo_must"]) or search(r["name"], r["photo_must"])
             if hit:
                 (OUT / f"{r['id']}.jpg").write_bytes(get(hit["thumb"]))
                 credits[r["id"]] = {k: hit[k] for k in ("artist", "license", "page", "title")}
@@ -57,7 +66,7 @@ def main():
                 print(f"none {r['id']}")
         except Exception as e:
             print(f"skip {r['id']}: {e}")
-        time.sleep(0.5)                                # be polite to Wikimedia
+        time.sleep(2)                                  # be polite to Wikimedia
     (OUT / "credits.json").write_text(json.dumps(credits, indent=1), encoding="utf-8")
     print(f"{got} of {len(recipes)} recipes have photos")
 
