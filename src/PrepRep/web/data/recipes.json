@@ -132,8 +132,8 @@
     "Whisk the eggs with garlic powder, salt and pepper, pour over the vegetables, and top with cheddar.",
     "Bake 20 to 22 minutes until set in the middle. Cool, then refrigerate 3 per serving."
    ],
-   "photo": "egg muffin cups",
-   "photo_must": "frittata|egg (muffin|cup|bite)",
+   "photo": "frittata",
+   "photo_must": "frittata|egg muffin|egg bake|quiche",
    "cost_note": "estimate",
    "photo_not": "mcmuffin"
   },
@@ -270,10 +270,10 @@
     "Stir in the oats and pour into the dish.",
     "Bake about 30 minutes until golden and set. Cut into 6 squares."
    ],
-   "photo": "baked oatmeal",
-   "photo_must": "baked oat|oatmeal",
+   "photo": "oatmeal banana",
+   "photo_must": "oat(meal|s)?\\b|porridge",
    "cost_note": "estimate",
-   "photo_not": "cookie"
+   "photo_not": "cookie|bar\\b"
   },
   {
    "id": "sweet_potato_hash",
@@ -402,10 +402,10 @@
     "Layer yogurt, berries, oats and chia in 5 jars, with a spoon of peanut butter on top.",
     "Refrigerate. Keep the oats on top so they stay a bit crunchy."
    ],
-   "photo": "yogurt parfait berries",
-   "photo_must": "yogh?urt",
+   "photo": "yogurt berries granola",
+   "photo_must": "yogh?urt|parfait",
    "cost_note": "estimate",
-   "photo_not": "glac"
+   "photo_not": "glac|frozen"
   },
   {
    "id": "chicken_burrito_bowls",
@@ -614,8 +614,8 @@
     "Pour in the sauce and simmer 5 minutes until sticky and the chicken reaches 165°F.",
     "Steam the green beans. Pack rice, chicken with sauce, and green beans into 6 containers."
    ],
-   "photo": "honey garlic chicken thighs",
-   "photo_must": "chicken",
+   "photo": "glazed chicken thighs",
+   "photo_must": "chicken (thigh|breast)|glazed chicken|garlic chicken",
    "cost_note": "estimate",
    "photo_not": "wing"
   },
@@ -1017,10 +1017,10 @@
     "Add the chicken and green beans to the pan and roast 18 to 20 minutes.",
     "Squeeze the lemons over everything and divide into 5 containers."
    ],
-   "photo": "lemon chicken potatoes",
-   "photo_must": "lemon.*chicken|chicken.*lemon",
+   "photo": "roast chicken potatoes",
+   "photo_must": "lemon.*chicken|chicken.*lemon|roast(ed)? chicken",
    "cost_note": "estimate",
-   "photo_not": "wing"
+   "photo_not": "wing|adobo|whole"
   },
   {
    "id": "buffalo_chicken_potatoes",
@@ -1080,10 +1080,10 @@
     "Stir the yogurt with garlic powder and a pinch of salt for a cool sauce.",
     "Split each potato, fill with buffalo chicken, and top with sauce and green onions."
    ],
-   "photo": "stuffed sweet potato",
+   "photo": "baked sweet potato",
    "photo_must": "sweet potato",
    "cost_note": "estimate",
-   "photo_not": "burger|wing|fries"
+   "photo_not": "burger|wing|fries|pie"
   },
   {
    "id": "chicken_spinach_pasta",
@@ -3133,10 +3133,10 @@
     "Cover and simmer on low 20 minutes.",
     "Stir in the peas, rest 5 minutes covered, and portion into 6."
    ],
-   "photo": "chickpeas rice",
+   "photo": "chickpea stew",
    "photo_must": "chickpea|garbanzo",
    "cost_note": "estimate",
-   "photo_not": ""
+   "photo_not": "bora|flour|hummus"
   },
   {
    "id": "veggie_egg_fried_rice",
