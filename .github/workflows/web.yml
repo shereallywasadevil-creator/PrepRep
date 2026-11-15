@@ -1,6 +1,10 @@
 name: Phone web app
+# Runs after each successful Windows build, so the site always carries the newest PrepRep.exe itself
+# (people download from the website, never from GitHub's release page).
 on:
-  push:
+  workflow_run:
+    workflows: ["Build PrepRep"]
+    types: [completed]
     branches: [main]
   workflow_dispatch:
 permissions:
@@ -8,6 +12,7 @@ permissions:
 concurrency: { group: web, cancel-in-progress: true }
 jobs:
   web:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -20,6 +25,12 @@ jobs:
         run: python tools/fetch_photos.py
       - name: Build the web app
         run: python tools/build_web.py ${GITHUB_SHA::8}
+      - name: Put the newest Windows app on the site
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release download --repo "${{ github.repository }}" --pattern PrepRep.exe --dir _site/download --clobber
+          test "$(stat -c%s _site/download/PrepRep.exe)" -gt 10000000
       - name: Publish to the gh-pages branch (GitHub Pages serves it)
         run: |
           cd _site

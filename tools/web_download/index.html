@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#56b13f">
 <meta property="og:title" content="PrepRep: a week of meal prep that fits your budget">
 <meta property="og:description" content="Meals, shopping list, real prices and workouts. Free for Windows and phones.">
-<meta property="og:image" content="https://shereallywasadevil-creator.github.io/PrepRep/photos/chicken_burrito_bowls.jpg">
+<meta property="og:image" content="../photos/chicken_burrito_bowls.jpg">
 <link rel="icon" href="../icons/icon-192.png">
 <link rel="apple-touch-icon" href="../icons/icon-192.png">
 <style>
@@ -175,7 +175,7 @@
       <h1>Dinner's sorted for the whole week.</h1>
       <p class="lede">Tell PrepRep your budget, who you're feeding and what you like. It picks the meals, writes the shopping list, prices it with your local tax, and walks you through every recipe.</p>
       <div class="ctas">
-        <a class="btn" id="cta-main" href="https://github.com/shereallywasadevil-creator/PrepRep/releases/latest/download/PrepRep.exe"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg><span>Download for Windows</span></a>
+        <a class="btn" id="cta-main" href="PrepRep.exe"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg><span>Download for Windows</span></a>
         <a class="btn line" id="cta-alt" href="../">Open on your phone</a>
       </div>
       <p class="meta">Free · No account · Your plans stay on your device</p>
@@ -251,7 +251,7 @@
           <span class="tag" hidden>For this computer</span>
           <h3><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>Windows PC</h3>
           <p>The full app for Windows 10 and 11. One file, nothing to install. About 93 MB.</p>
-          <a class="btn" href="https://github.com/shereallywasadevil-creator/PrepRep/releases/latest/download/PrepRep.exe" style="align-self:flex-start">Download for Windows</a>
+          <a class="btn" href="PrepRep.exe" style="align-self:flex-start">Download for Windows</a>
           <p class="fine">If Windows shows "Windows protected your PC", click <b>More info</b>, then <b>Run anyway</b>. New apps from small makers show that message.</p>
         </article>
         <article class="card" id="phone">
@@ -266,7 +266,7 @@
             <li><b>iPhone:</b> in Safari, tap Share, then "Add to Home Screen".</li>
             <li><b>Android:</b> in Chrome, tap ⋮, then "Add to Home screen".</li>
           </ul>
-          <p class="fine" id="onpc">On a computer? Open <span class="addr">shereallywasadevil-creator.github.io/PrepRep</span> on your phone.</p>
+          <p class="fine" id="onpc">On a computer? Tap "Send to my phone" to text or email yourself the link.</p>
         </article>
       </div>
     </div>
@@ -286,7 +286,7 @@
 
 <script>
   "use strict";
-  const DL = "https://github.com/shereallywasadevil-creator/PrepRep/releases/latest/download/PrepRep.exe", APP = "../";
+  const DL = "PrepRep.exe", APP = "../";
   const phone = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
   // Lead with the visitor's own device.
@@ -299,7 +299,7 @@
     main.href = APP; main.querySelector("span").textContent = "Open PrepRep"; main.querySelector("svg").remove();
     alt.href = DL; alt.textContent = "Get it for Windows";
   } else {
-    const share = document.getElementById("share"), url = "https://shereallywasadevil-creator.github.io/PrepRep/";
+    const share = document.getElementById("share"), url = new URL("../", location.href).href;
     share.hidden = false;
     share.addEventListener("click", async () => {
       try { if (navigator.share) await navigator.share({title: "PrepRep", url}); else { await navigator.clipboard.writeText(url); share.textContent = "Link copied"; } }
