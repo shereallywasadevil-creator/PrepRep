@@ -79,6 +79,9 @@ def main():
             got += 1
             print(f"OK   {r['id']}: generated photo")
             continue
+        if True:                                       # Dilan 2026-11-15: no photo credits in the app, so only our own
+            print(f"none {r['id']} (no generated photo yet)")   # generated photos are packed; web photos need credits
+            continue
         if picks:                                      # hand-picked photos only: every one was looked at for how appetizing it is
             pk = picks.get(r["id"])
             if not pk or pk == "none":

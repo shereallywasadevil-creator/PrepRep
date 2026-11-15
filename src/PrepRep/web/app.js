@@ -321,7 +321,6 @@
       h("p", {class: "muted", style: "margin:-6px 0 12px", text: `${r.minutes} minutes · makes ${r.servings} servings · ${r.steps.length} steps. Season with salt and pepper as you go.`}),
       h("ol", {class: "steps"}, ...r.steps.map(t => h("li", {text: t}))),
       h("p", {class: "muted", text: "Keeps 4 days in the fridge in sealed containers; most freeze for up to 3 months. Reheat until steaming hot."}));
-    const c = CREDITS[id]; if (c) main.append(h("p", {class: "credits"}, `Photo: ${c.artist}, ${c.license}, Wikimedia Commons (`, h("a", {href: c.page, target: "_blank", rel: "noopener", text: "source"}), ")"));
   };
 
   /* ---- List ---- */
@@ -565,9 +564,6 @@
       pl.append(h("div", {class: "li"}, ic, h("div", {class: "tx"}, h("b", {text: r.name}), h("small", {text: `${r.servings} servings`})), inp));
     });
     main.append(pl);
-    const ids = Object.keys(CREDITS);
-    main.append(h("div", {class: "sec"}, h("h2", {text: "Photo credits"})), h("div", {class: "credits"}, ids.length ? ids.map(id => { const c = CREDITS[id], r = byId(id);
-      return h("p", {}, `${r ? r.name : id}: ${c.artist}, ${c.license}, ${c.source || "Wikimedia Commons"} (`, h("a", {href: c.page, target: "_blank", rel: "noopener", text: c.source ? "model" : "source"}), ")"); }) : h("p", {text: "No photos are packed in this build."})));
   };
 
   /* ---- start ---- */
