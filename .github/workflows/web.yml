@@ -1,0 +1,31 @@
+name: Phone web app
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: web, cancel-in-progress: true }
+jobs:
+  web:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Tests
+        run: python -m unittest discover -s tests -v
+      - name: Photos
+        run: python tools/fetch_photos.py
+      - name: Build the web app
+        run: python tools/build_web.py ${GITHUB_SHA::8}
+      - name: Publish to the gh-pages branch (GitHub Pages serves it)
+        run: |
+          cd _site
+          git init -q -b gh-pages
+          git config user.name "PrepRep build"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Web app ${GITHUB_SHA::8}"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" gh-pages
