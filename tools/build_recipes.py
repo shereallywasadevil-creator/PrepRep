@@ -709,19 +709,42 @@ R += [
       "Slice the cucumber and grate the carrots.",
       "Pack rice, shrimp and vegetables with the sauce on the side; top with green onions."], "shrimp rice bowl", r"shrimp"),
 ]
+
+# Added 2026-11-15 (Dilan: stuffed peppers, Spanish chickpea rice and sweet potato hash "look gross"; replace them).
+R += [
+    ("breakfast_quesadillas", "Egg & Cheese Breakfast Quesadillas", 25, 4, ["breakfast", "vegetarian"],
+     [("eggs", 8), ("cheddar", 4), ("tortillas", 8), ("pepper", 1), ("onion", 0.5), ("spinach", 2), ("salsa", 0.5), ("olive_oil", 1)],
+     ["Soften the diced pepper and onion in the oil 4 minutes, then wilt in the spinach.",
+      "Add the beaten eggs and scramble over medium-low until just set.",
+      "Spread egg and cheddar over half of each tortilla and fold.",
+      "Toast in a dry pan 2 to 3 minutes a side until golden and melted. Pack 2 each with salsa."], "breakfast quesadilla", r"quesadilla"),
+    ("cheeseburger_pasta", "One-Pot Cheeseburger Pasta", 30, 6, [],
+     [("ground_beef", 1.25), ("ww_pasta", 0.75), ("cheddar", 6), ("milk", 1.5), ("broth", 3), ("onion", 1), ("tomato_paste", 2), ("mustard", 1), ("garlic_powder", 1), ("paprika", 1)],
+     ["Brown the beef with the chopped onion 8 minutes until no pink is left; drain the fat.",
+      "Stir in the tomato paste, mustard, garlic powder and paprika for 1 minute.",
+      "Add the broth, milk and pasta; simmer covered, stirring often, 10 to 12 minutes until the pasta is tender.",
+      "Off the heat, stir in the cheddar until melted and divide into 6."], "cheeseburger pasta", r"pasta"),
+    ("greek_chickpea_orzo", "Lemon Feta Chickpea Orzo", 25, 5, ["vegetarian"],
+     [("orzo", 0.75), ("chickpeas", 2), ("spinach", 5), ("cherry_tomatoes", 1), ("feta", 4), ("lemon", 1), ("garlic", 4), ("olive_oil", 3), ("oregano", 1)],
+     ["Boil the orzo in salted water about 9 minutes; drain.",
+      "Cook the garlic in the oil 1 minute, add the chickpeas, halved tomatoes and oregano and cook 4 minutes.",
+      "Stir in the spinach until wilted, then the orzo, lemon zest and juice.",
+      "Fold in the feta and divide into 5."], "chickpea orzo", r"orzo"),
+]
 # Retired 2026-11-15 (Dilan: these looked gross). Kept here, not deleted; the app no longer shows them.
 RETIRED = set("black_bean_quesadillas chicken_enchilada_skillet turkey_quinoa_skillet tuna_white_bean_salad tuna_pasta_salad "
-              "turkey_keema egg_roll_bowl chickpea_spinach_curry peanut_tofu_stir_fry beef_stroganoff taco_pasta lentil_marinara_pasta".split())
+              "turkey_keema egg_roll_bowl chickpea_spinach_curry peanut_tofu_stir_fry beef_stroganoff taco_pasta lentil_marinara_pasta "
+              "turkey_stuffed_peppers spanish_chickpeas_rice sweet_potato_hash".split())
 
 # cuisine of every recipe (for the categories in the app)
 CUISINE = {
-    "american": "garlic_steak_bites cheesesteak_bowls black_bean_quinoa_chili egg_muffins pb_banana_baked_oats sweet_potato_hash yogurt_parfait_jars berry_overnight_oats sheet_pan_chicken_sweet_potato lemon_pepper_chicken buffalo_chicken_potatoes chicken_noodle_soup bbq_chicken_potatoes turkey_chili turkey_shepherds_pie pork_tenderloin_roast turkey_stuffed_peppers lentil_sloppy_joes lentil_sweet_potato_soup turkey_quinoa_skillet beef_stew beef_bean_chili meatloaf_dinner honey_mustard_pork potato_spinach_frittata beef_stroganoff",
-    "mexican": "chicken_quesadillas black_bean_tacos vegan_burrito_bowls breakfast_burritos chicken_burrito_bowls chicken_fajitas chicken_enchilada_skillet turkey_taco_rice pork_carnitas_bowls black_bean_sweet_potato_bowls black_bean_quesadillas chicken_tortilla_soup chicken_tinga_tacos black_bean_enchiladas beef_burrito_bowls shrimp_tacos burrito_casserole steak_fajita_bowls taco_pasta bean_cheese_burritos rice_beans_eggs",
+    "american": "cheeseburger_pasta garlic_steak_bites cheesesteak_bowls black_bean_quinoa_chili egg_muffins pb_banana_baked_oats sweet_potato_hash yogurt_parfait_jars berry_overnight_oats sheet_pan_chicken_sweet_potato lemon_pepper_chicken buffalo_chicken_potatoes chicken_noodle_soup bbq_chicken_potatoes turkey_chili turkey_shepherds_pie pork_tenderloin_roast turkey_stuffed_peppers lentil_sloppy_joes lentil_sweet_potato_soup turkey_quinoa_skillet beef_stew beef_bean_chili meatloaf_dinner honey_mustard_pork potato_spinach_frittata beef_stroganoff",
+    "mexican": "breakfast_quesadillas chicken_quesadillas black_bean_tacos vegan_burrito_bowls breakfast_burritos chicken_burrito_bowls chicken_fajitas chicken_enchilada_skillet turkey_taco_rice pork_carnitas_bowls black_bean_sweet_potato_bowls black_bean_quesadillas chicken_tortilla_soup chicken_tinga_tacos black_bean_enchiladas beef_burrito_bowls shrimp_tacos burrito_casserole steak_fajita_bowls taco_pasta bean_cheese_burritos rice_beans_eggs",
     "chinese": "chicken_fried_rice sesame_chicken veggie_lo_mein chicken_veggie_stir_fry egg_roll_bowl beef_broccoli shrimp_fried_rice veggie_egg_fried_rice kung_pao_chicken orange_chicken chicken_lo_mein mapo_tofu tomato_egg_stir_fry cashew_chicken pork_cabbage_bowls sweet_sour_pork",
     "asian": "honey_garlic_shrimp bang_bang_shrimp_bowls honey_garlic_chicken teriyaki_chicken_bowls peanut_tofu_stir_fry salmon_rice_broccoli korean_beef_bowls peanut_chicken_noodles",
     "italian": "spaghetti_meat_sauce tuscan_chicken_pasta tomato_mozzarella_pasta lentil_veggie_bolognese chicken_spinach_pasta turkey_meatballs_spaghetti veggie_bolognese garlic_shrimp_pasta tuna_pasta_salad pasta_fagioli spinach_baked_ziti white_bean_kale_soup chicken_alfredo lasagna_skillet lemon_chicken_orzo pasta_primavera chicken_parm_bake lentil_marinara_pasta",
     "indian": "chickpea_sweet_potato_stew chicken_tikka_curry red_lentil_curry chickpea_spinach_curry butter_chicken turkey_keema",
-    "mediterranean": "greek_chicken_bowls tuna_white_bean_salad greek_chickpea_quinoa_jars chicken_quinoa_bowls spanish_chickpeas_rice shakshuka chicken_shawarma_bowls turkey_gyro_pitas",
+    "mediterranean": "greek_chickpea_orzo greek_chicken_bowls tuna_white_bean_salad greek_chickpea_quinoa_jars chicken_quinoa_bowls spanish_chickpeas_rice shakshuka chicken_shawarma_bowls turkey_gyro_pitas",
 }
 CUISINE_OF = {rid: c for c, ids in CUISINE.items() for rid in ids.split()}
 SOUPS = set("black_bean_quinoa_chili chickpea_sweet_potato_stew chicken_noodle_soup turkey_chili lentil_sweet_potato_soup white_bean_kale_soup pasta_fagioli chicken_tortilla_soup beef_stew beef_bean_chili".split())

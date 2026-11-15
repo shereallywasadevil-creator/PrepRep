@@ -540,129 +540,6 @@
    "photo_not": "cookie|bar\\b"
   },
   {
-   "id": "sweet_potato_hash",
-   "name": "Sweet Potato & Egg Breakfast Hash",
-   "cuisine": "american",
-   "protein_type": "vegetarian",
-   "contains": [
-    "egg"
-   ],
-   "keys": [
-    "eggs",
-    "olive_oil",
-    "onion",
-    "paprika",
-    "pepper",
-    "sweet_potatoes"
-   ],
-   "tags": [
-    "breakfast",
-    "vegetarian",
-    "american",
-    "budget"
-   ],
-   "minutes": 35,
-   "servings": 4,
-   "cost_cents": 556,
-   "kcal": 375,
-   "protein": 16,
-   "carbs": 41,
-   "fat": 17,
-   "fiber": 7,
-   "ingredients": [
-    {
-     "item": "sweet potatoes",
-     "qty": 1.5,
-     "unit": "lb",
-     "aisle": "produce",
-     "cents": 129,
-     "pack": 1
-    },
-    {
-     "item": "eggs",
-     "qty": 8,
-     "unit": "egg",
-     "aisle": "dairy & eggs",
-     "cents": 19,
-     "pack": 12,
-     "pack_name": "dozen"
-    },
-    {
-     "item": "yellow onion",
-     "qty": 1,
-     "unit": "onion",
-     "aisle": "produce",
-     "cents": 40,
-     "pack": 1
-    },
-    {
-     "item": "bell pepper",
-     "qty": 1,
-     "unit": "pepper",
-     "aisle": "produce",
-     "cents": 118,
-     "pack": 1
-    },
-    {
-     "item": "olive oil",
-     "qty": 2,
-     "unit": "tbsp",
-     "aisle": "oils & spices",
-     "cents": 20.56,
-     "pack": 34,
-     "pack_name": "17 oz bottle",
-     "pantry": true
-    },
-    {
-     "item": "smoked paprika",
-     "qty": 1,
-     "unit": "tsp",
-     "aisle": "oils & spices",
-     "cents": 11.86,
-     "pack": 21,
-     "pack_name": "1.75 oz jar",
-     "pantry": true
-    }
-   ],
-   "steps": [
-    "Dice the sweet potatoes small and cook them in the oil over medium heat, covered, for 10 minutes.",
-    "Add the diced onion and pepper and the paprika; cook uncovered 8 more minutes until browned.",
-    "Make 8 wells, crack in the eggs, cover and cook 5 to 7 minutes until the whites set.",
-    "Split into 4 containers, 2 eggs each."
-   ],
-   "photo": "sweet potato hash egg",
-   "photo_must": "hash",
-   "cost_note": "estimate",
-   "guide": {
-    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
-    "tools": [
-     "Large skillet with a lid (12 inch)",
-     "Cutting board and knife",
-     "Spatula"
-    ],
-    "prep": [
-     "Peel and cut 1.5 lb sweet potatoes into small 1/2-inch cubes.",
-     "Dice the onion and bell pepper."
-    ],
-    "steps": [
-     "Heat the 2 tbsp olive oil in the skillet on medium.",
-     "Add the sweet potatoes and a pinch of salt, stir to coat, and cover. Cook 10 minutes, stirring every few minutes, until they start to soften.",
-     "Take the lid off. Add the onion, pepper and smoked paprika. Cook uncovered 8 minutes, stirring now and then, until the potatoes are tender and browned in spots.",
-     "Make 8 small wells in the hash with a spoon and crack an egg into each one. Season the eggs with salt and pepper.",
-     "Cover and cook on medium-low 5 to 7 minutes, until the whites are firm and the yolks are thickened.",
-     "Divide into 4 containers with 2 eggs each."
-    ],
-    "tips": [
-     "Small, even cubes cook at the same speed.",
-     "For meal prep, cook the yolks firm; runny yolks don't reheat well."
-    ],
-    "safe": "Eggs are done when the whites are firm and the yolks are thickened. Baked egg dishes are safe at 160°F in the middle.",
-    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
-    "reheat": "Microwave covered 1.5 to 2 minutes until hot. Pierce the yolks first so they don't pop."
-   },
-   "photo_not": "duck|waffle"
-  },
-  {
    "id": "yogurt_parfait_jars",
    "name": "High-Protein Yogurt Parfait Jars",
    "cuisine": "american",
@@ -3389,137 +3266,6 @@
    }
   },
   {
-   "id": "turkey_stuffed_peppers",
-   "name": "Turkey & Rice Stuffed Peppers",
-   "cuisine": "american",
-   "protein_type": "turkey",
-   "contains": [
-    "dairy",
-    "meat"
-   ],
-   "keys": [
-    "cheddar",
-    "ground_turkey",
-    "italian",
-    "onion",
-    "pepper",
-    "rice",
-    "tomato_sauce"
-   ],
-   "tags": [
-    "american",
-    "turkey",
-    "classic prep"
-   ],
-   "minutes": 50,
-   "servings": 6,
-   "cost_cents": 1747,
-   "kcal": 406,
-   "protein": 29,
-   "carbs": 40,
-   "fat": 15,
-   "fiber": 5,
-   "ingredients": [
-    {
-     "item": "bell pepper",
-     "qty": 6,
-     "unit": "pepper",
-     "aisle": "produce",
-     "cents": 118,
-     "pack": 1
-    },
-    {
-     "item": "lean ground turkey (93%)",
-     "qty": 1.5,
-     "unit": "lb",
-     "aisle": "meat",
-     "cents": 499,
-     "pack": 1
-    },
-    {
-     "item": "long-grain white rice",
-     "qty": 1,
-     "unit": "cup",
-     "aisle": "grains & pasta",
-     "cents": 45,
-     "pack": 4.9,
-     "pack_name": "2 lb bag"
-    },
-    {
-     "item": "tomato sauce (15 oz)",
-     "qty": 1,
-     "unit": "can",
-     "aisle": "canned",
-     "cents": 89,
-     "pack": 1
-    },
-    {
-     "item": "yellow onion",
-     "qty": 1,
-     "unit": "onion",
-     "aisle": "produce",
-     "cents": 40,
-     "pack": 1
-    },
-    {
-     "item": "shredded cheddar",
-     "qty": 3,
-     "unit": "oz",
-     "aisle": "dairy & eggs",
-     "cents": 37,
-     "pack": 8,
-     "pack_name": "8 oz bag"
-    },
-    {
-     "item": "Italian seasoning",
-     "qty": 1,
-     "unit": "tsp",
-     "aisle": "oils & spices",
-     "cents": 5.16,
-     "pack": 25,
-     "pack_name": "0.87 oz jar",
-     "pantry": true
-    }
-   ],
-   "steps": [
-    "Cook the rice. Heat the oven to 375°F. Cut the tops off the peppers and scoop out the seeds.",
-    "Brown the turkey with chopped onion; stir in the rice, most of the tomato sauce and the seasoning.",
-    "Stuff the peppers, spoon the rest of the sauce on top, cover with foil, and bake 30 minutes.",
-    "Add cheddar and bake 5 more minutes uncovered."
-   ],
-   "photo": "stuffed peppers",
-   "photo_must": "stuffed pepper",
-   "cost_note": "estimate",
-   "guide": {
-    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
-    "tools": [
-     "Saucepan with lid (for rice)",
-     "Large skillet",
-     "Baking dish that fits 6 peppers upright",
-     "Aluminium foil"
-    ],
-    "prep": [
-     "Heat the oven to 375°F.",
-     "Cut the tops off the 6 peppers and scoop out the seeds and ribs. Trim a thin slice off any bottoms that wobble so they stand up.",
-     "Chop the onion."
-    ],
-    "steps": [
-     "Cook the 1 cup rice: rinse, bring to a boil with 2 cups water and a pinch of salt, cover, cook on low 18 minutes, then rest 5 minutes.",
-     "Brown the turkey with the onion in the skillet on medium-high, breaking it up, about 8 minutes, until no pink is left (165°F).",
-     "Stir in the cooked rice, most of the tomato sauce (keep about 1/3 cup), the Italian seasoning and 1/2 tsp salt.",
-     "Stand the peppers in the dish and pack the filling in firmly. Spoon the rest of the sauce on top.",
-     "Cover with foil and bake 30 minutes, until the peppers are tender.",
-     "Take off the foil, add the cheddar and bake 5 more minutes until melted."
-    ],
-    "tips": [
-     "Pour 1/4 cup water into the bottom of the dish so the peppers steam and don't scorch."
-    ],
-    "safe": "Ground turkey is safe at 165°F. It should be browned all the way through with no pink left.",
-    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
-    "reheat": "Microwave covered, stirring halfway, until steaming hot all the way through (165°F), about 2 to 3 minutes per container. Thaw frozen portions overnight in the fridge first."
-   }
-  },
-  {
    "id": "turkey_shepherds_pie",
    "name": "Turkey Shepherd's Pie",
    "cuisine": "american",
@@ -4856,163 +4602,6 @@
     "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
     "reheat": "Take out the yogurt first. Microwave covered 2 minutes until hot, then add the yogurt, avocado and lime."
    }
-  },
-  {
-   "id": "spanish_chickpeas_rice",
-   "name": "Spanish Chickpeas & Rice",
-   "cuisine": "mediterranean",
-   "protein_type": "vegetarian",
-   "contains": [],
-   "keys": [
-    "broth",
-    "chickpeas",
-    "diced_tomatoes",
-    "garlic",
-    "olive_oil",
-    "onion",
-    "paprika",
-    "peas",
-    "pepper",
-    "rice"
-   ],
-   "tags": [
-    "vegetarian",
-    "mediterranean",
-    "budget",
-    "classic prep"
-   ],
-   "minutes": 40,
-   "servings": 6,
-   "cost_cents": 890,
-   "kcal": 386,
-   "protein": 14,
-   "carbs": 71,
-   "fat": 5,
-   "fiber": 10,
-   "ingredients": [
-    {
-     "item": "canned chickpeas (15 oz)",
-     "qty": 2,
-     "unit": "can",
-     "aisle": "canned",
-     "cents": 99,
-     "pack": 1
-    },
-    {
-     "item": "long-grain white rice",
-     "qty": 1.5,
-     "unit": "cup",
-     "aisle": "grains & pasta",
-     "cents": 45,
-     "pack": 4.9,
-     "pack_name": "2 lb bag"
-    },
-    {
-     "item": "canned diced tomatoes (14.5 oz)",
-     "qty": 1,
-     "unit": "can",
-     "aisle": "canned",
-     "cents": 99,
-     "pack": 1
-    },
-    {
-     "item": "yellow onion",
-     "qty": 1,
-     "unit": "onion",
-     "aisle": "produce",
-     "cents": 40,
-     "pack": 1
-    },
-    {
-     "item": "bell pepper",
-     "qty": 1,
-     "unit": "pepper",
-     "aisle": "produce",
-     "cents": 118,
-     "pack": 1
-    },
-    {
-     "item": "smoked paprika",
-     "qty": 2,
-     "unit": "tsp",
-     "aisle": "oils & spices",
-     "cents": 11.86,
-     "pack": 21,
-     "pack_name": "1.75 oz jar",
-     "pantry": true
-    },
-    {
-     "item": "low-sodium broth",
-     "qty": 3,
-     "unit": "cup",
-     "aisle": "canned",
-     "cents": 62,
-     "pack": 4,
-     "pack_name": "32 oz carton"
-    },
-    {
-     "item": "frozen peas (12 oz)",
-     "qty": 1,
-     "unit": "bag",
-     "aisle": "frozen",
-     "cents": 119,
-     "pack": 1
-    },
-    {
-     "item": "garlic",
-     "qty": 3,
-     "unit": "clove",
-     "aisle": "produce",
-     "cents": 6,
-     "pack": 10,
-     "pack_name": "head"
-    },
-    {
-     "item": "olive oil",
-     "qty": 1,
-     "unit": "tbsp",
-     "aisle": "oils & spices",
-     "cents": 20.56,
-     "pack": 34,
-     "pack_name": "17 oz bottle",
-     "pantry": true
-    }
-   ],
-   "steps": [
-    "Soften the onion and pepper in the oil 5 minutes; add garlic and smoked paprika.",
-    "Stir in the rice to coat, then the tomatoes, chickpeas and broth.",
-    "Cover and simmer on low 20 minutes.",
-    "Stir in the peas, rest 5 minutes covered, and portion into 6."
-   ],
-   "photo": "chickpea stew",
-   "photo_must": "chickpea|garbanzo",
-   "cost_note": "estimate",
-   "guide": {
-    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
-    "tools": [
-     "Large deep pan or pot with a tight lid",
-     "Can opener and sieve"
-    ],
-    "prep": [
-     "Chop the onion and bell pepper. Mince the 3 garlic cloves.",
-     "Drain and rinse the 2 cans of chickpeas. Rinse the rice."
-    ],
-    "steps": [
-     "Heat the 1 tbsp olive oil in the pan on medium. Cook the onion and pepper 5 minutes until soft.",
-     "Add the garlic and smoked paprika and stir 30 seconds.",
-     "Stir in the rice for 1 minute so it's coated in oil.",
-     "Add the diced tomatoes with their juice, the chickpeas, 3 cups broth and 1/2 tsp salt. Bring to a boil.",
-     "Cover, turn the heat to low and simmer 20 minutes without lifting the lid.",
-     "Scatter the peas on top, cover and rest off the heat 5 minutes. Fluff and portion into 6."
-    ],
-    "tips": [
-     "A little crust on the bottom is good (that's the Spanish 'socarrat'), but don't let it burn."
-    ],
-    "safe": "No meat or eggs to undercook: cook until the vegetables are tender and the sauce is hot all the way through.",
-    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
-    "reheat": "Microwave covered, stirring halfway, until steaming hot all the way through (165°F), about 2 to 3 minutes per container. Thaw frozen portions overnight in the fridge first."
-   },
-   "photo_not": "bora|flour|hummus"
   },
   {
    "id": "veggie_egg_fried_rice",
@@ -13646,6 +13235,474 @@
     "safe": "Fish is done at 145°F, or when it turns opaque and flakes easily with a fork. Shrimp are done when they turn pink and opaque and curl into a loose C shape.",
     "store": "Refrigerate within 2 hours and eat within 3 days.",
     "reheat": "Take out the vegetables and sauce. Microwave the rice and shrimp covered 1 to 1.5 minutes, just until hot, then add them back."
+   }
+  },
+  {
+   "id": "breakfast_quesadillas",
+   "name": "Egg & Cheese Breakfast Quesadillas",
+   "cuisine": "mexican",
+   "protein_type": "vegetarian",
+   "contains": [
+    "dairy",
+    "egg",
+    "gluten"
+   ],
+   "keys": [
+    "cheddar",
+    "eggs",
+    "olive_oil",
+    "onion",
+    "pepper",
+    "salsa",
+    "spinach",
+    "tortillas"
+   ],
+   "tags": [
+    "breakfast",
+    "vegetarian",
+    "mexican",
+    "budget",
+    "quick"
+   ],
+   "minutes": 25,
+   "servings": 4,
+   "cost_cents": 886,
+   "kcal": 576,
+   "protein": 29,
+   "carbs": 52,
+   "fat": 30,
+   "fiber": 8,
+   "ingredients": [
+    {
+     "item": "eggs",
+     "qty": 8,
+     "unit": "egg",
+     "aisle": "dairy & eggs",
+     "cents": 19,
+     "pack": 12,
+     "pack_name": "dozen"
+    },
+    {
+     "item": "shredded cheddar",
+     "qty": 4,
+     "unit": "oz",
+     "aisle": "dairy & eggs",
+     "cents": 37,
+     "pack": 8,
+     "pack_name": "8 oz bag"
+    },
+    {
+     "item": "whole wheat tortillas (8 in)",
+     "qty": 8,
+     "unit": "tortilla",
+     "aisle": "bakery",
+     "cents": 37,
+     "pack": 10,
+     "pack_name": "pack of 10"
+    },
+    {
+     "item": "bell pepper",
+     "qty": 1,
+     "unit": "pepper",
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
+    },
+    {
+     "item": "yellow onion",
+     "qty": 0.5,
+     "unit": "onion",
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
+    },
+    {
+     "item": "baby spinach",
+     "qty": 2,
+     "unit": "oz",
+     "aisle": "produce",
+     "cents": 30,
+     "pack": 5,
+     "pack_name": "5 oz box"
+    },
+    {
+     "item": "salsa",
+     "qty": 0.5,
+     "unit": "cup",
+     "aisle": "canned",
+     "cents": 142,
+     "pack": 1.75,
+     "pack_name": "16 oz jar"
+    },
+    {
+     "item": "olive oil",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "oils & spices",
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
+    }
+   ],
+   "steps": [
+    "Soften the diced pepper and onion in the oil 4 minutes, then wilt in the spinach.",
+    "Add the beaten eggs and scramble over medium-low until just set.",
+    "Spread egg and cheddar over half of each tortilla and fold.",
+    "Toast in a dry pan 2 to 3 minutes a side until golden and melted. Pack 2 each with salsa."
+   ],
+   "photo": "breakfast quesadilla",
+   "photo_must": "quesadilla",
+   "cost_note": "estimate",
+   "guide": {
+    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
+    "tools": [
+     "Large non-stick skillet",
+     "Mixing bowl and fork",
+     "Spatula",
+     "Cutting board and knife"
+    ],
+    "prep": [
+     "Dice the bell pepper and half the onion small.",
+     "Beat the 8 eggs with 1/4 tsp salt and some pepper.",
+     "Roughly chop the 2 oz spinach."
+    ],
+    "steps": [
+     "Heat the 1 tbsp oil in the skillet on medium. Cook the pepper and onion 4 minutes until soft, then stir in the spinach until it wilts.",
+     "Turn the heat to medium-low, pour in the eggs and stir slowly with the spatula 2 to 3 minutes until just set but still soft. Move to a plate and wipe out the pan.",
+     "Lay out the 8 tortillas. Put some cheddar, a share of the eggs, then a little more cheddar on one half of each and fold it over.",
+     "Heat the dry pan on medium. Cook 2 or 3 quesadillas at a time, 2 to 3 minutes a side, until golden and the cheese has melted.",
+     "Let them cool, then pack 2 per container with the salsa in a small cup on the side."
+    ],
+    "tips": [
+     "Take the eggs off while they still look a little wet; they finish cooking in the quesadilla."
+    ],
+    "safe": "Eggs are done when the whites are firm and the yolks are thickened. Baked egg dishes are safe at 160°F in the middle.",
+    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
+    "reheat": "Reheat in a dry pan 2 minutes a side to keep them crisp, or microwave 60 to 90 seconds until hot in the middle."
+   }
+  },
+  {
+   "id": "cheeseburger_pasta",
+   "name": "One-Pot Cheeseburger Pasta",
+   "cuisine": "american",
+   "protein_type": "red meat",
+   "contains": [
+    "dairy",
+    "gluten",
+    "meat",
+    "red meat"
+   ],
+   "keys": [
+    "broth",
+    "cheddar",
+    "garlic_powder",
+    "ground_beef",
+    "milk",
+    "mustard",
+    "onion",
+    "paprika",
+    "tomato_paste",
+    "ww_pasta"
+   ],
+   "tags": [
+    "american",
+    "red meat",
+    "pasta",
+    "high-protein",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 30,
+   "servings": 6,
+   "cost_cents": 1641,
+   "kcal": 537,
+   "protein": 37,
+   "carbs": 48,
+   "fat": 22,
+   "fiber": 6,
+   "ingredients": [
+    {
+     "item": "lean ground beef (90%)",
+     "qty": 1.25,
+     "unit": "lb",
+     "aisle": "meat",
+     "cents": 799,
+     "pack": 1
+    },
+    {
+     "item": "whole wheat pasta",
+     "qty": 0.75,
+     "unit": "lb",
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
+    },
+    {
+     "item": "shredded cheddar",
+     "qty": 6,
+     "unit": "oz",
+     "aisle": "dairy & eggs",
+     "cents": 37,
+     "pack": 8,
+     "pack_name": "8 oz bag"
+    },
+    {
+     "item": "milk (2%)",
+     "qty": 1.5,
+     "unit": "cup",
+     "aisle": "dairy & eggs",
+     "cents": 26,
+     "pack": 8,
+     "pack_name": "half gallon"
+    },
+    {
+     "item": "low-sodium broth",
+     "qty": 3,
+     "unit": "cup",
+     "aisle": "canned",
+     "cents": 62,
+     "pack": 4,
+     "pack_name": "32 oz carton"
+    },
+    {
+     "item": "yellow onion",
+     "qty": 1,
+     "unit": "onion",
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
+    },
+    {
+     "item": "tomato paste",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "canned",
+     "cents": 7.9,
+     "pack": 10,
+     "pack_name": "6 oz can"
+    },
+    {
+     "item": "Dijon mustard",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "sauces",
+     "cents": 11.32,
+     "pack": 22,
+     "pack_name": "12 oz jar",
+     "pantry": true
+    },
+    {
+     "item": "garlic powder",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices",
+     "cents": 4.81,
+     "pack": 31,
+     "pack_name": "3.4 oz jar",
+     "pantry": true
+    },
+    {
+     "item": "smoked paprika",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices",
+     "cents": 11.86,
+     "pack": 21,
+     "pack_name": "1.75 oz jar",
+     "pantry": true
+    }
+   ],
+   "steps": [
+    "Brown the beef with the chopped onion 8 minutes until no pink is left; drain the fat.",
+    "Stir in the tomato paste, mustard, garlic powder and paprika for 1 minute.",
+    "Add the broth, milk and pasta; simmer covered, stirring often, 10 to 12 minutes until the pasta is tender.",
+    "Off the heat, stir in the cheddar until melted and divide into 6."
+   ],
+   "photo": "cheeseburger pasta",
+   "photo_must": "pasta",
+   "cost_note": "estimate",
+   "guide": {
+    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
+    "tools": [
+     "Large deep skillet or pot with a lid",
+     "Wooden spoon",
+     "Cutting board and knife",
+     "Measuring cups"
+    ],
+    "prep": [
+     "Chop the onion.",
+     "Measure the 3 cups broth and 1.5 cups milk.",
+     "Have the 12 oz pasta (small shells or elbows work best) ready."
+    ],
+    "steps": [
+     "Heat the pan on medium-high. Brown the 1.25 lb beef with the onion about 8 minutes, breaking it up, until no pink is left (160°F). Spoon off the fat.",
+     "Stir in the 2 tbsp tomato paste, 1 tbsp mustard, 1 tsp garlic powder, 1 tsp paprika and 1 tsp salt for 1 minute.",
+     "Pour in the broth and milk, stir in the pasta and bring to a gentle boil.",
+     "Cover, turn the heat to medium-low and simmer 10 to 12 minutes, stirring every few minutes so it doesn't stick, until the pasta is tender and most of the liquid is gone.",
+     "Take the pan off the heat and stir in the 6 oz cheddar until melted and creamy. Divide into 6."
+    ],
+    "tips": [
+     "Keep it at a gentle simmer: milk can catch on the bottom if the heat is too high.",
+     "It thickens as it cools; add a splash of milk when you reheat."
+    ],
+    "safe": "Ground beef and pork are safe at 160°F (no pink left). Whole cuts like steak, pork chops and tenderloin are safe at 145°F, then rest 3 minutes before slicing.",
+    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
+    "reheat": "Microwave covered, stirring halfway, until steaming hot all the way through (165°F), about 2 to 3 minutes per container. Thaw frozen portions overnight in the fridge first."
+   }
+  },
+  {
+   "id": "greek_chickpea_orzo",
+   "name": "Lemon Feta Chickpea Orzo",
+   "cuisine": "mediterranean",
+   "protein_type": "vegetarian",
+   "contains": [
+    "dairy",
+    "gluten"
+   ],
+   "keys": [
+    "cherry_tomatoes",
+    "chickpeas",
+    "feta",
+    "garlic",
+    "lemon",
+    "olive_oil",
+    "oregano",
+    "orzo",
+    "spinach"
+   ],
+   "tags": [
+    "vegetarian",
+    "mediterranean",
+    "pasta",
+    "budget",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 25,
+   "servings": 5,
+   "cost_cents": 1168,
+   "kcal": 543,
+   "protein": 20,
+   "carbs": 79,
+   "fat": 17,
+   "fiber": 10,
+   "ingredients": [
+    {
+     "item": "orzo",
+     "qty": 0.75,
+     "unit": "lb",
+     "aisle": "grains & pasta",
+     "cents": 169,
+     "pack": 1
+    },
+    {
+     "item": "canned chickpeas (15 oz)",
+     "qty": 2,
+     "unit": "can",
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
+    },
+    {
+     "item": "baby spinach",
+     "qty": 5,
+     "unit": "oz",
+     "aisle": "produce",
+     "cents": 30,
+     "pack": 5,
+     "pack_name": "5 oz box"
+    },
+    {
+     "item": "cherry tomatoes",
+     "qty": 1,
+     "unit": "pint",
+     "aisle": "produce",
+     "cents": 299,
+     "pack": 1
+    },
+    {
+     "item": "crumbled feta",
+     "qty": 4,
+     "unit": "oz",
+     "aisle": "dairy & eggs",
+     "cents": 61,
+     "pack": 4,
+     "pack_name": "4 oz tub"
+    },
+    {
+     "item": "lemon",
+     "qty": 1,
+     "unit": "lemon",
+     "aisle": "produce",
+     "cents": 59,
+     "pack": 1
+    },
+    {
+     "item": "garlic",
+     "qty": 4,
+     "unit": "clove",
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
+    },
+    {
+     "item": "olive oil",
+     "qty": 3,
+     "unit": "tbsp",
+     "aisle": "oils & spices",
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
+    },
+    {
+     "item": "dried oregano",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices",
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
+    }
+   ],
+   "steps": [
+    "Boil the orzo in salted water about 9 minutes; drain.",
+    "Cook the garlic in the oil 1 minute, add the chickpeas, halved tomatoes and oregano and cook 4 minutes.",
+    "Stir in the spinach until wilted, then the orzo, lemon zest and juice.",
+    "Fold in the feta and divide into 5."
+   ],
+   "photo": "chickpea orzo",
+   "photo_must": "orzo",
+   "cost_note": "estimate",
+   "guide": {
+    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
+    "tools": [
+     "Large pot",
+     "Colander",
+     "Large skillet",
+     "Zester or grater"
+    ],
+    "prep": [
+     "Drain and rinse the 2 cans of chickpeas.",
+     "Halve the cherry tomatoes and mince the 4 garlic cloves.",
+     "Zest the lemon, then juice it."
+    ],
+    "steps": [
+     "Boil the 12 oz orzo in salted water about 9 minutes until tender. Drain.",
+     "Heat the 3 tbsp olive oil in the skillet on medium. Cook the garlic 1 minute, then add the chickpeas, tomatoes and 1 tsp oregano and cook 4 minutes.",
+     "Add the 5 oz spinach and stir until it wilts.",
+     "Stir in the orzo, the lemon zest and juice and 1/2 tsp salt.",
+     "Fold in the 4 oz feta and divide into 5 containers."
+    ],
+    "tips": [
+     "It tastes good cold too, like a pasta salad."
+    ],
+    "safe": "No meat or eggs to undercook: cook until the spinach wilts and everything is hot.",
+    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
+    "reheat": "Microwave covered, stirring halfway, until steaming hot all the way through (165°F), about 2 to 3 minutes per container. Thaw frozen portions overnight in the fridge first."
    }
   }
  ],

@@ -1495,3 +1495,48 @@ GUIDES.update({
         "reheat": "Take out the vegetables and sauce. Microwave the rice and shrimp covered 1 to 1.5 minutes, just until hot, then add them back.",
     },
 })
+
+# Added 2026-11-15 with the three replacement recipes in build_recipes.py.
+GUIDES.update({
+    "breakfast_quesadillas": {
+        "protein": "egg",
+        "tools": ["Large non-stick skillet", "Mixing bowl and fork", "Spatula", "Cutting board and knife"],
+        "prep": ["Dice the bell pepper and half the onion small.", "Beat the 8 eggs with 1/4 tsp salt and some pepper.", "Roughly chop the 2 oz spinach."],
+        "steps": [
+            "Heat the 1 tbsp oil in the skillet on medium. Cook the pepper and onion 4 minutes until soft, then stir in the spinach until it wilts.",
+            "Turn the heat to medium-low, pour in the eggs and stir slowly with the spatula 2 to 3 minutes until just set but still soft. Move to a plate and wipe out the pan.",
+            "Lay out the 8 tortillas. Put some cheddar, a share of the eggs, then a little more cheddar on one half of each and fold it over.",
+            "Heat the dry pan on medium. Cook 2 or 3 quesadillas at a time, 2 to 3 minutes a side, until golden and the cheese has melted.",
+            "Let them cool, then pack 2 per container with the salsa in a small cup on the side.",
+        ],
+        "tips": ["Take the eggs off while they still look a little wet; they finish cooking in the quesadilla."],
+        "reheat": "Reheat in a dry pan 2 minutes a side to keep them crisp, or microwave 60 to 90 seconds until hot in the middle.",
+    },
+    "cheeseburger_pasta": {
+        "protein": "red meat",
+        "tools": ["Large deep skillet or pot with a lid", "Wooden spoon", "Cutting board and knife", "Measuring cups"],
+        "prep": ["Chop the onion.", "Measure the 3 cups broth and 1.5 cups milk.", "Have the 12 oz pasta (small shells or elbows work best) ready."],
+        "steps": [
+            "Heat the pan on medium-high. Brown the 1.25 lb beef with the onion about 8 minutes, breaking it up, until no pink is left (160°F). Spoon off the fat.",
+            "Stir in the 2 tbsp tomato paste, 1 tbsp mustard, 1 tsp garlic powder, 1 tsp paprika and 1 tsp salt for 1 minute.",
+            "Pour in the broth and milk, stir in the pasta and bring to a gentle boil.",
+            "Cover, turn the heat to medium-low and simmer 10 to 12 minutes, stirring every few minutes so it doesn't stick, until the pasta is tender and most of the liquid is gone.",
+            "Take the pan off the heat and stir in the 6 oz cheddar until melted and creamy. Divide into 6.",
+        ],
+        "tips": ["Keep it at a gentle simmer: milk can catch on the bottom if the heat is too high.", "It thickens as it cools; add a splash of milk when you reheat."],
+    },
+    "greek_chickpea_orzo": {
+        "protein": "plant",
+        "tools": ["Large pot", "Colander", "Large skillet", "Zester or grater"],
+        "prep": ["Drain and rinse the 2 cans of chickpeas.", "Halve the cherry tomatoes and mince the 4 garlic cloves.", "Zest the lemon, then juice it."],
+        "steps": [
+            "Boil the 12 oz orzo in salted water about 9 minutes until tender. Drain.",
+            "Heat the 3 tbsp olive oil in the skillet on medium. Cook the garlic 1 minute, then add the chickpeas, tomatoes and 1 tsp oregano and cook 4 minutes.",
+            "Add the 5 oz spinach and stir until it wilts.",
+            "Stir in the orzo, the lemon zest and juice and 1/2 tsp salt.",
+            "Fold in the 4 oz feta and divide into 5 containers.",
+        ],
+        "tips": ["It tastes good cold too, like a pasta salad."],
+        "safe": "No meat or eggs to undercook: cook until the spinach wilts and everything is hot.",
+    },
+})
