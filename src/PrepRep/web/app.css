@@ -192,3 +192,8 @@ body.wizopen{overflow:hidden}
 .part{display:grid;gap:4px}.part b{font-size:14px}
 .planitem{border:0;background:none;padding:2px 0;color:var(--dim);font:inherit;cursor:pointer;text-align:left;display:block}.planitem:hover{color:var(--green-dark);text-decoration:underline}
 .wnext{position:sticky;bottom:14px;z-index:2}
+/* photos: a little warmer and brighter so food looks fresh; a calm icon tile when there's no good photo */
+.phimg{position:absolute;inset:0;background:center/cover no-repeat;filter:saturate(1.15) contrast(1.05) brightness(1.04);border-radius:inherit}
+.ph,.tile{background-image:linear-gradient(135deg,color-mix(in srgb,var(--c) 70%,#fff),var(--c))!important}
+.mono.icon{font-size:54px!important;color:inherit!important;filter:drop-shadow(0 6px 10px rgba(0,0,0,.18))}
+.ph>*:not(.phimg),.tile>*:not(.phimg){z-index:1}

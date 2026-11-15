@@ -50,7 +50,15 @@
   const byName = n => RECIPES.find(r => r.name === n), byId = id => RECIPES.find(r => r.id === id);
   const cost = r => S.get("prices")[r.id] ?? r.cost_cents;
   const colorOf = r => COLORS[RECIPES.indexOf(r) % COLORS.length];
-  function photo(el, r) { const img = new Image(); img.onload = () => { el.style.backgroundImage = `url(photos/${r.id}.jpg)`; const m = el.querySelector(".mono"); if (m) m.remove(); }; img.src = `photos/${r.id}.jpg`; }
+  const ICON = r => !r ? "🍽️" : r.tags.includes("breakfast") ? "🍳" : r.tags.includes("soup") ? "🍲" : r.tags.includes("pasta") ? "🍝" :
+    ({chinese: "🥡", mexican: "🌮", indian: "🍛", mediterranean: "🫒", asian: "🍜"})[r.cuisine] || ({chicken: "🍗", "red meat": "🥩", turkey: "🦃", seafood: "🍤", vegetarian: "🥗"})[r.protein_type] || "🍽️";
+  function photo(el, r) {
+    const m = el.querySelector(".mono"); if (m && r) { m.textContent = ICON(r); m.classList.add("icon"); }
+    if (!r) return;
+    const img = new Image();
+    img.onload = () => { const i = h("i", {class: "phimg", "aria-hidden": "true"}); i.style.backgroundImage = `url(photos/${r.id}.jpg)`; el.prepend(i); if (m) m.remove(); };
+    img.src = `photos/${r.id}.jpg`;
+  }
   const CATS = [["budget", "Budget Meals", "💵", r => cost(r) / r.servings <= 200], ["chicken", "Chicken", "🍗", r => r.protein_type === "chicken"],
     ["redmeat", "Red Meat", "🥩", r => r.protein_type === "red meat"], ["turkey", "Turkey", "🦃", r => r.protein_type === "turkey"],
     ["seafood", "Seafood", "🍤", r => r.protein_type === "seafood"], ["veg", "Vegetarian", "🥗", r => r.tags.includes("vegetarian")],

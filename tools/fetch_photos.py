@@ -63,7 +63,23 @@ def main():
     recipes = json.loads((WEB / "data" / "recipes.json").read_text(encoding="utf-8"))["recipes"]
     OUT.mkdir(exist_ok=True)
     credits, got = {}, 0
+    picks_file = Path(__file__).resolve().parent / "photo_picks.json"
+    picks = json.loads(picks_file.read_text(encoding="utf-8")) if picks_file.exists() else {}
     for r in recipes:
+        if picks:                                      # hand-picked photos only: every one was looked at for how appetizing it is
+            pk = picks.get(r["id"])
+            if not pk or pk == "none":
+                print(f"none {r['id']} (no photo picked)")
+                continue
+            try:
+                (OUT / f"{r['id']}.jpg").write_bytes(get(pk["full"]))
+                credits[r["id"]] = {k: pk.get(k, "") for k in ("artist", "license", "page", "title")}
+                got += 1
+                print(f"OK   {r['id']}: picked {pk.get('title', '')[:60]}")
+            except Exception as e:
+                print(f"skip {r['id']}: {e}")
+            time.sleep(1)
+            continue
         try:
             hit = search(r["photo"], r["photo_must"], r.get("photo_not", "")) or search(r["name"], r["photo_must"], r.get("photo_not", ""))
             if hit:

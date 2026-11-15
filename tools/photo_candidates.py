@@ -23,6 +23,7 @@ OUT = ROOT / "review"
 UA = {"User-Agent": "PrepRepBuild/1.0 (personal app; github.com/shereallywasadevil-creator/PrepRep)"}
 OK_LIC = {"cc0", "pdm", "by", "by-sa"}
 PER = 6
+OV_DOWN = False
 
 
 def get(url, tries=4, timeout=40):
@@ -37,8 +38,16 @@ def get(url, tries=4, timeout=40):
 
 
 def openverse(q):
+    global OV_DOWN
+    if OV_DOWN:
+        return []
     qs = urllib.parse.urlencode({"q": q, "license": "by,by-sa,cc0,pdm", "mature": "false", "page_size": 20, "size": "large"})
-    data = json.loads(get("https://api.openverse.org/v1/images/?" + qs))
+    try:
+        data = json.loads(get("https://api.openverse.org/v1/images/?" + qs, tries=1, timeout=20))
+    except Exception as e:
+        if "429" in str(e):
+            OV_DOWN = True                         # rate limited: stop asking, use Wikimedia for the rest
+        raise
     out = []
     for r in data.get("results", []):
         if (r.get("license") or "").lower() not in OK_LIC:
@@ -85,7 +94,7 @@ def main():
             continue
         seen, got = set(), []
         q = r.get("photo") or r["name"]
-        for fn, query in ((openverse, q), (openverse, re.sub(r"\(.*?\)", "", r["name"]).strip()), (commons, q)):
+        for fn, query in ((openverse, q), (commons, q), (commons, re.sub(r"\(.*?\)", "", r["name"]).strip())):
             try:
                 for c in fn(query):
                     if c["thumb"] in seen:
@@ -95,7 +104,7 @@ def main():
                 print("skip", r["id"], fn.__name__, e)
             if len(got) >= PER * 2:
                 break
-            time.sleep(1.5)
+            time.sleep(1)
         thumbs = []
         for c in got:
             if len(thumbs) >= PER:
@@ -108,7 +117,7 @@ def main():
                 continue
         cands[r["id"]] = [dict(c, key=f"{r['id']}#{i}") for i, (c, _) in enumerate(thumbs)]
         r["_thumbs"] = [im for _, im in thumbs]
-        print(f"{r['id']}: {len(thumbs)} candidates")
+        print(f"{r['id']}: {len(thumbs)} candidates ({sum(1 for c, _ in thumbs if c['src'] == 'openverse')} from Openverse)", flush=True)
     (OUT / "candidates.json").write_text(json.dumps(cands, indent=1, ensure_ascii=False), encoding="utf-8")
     # contact sheets: 5 recipes per sheet, one row each: name + up to 6 numbered thumbnails
     rows = [r for r in recipes if r.get("_thumbs") is not None]
