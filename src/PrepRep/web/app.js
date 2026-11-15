@@ -309,8 +309,13 @@
   }
 
   /* ---- Price it: realistic cost for any number of people, with grocery tax ---- */
-  // State grocery tax (state level, late 2026). Local city/county tax can add more, so the rate can be changed.
-  const FOOD_TAX = {AL: 2, HI: 4, ID: 6, MS: 5, MO: 1.225, SD: 4.2, TN: 4, UT: 3};
+  // Typical grocery tax by state, late 2026: the state's food rate plus the average local rate where cities and counties
+  // also tax groceries (Tax Foundation average local rates, midyear 2026). Your exact city can differ, so it stays editable.
+  // [rate %, how sure: "state" = set statewide, "typical" = state + average local, varies by city]
+  const FOOD_TAX = {AL: [7.46, "typical"], TN: [6.61, "typical"], MO: [5.45, "typical"], MS: [5, "state"], ID: [6, "state"],
+    HI: [4.5, "typical"], SD: [6.2, "typical"], UT: [3, "state"], VA: [1, "state"], NC: [2, "state"], IL: [1, "typical"],
+    AR: [3, "typical"], OK: [4.5, "typical"], KS: [2.2, "typical"], LA: [5, "typical"], GA: [3, "typical"]};
+  const taxOf = st => (FOOD_TAX[st] || [0])[0];
   const ZIP3 = [[5, 5, "NY"], [6, 9, "PR"], [10, 27, "MA"], [28, 29, "RI"], [30, 38, "NH"], [39, 49, "ME"], [50, 59, "VT"], [60, 69, "CT"],
     [70, 89, "NJ"], [100, 149, "NY"], [150, 196, "PA"], [197, 199, "DE"], [200, 205, "DC"], [206, 219, "MD"], [220, 246, "VA"],
     [247, 268, "WV"], [270, 289, "NC"], [290, 299, "SC"], [300, 319, "GA"], [320, 349, "FL"], [350, 369, "AL"], [370, 385, "TN"],
@@ -335,11 +340,11 @@
   }
   function priceCard(r) {
     const st = S.get("calc") || {}, stc = stateOf(S.get("zip"));
-    let people = st.people || 1, meals = st.meals || 1, rate = st.rate ?? (FOOD_TAX[stc] || 0), big = !!st.big, have = st.have ?? false;
+    let people = st.people || 1, meals = st.meals || 1, rate = st.zip === S.get("zip") && st.rate != null ? st.rate : taxOf(stc), big = !!st.big, have = st.have ?? false;
     const out = h("div", {class: "pc-out", "aria-live": "polite"});
     const packWord = b => b.unit === "lb" ? `${b.packs} lb` : b.name ? `${b.packs} × ${b.name}` : `${b.packs} ${b.unit}${b.packs > 1 && !/s$/.test(b.unit) ? "s" : ""}`;
     const draw = () => {
-      S.set("calc", {people, meals, rate, big, have});
+      S.set("calc", {people, meals, rate, big, have, zip: S.get("zip")});
       const n = people * meals, portions = n * (big ? 1.5 : 1), p = priceFor(r, portions, have);
       const tax = Math.round(p.store * rate / 100), total = p.store + tax;
       out.replaceChildren(
@@ -369,7 +374,10 @@
       h("div", {class: "pc-row"}, num("People", () => people, x => people = x, 1, 50), num("Meals each", () => meals, x => meals = x, 1, 21),
         h("label", {class: "pc-step"}, h("span", {text: "Portion size"}), size), num("Grocery tax %", () => rate, x => rate = x, 0, 15, 0.001)),
       h("label", {class: "pc-check"}, haveBox, h("span", {text: "I already have spices, oils and sauces"})),
-      h("p", {class: "muted pc-note", text: (stc ? (FOOD_TAX[stc] ? `${stc} taxes groceries at ${FOOD_TAX[stc]}% statewide; your city or county may add more.` : `${stc} doesn't tax groceries statewide; some cities and counties do.`) : "Add your ZIP code in You to fill in your state's grocery tax.") + " Type the percent, like 7.5 for 7.5%."}),
+      h("p", {class: "muted pc-note", text: !stc ? "Add your ZIP code in You and PrepRep fills in your grocery tax. Or type the percent, like 7.5." :
+        !FOOD_TAX[stc] ? `Groceries aren't taxed in ${stc}, so tax is 0%. If your city adds one, type it in.` :
+        FOOD_TAX[stc][1] === "state" ? `${stc} grocery tax is ${FOOD_TAX[stc][0]}%. Filled in for you.` :
+        `${stc} grocery tax is about ${FOOD_TAX[stc][0]}% (state plus the average city and county rate). Filled in for you; type your exact rate if you know it.`}),
       out,
       h("p", {class: "muted pc-note", text: "Prices are US averages for store-brand items (Bureau of Labor Statistics data where it exists, late 2026). Your store may be higher or lower."}));
   }
