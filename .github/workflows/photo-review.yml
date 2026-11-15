@@ -1,0 +1,26 @@
+name: photo-review
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [tools/photo_candidates.py]
+permissions:
+  contents: write
+jobs:
+  candidates:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pillow
+      - name: Collect photo candidates and contact sheets
+        run: python tools/photo_candidates.py
+      - name: Publish sheets to the photo-review branch
+        run: |
+          cd review
+          git init -q -b photo-review
+          git config user.name "photo-review"; git config user.email "photo-review@users.noreply.github.com"
+          git add -A && git commit -qm "Photo candidates for review"
+          git push -f "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" photo-review
