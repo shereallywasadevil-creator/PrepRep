@@ -129,6 +129,7 @@ ING = {
     "italian": ("Italian seasoning", "oils & spices", "tsp", 1, 6, 265, 9, 69, 4.3, 40),
     "curry_powder": ("curry powder", "oils & spices", "tsp", 2, 7, 325, 14, 56, 14, 33),
     "taco": ("taco seasoning", "oils & spices", "tbsp", 8, 25, 300, 6, 60, 4, 10),
+    "butter": ("butter", "dairy & eggs", "tbsp", 14.2, 14, 717, 0.9, 0.1, 81, 0),
 }
 
 # (id, name, minutes, servings, extra tags, [(ingredient, amount in its unit)], [steps], photo search, photo must-match)
@@ -638,13 +639,87 @@ R = [
       "Reheat from frozen: unwrap, cover with a damp paper towel, and microwave 2 to 3 minutes. 2 burritos per serving."], "bean burrito", r"burrito"),
 ]
 
+# Added 2026-11-15 (Dilan: "replace most of the 30 minute recipes for better ones"): crowd-pleasing quick dinners.
+R += [
+    ("chicken_quesadillas", "Chicken & Cheese Quesadillas", 25, 4, [],
+     [("chicken_breast", 1), ("cheddar", 6), ("tortillas", 8), ("pepper", 1), ("onion", 0.5), ("taco", 1), ("salsa", 1), ("olive_oil", 1)],
+     ["Rub the chicken with the taco seasoning and half the oil; cook 6 to 7 minutes a side until 165°F, rest and chop.",
+      "Soften the sliced pepper and onion in the rest of the oil for 5 minutes.",
+      "Layer cheese, chicken, peppers and more cheese on 4 tortillas and top with the other 4.",
+      "Toast in a dry pan 3 minutes a side until golden and melted. Cut into wedges and pack with salsa."], "chicken quesadilla", r"quesadilla"),
+    ("garlic_steak_bites", "Garlic Butter Steak Bites & Potatoes", 30, 5, [],
+     [("sirloin", 1.5), ("potatoes", 2), ("green_beans", 2), ("butter", 3), ("garlic", 5), ("olive_oil", 1)],
+     ["Microwave the potato cubes covered 7 minutes, then brown them in the oil 8 minutes; set aside.",
+      "Sear 1-inch steak cubes in a very hot pan 2 to 3 minutes a side, in batches.",
+      "Add the butter and minced garlic for 1 minute, return the potatoes and toss.",
+      "Steam the green beans and pack with the steak and potatoes."], "steak bites", r"steak"),
+    ("honey_garlic_shrimp", "Honey Garlic Shrimp, Rice & Broccoli", 25, 4, [],
+     [("shrimp", 1.5), ("rice", 1.25), ("broccoli", 1.5), ("honey", 3), ("soy", 3), ("garlic", 4), ("cornstarch", 1), ("butter", 1)],
+     ["Cook the rice. Whisk the honey, soy sauce, cornstarch and 1/4 cup water.",
+      "Steam the broccoli florets 4 minutes.",
+      "Cook the shrimp in the butter 2 minutes a side, add the garlic for 30 seconds, then the sauce until glossy.",
+      "Pack rice, broccoli and honey garlic shrimp into 4 containers."], "honey garlic shrimp", r"shrimp"),
+    ("chicken_fried_rice", "Chicken Fried Rice", 25, 5, [],
+     [("chicken_breast", 1.25), ("rice", 1.5), ("eggs", 3), ("mixed_veg", 1), ("soy", 4), ("green_onions", 1), ("garlic", 3), ("sesame_oil", 2)],
+     ["Cook the rice ahead and chill it.", "Stir-fry small pieces of chicken 5 to 6 minutes until 165°F; set aside.",
+      "Scramble the eggs, then stir-fry the vegetables and garlic 3 minutes.",
+      "Add the rice, soy sauce and sesame oil; fry 4 minutes, return the chicken and add green onions."], "chicken fried rice", r"fried rice"),
+    ("spaghetti_meat_sauce", "Spaghetti with Meat Sauce", 30, 6, [],
+     [("ground_beef", 1.25), ("marinara", 1), ("ww_pasta", 1), ("onion", 1), ("garlic", 3), ("italian", 1), ("parmesan", 4)],
+     ["Brown the beef with the chopped onion 8 minutes; add the garlic for 1 minute.",
+      "Add the marinara and Italian seasoning and simmer 10 minutes.", "Boil the spaghetti meanwhile.",
+      "Toss with the sauce, top with parmesan and divide into 6."], "spaghetti meat sauce", r"spaghetti|bolognese"),
+    ("sesame_chicken", "Sesame Chicken & Broccoli", 30, 5, [],
+     [("chicken_breast", 1.75), ("rice", 1.5), ("frozen_broccoli", 2), ("honey", 3), ("soy", 4), ("rice_vinegar", 1), ("sesame_oil", 2), ("cornstarch", 3), ("garlic", 2), ("green_onions", 0.5)],
+     ["Cook the rice. Toss bite-size chicken with 2 tablespoons cornstarch.",
+      "Pan-fry the chicken 6 to 7 minutes until golden and 165°F.",
+      "Whisk honey, soy sauce, vinegar, sesame oil, garlic, the last tablespoon of cornstarch and 1/4 cup water; simmer with the chicken 2 minutes.",
+      "Steam the broccoli and pack with rice and sesame chicken; top with green onions."], "sesame chicken", r"chicken"),
+    ("tuscan_chicken_pasta", "Creamy Tuscan Chicken Pasta", 30, 6, [],
+     [("chicken_breast", 1.5), ("ww_pasta", 1), ("spinach", 5), ("cherry_tomatoes", 1), ("milk", 1.5), ("cornstarch", 1.5), ("parmesan", 6), ("garlic", 4), ("italian", 2), ("olive_oil", 1)],
+     ["Boil the pasta. Cook bite-size chicken with Italian seasoning in the oil 7 minutes.",
+      "Add garlic and halved tomatoes for 2 minutes.", "Stir in the milk whisked with cornstarch until it thickens, then the spinach and parmesan.",
+      "Toss with the pasta and divide into 6."], "creamy chicken pasta", r"pasta"),
+    ("cheesesteak_bowls", "Philly Cheesesteak Rice Bowls", 30, 5, [],
+     [("sirloin", 1.5), ("pepper", 2), ("onion", 1), ("mushrooms", 1), ("mozzarella", 4), ("rice", 1.25), ("olive_oil", 1), ("garlic_powder", 1), ("soy", 1)],
+     ["Cook the rice. Slice the steak very thin (easier if it's half-frozen).",
+      "Cook the sliced peppers, onion and mushrooms in the oil 7 minutes.",
+      "Push aside, sear the steak 2 to 3 minutes with the garlic powder and soy sauce, and toss together.",
+      "Top with mozzarella, cover 1 minute to melt, and pack over rice."], "cheesesteak", r"cheese ?steak"),
+    ("veggie_lo_mein", "Vegetable Lo Mein with Egg", 25, 5, ["vegetarian"],
+     [("ww_pasta", 0.75), ("eggs", 4), ("cabbage", 0.25), ("carrots", 2), ("pepper", 1), ("mushrooms", 1), ("green_onions", 1), ("soy", 5), ("hoisin", 2), ("sesame_oil", 2), ("garlic", 3)],
+     ["Boil the spaghetti, drain and toss with 1 teaspoon sesame oil.", "Scramble the eggs and set aside.",
+      "Stir-fry the mushrooms, cabbage, carrots, pepper and garlic 4 minutes.",
+      "Add noodles, soy sauce, hoisin, the rest of the sesame oil and the eggs; toss 2 minutes and add green onions."], "vegetable lo mein", r"lo ?mein|noodle"),
+    ("black_bean_tacos", "Crispy Black Bean Tacos", 25, 4, ["vegetarian"],
+     [("black_beans", 2), ("corn_tortillas", 12), ("cheddar", 4), ("cabbage", 0.25), ("greek_yogurt", 0.5), ("lime", 2), ("avocado", 1), ("cumin", 1), ("chili_powder", 1), ("salsa", 0.5), ("olive_oil", 1)],
+     ["Mash the drained beans with the cumin, chili powder and a pinch of salt.",
+      "Fill warmed tortillas with beans and cheese, fold, and crisp in a lightly oiled pan 2 to 3 minutes a side.",
+      "Toss the shredded cabbage with yogurt, the juice of one lime and salt.",
+      "Pack 3 tacos each with slaw, salsa, sliced avocado and lime on the side."], "black bean tacos", r"taco"),
+    ("tomato_mozzarella_pasta", "Garlic Tomato Pasta with Mozzarella", 25, 6, ["vegetarian"],
+     [("ww_pasta", 1), ("cherry_tomatoes", 2), ("mozzarella", 8), ("spinach", 3), ("garlic", 5), ("olive_oil", 3), ("parmesan", 4), ("italian", 1), ("white_beans", 1)],
+     ["Boil the pasta; keep a cup of the water.", "Cook the sliced garlic in the oil 1 minute, add the tomatoes and cook 6 minutes until they burst.",
+      "Add the beans, spinach, Italian seasoning, pasta, parmesan and a splash of pasta water.",
+      "Off the heat, stir in the mozzarella so it goes melty, and divide into 6."], "tomato mozzarella pasta", r"pasta"),
+    ("bang_bang_shrimp_bowls", "Bang Bang Shrimp Bowls", 25, 4, [],
+     [("shrimp", 1.5), ("rice", 1.25), ("cucumber", 1), ("carrots", 2), ("greek_yogurt", 0.5), ("sriracha", 3), ("honey", 2), ("cornstarch", 2), ("olive_oil", 1), ("green_onions", 0.5)],
+     ["Cook the rice. Stir the yogurt, sriracha and honey for the sauce.",
+      "Toss the shrimp in cornstarch and a pinch of salt; pan-fry in the oil 2 minutes a side until pink and crisp.",
+      "Slice the cucumber and grate the carrots.",
+      "Pack rice, shrimp and vegetables with the sauce on the side; top with green onions."], "shrimp rice bowl", r"shrimp"),
+]
+# Retired 2026-11-15 (Dilan: these looked gross). Kept here, not deleted; the app no longer shows them.
+RETIRED = set("black_bean_quesadillas chicken_enchilada_skillet turkey_quinoa_skillet tuna_white_bean_salad tuna_pasta_salad "
+              "turkey_keema egg_roll_bowl chickpea_spinach_curry peanut_tofu_stir_fry beef_stroganoff taco_pasta lentil_marinara_pasta".split())
+
 # cuisine of every recipe (for the categories in the app)
 CUISINE = {
-    "american": "black_bean_quinoa_chili egg_muffins pb_banana_baked_oats sweet_potato_hash yogurt_parfait_jars berry_overnight_oats sheet_pan_chicken_sweet_potato lemon_pepper_chicken buffalo_chicken_potatoes chicken_noodle_soup bbq_chicken_potatoes turkey_chili turkey_shepherds_pie pork_tenderloin_roast turkey_stuffed_peppers lentil_sloppy_joes lentil_sweet_potato_soup turkey_quinoa_skillet beef_stew beef_bean_chili meatloaf_dinner honey_mustard_pork potato_spinach_frittata beef_stroganoff",
-    "mexican": "vegan_burrito_bowls breakfast_burritos chicken_burrito_bowls chicken_fajitas chicken_enchilada_skillet turkey_taco_rice pork_carnitas_bowls black_bean_sweet_potato_bowls black_bean_quesadillas chicken_tortilla_soup chicken_tinga_tacos black_bean_enchiladas beef_burrito_bowls shrimp_tacos burrito_casserole steak_fajita_bowls taco_pasta bean_cheese_burritos rice_beans_eggs",
-    "chinese": "chicken_veggie_stir_fry egg_roll_bowl beef_broccoli shrimp_fried_rice veggie_egg_fried_rice kung_pao_chicken orange_chicken chicken_lo_mein mapo_tofu tomato_egg_stir_fry cashew_chicken pork_cabbage_bowls sweet_sour_pork",
-    "asian": "honey_garlic_chicken teriyaki_chicken_bowls peanut_tofu_stir_fry salmon_rice_broccoli korean_beef_bowls peanut_chicken_noodles",
-    "italian": "lentil_veggie_bolognese chicken_spinach_pasta turkey_meatballs_spaghetti veggie_bolognese garlic_shrimp_pasta tuna_pasta_salad pasta_fagioli spinach_baked_ziti white_bean_kale_soup chicken_alfredo lasagna_skillet lemon_chicken_orzo pasta_primavera chicken_parm_bake lentil_marinara_pasta",
+    "american": "garlic_steak_bites cheesesteak_bowls black_bean_quinoa_chili egg_muffins pb_banana_baked_oats sweet_potato_hash yogurt_parfait_jars berry_overnight_oats sheet_pan_chicken_sweet_potato lemon_pepper_chicken buffalo_chicken_potatoes chicken_noodle_soup bbq_chicken_potatoes turkey_chili turkey_shepherds_pie pork_tenderloin_roast turkey_stuffed_peppers lentil_sloppy_joes lentil_sweet_potato_soup turkey_quinoa_skillet beef_stew beef_bean_chili meatloaf_dinner honey_mustard_pork potato_spinach_frittata beef_stroganoff",
+    "mexican": "chicken_quesadillas black_bean_tacos vegan_burrito_bowls breakfast_burritos chicken_burrito_bowls chicken_fajitas chicken_enchilada_skillet turkey_taco_rice pork_carnitas_bowls black_bean_sweet_potato_bowls black_bean_quesadillas chicken_tortilla_soup chicken_tinga_tacos black_bean_enchiladas beef_burrito_bowls shrimp_tacos burrito_casserole steak_fajita_bowls taco_pasta bean_cheese_burritos rice_beans_eggs",
+    "chinese": "chicken_fried_rice sesame_chicken veggie_lo_mein chicken_veggie_stir_fry egg_roll_bowl beef_broccoli shrimp_fried_rice veggie_egg_fried_rice kung_pao_chicken orange_chicken chicken_lo_mein mapo_tofu tomato_egg_stir_fry cashew_chicken pork_cabbage_bowls sweet_sour_pork",
+    "asian": "honey_garlic_shrimp bang_bang_shrimp_bowls honey_garlic_chicken teriyaki_chicken_bowls peanut_tofu_stir_fry salmon_rice_broccoli korean_beef_bowls peanut_chicken_noodles",
+    "italian": "spaghetti_meat_sauce tuscan_chicken_pasta tomato_mozzarella_pasta lentil_veggie_bolognese chicken_spinach_pasta turkey_meatballs_spaghetti veggie_bolognese garlic_shrimp_pasta tuna_pasta_salad pasta_fagioli spinach_baked_ziti white_bean_kale_soup chicken_alfredo lasagna_skillet lemon_chicken_orzo pasta_primavera chicken_parm_bake lentil_marinara_pasta",
     "indian": "chickpea_sweet_potato_stew chicken_tikka_curry red_lentil_curry chickpea_spinach_curry butter_chicken turkey_keema",
     "mediterranean": "greek_chicken_bowls tuna_white_bean_salad greek_chickpea_quinoa_jars chicken_quinoa_bowls spanish_chickpeas_rice shakshuka chicken_shawarma_bowls turkey_gyro_pitas",
 }
@@ -659,7 +734,7 @@ CONTAINS = {
     "meat": {"chicken_breast", "chicken_thighs", "ground_turkey", "ground_beef", "pork_tenderloin", "ground_pork", "stew_beef", "sirloin"},
     "pork": {"pork_tenderloin", "ground_pork"}, "red meat": {"ground_beef", "stew_beef", "sirloin", "pork_tenderloin", "ground_pork"},
     "seafood": {"salmon", "shrimp", "tuna"},
-    "dairy": {"greek_yogurt", "cottage", "cheddar", "mozzarella", "parmesan", "feta", "milk"},
+    "dairy": {"greek_yogurt", "cottage", "cheddar", "mozzarella", "parmesan", "feta", "milk", "butter"},
     "egg": {"eggs"}, "honey": {"honey"},
     "gluten": {"ww_pasta", "orzo", "tortillas", "buns", "pita", "soy", "hoisin", "oats"},
     "nuts": {"peanut_butter", "peanuts", "cashews"},
@@ -692,6 +767,29 @@ LIMITS = {"kcal": (250, 750), "protein": (12, 75)}
 
 # How much of each unit the smallest normal store package holds, for "what you'd really pay at the store".
 # Units not listed come one at a time (a can, a bag, an onion). tbsp/tsp are pantry staples: priced by what you use.
+# Pantry staples and small-jar items, priced the way you buy them: (units in one package, package price in cents,
+# package name). Typical US store-brand shelf prices, late 2026. The price per spoon below comes from these, so a
+# recipe is charged for the spoonfuls it uses, and "Price it" can show the whole bottle or jar for a first shop.
+# pantry=True: a staple most kitchens already have (spices, oils, sauces); the calculator can leave those out.
+SPOON_PACKS = {
+    "parmesan": (45, 399, "8 oz tub", False), "ginger": (10, 60, "small piece (about 2 oz)", False),
+    "chipotle": (13, 159, "7 oz can", False), "tomato_paste": (10, 79, "6 oz can", False),
+    "chia": (28, 449, "12 oz bag", False), "taco": (3.5, 79, "1 oz packet", False), "butter": (32, 449, "1 lb (4 sticks)", False),
+    "hoisin": (15, 279, "8.5 oz jar", True), "rice_vinegar": (24, 249, "12 oz bottle", True),
+    "chili_garlic": (37, 329, "8 oz jar", True), "bbq": (30, 149, "18 oz bottle", True),
+    "soy": (30, 249, "15 oz bottle", True), "honey": (16, 449, "12 oz bottle", True),
+    "peanut_butter": (28, 249, "16 oz jar", True), "hot_sauce": (24, 249, "12 oz bottle", True),
+    "sriracha": (80, 399, "17 oz bottle", True), "mustard": (22, 249, "12 oz jar", True),
+    "olive_oil": (34, 699, "17 oz bottle", True), "sesame_oil": (30, 349, "5 oz bottle", True),
+    "cornstarch": (56, 179, "16 oz box", True), "cinnamon": (26, 149, "2.4 oz jar", True),
+    "chili_powder": (26, 149, "2.5 oz jar", True), "cumin": (20, 179, "1.5 oz jar", True),
+    "paprika": (21, 249, "1.75 oz jar", True), "garlic_powder": (31, 149, "3.4 oz jar", True),
+    "oregano": (25, 129, "0.87 oz jar", True), "italian": (25, 129, "0.87 oz jar", True),
+    "curry_powder": (25, 249, "1.75 oz jar", True),
+}
+for _k, (_n, _c, _name, _p) in SPOON_PACKS.items():          # price per spoon = package price / spoons in it
+    _row = list(ING[_k]); _row[4] = round(_c / _n, 2); ING[_k] = tuple(_row)
+
 PACK_BY_UNIT = {"lb": 1, "egg": 12, "tortilla": 10, "bun": 8, "pita": 6, "clove": 10, "stalk": 8, "tbsp": 0, "tsp": 0}
 PACK = {"greek_yogurt": 3.75, "cottage": 2, "cheddar": 8, "mozzarella": 8, "feta": 4, "milk": 8, "red_lentils": 2.3,
         "brown_lentils": 2.3, "rice": 4.9, "brown_rice": 4.8, "quinoa": 2, "oats": 6.4, "spinach": 5, "peanuts": 16,
@@ -712,6 +810,8 @@ from recipe_guides import guide_for  # noqa: E402
 def build():
     out, bad = [], []
     for rid, name, minutes, servings, tags, ings, steps, photo, must in R:
+        if rid in RETIRED:
+            continue
         tot = dict(cost=0.0, kcal=0.0, protein=0.0, carbs=0.0, fat=0.0, fiber=0.0)
         rows = []
         for key, amt in ings:
@@ -721,8 +821,9 @@ def build():
             for k, v in (("kcal", kcal), ("protein", p), ("carbs", c), ("fat", f), ("fiber", fib)):
                 tot[k] += g * v / 100
             rows.append({"item": label, "qty": round(amt, 2), "unit": unit, "aisle": aisle, "cents": cents,
-                         "pack": PACK.get(key, PACK_BY_UNIT.get(unit, 1)),
-                         **({"pack_name": PACK_NAME[key]} if key in PACK_NAME else {})})
+                         "pack": SPOON_PACKS[key][0] if key in SPOON_PACKS else PACK.get(key, PACK_BY_UNIT.get(unit, 1)),
+                         **({"pack_name": SPOON_PACKS[key][2]} if key in SPOON_PACKS else {"pack_name": PACK_NAME[key]} if key in PACK_NAME else {}),
+                         **({"pantry": True} if key in SPOON_PACKS and SPOON_PACKS[key][3] else {})})
         per = {k: tot[k] / servings for k in tot}
         all_tags = list(tags)
         keys = {k for k, _ in ings}

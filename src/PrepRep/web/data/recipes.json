@@ -29,7 +29,7 @@
    ],
    "minutes": 10,
    "servings": 5,
-   "cost_cents": 781,
+   "cost_cents": 773,
    "kcal": 368,
    "protein": 23,
    "carbs": 54,
@@ -76,24 +76,29 @@
      "qty": 2.5,
      "unit": "tbsp",
      "aisle": "baking",
-     "cents": 17,
-     "pack": 0
+     "cents": 16.04,
+     "pack": 28,
+     "pack_name": "12 oz bag"
     },
     {
      "item": "honey",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 31,
-     "pack": 0
+     "cents": 28.06,
+     "pack": 16,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "ground cinnamon",
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 5.73,
+     "pack": 26,
+     "pack_name": "2.4 oz jar",
+     "pantry": true
     }
    ],
    "steps": [
@@ -159,7 +164,7 @@
    ],
    "minutes": 30,
    "servings": 4,
-   "cost_cents": 570,
+   "cost_cents": 569,
    "kcal": 324,
    "protein": 25,
    "carbs": 6,
@@ -214,8 +219,10 @@
      "qty": 0.5,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 4.81,
+     "pack": 31,
+     "pack_name": "3.4 oz jar",
+     "pantry": true
     }
    ],
    "steps": [
@@ -287,7 +294,7 @@
    ],
    "minutes": 25,
    "servings": 6,
-   "cost_cents": 769,
+   "cost_cents": 770,
    "kcal": 371,
    "protein": 22,
    "carbs": 32,
@@ -343,8 +350,10 @@
      "qty": 0.5,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 8.95,
+     "pack": 20,
+     "pack_name": "1.5 oz jar",
+     "pantry": true
     }
    ],
    "steps": [
@@ -418,7 +427,7 @@
    ],
    "minutes": 40,
    "servings": 6,
-   "cost_cents": 290,
+   "cost_cents": 279,
    "kcal": 336,
    "protein": 13,
    "carbs": 48,
@@ -465,24 +474,30 @@
      "qty": 4,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 10,
-     "pack": 0
+     "cents": 8.89,
+     "pack": 28,
+     "pack_name": "16 oz jar",
+     "pantry": true
     },
     {
      "item": "honey",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 31,
-     "pack": 0
+     "cents": 28.06,
+     "pack": 16,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "ground cinnamon",
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 5.73,
+     "pack": 26,
+     "pack_name": "2.4 oz jar",
+     "pantry": true
     }
    ],
    "steps": [
@@ -548,7 +563,7 @@
    ],
    "minutes": 35,
    "servings": 4,
-   "cost_cents": 564,
+   "cost_cents": 556,
    "kcal": 375,
    "protein": 16,
    "carbs": 41,
@@ -593,16 +608,20 @@
      "qty": 2,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     },
     {
      "item": "smoked paprika",
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 8,
-     "pack": 0
+     "cents": 11.86,
+     "pack": 21,
+     "pack_name": "1.75 oz jar",
+     "pantry": true
     }
    ],
    "steps": [
@@ -672,7 +691,7 @@
    ],
    "minutes": 10,
    "servings": 5,
-   "cost_cents": 1062,
+   "cost_cents": 1049,
    "kcal": 333,
    "protein": 26,
    "carbs": 41,
@@ -710,24 +729,29 @@
      "qty": 3,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 10,
-     "pack": 0
+     "cents": 8.89,
+     "pack": 28,
+     "pack_name": "16 oz jar",
+     "pantry": true
     },
     {
      "item": "honey",
      "qty": 2.5,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 31,
-     "pack": 0
+     "cents": 28.06,
+     "pack": 16,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "chia seeds",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "baking",
-     "cents": 17,
-     "pack": 0
+     "cents": 16.04,
+     "pack": 28,
+     "pack_name": "12 oz bag"
     }
    ],
    "steps": [
@@ -794,7 +818,7 @@
    ],
    "minutes": 35,
    "servings": 6,
-   "cost_cents": 1470,
+   "cost_cents": 1459,
    "kcal": 516,
    "protein": 45,
    "carbs": 68,
@@ -856,16 +880,19 @@
      "qty": 2,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 25,
-     "pack": 0
+     "cents": 22.57,
+     "pack": 3.5,
+     "pack_name": "1 oz packet"
     },
     {
      "item": "olive oil",
      "qty": 1,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -933,7 +960,7 @@
    ],
    "minutes": 40,
    "servings": 5,
-   "cost_cents": 1490,
+   "cost_cents": 1481,
    "kcal": 496,
    "protein": 48,
    "carbs": 46,
@@ -969,24 +996,30 @@
      "qty": 3,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     },
     {
      "item": "smoked paprika",
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 8,
-     "pack": 0
+     "cents": 11.86,
+     "pack": 21,
+     "pack_name": "1.75 oz jar",
+     "pantry": true
     },
     {
      "item": "garlic powder",
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 4.81,
+     "pack": 31,
+     "pack_name": "3.4 oz jar",
+     "pantry": true
     }
    ],
    "steps": [
@@ -1056,7 +1089,7 @@
    ],
    "minutes": 35,
    "servings": 6,
-   "cost_cents": 1300,
+   "cost_cents": 1293,
    "kcal": 481,
    "protein": 44,
    "carbs": 57,
@@ -1093,16 +1126,20 @@
      "qty": 3,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 31,
-     "pack": 0
+     "cents": 28.06,
+     "pack": 16,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 4,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 8,
-     "pack": 0
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
     },
     {
      "item": "garlic",
@@ -1118,8 +1155,10 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "baking",
-     "cents": 3,
-     "pack": 0
+     "cents": 3.2,
+     "pack": 56,
+     "pack_name": "16 oz box",
+     "pantry": true
     }
    ],
    "steps": [
@@ -1194,7 +1233,7 @@
    ],
    "minutes": 30,
    "servings": 5,
-   "cost_cents": 1297,
+   "cost_cents": 1296,
    "kcal": 481,
    "protein": 39,
    "carbs": 66,
@@ -1247,24 +1286,29 @@
      "qty": 4,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 8,
-     "pack": 0
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
     },
     {
      "item": "honey",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 31,
-     "pack": 0
+     "cents": 28.06,
+     "pack": 16,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "fresh ginger (grated)",
      "qty": 1,
      "unit": "tbsp",
      "aisle": "produce",
-     "cents": 8,
-     "pack": 0
+     "cents": 6.0,
+     "pack": 10,
+     "pack_name": "small piece (about 2 oz)"
     },
     {
      "item": "garlic",
@@ -1280,16 +1324,20 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "baking",
-     "cents": 3,
-     "pack": 0
+     "cents": 3.2,
+     "pack": 56,
+     "pack_name": "16 oz box",
+     "pantry": true
     },
     {
      "item": "toasted sesame oil",
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 9,
-     "pack": 0
+     "cents": 11.63,
+     "pack": 30,
+     "pack_name": "5 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -1362,7 +1410,7 @@
    ],
    "minutes": 35,
    "servings": 5,
-   "cost_cents": 1566,
+   "cost_cents": 1553,
    "kcal": 530,
    "protein": 51,
    "carbs": 54,
@@ -1441,16 +1489,20 @@
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
     },
     {
      "item": "olive oil",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -1519,7 +1571,7 @@
    ],
    "minutes": 30,
    "servings": 5,
-   "cost_cents": 1733,
+   "cost_cents": 1717,
    "kcal": 575,
    "protein": 50,
    "carbs": 56,
@@ -1564,8 +1616,9 @@
      "qty": 2,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 25,
-     "pack": 0
+     "cents": 22.57,
+     "pack": 3.5,
+     "pack_name": "1 oz packet"
     },
     {
      "item": "lime",
@@ -1580,8 +1633,10 @@
      "qty": 2,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -1651,7 +1706,7 @@
    ],
    "minutes": 40,
    "servings": 6,
-   "cost_cents": 1356,
+   "cost_cents": 1363,
    "kcal": 515,
    "protein": 41,
    "carbs": 59,
@@ -1704,16 +1759,19 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "produce",
-     "cents": 8,
-     "pack": 0
+     "cents": 6.0,
+     "pack": 10,
+     "pack_name": "small piece (about 2 oz)"
     },
     {
      "item": "curry powder",
      "qty": 3,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 9.96,
+     "pack": 25,
+     "pack_name": "1.75 oz jar",
+     "pantry": true
     },
     {
      "item": "frozen peas (12 oz)",
@@ -1805,7 +1863,7 @@
    ],
    "minutes": 40,
    "servings": 5,
-   "cost_cents": 1490,
+   "cost_cents": 1472,
    "kcal": 486,
    "protein": 47,
    "carbs": 45,
@@ -1849,16 +1907,20 @@
      "qty": 3,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     },
     {
      "item": "garlic powder",
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 4.81,
+     "pack": 31,
+     "pack_name": "3.4 oz jar",
+     "pantry": true
     }
    ],
    "steps": [
@@ -1924,7 +1986,7 @@
    ],
    "minutes": 45,
    "servings": 4,
-   "cost_cents": 1049,
+   "cost_cents": 1065,
    "kcal": 435,
    "protein": 47,
    "carbs": 49,
@@ -1952,8 +2014,10 @@
      "qty": 4,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 6,
-     "pack": 0
+     "cents": 10.38,
+     "pack": 24,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "plain nonfat Greek yogurt",
@@ -1977,8 +2041,10 @@
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 4.81,
+     "pack": 31,
+     "pack_name": "3.4 oz jar",
+     "pantry": true
     }
    ],
    "steps": [
@@ -2051,7 +2117,7 @@
    ],
    "minutes": 30,
    "servings": 6,
-   "cost_cents": 1352,
+   "cost_cents": 1334,
    "kcal": 474,
    "protein": 39,
    "carbs": 57,
@@ -2105,24 +2171,29 @@
      "qty": 4,
      "unit": "tbsp",
      "aisle": "dairy & eggs",
-     "cents": 10,
-     "pack": 0
+     "cents": 8.87,
+     "pack": 45,
+     "pack_name": "8 oz tub"
     },
     {
      "item": "olive oil",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     },
     {
      "item": "Italian seasoning",
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
     }
    ],
    "steps": [
@@ -2195,7 +2266,7 @@
    ],
    "minutes": 30,
    "servings": 6,
-   "cost_cents": 1146,
+   "cost_cents": 1136,
    "kcal": 431,
    "protein": 38,
    "carbs": 54,
@@ -2232,16 +2303,20 @@
      "qty": 5,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 8,
-     "pack": 0
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
     },
     {
      "item": "honey",
      "qty": 3,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 31,
-     "pack": 0
+     "cents": 28.06,
+     "pack": 16,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "garlic",
@@ -2257,16 +2332,19 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "produce",
-     "cents": 8,
-     "pack": 0
+     "cents": 6.0,
+     "pack": 10,
+     "pack_name": "small piece (about 2 oz)"
     },
     {
      "item": "cornstarch",
      "qty": 1,
      "unit": "tbsp",
      "aisle": "baking",
-     "cents": 3,
-     "pack": 0
+     "cents": 3.2,
+     "pack": 56,
+     "pack_name": "16 oz box",
+     "pantry": true
     }
    ],
    "steps": [
@@ -2337,7 +2415,7 @@
    ],
    "minutes": 40,
    "servings": 6,
-   "cost_cents": 1332,
+   "cost_cents": 1331,
    "kcal": 317,
    "protein": 35,
    "carbs": 35,
@@ -2408,8 +2486,10 @@
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
     }
    ],
    "steps": [
@@ -2469,11 +2549,12 @@
     "american",
     "chicken",
     "high-protein",
+    "budget",
     "classic prep"
    ],
    "minutes": 40,
    "servings": 5,
-   "cost_cents": 1263,
+   "cost_cents": 1232,
    "kcal": 501,
    "protein": 47,
    "carbs": 54,
@@ -2509,24 +2590,30 @@
      "qty": 6,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 9,
-     "pack": 0
+     "cents": 4.97,
+     "pack": 30,
+     "pack_name": "18 oz bottle",
+     "pantry": true
     },
     {
      "item": "olive oil",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     },
     {
      "item": "smoked paprika",
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 8,
-     "pack": 0
+     "cents": 11.86,
+     "pack": 21,
+     "pack_name": "1.75 oz jar",
+     "pantry": true
     }
    ],
    "steps": [
@@ -2567,156 +2654,6 @@
    }
   },
   {
-   "id": "chicken_enchilada_skillet",
-   "name": "Chicken Enchilada Skillet",
-   "cuisine": "mexican",
-   "protein_type": "chicken",
-   "contains": [
-    "dairy",
-    "gluten",
-    "meat"
-   ],
-   "keys": [
-    "black_beans",
-    "cheddar",
-    "chicken_breast",
-    "chili_powder",
-    "corn",
-    "cumin",
-    "onion",
-    "tomato_sauce",
-    "tortillas"
-   ],
-   "tags": [
-    "mexican",
-    "chicken",
-    "high-protein",
-    "budget",
-    "quick",
-    "classic prep"
-   ],
-   "minutes": 30,
-   "servings": 6,
-   "cost_cents": 1386,
-   "kcal": 434,
-   "protein": 39,
-   "carbs": 44,
-   "fat": 13,
-   "fiber": 9,
-   "ingredients": [
-    {
-     "item": "chicken breast",
-     "qty": 1.5,
-     "unit": "lb",
-     "aisle": "meat",
-     "cents": 417,
-     "pack": 1
-    },
-    {
-     "item": "canned black beans (15 oz)",
-     "qty": 1,
-     "unit": "can",
-     "aisle": "canned",
-     "cents": 99,
-     "pack": 1
-    },
-    {
-     "item": "frozen corn (12 oz)",
-     "qty": 1,
-     "unit": "bag",
-     "aisle": "frozen",
-     "cents": 119,
-     "pack": 1
-    },
-    {
-     "item": "tomato sauce (15 oz)",
-     "qty": 2,
-     "unit": "can",
-     "aisle": "canned",
-     "cents": 89,
-     "pack": 1
-    },
-    {
-     "item": "chili powder",
-     "qty": 3,
-     "unit": "tsp",
-     "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
-    },
-    {
-     "item": "ground cumin",
-     "qty": 1,
-     "unit": "tsp",
-     "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
-    },
-    {
-     "item": "shredded cheddar",
-     "qty": 4,
-     "unit": "oz",
-     "aisle": "dairy & eggs",
-     "cents": 37,
-     "pack": 8,
-     "pack_name": "8 oz bag"
-    },
-    {
-     "item": "whole wheat tortillas (8 in)",
-     "qty": 4,
-     "unit": "tortilla",
-     "aisle": "bakery",
-     "cents": 37,
-     "pack": 10,
-     "pack_name": "pack of 10"
-    },
-    {
-     "item": "yellow onion",
-     "qty": 1,
-     "unit": "onion",
-     "aisle": "produce",
-     "cents": 40,
-     "pack": 1
-    }
-   ],
-   "steps": [
-    "Brown diced chicken and onion in a large skillet for 7 minutes.",
-    "Stir in the tomato sauce, chili powder, cumin, beans and corn; simmer 5 minutes.",
-    "Tear the tortillas into pieces and fold them in.",
-    "Top with cheddar, cover 3 minutes to melt, and portion into 6."
-   ],
-   "photo": "chicken enchiladas",
-   "photo_must": "enchilada",
-   "cost_note": "estimate",
-   "guide": {
-    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
-    "tools": [
-     "Large deep skillet with a lid",
-     "Cutting board and knife",
-     "Can opener and sieve"
-    ],
-    "prep": [
-     "Dice the chicken into small cubes and chop the onion.",
-     "Drain and rinse the black beans.",
-     "Tear the 4 tortillas into bite-size pieces."
-    ],
-    "steps": [
-     "Heat a little oil in the skillet on medium-high. Add the chicken and onion and cook 7 minutes, stirring, until the chicken is browned and 165°F.",
-     "Stir in the 2 cans tomato sauce, the chili powder, cumin, beans and corn. Bring to a simmer and cook 5 minutes.",
-     "Fold in the tortilla pieces so they soak in the sauce.",
-     "Sprinkle the cheddar over the top, cover, and leave on low 3 minutes until melted.",
-     "Portion into 6 containers."
-    ],
-    "tips": [
-     "Taste the sauce before adding the cheese; add salt if it needs it."
-    ],
-    "safe": "Chicken is safe at 165°F in the thickest part. No thermometer? Cut the thickest piece: the juices run clear and there is no pink.",
-    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
-    "reheat": "Microwave covered, stirring halfway, until steaming hot all the way through (165°F), about 2 to 3 minutes per container. Thaw frozen portions overnight in the fridge first."
-   },
-   "photo_not": "festival"
-  },
-  {
    "id": "turkey_chili",
    "name": "Turkey & Three-Bean Chili",
    "cuisine": "american",
@@ -2744,7 +2681,7 @@
    ],
    "minutes": 45,
    "servings": 8,
-   "cost_cents": 1692,
+   "cost_cents": 1691,
    "kcal": 301,
    "protein": 29,
    "carbs": 26,
@@ -2813,16 +2750,20 @@
      "qty": 4,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 5.73,
+     "pack": 26,
+     "pack_name": "2.5 oz jar",
+     "pantry": true
     },
     {
      "item": "ground cumin",
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 8.95,
+     "pack": 20,
+     "pack_name": "1.5 oz jar",
+     "pantry": true
     }
    ],
    "steps": [
@@ -2888,7 +2829,7 @@
    ],
    "minutes": 35,
    "servings": 6,
-   "cost_cents": 1523,
+   "cost_cents": 1518,
    "kcal": 509,
    "protein": 34,
    "carbs": 60,
@@ -2951,8 +2892,9 @@
      "qty": 2,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 25,
-     "pack": 0
+     "cents": 22.57,
+     "pack": 3.5,
+     "pack_name": "1 oz packet"
     },
     {
      "item": "low-sodium broth",
@@ -2999,165 +2941,6 @@
    }
   },
   {
-   "id": "egg_roll_bowl",
-   "name": "Egg Roll in a Bowl (Turkey & Cabbage)",
-   "cuisine": "chinese",
-   "protein_type": "turkey",
-   "contains": [
-    "gluten",
-    "meat"
-   ],
-   "keys": [
-    "cabbage",
-    "carrots",
-    "garlic",
-    "ginger",
-    "green_onions",
-    "ground_turkey",
-    "rice",
-    "sesame_oil",
-    "soy",
-    "sriracha"
-   ],
-   "tags": [
-    "chinese",
-    "turkey",
-    "bowl",
-    "high-protein",
-    "budget",
-    "quick",
-    "classic prep"
-   ],
-   "minutes": 25,
-   "servings": 6,
-   "cost_cents": 1341,
-   "kcal": 400,
-   "protein": 33,
-   "carbs": 35,
-   "fat": 14,
-   "fiber": 4,
-   "ingredients": [
-    {
-     "item": "lean ground turkey (93%)",
-     "qty": 2,
-     "unit": "lb",
-     "aisle": "meat",
-     "cents": 499,
-     "pack": 1
-    },
-    {
-     "item": "green cabbage",
-     "qty": 0.6,
-     "unit": "head",
-     "aisle": "produce",
-     "cents": 159,
-     "pack": 1
-    },
-    {
-     "item": "carrots",
-     "qty": 2,
-     "unit": "carrot",
-     "aisle": "produce",
-     "cents": 14,
-     "pack": 1
-    },
-    {
-     "item": "green onions",
-     "qty": 1,
-     "unit": "bunch",
-     "aisle": "produce",
-     "cents": 89,
-     "pack": 1
-    },
-    {
-     "item": "low-sodium soy sauce",
-     "qty": 4,
-     "unit": "tbsp",
-     "aisle": "sauces",
-     "cents": 8,
-     "pack": 0
-    },
-    {
-     "item": "fresh ginger (grated)",
-     "qty": 1,
-     "unit": "tbsp",
-     "aisle": "produce",
-     "cents": 8,
-     "pack": 0
-    },
-    {
-     "item": "garlic",
-     "qty": 3,
-     "unit": "clove",
-     "aisle": "produce",
-     "cents": 6,
-     "pack": 10,
-     "pack_name": "head"
-    },
-    {
-     "item": "sriracha",
-     "qty": 2,
-     "unit": "tsp",
-     "aisle": "sauces",
-     "cents": 5,
-     "pack": 0
-    },
-    {
-     "item": "toasted sesame oil",
-     "qty": 2,
-     "unit": "tsp",
-     "aisle": "oils & spices",
-     "cents": 9,
-     "pack": 0
-    },
-    {
-     "item": "long-grain white rice",
-     "qty": 1,
-     "unit": "cup",
-     "aisle": "grains & pasta",
-     "cents": 45,
-     "pack": 4.9,
-     "pack_name": "2 lb bag"
-    }
-   ],
-   "steps": [
-    "Cook the rice. Brown the turkey in a large pan.",
-    "Add garlic and ginger for 1 minute, then the shredded cabbage and grated carrots.",
-    "Stir-fry 6 minutes until the cabbage softens. Add soy sauce, sriracha and sesame oil.",
-    "Top with green onions and pack with a scoop of rice."
-   ],
-   "photo": "cabbage stir fry",
-   "photo_must": "cabbage|stir",
-   "cost_note": "estimate",
-   "guide": {
-    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
-    "tools": [
-     "Saucepan with lid (for rice)",
-     "Very large skillet or wok",
-     "Grater"
-    ],
-    "prep": [
-     "Start the rice (1 cup rice + 2 cups water).",
-     "Shred the cabbage thin and grate the 2 carrots.",
-     "Mince the garlic and grate the ginger. Slice the green onions."
-    ],
-    "steps": [
-     "Cook the 1 cup rice: rinse, bring to a boil with 2 cups water and a pinch of salt, cover, cook on low 18 minutes, then rest 5 minutes.",
-     "Brown the turkey in the skillet on medium-high for about 7 minutes, breaking it up, until no pink remains (165°F).",
-     "Add the garlic and ginger and stir 1 minute.",
-     "Add the cabbage and carrots and stir-fry 6 minutes, until the cabbage softens.",
-     "Stir in the soy sauce, sriracha and sesame oil.",
-     "Top with green onions and pack with a scoop of rice in 6 containers."
-    ],
-    "tips": [
-     "The cabbage cooks down a lot; it fits in the pan after a couple of minutes."
-    ],
-    "safe": "Ground turkey is safe at 165°F. It should be browned all the way through with no pink left.",
-    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
-    "reheat": "Microwave covered, stirring halfway, until steaming hot all the way through (165°F), about 2 to 3 minutes per container. Thaw frozen portions overnight in the fridge first."
-   }
-  },
-  {
    "id": "turkey_meatballs_spaghetti",
    "name": "Turkey Meatballs & Whole Wheat Spaghetti",
    "cuisine": "italian",
@@ -3188,7 +2971,7 @@
    ],
    "minutes": 40,
    "servings": 6,
-   "cost_cents": 1190,
+   "cost_cents": 1184,
    "kcal": 548,
    "protein": 37,
    "carbs": 68,
@@ -3226,16 +3009,19 @@
      "qty": 4,
      "unit": "tbsp",
      "aisle": "dairy & eggs",
-     "cents": 10,
-     "pack": 0
+     "cents": 8.87,
+     "pack": 45,
+     "pack_name": "8 oz tub"
     },
     {
      "item": "Italian seasoning",
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
     },
     {
      "item": "garlic",
@@ -3332,7 +3118,7 @@
    ],
    "minutes": 25,
    "servings": 6,
-   "cost_cents": 1787,
+   "cost_cents": 1781,
    "kcal": 455,
    "protein": 31,
    "carbs": 55,
@@ -3369,16 +3155,20 @@
      "qty": 4,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 8,
-     "pack": 0
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
     },
     {
      "item": "honey",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 31,
-     "pack": 0
+     "cents": 28.06,
+     "pack": 16,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "garlic",
@@ -3394,16 +3184,19 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "produce",
-     "cents": 8,
-     "pack": 0
+     "cents": 6.0,
+     "pack": 10,
+     "pack_name": "small piece (about 2 oz)"
     },
     {
      "item": "cornstarch",
      "qty": 1,
      "unit": "tbsp",
      "aisle": "baking",
-     "cents": 3,
-     "pack": 0
+     "cents": 3.2,
+     "pack": 56,
+     "pack_name": "16 oz box",
+     "pantry": true
     }
    ],
    "steps": [
@@ -3475,7 +3268,7 @@
    ],
    "minutes": 45,
    "servings": 6,
-   "cost_cents": 1321,
+   "cost_cents": 1316,
    "kcal": 479,
    "protein": 30,
    "carbs": 69,
@@ -3544,16 +3337,19 @@
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
     },
     {
      "item": "grated parmesan",
      "qty": 3,
      "unit": "tbsp",
      "aisle": "dairy & eggs",
-     "cents": 10,
-     "pack": 0
+     "cents": 8.87,
+     "pack": 45,
+     "pack_name": "8 oz tub"
     }
    ],
    "steps": [
@@ -3617,7 +3413,7 @@
    ],
    "minutes": 50,
    "servings": 6,
-   "cost_cents": 1748,
+   "cost_cents": 1747,
    "kcal": 406,
    "protein": 29,
    "carbs": 40,
@@ -3679,8 +3475,10 @@
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
     }
    ],
    "steps": [
@@ -3749,7 +3547,7 @@
    ],
    "minutes": 55,
    "servings": 6,
-   "cost_cents": 1704,
+   "cost_cents": 1705,
    "kcal": 513,
    "protein": 38,
    "carbs": 60,
@@ -3819,8 +3617,10 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "baking",
-     "cents": 3,
-     "pack": 0
+     "cents": 3.2,
+     "pack": 56,
+     "pack_name": "16 oz box",
+     "pantry": true
     },
     {
      "item": "garlic",
@@ -3901,7 +3701,7 @@
    ],
    "minutes": 45,
    "servings": 6,
-   "cost_cents": 1235,
+   "cost_cents": 1214,
    "kcal": 399,
    "protein": 36,
    "carbs": 35,
@@ -3937,8 +3737,10 @@
      "qty": 3,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     },
     {
      "item": "garlic",
@@ -3954,16 +3756,20 @@
      "qty": 2,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 12,
-     "pack": 0
+     "cents": 11.32,
+     "pack": 22,
+     "pack_name": "12 oz jar",
+     "pantry": true
     },
     {
      "item": "honey",
      "qty": 1,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 31,
-     "pack": 0
+     "cents": 28.06,
+     "pack": 16,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -4037,7 +3843,7 @@
    ],
    "minutes": 45,
    "servings": 7,
-   "cost_cents": 1605,
+   "cost_cents": 1608,
    "kcal": 448,
    "protein": 42,
    "carbs": 54,
@@ -4074,16 +3880,20 @@
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 8.95,
+     "pack": 20,
+     "pack_name": "1.5 oz jar",
+     "pantry": true
     },
     {
      "item": "dried oregano",
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
     },
     {
      "item": "long-grain white rice",
@@ -4159,139 +3969,6 @@
    }
   },
   {
-   "id": "tuna_white_bean_salad",
-   "name": "Lemony Tuna & White Bean Salad",
-   "cuisine": "mediterranean",
-   "protein_type": "seafood",
-   "contains": [
-    "seafood"
-   ],
-   "keys": [
-    "cherry_tomatoes",
-    "cucumber",
-    "lemon",
-    "olive_oil",
-    "oregano",
-    "red_onion",
-    "tuna",
-    "white_beans"
-   ],
-   "tags": [
-    "mediterranean",
-    "seafood",
-    "high-protein",
-    "quick"
-   ],
-   "minutes": 15,
-   "servings": 4,
-   "cost_cents": 1219,
-   "kcal": 366,
-   "protein": 39,
-   "carbs": 35,
-   "fat": 8,
-   "fiber": 8,
-   "ingredients": [
-    {
-     "item": "canned tuna in water (5 oz)",
-     "qty": 4,
-     "unit": "can",
-     "aisle": "canned",
-     "cents": 119,
-     "pack": 1
-    },
-    {
-     "item": "canned white beans (15 oz)",
-     "qty": 2,
-     "unit": "can",
-     "aisle": "canned",
-     "cents": 109,
-     "pack": 1
-    },
-    {
-     "item": "cucumber",
-     "qty": 1,
-     "unit": "cucumber",
-     "aisle": "produce",
-     "cents": 79,
-     "pack": 1
-    },
-    {
-     "item": "cherry tomatoes",
-     "qty": 1,
-     "unit": "pint",
-     "aisle": "produce",
-     "cents": 299,
-     "pack": 1
-    },
-    {
-     "item": "red onion",
-     "qty": 0.5,
-     "unit": "onion",
-     "aisle": "produce",
-     "cents": 60,
-     "pack": 1
-    },
-    {
-     "item": "lemon",
-     "qty": 1,
-     "unit": "lemon",
-     "aisle": "produce",
-     "cents": 59,
-     "pack": 1
-    },
-    {
-     "item": "olive oil",
-     "qty": 2,
-     "unit": "tbsp",
-     "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
-    },
-    {
-     "item": "dried oregano",
-     "qty": 1,
-     "unit": "tsp",
-     "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
-    }
-   ],
-   "steps": [
-    "Drain the tuna and beans.",
-    "Chop the cucumber, halve the tomatoes and slice the red onion thin.",
-    "Toss everything with lemon juice, olive oil, oregano, salt and pepper.",
-    "Keeps 3 days in the fridge; no cooking needed."
-   ],
-   "photo": "tuna salad beans",
-   "photo_must": "tuna",
-   "cost_note": "estimate",
-   "guide": {
-    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
-    "tools": [
-     "Large bowl",
-     "Can opener and sieve",
-     "Cutting board and knife"
-    ],
-    "prep": [
-     "Drain the 4 cans of tuna. Drain and rinse the 2 cans of white beans.",
-     "Chop the cucumber, halve the cherry tomatoes and slice half a red onion thin.",
-     "Juice the lemon."
-    ],
-    "steps": [
-     "Put the beans, cucumber, tomatoes and red onion in the bowl.",
-     "Add the lemon juice, the 2 tbsp olive oil, the oregano, 1/2 tsp salt and some pepper. Toss.",
-     "Flake in the tuna in big pieces and fold gently so it doesn't turn to mush.",
-     "Divide into 4 containers."
-    ],
-    "tips": [
-     "Soak the sliced red onion in cold water for 5 minutes to make it milder."
-    ],
-    "safe": "No cooking needed. Keep it cold: don't leave it out of the fridge more than 2 hours.",
-    "store": "Keep sealed in the fridge and eat within 3 days.",
-    "reheat": "Eat cold; don't reheat."
-   }
-  },
-  {
    "id": "shrimp_fried_rice",
    "name": "Shrimp Fried Rice",
    "cuisine": "chinese",
@@ -4321,7 +3998,7 @@
    ],
    "minutes": 25,
    "servings": 5,
-   "cost_cents": 1118,
+   "cost_cents": 1125,
    "kcal": 413,
    "protein": 31,
    "carbs": 56,
@@ -4367,8 +4044,10 @@
      "qty": 4,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 8,
-     "pack": 0
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
     },
     {
      "item": "green onions",
@@ -4392,8 +4071,10 @@
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 9,
-     "pack": 0
+     "cents": 11.63,
+     "pack": 30,
+     "pack_name": "5 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -4459,7 +4140,7 @@
    ],
    "minutes": 30,
    "servings": 4,
-   "cost_cents": 1366,
+   "cost_cents": 1356,
    "kcal": 651,
    "protein": 43,
    "carbs": 58,
@@ -4496,16 +4177,20 @@
      "qty": 3,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 8,
-     "pack": 0
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
     },
     {
      "item": "honey",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 31,
-     "pack": 0
+     "cents": 28.06,
+     "pack": 16,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "garlic",
@@ -4521,8 +4206,10 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -4594,7 +4281,7 @@
    ],
    "minutes": 25,
    "servings": 5,
-   "cost_cents": 1142,
+   "cost_cents": 1126,
    "kcal": 398,
    "protein": 30,
    "carbs": 52,
@@ -4648,16 +4335,19 @@
      "qty": 4,
      "unit": "tbsp",
      "aisle": "dairy & eggs",
-     "cents": 10,
-     "pack": 0
+     "cents": 8.87,
+     "pack": 45,
+     "pack_name": "8 oz tub"
     },
     {
      "item": "olive oil",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -4698,146 +4388,6 @@
    }
   },
   {
-   "id": "tuna_pasta_salad",
-   "name": "Greek Yogurt Tuna Pasta Salad",
-   "cuisine": "italian",
-   "protein_type": "seafood",
-   "contains": [
-    "dairy",
-    "gluten",
-    "seafood"
-   ],
-   "keys": [
-    "celery",
-    "greek_yogurt",
-    "lemon",
-    "mustard",
-    "peas",
-    "red_onion",
-    "tuna",
-    "ww_pasta"
-   ],
-   "tags": [
-    "italian",
-    "seafood",
-    "pasta",
-    "high-protein",
-    "budget",
-    "quick",
-    "classic prep"
-   ],
-   "minutes": 20,
-   "servings": 5,
-   "cost_cents": 830,
-   "kcal": 415,
-   "protein": 36,
-   "carbs": 63,
-   "fat": 3,
-   "fiber": 10,
-   "ingredients": [
-    {
-     "item": "whole wheat pasta",
-     "qty": 0.75,
-     "unit": "lb",
-     "aisle": "grains & pasta",
-     "cents": 149,
-     "pack": 1
-    },
-    {
-     "item": "canned tuna in water (5 oz)",
-     "qty": 3,
-     "unit": "can",
-     "aisle": "canned",
-     "cents": 119,
-     "pack": 1
-    },
-    {
-     "item": "plain nonfat Greek yogurt",
-     "qty": 1,
-     "unit": "cup",
-     "aisle": "dairy & eggs",
-     "cents": 121,
-     "pack": 3.75,
-     "pack_name": "32 oz tub"
-    },
-    {
-     "item": "frozen peas (12 oz)",
-     "qty": 1,
-     "unit": "bag",
-     "aisle": "frozen",
-     "cents": 119,
-     "pack": 1
-    },
-    {
-     "item": "celery",
-     "qty": 2,
-     "unit": "stalk",
-     "aisle": "produce",
-     "cents": 10,
-     "pack": 8,
-     "pack_name": "bunch"
-    },
-    {
-     "item": "red onion",
-     "qty": 0.5,
-     "unit": "onion",
-     "aisle": "produce",
-     "cents": 60,
-     "pack": 1
-    },
-    {
-     "item": "lemon",
-     "qty": 1,
-     "unit": "lemon",
-     "aisle": "produce",
-     "cents": 59,
-     "pack": 1
-    },
-    {
-     "item": "Dijon mustard",
-     "qty": 1,
-     "unit": "tbsp",
-     "aisle": "sauces",
-     "cents": 12,
-     "pack": 0
-    }
-   ],
-   "steps": [
-    "Boil the pasta, adding the frozen peas for the last 2 minutes; rinse under cold water.",
-    "Stir the yogurt with mustard, lemon juice, salt and pepper.",
-    "Fold in the drained tuna, chopped celery and red onion, pasta and peas.",
-    "Chill and divide into 5."
-   ],
-   "photo": "tuna pasta salad",
-   "photo_must": "pasta salad|tuna",
-   "cost_note": "estimate",
-   "guide": {
-    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
-    "tools": [
-     "Large pot",
-     "Colander",
-     "Large bowl"
-    ],
-    "prep": [
-     "Chop the 2 celery stalks and half the red onion small.",
-     "Juice the lemon. Drain the 3 cans of tuna."
-    ],
-    "steps": [
-     "Boil the pasta in salted water as the package says. Add the frozen peas for the last 2 minutes.",
-     "Drain and rinse under cold water until cool. Shake off the water.",
-     "In the bowl, stir the Greek yogurt with the mustard, lemon juice, 1/2 tsp salt and pepper.",
-     "Fold in the tuna, celery, red onion, pasta and peas.",
-     "Chill at least 30 minutes, then divide into 5."
-    ],
-    "tips": [
-     "It thickens in the fridge. Stir in a spoon of yogurt or a splash of lemon juice before eating."
-    ],
-    "safe": "No raw ingredients to cook beyond the pasta. Keep it cold: don't leave it out of the fridge more than 2 hours.",
-    "store": "Keep sealed in the fridge and eat within 3 days.",
-    "reheat": "Eat cold; don't reheat."
-   }
-  },
-  {
    "id": "red_lentil_curry",
    "name": "Red Lentil Coconut Curry",
    "cuisine": "indian",
@@ -4862,7 +4412,7 @@
    ],
    "minutes": 35,
    "servings": 6,
-   "cost_cents": 820,
+   "cost_cents": 827,
    "kcal": 511,
    "protein": 22,
    "carbs": 92,
@@ -4916,16 +4466,19 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "produce",
-     "cents": 8,
-     "pack": 0
+     "cents": 6.0,
+     "pack": 10,
+     "pack_name": "small piece (about 2 oz)"
     },
     {
      "item": "curry powder",
      "qty": 3,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 9.96,
+     "pack": 25,
+     "pack_name": "1.75 oz jar",
+     "pantry": true
     },
     {
      "item": "baby spinach",
@@ -5009,7 +4562,7 @@
    ],
    "minutes": 45,
    "servings": 6,
-   "cost_cents": 1032,
+   "cost_cents": 1039,
    "kcal": 314,
    "protein": 18,
    "carbs": 60,
@@ -5063,16 +4616,20 @@
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 8.95,
+     "pack": 20,
+     "pack_name": "1.5 oz jar",
+     "pantry": true
     },
     {
      "item": "smoked paprika",
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 8,
-     "pack": 0
+     "cents": 11.86,
+     "pack": 21,
+     "pack_name": "1.75 oz jar",
+     "pantry": true
     },
     {
      "item": "baby spinach",
@@ -5158,7 +4715,7 @@
    ],
    "minutes": 40,
    "servings": 6,
-   "cost_cents": 1281,
+   "cost_cents": 1271,
    "kcal": 563,
    "protein": 20,
    "carbs": 97,
@@ -5237,24 +4794,30 @@
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 8.95,
+     "pack": 20,
+     "pack_name": "1.5 oz jar",
+     "pantry": true
     },
     {
      "item": "chili powder",
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 5.73,
+     "pack": 26,
+     "pack_name": "2.5 oz jar",
+     "pantry": true
     },
     {
      "item": "olive oil",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -5295,321 +4858,6 @@
    }
   },
   {
-   "id": "chickpea_spinach_curry",
-   "name": "Chickpea & Spinach Curry",
-   "cuisine": "indian",
-   "protein_type": "vegetarian",
-   "contains": [],
-   "keys": [
-    "chickpeas",
-    "coconut_milk",
-    "crushed_tomatoes",
-    "curry_powder",
-    "garlic",
-    "ginger",
-    "onion",
-    "rice",
-    "spinach"
-   ],
-   "tags": [
-    "vegetarian",
-    "indian",
-    "budget",
-    "quick",
-    "classic prep"
-   ],
-   "minutes": 30,
-   "servings": 6,
-   "cost_cents": 966,
-   "kcal": 449,
-   "protein": 15,
-   "carbs": 79,
-   "fat": 9,
-   "fiber": 12,
-   "ingredients": [
-    {
-     "item": "canned chickpeas (15 oz)",
-     "qty": 3,
-     "unit": "can",
-     "aisle": "canned",
-     "cents": 99,
-     "pack": 1
-    },
-    {
-     "item": "crushed tomatoes (28 oz)",
-     "qty": 1,
-     "unit": "can",
-     "aisle": "canned",
-     "cents": 179,
-     "pack": 1
-    },
-    {
-     "item": "light coconut milk (13.5 oz)",
-     "qty": 1,
-     "unit": "can",
-     "aisle": "canned",
-     "cents": 179,
-     "pack": 1
-    },
-    {
-     "item": "yellow onion",
-     "qty": 1,
-     "unit": "onion",
-     "aisle": "produce",
-     "cents": 40,
-     "pack": 1
-    },
-    {
-     "item": "garlic",
-     "qty": 4,
-     "unit": "clove",
-     "aisle": "produce",
-     "cents": 6,
-     "pack": 10,
-     "pack_name": "head"
-    },
-    {
-     "item": "fresh ginger (grated)",
-     "qty": 1,
-     "unit": "tbsp",
-     "aisle": "produce",
-     "cents": 8,
-     "pack": 0
-    },
-    {
-     "item": "curry powder",
-     "qty": 3,
-     "unit": "tsp",
-     "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
-    },
-    {
-     "item": "baby spinach",
-     "qty": 5,
-     "unit": "oz",
-     "aisle": "produce",
-     "cents": 30,
-     "pack": 5,
-     "pack_name": "5 oz box"
-    },
-    {
-     "item": "long-grain white rice",
-     "qty": 1.5,
-     "unit": "cup",
-     "aisle": "grains & pasta",
-     "cents": 45,
-     "pack": 4.9,
-     "pack_name": "2 lb bag"
-    }
-   ],
-   "steps": [
-    "Cook the rice. Soften the onion 5 minutes; add garlic, ginger and curry powder.",
-    "Add the drained chickpeas, crushed tomatoes and coconut milk; simmer 15 minutes.",
-    "Stir in the spinach and season with salt.",
-    "Serve over rice."
-   ],
-   "photo": "chickpea curry",
-   "photo_must": "chickpea|chana",
-   "cost_note": "estimate",
-   "guide": {
-    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
-    "tools": [
-     "Saucepan with lid (for rice)",
-     "Large pot",
-     "Can opener and sieve"
-    ],
-    "prep": [
-     "Start the rice.",
-     "Drain and rinse the 3 cans of chickpeas.",
-     "Chop the onion, mince the 4 garlic cloves and grate the ginger."
-    ],
-    "steps": [
-     "Cook the 1.5 cups rice: Rinse the rice in a sieve until the water runs mostly clear. Bring the rice and twice its volume of water (for example 1.5 cups rice + 3 cups water) and a pinch of salt to a boil, cover, turn the heat to low and cook 18 minutes. Take it off the heat and leave the lid on 5 more minutes, then fluff with a fork.",
-     "Heat a little oil in the pot on medium. Cook the onion 5 minutes until soft.",
-     "Add the garlic, ginger and curry powder and stir 1 minute.",
-     "Add the chickpeas, crushed tomatoes and coconut milk. Simmer 15 minutes, stirring now and then, until thickened.",
-     "Stir in the spinach until it wilts. Add salt to taste.",
-     "Serve over rice in 6 containers."
-    ],
-    "tips": [
-     "Mash a few chickpeas against the pot to make the sauce thicker."
-    ],
-    "safe": "No meat or eggs to undercook: cook until the vegetables are tender and the sauce is hot all the way through.",
-    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
-    "reheat": "Microwave covered, stirring halfway, until steaming hot all the way through (165°F), about 2 to 3 minutes per container. Thaw frozen portions overnight in the fridge first."
-   }
-  },
-  {
-   "id": "peanut_tofu_stir_fry",
-   "name": "Peanut Tofu & Veggie Stir-Fry",
-   "cuisine": "asian",
-   "protein_type": "vegetarian",
-   "contains": [
-    "gluten",
-    "honey",
-    "nuts"
-   ],
-   "keys": [
-    "broccoli",
-    "carrots",
-    "cornstarch",
-    "garlic",
-    "honey",
-    "lime",
-    "peanut_butter",
-    "pepper",
-    "rice",
-    "soy",
-    "tofu"
-   ],
-   "tags": [
-    "vegetarian",
-    "asian",
-    "budget",
-    "quick",
-    "classic prep"
-   ],
-   "minutes": 30,
-   "servings": 5,
-   "cost_cents": 1172,
-   "kcal": 552,
-   "protein": 28,
-   "carbs": 74,
-   "fat": 17,
-   "fiber": 8,
-   "ingredients": [
-    {
-     "item": "extra-firm tofu (14 oz)",
-     "qty": 2,
-     "unit": "block",
-     "aisle": "produce",
-     "cents": 229,
-     "pack": 1
-    },
-    {
-     "item": "broccoli",
-     "qty": 1,
-     "unit": "lb",
-     "aisle": "produce",
-     "cents": 199,
-     "pack": 1
-    },
-    {
-     "item": "bell pepper",
-     "qty": 2,
-     "unit": "pepper",
-     "aisle": "produce",
-     "cents": 118,
-     "pack": 1
-    },
-    {
-     "item": "carrots",
-     "qty": 2,
-     "unit": "carrot",
-     "aisle": "produce",
-     "cents": 14,
-     "pack": 1
-    },
-    {
-     "item": "peanut butter",
-     "qty": 4,
-     "unit": "tbsp",
-     "aisle": "sauces",
-     "cents": 10,
-     "pack": 0
-    },
-    {
-     "item": "low-sodium soy sauce",
-     "qty": 3,
-     "unit": "tbsp",
-     "aisle": "sauces",
-     "cents": 8,
-     "pack": 0
-    },
-    {
-     "item": "honey",
-     "qty": 2,
-     "unit": "tbsp",
-     "aisle": "sauces",
-     "cents": 31,
-     "pack": 0
-    },
-    {
-     "item": "lime",
-     "qty": 1,
-     "unit": "lime",
-     "aisle": "produce",
-     "cents": 33,
-     "pack": 1
-    },
-    {
-     "item": "long-grain white rice",
-     "qty": 1.5,
-     "unit": "cup",
-     "aisle": "grains & pasta",
-     "cents": 45,
-     "pack": 4.9,
-     "pack_name": "2 lb bag"
-    },
-    {
-     "item": "cornstarch",
-     "qty": 2,
-     "unit": "tbsp",
-     "aisle": "baking",
-     "cents": 3,
-     "pack": 0
-    },
-    {
-     "item": "garlic",
-     "qty": 3,
-     "unit": "clove",
-     "aisle": "produce",
-     "cents": 6,
-     "pack": 10,
-     "pack_name": "head"
-    }
-   ],
-   "steps": [
-    "Cook the rice. Press the tofu dry, cube it, and toss with the cornstarch.",
-    "Fry the tofu in a non-stick pan until golden on all sides, about 10 minutes.",
-    "Stir-fry the vegetables and garlic 5 minutes.",
-    "Whisk peanut butter, soy sauce, honey, lime juice and 1/4 cup hot water; toss everything and pack over rice."
-   ],
-   "photo": "tofu stir fry",
-   "photo_must": "tofu",
-   "cost_note": "estimate",
-   "guide": {
-    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
-    "tools": [
-     "Saucepan with lid (for rice)",
-     "Large non-stick pan",
-     "Clean kitchen towel",
-     "Small bowl"
-    ],
-    "prep": [
-     "Start the rice.",
-     "Wrap the 2 tofu blocks in a towel and press under something heavy for 15 minutes to squeeze out water.",
-     "Cut the broccoli into florets, slice the peppers and carrots. Mince the garlic.",
-     "Whisk the peanut butter, soy sauce, honey, lime juice and 1/4 cup hot water until smooth."
-    ],
-    "steps": [
-     "Cook the 1.5 cups rice: Rinse the rice in a sieve until the water runs mostly clear. Bring the rice and twice its volume of water (for example 1.5 cups rice + 3 cups water) and a pinch of salt to a boil, cover, turn the heat to low and cook 18 minutes. Take it off the heat and leave the lid on 5 more minutes, then fluff with a fork.",
-     "Cut the tofu into 3/4-inch cubes and toss with the 2 tbsp cornstarch.",
-     "Heat 2 tbsp oil in the pan on medium-high. Fry the tofu about 10 minutes, turning every couple of minutes, until golden on all sides. Move to a plate.",
-     "Add a little oil and stir-fry the broccoli, peppers, carrots and garlic 5 minutes until crisp-tender.",
-     "Return the tofu, pour in the peanut sauce and toss until coated.",
-     "Pack over rice in 5 containers."
-    ],
-    "tips": [
-     "Don't move the tofu for the first 2 minutes so it forms a crust and doesn't stick."
-    ],
-    "safe": "No meat or eggs to undercook: cook until the vegetables are tender and the sauce is hot all the way through.",
-    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
-    "reheat": "Microwave covered, stirring halfway, until steaming hot all the way through (165°F), about 2 to 3 minutes per container. Thaw frozen portions overnight in the fridge first."
-   }
-  },
-  {
    "id": "spanish_chickpeas_rice",
    "name": "Spanish Chickpeas & Rice",
    "cuisine": "mediterranean",
@@ -5635,7 +4883,7 @@
    ],
    "minutes": 40,
    "servings": 6,
-   "cost_cents": 888,
+   "cost_cents": 890,
    "kcal": 386,
    "protein": 14,
    "carbs": 71,
@@ -5688,8 +4936,10 @@
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 8,
-     "pack": 0
+     "cents": 11.86,
+     "pack": 21,
+     "pack_name": "1.75 oz jar",
+     "pantry": true
     },
     {
      "item": "low-sodium broth",
@@ -5722,8 +4972,10 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -5789,7 +5041,7 @@
    ],
    "minutes": 20,
    "servings": 5,
-   "cost_cents": 599,
+   "cost_cents": 605,
    "kcal": 477,
    "protein": 18,
    "carbs": 80,
@@ -5827,8 +5079,10 @@
      "qty": 4,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 8,
-     "pack": 0
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
     },
     {
      "item": "green onions",
@@ -5852,8 +5106,10 @@
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 9,
-     "pack": 0
+     "cents": 11.63,
+     "pack": 30,
+     "pack_name": "5 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -5919,7 +5175,7 @@
    ],
    "minutes": 25,
    "servings": 5,
-   "cost_cents": 1143,
+   "cost_cents": 1126,
    "kcal": 421,
    "protein": 16,
    "carbs": 52,
@@ -5989,16 +5245,20 @@
      "qty": 3,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     },
     {
      "item": "dried oregano",
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
     }
    ],
    "steps": [
@@ -6063,7 +5323,7 @@
    ],
    "minutes": 35,
    "servings": 5,
-   "cost_cents": 1244,
+   "cost_cents": 1239,
    "kcal": 311,
    "protein": 21,
    "carbs": 53,
@@ -6133,16 +5393,19 @@
      "qty": 4,
      "unit": "tbsp",
      "aisle": "dairy & eggs",
-     "cents": 10,
-     "pack": 0
+     "cents": 8.87,
+     "pack": 45,
+     "pack_name": "8 oz tub"
     },
     {
      "item": "Italian seasoning",
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
     }
    ],
    "steps": [
@@ -6183,134 +5446,6 @@
    }
   },
   {
-   "id": "black_bean_quesadillas",
-   "name": "Black Bean & Spinach Quesadillas",
-   "cuisine": "mexican",
-   "protein_type": "vegetarian",
-   "contains": [
-    "dairy",
-    "gluten"
-   ],
-   "keys": [
-    "black_beans",
-    "cheddar",
-    "corn",
-    "cumin",
-    "salsa",
-    "spinach",
-    "tortillas"
-   ],
-   "tags": [
-    "vegetarian",
-    "mexican",
-    "quick"
-   ],
-   "minutes": 20,
-   "servings": 4,
-   "cost_cents": 1014,
-   "kcal": 602,
-   "protein": 28,
-   "carbs": 78,
-   "fat": 22,
-   "fiber": 17,
-   "ingredients": [
-    {
-     "item": "canned black beans (15 oz)",
-     "qty": 2,
-     "unit": "can",
-     "aisle": "canned",
-     "cents": 99,
-     "pack": 1
-    },
-    {
-     "item": "frozen corn (12 oz)",
-     "qty": 0.5,
-     "unit": "bag",
-     "aisle": "frozen",
-     "cents": 119,
-     "pack": 1
-    },
-    {
-     "item": "shredded cheddar",
-     "qty": 6,
-     "unit": "oz",
-     "aisle": "dairy & eggs",
-     "cents": 37,
-     "pack": 8,
-     "pack_name": "8 oz bag"
-    },
-    {
-     "item": "whole wheat tortillas (8 in)",
-     "qty": 8,
-     "unit": "tortilla",
-     "aisle": "bakery",
-     "cents": 37,
-     "pack": 10,
-     "pack_name": "pack of 10"
-    },
-    {
-     "item": "salsa",
-     "qty": 1,
-     "unit": "cup",
-     "aisle": "canned",
-     "cents": 142,
-     "pack": 1.75,
-     "pack_name": "16 oz jar"
-    },
-    {
-     "item": "baby spinach",
-     "qty": 3,
-     "unit": "oz",
-     "aisle": "produce",
-     "cents": 30,
-     "pack": 5,
-     "pack_name": "5 oz box"
-    },
-    {
-     "item": "ground cumin",
-     "qty": 1,
-     "unit": "tsp",
-     "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
-    }
-   ],
-   "steps": [
-    "Mash half the beans with cumin, then stir in the rest with the corn and chopped spinach.",
-    "Spread on 4 tortillas, top with cheese, and close with the other 4.",
-    "Toast in a dry pan 3 minutes a side until golden and melted.",
-    "Cut into wedges and pack with salsa."
-   ],
-   "photo": "quesadilla",
-   "photo_must": "quesadilla",
-   "cost_note": "estimate",
-   "guide": {
-    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
-    "tools": [
-     "Large dry skillet",
-     "Bowl and fork",
-     "Spatula",
-     "Cutting board and knife"
-    ],
-    "prep": [
-     "Drain and rinse the 2 cans of black beans.",
-     "Chop the 3 oz spinach."
-    ],
-    "steps": [
-     "Mash half the beans with the cumin and a pinch of salt. Stir in the rest of the beans, the corn and the spinach.",
-     "Spread the filling over 4 tortillas, top with the cheddar, and close with the other 4 tortillas.",
-     "Heat the dry skillet on medium. Cook one quesadilla at a time, about 3 minutes a side, until golden and the cheese has melted.",
-     "Cut each into 4 wedges and pack with salsa on the side."
-    ],
-    "tips": [
-     "Press down gently with the spatula so the filling sticks together."
-    ],
-    "safe": "No meat or eggs to undercook: cook until the vegetables are tender and the sauce is hot all the way through.",
-    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
-    "reheat": "Reheat in a dry pan 2 minutes a side for crisp edges, or microwave 60 to 90 seconds."
-   }
-  },
-  {
    "id": "lentil_sloppy_joes",
    "name": "Lentil Sloppy Joes",
    "cuisine": "american",
@@ -6338,7 +5473,7 @@
    ],
    "minutes": 35,
    "servings": 6,
-   "cost_cents": 713,
+   "cost_cents": 704,
    "kcal": 369,
    "protein": 19,
    "carbs": 68,
@@ -6383,24 +5518,30 @@
      "qty": 2,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 31,
-     "pack": 0
+     "cents": 28.06,
+     "pack": 16,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "Dijon mustard",
      "qty": 1,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 12,
-     "pack": 0
+     "cents": 11.32,
+     "pack": 22,
+     "pack_name": "12 oz jar",
+     "pantry": true
     },
     {
      "item": "chili powder",
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 5.73,
+     "pack": 26,
+     "pack_name": "2.5 oz jar",
+     "pantry": true
     },
     {
      "item": "whole wheat buns",
@@ -6487,7 +5628,7 @@
    ],
    "minutes": 35,
    "servings": 6,
-   "cost_cents": 1000,
+   "cost_cents": 995,
    "kcal": 293,
    "protein": 17,
    "carbs": 53,
@@ -6566,8 +5707,9 @@
      "qty": 4,
      "unit": "tbsp",
      "aisle": "dairy & eggs",
-     "cents": 10,
-     "pack": 0
+     "cents": 8.87,
+     "pack": 45,
+     "pack_name": "8 oz tub"
     },
     {
      "item": "garlic",
@@ -6643,7 +5785,7 @@
    ],
    "minutes": 45,
    "servings": 8,
-   "cost_cents": 1230,
+   "cost_cents": 1229,
    "kcal": 411,
    "protein": 28,
    "carbs": 54,
@@ -6698,8 +5840,10 @@
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
     },
     {
      "item": "eggs",
@@ -6750,152 +5894,6 @@
    }
   },
   {
-   "id": "turkey_quinoa_skillet",
-   "name": "Turkey, Zucchini & Quinoa Skillet",
-   "cuisine": "american",
-   "protein_type": "turkey",
-   "contains": [
-    "meat"
-   ],
-   "keys": [
-    "broth",
-    "cumin",
-    "diced_tomatoes",
-    "garlic",
-    "ground_turkey",
-    "onion",
-    "paprika",
-    "quinoa",
-    "zucchini"
-   ],
-   "tags": [
-    "american",
-    "turkey",
-    "high-protein",
-    "quick",
-    "classic prep"
-   ],
-   "minutes": 30,
-   "servings": 5,
-   "cost_cents": 1320,
-   "kcal": 383,
-   "protein": 34,
-   "carbs": 32,
-   "fat": 14,
-   "fiber": 5,
-   "ingredients": [
-    {
-     "item": "lean ground turkey (93%)",
-     "qty": 1.5,
-     "unit": "lb",
-     "aisle": "meat",
-     "cents": 499,
-     "pack": 1
-    },
-    {
-     "item": "quinoa",
-     "qty": 1,
-     "unit": "cup",
-     "aisle": "grains & pasta",
-     "cents": 150,
-     "pack": 2,
-     "pack_name": "12 oz bag"
-    },
-    {
-     "item": "zucchini",
-     "qty": 2,
-     "unit": "zucchini",
-     "aisle": "produce",
-     "cents": 66,
-     "pack": 1
-    },
-    {
-     "item": "canned diced tomatoes (14.5 oz)",
-     "qty": 1,
-     "unit": "can",
-     "aisle": "canned",
-     "cents": 99,
-     "pack": 1
-    },
-    {
-     "item": "yellow onion",
-     "qty": 1,
-     "unit": "onion",
-     "aisle": "produce",
-     "cents": 40,
-     "pack": 1
-    },
-    {
-     "item": "low-sodium broth",
-     "qty": 2,
-     "unit": "cup",
-     "aisle": "canned",
-     "cents": 62,
-     "pack": 4,
-     "pack_name": "32 oz carton"
-    },
-    {
-     "item": "ground cumin",
-     "qty": 1,
-     "unit": "tsp",
-     "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
-    },
-    {
-     "item": "smoked paprika",
-     "qty": 1,
-     "unit": "tsp",
-     "aisle": "oils & spices",
-     "cents": 8,
-     "pack": 0
-    },
-    {
-     "item": "garlic",
-     "qty": 2,
-     "unit": "clove",
-     "aisle": "produce",
-     "cents": 6,
-     "pack": 10,
-     "pack_name": "head"
-    }
-   ],
-   "steps": [
-    "Brown the turkey with onion and garlic.",
-    "Add the rinsed quinoa, tomatoes, broth and spices; cover and simmer 15 minutes.",
-    "Stir in diced zucchini, cover, and cook 5 more minutes.",
-    "Portion into 5."
-   ],
-   "photo": "quinoa vegetables",
-   "photo_must": "quinoa",
-   "cost_note": "estimate",
-   "guide": {
-    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
-    "tools": [
-     "Large deep skillet with a lid",
-     "Sieve"
-    ],
-    "prep": [
-     "Rinse the 1 cup quinoa.",
-     "Chop the onion, mince the 2 garlic cloves, and dice the 2 zucchini."
-    ],
-    "steps": [
-     "Brown the turkey with the onion and garlic in the skillet on medium-high, breaking it up, about 8 minutes, until no pink is left (165°F).",
-     "Add the quinoa, diced tomatoes with juice, 2 cups broth, cumin, smoked paprika and 1/2 tsp salt. Bring to a boil.",
-     "Cover, turn to low and simmer 15 minutes.",
-     "Stir in the zucchini, cover and cook 5 more minutes, until the quinoa is tender and the liquid is absorbed.",
-     "Portion into 5."
-    ],
-    "tips": [
-     "If it's still wet at the end, cook uncovered 2 more minutes."
-    ],
-    "safe": "Ground turkey is safe at 165°F. It should be browned all the way through with no pink left.",
-    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
-    "reheat": "Microwave covered, stirring halfway, until steaming hot all the way through (165°F), about 2 to 3 minutes per container. Thaw frozen portions overnight in the fridge first."
-   },
-   "photo_not": ""
-  },
-  {
    "id": "chicken_quinoa_bowls",
    "name": "Herby Lemon Chicken Quinoa Bowls",
    "cuisine": "mediterranean",
@@ -6925,7 +5923,7 @@
    ],
    "minutes": 30,
    "servings": 5,
-   "cost_cents": 1680,
+   "cost_cents": 1662,
    "kcal": 461,
    "protein": 45,
    "carbs": 29,
@@ -6987,16 +5985,20 @@
      "qty": 3,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     },
     {
      "item": "Italian seasoning",
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
     },
     {
      "item": "crumbled feta",
@@ -7074,7 +6076,7 @@
    ],
    "minutes": 40,
    "servings": 6,
-   "cost_cents": 1112,
+   "cost_cents": 1110,
    "kcal": 313,
    "protein": 16,
    "carbs": 61,
@@ -7144,16 +6146,20 @@
      "qty": 4,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 5.73,
+     "pack": 26,
+     "pack_name": "2.5 oz jar",
+     "pantry": true
     },
     {
      "item": "ground cumin",
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 8.95,
+     "pack": 20,
+     "pack_name": "1.5 oz jar",
+     "pantry": true
     },
     {
      "item": "low-sodium broth",
@@ -7230,7 +6236,7 @@
    ],
    "minutes": 30,
    "servings": 5,
-   "cost_cents": 1006,
+   "cost_cents": 1003,
    "kcal": 532,
    "protein": 17,
    "carbs": 90,
@@ -7300,16 +6306,20 @@
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 8.95,
+     "pack": 20,
+     "pack_name": "1.5 oz jar",
+     "pantry": true
     },
     {
      "item": "chili powder",
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 5.73,
+     "pack": 26,
+     "pack_name": "2.5 oz jar",
+     "pantry": true
     },
     {
      "item": "cilantro",
@@ -7324,8 +6334,10 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -7393,7 +6405,7 @@
    ],
    "minutes": 40,
    "servings": 6,
-   "cost_cents": 1093,
+   "cost_cents": 1100,
    "kcal": 440,
    "protein": 13,
    "carbs": 80,
@@ -7463,16 +6475,19 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "produce",
-     "cents": 8,
-     "pack": 0
+     "cents": 6.0,
+     "pack": 10,
+     "pack_name": "small piece (about 2 oz)"
     },
     {
      "item": "curry powder",
      "qty": 3,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 9.96,
+     "pack": 25,
+     "pack_name": "1.75 oz jar",
+     "pantry": true
     },
     {
      "item": "low-sodium broth",
@@ -7558,7 +6573,7 @@
    ],
    "minutes": 40,
    "servings": 6,
-   "cost_cents": 752,
+   "cost_cents": 745,
    "kcal": 500,
    "protein": 24,
    "carbs": 95,
@@ -7628,16 +6643,20 @@
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
     },
     {
      "item": "olive oil",
      "qty": 1,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -7711,7 +6730,7 @@
    ],
    "minutes": 30,
    "servings": 5,
-   "cost_cents": 1134,
+   "cost_cents": 1148,
    "kcal": 489,
    "protein": 39,
    "carbs": 59,
@@ -7748,32 +6767,40 @@
      "qty": 4,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 8,
-     "pack": 0
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
     },
     {
      "item": "honey",
      "qty": 1,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 31,
-     "pack": 0
+     "cents": 28.06,
+     "pack": 16,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "rice vinegar",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 6,
-     "pack": 0
+     "cents": 10.38,
+     "pack": 24,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "chili garlic sauce",
      "qty": 2,
      "unit": "tsp",
      "aisle": "sauces",
-     "cents": 5,
-     "pack": 0
+     "cents": 8.89,
+     "pack": 37,
+     "pack_name": "8 oz jar",
+     "pantry": true
     },
     {
      "item": "garlic",
@@ -7789,16 +6816,19 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "produce",
-     "cents": 8,
-     "pack": 0
+     "cents": 6.0,
+     "pack": 10,
+     "pack_name": "small piece (about 2 oz)"
     },
     {
      "item": "cornstarch",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "baking",
-     "cents": 3,
-     "pack": 0
+     "cents": 3.2,
+     "pack": 56,
+     "pack_name": "16 oz box",
+     "pantry": true
     },
     {
      "item": "green onions",
@@ -7889,7 +6919,7 @@
    ],
    "minutes": 30,
    "servings": 6,
-   "cost_cents": 1470,
+   "cost_cents": 1465,
    "kcal": 458,
    "protein": 42,
    "carbs": 62,
@@ -7917,24 +6947,30 @@
      "qty": 3,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 31,
-     "pack": 0
+     "cents": 28.06,
+     "pack": 16,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 3,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 8,
-     "pack": 0
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
     },
     {
      "item": "rice vinegar",
      "qty": 1,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 6,
-     "pack": 0
+     "cents": 10.38,
+     "pack": 24,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "garlic",
@@ -7950,16 +6986,19 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "produce",
-     "cents": 8,
-     "pack": 0
+     "cents": 6.0,
+     "pack": 10,
+     "pack_name": "small piece (about 2 oz)"
     },
     {
      "item": "cornstarch",
      "qty": 3,
      "unit": "tbsp",
      "aisle": "baking",
-     "cents": 3,
-     "pack": 0
+     "cents": 3.2,
+     "pack": 56,
+     "pack_name": "16 oz box",
+     "pantry": true
     },
     {
      "item": "frozen broccoli (12 oz)",
@@ -8051,7 +7090,7 @@
    ],
    "minutes": 25,
    "servings": 5,
-   "cost_cents": 1008,
+   "cost_cents": 1028,
    "kcal": 453,
    "protein": 38,
    "carbs": 61,
@@ -8111,24 +7150,30 @@
      "qty": 5,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 8,
-     "pack": 0
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
     },
     {
      "item": "hoisin sauce",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 12,
-     "pack": 0
+     "cents": 18.6,
+     "pack": 15,
+     "pack_name": "8.5 oz jar",
+     "pantry": true
     },
     {
      "item": "toasted sesame oil",
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 9,
-     "pack": 0
+     "cents": 11.63,
+     "pack": 30,
+     "pack_name": "5 oz bottle",
+     "pantry": true
     },
     {
      "item": "garlic",
@@ -8208,7 +7253,7 @@
    ],
    "minutes": 25,
    "servings": 5,
-   "cost_cents": 900,
+   "cost_cents": 910,
    "kcal": 514,
    "protein": 30,
    "carbs": 52,
@@ -8236,16 +7281,20 @@
      "qty": 3,
      "unit": "tsp",
      "aisle": "sauces",
-     "cents": 5,
-     "pack": 0
+     "cents": 8.89,
+     "pack": 37,
+     "pack_name": "8 oz jar",
+     "pantry": true
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 3,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 8,
-     "pack": 0
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
     },
     {
      "item": "garlic",
@@ -8261,8 +7310,9 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "produce",
-     "cents": 8,
-     "pack": 0
+     "cents": 6.0,
+     "pack": 10,
+     "pack_name": "small piece (about 2 oz)"
     },
     {
      "item": "low-sodium broth",
@@ -8278,8 +7328,10 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "baking",
-     "cents": 3,
-     "pack": 0
+     "cents": 3.2,
+     "pack": 56,
+     "pack_name": "16 oz box",
+     "pantry": true
     },
     {
      "item": "green onions",
@@ -8364,7 +7416,7 @@
    ],
    "minutes": 20,
    "servings": 4,
-   "cost_cents": 714,
+   "cost_cents": 707,
    "kcal": 523,
    "protein": 23,
    "carbs": 70,
@@ -8401,24 +7453,30 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 31,
-     "pack": 0
+     "cents": 28.06,
+     "pack": 16,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 1,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 8,
-     "pack": 0
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
     },
     {
      "item": "cornstarch",
      "qty": 1,
      "unit": "tbsp",
      "aisle": "baking",
-     "cents": 3,
-     "pack": 0
+     "cents": 3.2,
+     "pack": 56,
+     "pack_name": "16 oz box",
+     "pantry": true
     },
     {
      "item": "long-grain white rice",
@@ -8434,8 +7492,10 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -8506,7 +7566,7 @@
    ],
    "minutes": 25,
    "servings": 5,
-   "cost_cents": 1292,
+   "cost_cents": 1307,
    "kcal": 541,
    "protein": 42,
    "carbs": 66,
@@ -8559,16 +7619,20 @@
      "qty": 4,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 8,
-     "pack": 0
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
     },
     {
      "item": "hoisin sauce",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 12,
-     "pack": 0
+     "cents": 18.6,
+     "pack": 15,
+     "pack_name": "8.5 oz jar",
+     "pantry": true
     },
     {
      "item": "garlic",
@@ -8584,8 +7648,10 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "baking",
-     "cents": 3,
-     "pack": 0
+     "cents": 3.2,
+     "pack": 56,
+     "pack_name": "16 oz box",
+     "pantry": true
     },
     {
      "item": "long-grain white rice",
@@ -8665,7 +7731,7 @@
    ],
    "minutes": 25,
    "servings": 6,
-   "cost_cents": 950,
+   "cost_cents": 964,
    "kcal": 523,
    "protein": 25,
    "carbs": 46,
@@ -8709,24 +7775,29 @@
      "qty": 4,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 8,
-     "pack": 0
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
     },
     {
      "item": "rice vinegar",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 6,
-     "pack": 0
+     "cents": 10.38,
+     "pack": 24,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "fresh ginger (grated)",
      "qty": 1,
      "unit": "tbsp",
      "aisle": "produce",
-     "cents": 8,
-     "pack": 0
+     "cents": 6.0,
+     "pack": 10,
+     "pack_name": "small piece (about 2 oz)"
     },
     {
      "item": "garlic",
@@ -8742,8 +7813,10 @@
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 9,
-     "pack": 0
+     "cents": 11.63,
+     "pack": 30,
+     "pack_name": "5 oz bottle",
+     "pantry": true
     },
     {
      "item": "long-grain white rice",
@@ -8825,7 +7898,7 @@
    ],
    "minutes": 30,
    "servings": 6,
-   "cost_cents": 1205,
+   "cost_cents": 1217,
    "kcal": 425,
    "protein": 29,
    "carbs": 67,
@@ -8869,40 +7942,49 @@
      "qty": 3,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 6,
-     "pack": 0
+     "cents": 10.38,
+     "pack": 24,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "honey",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 31,
-     "pack": 0
+     "cents": 28.06,
+     "pack": 16,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 8,
-     "pack": 0
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
     },
     {
      "item": "tomato paste",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "canned",
-     "cents": 6,
-     "pack": 0
+     "cents": 7.9,
+     "pack": 10,
+     "pack_name": "6 oz can"
     },
     {
      "item": "cornstarch",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "baking",
-     "cents": 3,
-     "pack": 0
+     "cents": 3.2,
+     "pack": 56,
+     "pack_name": "16 oz box",
+     "pantry": true
     },
     {
      "item": "long-grain white rice",
@@ -8988,7 +8070,7 @@
    ],
    "minutes": 25,
    "servings": 6,
-   "cost_cents": 1049,
+   "cost_cents": 1047,
    "kcal": 456,
    "protein": 35,
    "carbs": 58,
@@ -9016,40 +8098,50 @@
      "qty": 5,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 10,
-     "pack": 0
+     "cents": 8.89,
+     "pack": 28,
+     "pack_name": "16 oz jar",
+     "pantry": true
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 4,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 8,
-     "pack": 0
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
     },
     {
      "item": "honey",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 31,
-     "pack": 0
+     "cents": 28.06,
+     "pack": 16,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "rice vinegar",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 6,
-     "pack": 0
+     "cents": 10.38,
+     "pack": 24,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "sriracha",
      "qty": 2,
      "unit": "tsp",
      "aisle": "sauces",
-     "cents": 5,
-     "pack": 0
+     "cents": 4.99,
+     "pack": 80,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     },
     {
      "item": "green cabbage",
@@ -9152,7 +8244,7 @@
    ],
    "minutes": 40,
    "servings": 6,
-   "cost_cents": 1496,
+   "cost_cents": 1498,
    "kcal": 329,
    "protein": 35,
    "carbs": 39,
@@ -9230,16 +8322,20 @@
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 8.95,
+     "pack": 20,
+     "pack_name": "1.5 oz jar",
+     "pantry": true
     },
     {
      "item": "chili powder",
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 5.73,
+     "pack": 26,
+     "pack_name": "2.5 oz jar",
+     "pantry": true
     },
     {
      "item": "lime",
@@ -9326,7 +8422,7 @@
    ],
    "minutes": 35,
    "servings": 6,
-   "cost_cents": 1085,
+   "cost_cents": 1078,
    "kcal": 379,
    "protein": 36,
    "carbs": 42,
@@ -9354,8 +8450,9 @@
      "qty": 2,
      "unit": "tbsp",
      "aisle": "canned",
-     "cents": 15,
-     "pack": 0
+     "cents": 12.23,
+     "pack": 13,
+     "pack_name": "7 oz can"
     },
     {
      "item": "yellow onion",
@@ -9404,8 +8501,10 @@
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
     }
    ],
    "steps": [
@@ -9469,7 +8568,7 @@
    ],
    "minutes": 40,
    "servings": 4,
-   "cost_cents": 1230,
+   "cost_cents": 1232,
    "kcal": 679,
    "protein": 30,
    "carbs": 92,
@@ -9532,8 +8631,10 @@
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 8.95,
+     "pack": 20,
+     "pack_name": "1.5 oz jar",
+     "pantry": true
     }
    ],
    "steps": [
@@ -9601,7 +8702,7 @@
    ],
    "minutes": 30,
    "servings": 6,
-   "cost_cents": 1788,
+   "cost_cents": 1783,
    "kcal": 480,
    "protein": 31,
    "carbs": 61,
@@ -9655,8 +8756,9 @@
      "qty": 2,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 25,
-     "pack": 0
+     "cents": 22.57,
+     "pack": 3.5,
+     "pack_name": "1 oz packet"
     },
     {
      "item": "lime",
@@ -9740,7 +8842,7 @@
    ],
    "minutes": 20,
    "servings": 4,
-   "cost_cents": 1458,
+   "cost_cents": 1452,
    "kcal": 452,
    "protein": 44,
    "carbs": 47,
@@ -9794,16 +8896,20 @@
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 5.73,
+     "pack": 26,
+     "pack_name": "2.5 oz jar",
+     "pantry": true
     },
     {
      "item": "ground cumin",
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 8.95,
+     "pack": 20,
+     "pack_name": "1.5 oz jar",
+     "pantry": true
     },
     {
      "item": "avocado",
@@ -9818,8 +8924,10 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -9886,7 +8994,7 @@
    ],
    "minutes": 45,
    "servings": 6,
-   "cost_cents": 1484,
+   "cost_cents": 1482,
    "kcal": 474,
    "protein": 28,
    "carbs": 51,
@@ -9958,8 +9066,9 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 25,
-     "pack": 0
+     "cents": 22.57,
+     "pack": 3.5,
+     "pack_name": "1 oz packet"
     }
    ],
    "steps": [
@@ -10027,7 +9136,7 @@
    ],
    "minutes": 30,
    "servings": 5,
-   "cost_cents": 2117,
+   "cost_cents": 2101,
    "kcal": 487,
    "protein": 33,
    "carbs": 50,
@@ -10080,16 +9189,19 @@
      "qty": 2,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 25,
-     "pack": 0
+     "cents": 22.57,
+     "pack": 3.5,
+     "pack_name": "1 oz packet"
     },
     {
      "item": "olive oil",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -10162,7 +9274,7 @@
    ],
    "minutes": 25,
    "servings": 6,
-   "cost_cents": 1600,
+   "cost_cents": 1599,
    "kcal": 433,
    "protein": 28,
    "carbs": 49,
@@ -10182,16 +9294,20 @@
      "qty": 4,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 8,
-     "pack": 0
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
     },
     {
      "item": "honey",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 31,
-     "pack": 0
+     "cents": 28.06,
+     "pack": 16,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "garlic",
@@ -10207,16 +9323,19 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "produce",
-     "cents": 8,
-     "pack": 0
+     "cents": 6.0,
+     "pack": 10,
+     "pack_name": "small piece (about 2 oz)"
     },
     {
      "item": "toasted sesame oil",
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 9,
-     "pack": 0
+     "cents": 11.63,
+     "pack": 30,
+     "pack_name": "5 oz bottle",
+     "pantry": true
     },
     {
      "item": "green onions",
@@ -10318,7 +9437,7 @@
    ],
    "minutes": 120,
    "servings": 6,
-   "cost_cents": 2169,
+   "cost_cents": 2167,
    "kcal": 400,
    "protein": 35,
    "carbs": 30,
@@ -10371,8 +9490,9 @@
      "qty": 2,
      "unit": "tbsp",
      "aisle": "canned",
-     "cents": 6,
-     "pack": 0
+     "cents": 7.9,
+     "pack": 10,
+     "pack_name": "6 oz can"
     },
     {
      "item": "low-sodium broth",
@@ -10388,24 +9508,30 @@
      "qty": 2,
      "unit": "tbsp",
      "aisle": "baking",
-     "cents": 3,
-     "pack": 0
+     "cents": 3.2,
+     "pack": 56,
+     "pack_name": "16 oz box",
+     "pantry": true
     },
     {
      "item": "Italian seasoning",
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
     },
     {
      "item": "olive oil",
      "qty": 1,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -10475,7 +9601,7 @@
    ],
    "minutes": 45,
    "servings": 8,
-   "cost_cents": 1892,
+   "cost_cents": 1891,
    "kcal": 279,
    "protein": 24,
    "carbs": 25,
@@ -10544,16 +9670,20 @@
      "qty": 4,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 5.73,
+     "pack": 26,
+     "pack_name": "2.5 oz jar",
+     "pantry": true
     },
     {
      "item": "ground cumin",
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 8.95,
+     "pack": 20,
+     "pack_name": "1.5 oz jar",
+     "pantry": true
     }
    ],
    "steps": [
@@ -10621,7 +9751,7 @@
    ],
    "minutes": 70,
    "servings": 6,
-   "cost_cents": 1786,
+   "cost_cents": 1785,
    "kcal": 420,
    "protein": 31,
    "carbs": 44,
@@ -10700,8 +9830,10 @@
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
     }
    ],
    "steps": [
@@ -10745,159 +9877,6 @@
    }
   },
   {
-   "id": "beef_stroganoff",
-   "name": "Lighter Beef Stroganoff",
-   "cuisine": "american",
-   "protein_type": "red meat",
-   "contains": [
-    "dairy",
-    "gluten",
-    "meat",
-    "red meat"
-   ],
-   "keys": [
-    "broth",
-    "cornstarch",
-    "garlic",
-    "greek_yogurt",
-    "ground_beef",
-    "mushrooms",
-    "mustard",
-    "onion",
-    "ww_pasta"
-   ],
-   "tags": [
-    "american",
-    "red meat",
-    "pasta",
-    "high-protein",
-    "quick",
-    "classic prep"
-   ],
-   "minutes": 30,
-   "servings": 6,
-   "cost_cents": 1790,
-   "kcal": 428,
-   "protein": 34,
-   "carbs": 48,
-   "fat": 11,
-   "fiber": 7,
-   "ingredients": [
-    {
-     "item": "lean ground beef (90%)",
-     "qty": 1.25,
-     "unit": "lb",
-     "aisle": "meat",
-     "cents": 799,
-     "pack": 1
-    },
-    {
-     "item": "mushrooms (8 oz)",
-     "qty": 2,
-     "unit": "pack",
-     "aisle": "produce",
-     "cents": 199,
-     "pack": 1
-    },
-    {
-     "item": "yellow onion",
-     "qty": 1,
-     "unit": "onion",
-     "aisle": "produce",
-     "cents": 40,
-     "pack": 1
-    },
-    {
-     "item": "low-sodium broth",
-     "qty": 1.5,
-     "unit": "cup",
-     "aisle": "canned",
-     "cents": 62,
-     "pack": 4,
-     "pack_name": "32 oz carton"
-    },
-    {
-     "item": "plain nonfat Greek yogurt",
-     "qty": 1,
-     "unit": "cup",
-     "aisle": "dairy & eggs",
-     "cents": 121,
-     "pack": 3.75,
-     "pack_name": "32 oz tub"
-    },
-    {
-     "item": "Dijon mustard",
-     "qty": 1,
-     "unit": "tbsp",
-     "aisle": "sauces",
-     "cents": 12,
-     "pack": 0
-    },
-    {
-     "item": "cornstarch",
-     "qty": 1,
-     "unit": "tbsp",
-     "aisle": "baking",
-     "cents": 3,
-     "pack": 0
-    },
-    {
-     "item": "whole wheat pasta",
-     "qty": 0.75,
-     "unit": "lb",
-     "aisle": "grains & pasta",
-     "cents": 149,
-     "pack": 1
-    },
-    {
-     "item": "garlic",
-     "qty": 2,
-     "unit": "clove",
-     "aisle": "produce",
-     "cents": 6,
-     "pack": 10,
-     "pack_name": "head"
-    }
-   ],
-   "steps": [
-    "Boil the pasta. Brown the beef, then add the sliced mushrooms, onion and garlic and cook 8 minutes.",
-    "Add the broth and mustard and simmer 5 minutes; thicken with the cornstarch mixed in a little water.",
-    "Take the pan off the heat and stir in the Greek yogurt (off the heat so it stays creamy).",
-    "Toss with the pasta and divide into 6."
-   ],
-   "photo": "beef stroganoff",
-   "photo_must": "stroganoff",
-   "cost_note": "estimate",
-   "guide": {
-    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
-    "tools": [
-     "Large pot",
-     "Colander",
-     "Large deep skillet",
-     "Small cup"
-    ],
-    "prep": [
-     "Slice the 2 packs of mushrooms. Chop the onion and mince the 2 garlic cloves.",
-     "Take the yogurt out of the fridge so it isn't cold."
-    ],
-    "steps": [
-     "Boil the pasta as the package says and drain.",
-     "Brown the beef in the skillet on medium-high, breaking it up, about 5 minutes until no pink is left (160°F).",
-     "Add the mushrooms, onion and garlic and cook 8 minutes, until the mushrooms are browned and their liquid has cooked off.",
-     "Add the 1.5 cups broth and the mustard and simmer 5 minutes.",
-     "Mix the 1 tbsp cornstarch with 2 tbsp cold water, stir it in and simmer 1 minute until thick.",
-     "Take the pan off the heat, then stir in the Greek yogurt (off the heat so it stays creamy and doesn't split).",
-     "Toss with the pasta, season with salt and pepper, and divide into 6."
-    ],
-    "tips": [
-     "Reheat gently; boiling yogurt sauce can make it grainy."
-    ],
-    "safe": "Ground beef and pork are safe at 160°F (no pink left). Whole cuts like steak, pork chops and tenderloin are safe at 145°F, then rest 3 minutes before slicing.",
-    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
-    "reheat": "Microwave at medium power 2 to 3 minutes, stirring halfway, until steaming. A splash of water loosens the sauce."
-   }
-  },
-  {
    "id": "honey_mustard_pork",
    "name": "Honey Mustard Pork, Sweet Potatoes & Green Beans",
    "cuisine": "american",
@@ -10926,7 +9905,7 @@
    ],
    "minutes": 40,
    "servings": 6,
-   "cost_cents": 1482,
+   "cost_cents": 1463,
    "kcal": 417,
    "protein": 37,
    "carbs": 45,
@@ -10962,24 +9941,30 @@
      "qty": 2,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 31,
-     "pack": 0
+     "cents": 28.06,
+     "pack": 16,
+     "pack_name": "12 oz bottle",
+     "pantry": true
     },
     {
      "item": "Dijon mustard",
      "qty": 3,
      "unit": "tbsp",
      "aisle": "sauces",
-     "cents": 12,
-     "pack": 0
+     "cents": 11.32,
+     "pack": 22,
+     "pack_name": "12 oz jar",
+     "pantry": true
     },
     {
      "item": "olive oil",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     },
     {
      "item": "garlic",
@@ -11060,7 +10045,7 @@
    ],
    "minutes": 30,
    "servings": 6,
-   "cost_cents": 1126,
+   "cost_cents": 1117,
    "kcal": 513,
    "protein": 45,
    "carbs": 65,
@@ -11097,8 +10082,9 @@
      "qty": 8,
      "unit": "tbsp",
      "aisle": "dairy & eggs",
-     "cents": 10,
-     "pack": 0
+     "cents": 8.87,
+     "pack": 45,
+     "pack_name": "8 oz tub"
     },
     {
      "item": "garlic",
@@ -11114,8 +10100,10 @@
      "qty": 2,
      "unit": "tbsp",
      "aisle": "baking",
-     "cents": 3,
-     "pack": 0
+     "cents": 3.2,
+     "pack": 56,
+     "pack_name": "16 oz box",
+     "pantry": true
     },
     {
      "item": "frozen broccoli (12 oz)",
@@ -11172,136 +10160,6 @@
    }
   },
   {
-   "id": "taco_pasta",
-   "name": "One-Pot Taco Pasta",
-   "cuisine": "mexican",
-   "protein_type": "turkey",
-   "contains": [
-    "dairy",
-    "gluten",
-    "meat"
-   ],
-   "keys": [
-    "black_beans",
-    "broth",
-    "cheddar",
-    "ground_turkey",
-    "salsa",
-    "taco",
-    "ww_pasta"
-   ],
-   "tags": [
-    "mexican",
-    "turkey",
-    "pasta",
-    "high-protein",
-    "budget",
-    "quick",
-    "classic prep"
-   ],
-   "minutes": 30,
-   "servings": 6,
-   "cost_cents": 1454,
-   "kcal": 508,
-   "protein": 38,
-   "carbs": 52,
-   "fat": 18,
-   "fiber": 9,
-   "ingredients": [
-    {
-     "item": "lean ground turkey (93%)",
-     "qty": 1.5,
-     "unit": "lb",
-     "aisle": "meat",
-     "cents": 499,
-     "pack": 1
-    },
-    {
-     "item": "whole wheat pasta",
-     "qty": 0.75,
-     "unit": "lb",
-     "aisle": "grains & pasta",
-     "cents": 149,
-     "pack": 1
-    },
-    {
-     "item": "salsa",
-     "qty": 1,
-     "unit": "cup",
-     "aisle": "canned",
-     "cents": 142,
-     "pack": 1.75,
-     "pack_name": "16 oz jar"
-    },
-    {
-     "item": "low-sodium broth",
-     "qty": 2.5,
-     "unit": "cup",
-     "aisle": "canned",
-     "cents": 62,
-     "pack": 4,
-     "pack_name": "32 oz carton"
-    },
-    {
-     "item": "canned black beans (15 oz)",
-     "qty": 1,
-     "unit": "can",
-     "aisle": "canned",
-     "cents": 99,
-     "pack": 1
-    },
-    {
-     "item": "shredded cheddar",
-     "qty": 4,
-     "unit": "oz",
-     "aisle": "dairy & eggs",
-     "cents": 37,
-     "pack": 8,
-     "pack_name": "8 oz bag"
-    },
-    {
-     "item": "taco seasoning",
-     "qty": 2,
-     "unit": "tbsp",
-     "aisle": "oils & spices",
-     "cents": 25,
-     "pack": 0
-    }
-   ],
-   "steps": [
-    "Brown the turkey with the taco seasoning in a deep pot.",
-    "Add the dry pasta, salsa and broth; bring to a boil.",
-    "Cover and simmer 12 minutes, stirring now and then, until the pasta is tender.",
-    "Stir in the beans and cheddar until melted. Portion into 6."
-   ],
-   "photo": "taco pasta",
-   "photo_must": "pasta",
-   "cost_note": "estimate",
-   "guide": {
-    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
-    "tools": [
-     "Deep pot or skillet with a lid",
-     "Can opener and sieve"
-    ],
-    "prep": [
-     "Drain and rinse the black beans."
-    ],
-    "steps": [
-     "Brown the turkey with the taco seasoning in the pot on medium-high, breaking it up, about 7 minutes until no pink is left (165°F).",
-     "Add the dry pasta, 1 cup salsa and 2.5 cups broth. Bring to a boil.",
-     "Cover, lower the heat and simmer 12 minutes, stirring every few minutes so the pasta doesn't stick, until tender.",
-     "Stir in the beans and cheddar until the cheese melts.",
-     "Portion into 6."
-    ],
-    "tips": [
-     "If the pasta is tender but it's soupy, simmer uncovered 2 minutes more."
-    ],
-    "safe": "Ground turkey is safe at 165°F. It should be browned all the way through with no pink left.",
-    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
-    "reheat": "Microwave covered, stirring halfway, until steaming hot all the way through (165°F), about 2 to 3 minutes per container. Thaw frozen portions overnight in the fridge first."
-   }
-  },
-  {
    "id": "lasagna_skillet",
    "name": "Turkey Lasagna Skillet",
    "cuisine": "italian",
@@ -11330,7 +10188,7 @@
    ],
    "minutes": 35,
    "servings": 6,
-   "cost_cents": 1459,
+   "cost_cents": 1458,
    "kcal": 520,
    "protein": 43,
    "carbs": 52,
@@ -11393,8 +10251,10 @@
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
     }
    ],
    "steps": [
@@ -11461,7 +10321,7 @@
    ],
    "minutes": 30,
    "servings": 6,
-   "cost_cents": 1266,
+   "cost_cents": 1256,
    "kcal": 403,
    "protein": 36,
    "carbs": 47,
@@ -11524,16 +10384,19 @@
      "qty": 4,
      "unit": "tbsp",
      "aisle": "dairy & eggs",
-     "cents": 10,
-     "pack": 0
+     "cents": 8.87,
+     "pack": 45,
+     "pack_name": "8 oz tub"
     },
     {
      "item": "olive oil",
      "qty": 1,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -11600,7 +10463,7 @@
    ],
    "minutes": 30,
    "servings": 6,
-   "cost_cents": 1111,
+   "cost_cents": 1093,
    "kcal": 452,
    "protein": 20,
    "carbs": 78,
@@ -11661,16 +10524,19 @@
      "qty": 6,
      "unit": "tbsp",
      "aisle": "dairy & eggs",
-     "cents": 10,
-     "pack": 0
+     "cents": 8.87,
+     "pack": 45,
+     "pack_name": "8 oz tub"
     },
     {
      "item": "olive oil",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     },
     {
      "item": "lemon",
@@ -11746,7 +10612,7 @@
    ],
    "minutes": 45,
    "servings": 6,
-   "cost_cents": 1248,
+   "cost_cents": 1241,
    "kcal": 549,
    "protein": 46,
    "carbs": 64,
@@ -11791,16 +10657,19 @@
      "qty": 4,
      "unit": "tbsp",
      "aisle": "dairy & eggs",
-     "cents": 10,
-     "pack": 0
+     "cents": 8.87,
+     "pack": 45,
+     "pack_name": "8 oz tub"
     },
     {
      "item": "Italian seasoning",
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
     },
     {
      "item": "garlic",
@@ -11850,135 +10719,6 @@
    }
   },
   {
-   "id": "lentil_marinara_pasta",
-   "name": "Lentil Marinara Pasta",
-   "cuisine": "italian",
-   "protein_type": "vegetarian",
-   "contains": [
-    "dairy",
-    "gluten"
-   ],
-   "keys": [
-    "garlic",
-    "italian",
-    "marinara",
-    "onion",
-    "parmesan",
-    "red_lentils",
-    "ww_pasta"
-   ],
-   "tags": [
-    "vegetarian",
-    "italian",
-    "pasta",
-    "budget",
-    "quick",
-    "classic prep"
-   ],
-   "minutes": 30,
-   "servings": 6,
-   "cost_cents": 534,
-   "kcal": 466,
-   "protein": 22,
-   "carbs": 86,
-   "fat": 5,
-   "fiber": 13,
-   "ingredients": [
-    {
-     "item": "red lentils (dry)",
-     "qty": 1,
-     "unit": "cup",
-     "aisle": "grains & pasta",
-     "cents": 76,
-     "pack": 2.3,
-     "pack_name": "1 lb bag"
-    },
-    {
-     "item": "marinara sauce (24 oz)",
-     "qty": 1,
-     "unit": "jar",
-     "aisle": "canned",
-     "cents": 199,
-     "pack": 1
-    },
-    {
-     "item": "whole wheat pasta",
-     "qty": 1,
-     "unit": "lb",
-     "aisle": "grains & pasta",
-     "cents": 149,
-     "pack": 1
-    },
-    {
-     "item": "yellow onion",
-     "qty": 1,
-     "unit": "onion",
-     "aisle": "produce",
-     "cents": 40,
-     "pack": 1
-    },
-    {
-     "item": "garlic",
-     "qty": 3,
-     "unit": "clove",
-     "aisle": "produce",
-     "cents": 6,
-     "pack": 10,
-     "pack_name": "head"
-    },
-    {
-     "item": "Italian seasoning",
-     "qty": 2,
-     "unit": "tsp",
-     "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
-    },
-    {
-     "item": "grated parmesan",
-     "qty": 4,
-     "unit": "tbsp",
-     "aisle": "dairy & eggs",
-     "cents": 10,
-     "pack": 0
-    }
-   ],
-   "steps": [
-    "Soften the onion and garlic 5 minutes.",
-    "Add the lentils, marinara and 2 cups water; simmer 15 minutes until the lentils melt into a thick sauce.",
-    "Boil the pasta meanwhile.",
-    "Toss together, top with parmesan, and divide into 6."
-   ],
-   "photo": "pasta tomato sauce",
-   "photo_must": "pasta|spaghetti",
-   "cost_note": "estimate",
-   "guide": {
-    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
-    "tools": [
-     "Large deep pan",
-     "Large pot",
-     "Colander",
-     "Sieve"
-    ],
-    "prep": [
-     "Rinse the 1 cup red lentils.",
-     "Chop the onion and mince the 3 garlic cloves."
-    ],
-    "steps": [
-     "Heat a little oil in the deep pan on medium. Cook the onion and garlic 5 minutes until soft.",
-     "Add the lentils, marinara, Italian seasoning and 2 cups water. Simmer 15 minutes, stirring often, until the lentils break down into a thick sauce.",
-     "Meanwhile boil the pasta as the package says and drain.",
-     "Toss the pasta with the sauce, top with the parmesan, and divide into 6."
-    ],
-    "tips": [
-     "Red lentils cook fast and melt into the sauce, adding protein without changing the taste much."
-    ],
-    "safe": "No meat or eggs to undercook: cook until the vegetables are tender and the sauce is hot all the way through.",
-    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
-    "reheat": "Microwave covered, stirring halfway, until steaming hot all the way through (165°F), about 2 to 3 minutes per container. Thaw frozen portions overnight in the fridge first."
-   }
-  },
-  {
    "id": "butter_chicken",
    "name": "Lighter Butter Chicken",
    "cuisine": "indian",
@@ -12008,7 +10748,7 @@
    ],
    "minutes": 40,
    "servings": 6,
-   "cost_cents": 1144,
+   "cost_cents": 1154,
    "kcal": 450,
    "protein": 41,
    "carbs": 53,
@@ -12062,24 +10802,28 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "produce",
-     "cents": 8,
-     "pack": 0
+     "cents": 6.0,
+     "pack": 10,
+     "pack_name": "small piece (about 2 oz)"
     },
     {
      "item": "curry powder",
      "qty": 3,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 9.96,
+     "pack": 25,
+     "pack_name": "1.75 oz jar",
+     "pantry": true
     },
     {
      "item": "tomato paste",
      "qty": 2,
      "unit": "tbsp",
      "aisle": "canned",
-     "cents": 6,
-     "pack": 0
+     "cents": 7.9,
+     "pack": 10,
+     "pack_name": "6 oz can"
     },
     {
      "item": "milk (2%)",
@@ -12138,143 +10882,6 @@
    }
   },
   {
-   "id": "turkey_keema",
-   "name": "Turkey Keema with Peas",
-   "cuisine": "indian",
-   "protein_type": "turkey",
-   "contains": [
-    "meat"
-   ],
-   "keys": [
-    "curry_powder",
-    "diced_tomatoes",
-    "garlic",
-    "ginger",
-    "ground_turkey",
-    "onion",
-    "peas",
-    "rice"
-   ],
-   "tags": [
-    "indian",
-    "turkey",
-    "high-protein",
-    "budget",
-    "quick",
-    "classic prep"
-   ],
-   "minutes": 30,
-   "servings": 6,
-   "cost_cents": 1376,
-   "kcal": 471,
-   "protein": 36,
-   "carbs": 51,
-   "fat": 13,
-   "fiber": 5,
-   "ingredients": [
-    {
-     "item": "lean ground turkey (93%)",
-     "qty": 2,
-     "unit": "lb",
-     "aisle": "meat",
-     "cents": 499,
-     "pack": 1
-    },
-    {
-     "item": "yellow onion",
-     "qty": 1,
-     "unit": "onion",
-     "aisle": "produce",
-     "cents": 40,
-     "pack": 1
-    },
-    {
-     "item": "garlic",
-     "qty": 4,
-     "unit": "clove",
-     "aisle": "produce",
-     "cents": 6,
-     "pack": 10,
-     "pack_name": "head"
-    },
-    {
-     "item": "fresh ginger (grated)",
-     "qty": 1,
-     "unit": "tbsp",
-     "aisle": "produce",
-     "cents": 8,
-     "pack": 0
-    },
-    {
-     "item": "curry powder",
-     "qty": 3,
-     "unit": "tsp",
-     "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
-    },
-    {
-     "item": "canned diced tomatoes (14.5 oz)",
-     "qty": 1,
-     "unit": "can",
-     "aisle": "canned",
-     "cents": 99,
-     "pack": 1
-    },
-    {
-     "item": "frozen peas (12 oz)",
-     "qty": 1,
-     "unit": "bag",
-     "aisle": "frozen",
-     "cents": 119,
-     "pack": 1
-    },
-    {
-     "item": "long-grain white rice",
-     "qty": 1.5,
-     "unit": "cup",
-     "aisle": "grains & pasta",
-     "cents": 45,
-     "pack": 4.9,
-     "pack_name": "2 lb bag"
-    }
-   ],
-   "steps": [
-    "Cook the rice. Soften the onion 5 minutes, then add the garlic, ginger and curry powder.",
-    "Add the turkey and brown it, breaking it up, 8 minutes.",
-    "Add the tomatoes and simmer 10 minutes.",
-    "Stir in the peas for 3 minutes. Serve over rice."
-   ],
-   "photo": "keema",
-   "photo_must": "keema|kheema",
-   "cost_note": "estimate",
-   "guide": {
-    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
-    "tools": [
-     "Saucepan with lid (for rice)",
-     "Large deep skillet"
-    ],
-    "prep": [
-     "Start the rice.",
-     "Chop the onion, mince the 4 garlic cloves, grate the ginger."
-    ],
-    "steps": [
-     "Cook the 1.5 cups rice: Rinse the rice in a sieve until the water runs mostly clear. Bring the rice and twice its volume of water (for example 1.5 cups rice + 3 cups water) and a pinch of salt to a boil, cover, turn the heat to low and cook 18 minutes. Take it off the heat and leave the lid on 5 more minutes, then fluff with a fork.",
-     "Heat a little oil in the skillet on medium. Cook the onion 5 minutes until soft.",
-     "Add the garlic, ginger and curry powder and stir 1 minute.",
-     "Add the turkey and brown it, breaking it up, about 8 minutes until no pink is left (165°F).",
-     "Add the diced tomatoes with juice and 1/2 tsp salt. Simmer 10 minutes until thick.",
-     "Stir in the peas for 3 minutes. Serve over rice in 6 containers."
-    ],
-    "tips": [
-     "A squeeze of lemon at the end brightens it up."
-    ],
-    "safe": "Ground turkey is safe at 165°F. It should be browned all the way through with no pink left.",
-    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
-    "reheat": "Microwave covered, stirring halfway, until steaming hot all the way through (165°F), about 2 to 3 minutes per container. Thaw frozen portions overnight in the fridge first."
-   }
-  },
-  {
    "id": "shakshuka",
    "name": "Shakshuka with Feta",
    "cuisine": "mediterranean",
@@ -12305,7 +10912,7 @@
    ],
    "minutes": 30,
    "servings": 6,
-   "cost_cents": 1246,
+   "cost_cents": 1252,
    "kcal": 441,
    "protein": 24,
    "carbs": 52,
@@ -12359,16 +10966,20 @@
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 8.95,
+     "pack": 20,
+     "pack_name": "1.5 oz jar",
+     "pantry": true
     },
     {
      "item": "smoked paprika",
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 8,
-     "pack": 0
+     "cents": 11.86,
+     "pack": 21,
+     "pack_name": "1.75 oz jar",
+     "pantry": true
     },
     {
      "item": "crumbled feta",
@@ -12393,8 +11004,10 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -12463,7 +11076,7 @@
    ],
    "minutes": 35,
    "servings": 6,
-   "cost_cents": 1274,
+   "cost_cents": 1280,
    "kcal": 431,
    "protein": 39,
    "carbs": 47,
@@ -12509,16 +11122,20 @@
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 8.95,
+     "pack": 20,
+     "pack_name": "1.5 oz jar",
+     "pantry": true
     },
     {
      "item": "smoked paprika",
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 8,
-     "pack": 0
+     "cents": 11.86,
+     "pack": 21,
+     "pack_name": "1.75 oz jar",
+     "pantry": true
     },
     {
      "item": "long-grain white rice",
@@ -12558,8 +11175,10 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -12632,7 +11251,7 @@
    ],
    "minutes": 35,
    "servings": 6,
-   "cost_cents": 1488,
+   "cost_cents": 1486,
    "kcal": 421,
    "protein": 35,
    "carbs": 47,
@@ -12670,8 +11289,10 @@
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
     },
     {
      "item": "garlic",
@@ -12790,7 +11411,7 @@
    ],
    "minutes": 30,
    "servings": 6,
-   "cost_cents": 672,
+   "cost_cents": 670,
    "kcal": 361,
    "protein": 15,
    "carbs": 57,
@@ -12844,16 +11465,20 @@
      "qty": 2,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 8.95,
+     "pack": 20,
+     "pack_name": "1.5 oz jar",
+     "pantry": true
     },
     {
      "item": "dried oregano",
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 6,
-     "pack": 0
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
     },
     {
      "item": "eggs",
@@ -12878,8 +11503,10 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -12946,7 +11573,7 @@
    ],
    "minutes": 40,
    "servings": 6,
-   "cost_cents": 672,
+   "cost_cents": 667,
    "kcal": 322,
    "protein": 19,
    "carbs": 23,
@@ -13001,8 +11628,10 @@
      "qty": 1,
      "unit": "tbsp",
      "aisle": "oils & spices",
-     "cents": 26,
-     "pack": 0
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
     }
    ],
    "steps": [
@@ -13068,7 +11697,7 @@
    ],
    "minutes": 30,
    "servings": 5,
-   "cost_cents": 1083,
+   "cost_cents": 1085,
    "kcal": 679,
    "protein": 28,
    "carbs": 101,
@@ -13124,8 +11753,10 @@
      "qty": 1,
      "unit": "tsp",
      "aisle": "oils & spices",
-     "cents": 7,
-     "pack": 0
+     "cents": 8.95,
+     "pack": 20,
+     "pack_name": "1.5 oz jar",
+     "pantry": true
     }
    ],
    "steps": [
@@ -13164,6 +11795,1857 @@
     "safe": "No meat or eggs to undercook: cook until the vegetables are tender and the sauce is hot all the way through.",
     "store": "Refrigerate up to 4 days, or freeze up to 3 months.",
     "reheat": "From frozen: unwrap, cover with a damp paper towel and microwave 2 to 3 minutes, turning halfway, until hot in the middle. From the fridge: 1 to 1.5 minutes."
+   }
+  },
+  {
+   "id": "chicken_quesadillas",
+   "name": "Chicken & Cheese Quesadillas",
+   "cuisine": "mexican",
+   "protein_type": "chicken",
+   "contains": [
+    "dairy",
+    "gluten",
+    "meat"
+   ],
+   "keys": [
+    "cheddar",
+    "chicken_breast",
+    "olive_oil",
+    "onion",
+    "pepper",
+    "salsa",
+    "taco",
+    "tortillas"
+   ],
+   "tags": [
+    "mexican",
+    "chicken",
+    "high-protein",
+    "quick"
+   ],
+   "minutes": 25,
+   "servings": 4,
+   "cost_cents": 1258,
+   "kcal": 638,
+   "protein": 45,
+   "carbs": 54,
+   "fat": 28,
+   "fiber": 8,
+   "ingredients": [
+    {
+     "item": "chicken breast",
+     "qty": 1,
+     "unit": "lb",
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
+    },
+    {
+     "item": "shredded cheddar",
+     "qty": 6,
+     "unit": "oz",
+     "aisle": "dairy & eggs",
+     "cents": 37,
+     "pack": 8,
+     "pack_name": "8 oz bag"
+    },
+    {
+     "item": "whole wheat tortillas (8 in)",
+     "qty": 8,
+     "unit": "tortilla",
+     "aisle": "bakery",
+     "cents": 37,
+     "pack": 10,
+     "pack_name": "pack of 10"
+    },
+    {
+     "item": "bell pepper",
+     "qty": 1,
+     "unit": "pepper",
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
+    },
+    {
+     "item": "yellow onion",
+     "qty": 0.5,
+     "unit": "onion",
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
+    },
+    {
+     "item": "taco seasoning",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "oils & spices",
+     "cents": 22.57,
+     "pack": 3.5,
+     "pack_name": "1 oz packet"
+    },
+    {
+     "item": "salsa",
+     "qty": 1,
+     "unit": "cup",
+     "aisle": "canned",
+     "cents": 142,
+     "pack": 1.75,
+     "pack_name": "16 oz jar"
+    },
+    {
+     "item": "olive oil",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "oils & spices",
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
+    }
+   ],
+   "steps": [
+    "Rub the chicken with the taco seasoning and half the oil; cook 6 to 7 minutes a side until 165°F, rest and chop.",
+    "Soften the sliced pepper and onion in the rest of the oil for 5 minutes.",
+    "Layer cheese, chicken, peppers and more cheese on 4 tortillas and top with the other 4.",
+    "Toast in a dry pan 3 minutes a side until golden and melted. Cut into wedges and pack with salsa."
+   ],
+   "photo": "chicken quesadilla",
+   "photo_must": "quesadilla",
+   "cost_note": "estimate",
+   "guide": {
+    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
+    "tools": [
+     "Large skillet",
+     "Cutting board and knife",
+     "Spatula",
+     "Meat thermometer (recommended)"
+    ],
+    "prep": [
+     "Slice the pepper and half the onion thin.",
+     "Rub the chicken with the 1 tbsp taco seasoning and half the oil."
+    ],
+    "steps": [
+     "Heat the skillet on medium-high. Cook the chicken 6 to 7 minutes a side until it reads 165°F. Rest 5 minutes, then chop small.",
+     "Add the rest of the oil and cook the pepper and onion 5 minutes until soft. Wipe out the pan.",
+     "On 4 tortillas, layer a little cheddar, the chicken, the peppers and onion, then more cheddar. Top each with another tortilla.",
+     "Heat the dry pan on medium. Cook each quesadilla about 3 minutes a side, pressing gently, until golden and the cheese has melted.",
+     "Cut each into 4 wedges. Pack with salsa on the side."
+    ],
+    "tips": [
+     "Cheese on both the top and bottom layer glues the quesadilla together."
+    ],
+    "safe": "Chicken is safe at 165°F in the thickest part. No thermometer? Cut the thickest piece: the juices run clear and there is no pink.",
+    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
+    "reheat": "Reheat in a dry pan 2 minutes a side to keep it crisp, or microwave 60 to 90 seconds."
+   }
+  },
+  {
+   "id": "garlic_steak_bites",
+   "name": "Garlic Butter Steak Bites & Potatoes",
+   "cuisine": "american",
+   "protein_type": "red meat",
+   "contains": [
+    "dairy",
+    "meat",
+    "red meat"
+   ],
+   "keys": [
+    "butter",
+    "garlic",
+    "green_beans",
+    "olive_oil",
+    "potatoes",
+    "sirloin"
+   ],
+   "tags": [
+    "american",
+    "red meat",
+    "high-protein",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 30,
+   "servings": 5,
+   "cost_cents": 2045,
+   "kcal": 492,
+   "protein": 35,
+   "carbs": 42,
+   "fat": 20,
+   "fiber": 8,
+   "ingredients": [
+    {
+     "item": "sirloin steak",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "meat",
+     "cents": 999,
+     "pack": 1
+    },
+    {
+     "item": "potatoes",
+     "qty": 2,
+     "unit": "lb",
+     "aisle": "produce",
+     "cents": 98,
+     "pack": 1
+    },
+    {
+     "item": "frozen green beans (12 oz)",
+     "qty": 2,
+     "unit": "bag",
+     "aisle": "frozen",
+     "cents": 129,
+     "pack": 1
+    },
+    {
+     "item": "butter",
+     "qty": 3,
+     "unit": "tbsp",
+     "aisle": "dairy & eggs",
+     "cents": 14.03,
+     "pack": 32,
+     "pack_name": "1 lb (4 sticks)"
+    },
+    {
+     "item": "garlic",
+     "qty": 5,
+     "unit": "clove",
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
+    },
+    {
+     "item": "olive oil",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "oils & spices",
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
+    }
+   ],
+   "steps": [
+    "Microwave the potato cubes covered 7 minutes, then brown them in the oil 8 minutes; set aside.",
+    "Sear 1-inch steak cubes in a very hot pan 2 to 3 minutes a side, in batches.",
+    "Add the butter and minced garlic for 1 minute, return the potatoes and toss.",
+    "Steam the green beans and pack with the steak and potatoes."
+   ],
+   "photo": "steak bites",
+   "photo_must": "steak",
+   "cost_note": "estimate",
+   "guide": {
+    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
+    "tools": [
+     "Microwave-safe bowl with a cover",
+     "Large heavy skillet (cast iron is best)",
+     "Meat thermometer (recommended)",
+     "Steamer or microwave-safe bowl"
+    ],
+    "prep": [
+     "Cut the 2 lb potatoes into 3/4-inch cubes.",
+     "Pat the steak dry and cut into 1-inch cubes; season with 1 tsp salt and pepper.",
+     "Mince the 5 garlic cloves."
+    ],
+    "steps": [
+     "Put the potatoes in the bowl with 2 tbsp water, cover and microwave 7 minutes until almost tender. Drain.",
+     "Heat the 1 tbsp oil in the skillet on medium-high. Brown the potatoes about 8 minutes, turning, until golden. Season with salt and move to a plate.",
+     "Turn the heat to high. Sear the steak in one layer, in 2 batches, 2 to 3 minutes a side, until browned and 145°F in the middle.",
+     "Turn the heat to low. Add the 3 tbsp butter and the garlic and stir 1 minute until fragrant. Return all the steak and potatoes and toss.",
+     "Steam the green beans until tender and divide everything into 5 containers."
+    ],
+    "tips": [
+     "Don't crowd the pan: steak needs space to brown instead of steaming.",
+     "Garlic burns fast in hot butter; keep the heat low for that step."
+    ],
+    "safe": "Steak cubes are whole-muscle beef: safe at 145°F after a 3-minute rest. Cook them past that if you like them more done.",
+    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
+    "reheat": "Microwave covered, stirring halfway, until steaming hot all the way through (165°F), about 2 to 3 minutes per container. Thaw frozen portions overnight in the fridge first."
+   }
+  },
+  {
+   "id": "honey_garlic_shrimp",
+   "name": "Honey Garlic Shrimp, Rice & Broccoli",
+   "cuisine": "asian",
+   "protein_type": "seafood",
+   "contains": [
+    "dairy",
+    "gluten",
+    "honey",
+    "seafood"
+   ],
+   "keys": [
+    "broccoli",
+    "butter",
+    "cornstarch",
+    "garlic",
+    "honey",
+    "rice",
+    "shrimp",
+    "soy"
+   ],
+   "tags": [
+    "asian",
+    "seafood",
+    "high-protein",
+    "quick"
+   ],
+   "minutes": 25,
+   "servings": 4,
+   "cost_cents": 1554,
+   "kcal": 506,
+   "protein": 44,
+   "carbs": 74,
+   "fat": 5,
+   "fiber": 5,
+   "ingredients": [
+    {
+     "item": "frozen raw shrimp",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "seafood",
+     "cents": 699,
+     "pack": 1
+    },
+    {
+     "item": "long-grain white rice",
+     "qty": 1.25,
+     "unit": "cup",
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
+    },
+    {
+     "item": "broccoli",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "produce",
+     "cents": 199,
+     "pack": 1
+    },
+    {
+     "item": "honey",
+     "qty": 3,
+     "unit": "tbsp",
+     "aisle": "sauces",
+     "cents": 28.06,
+     "pack": 16,
+     "pack_name": "12 oz bottle",
+     "pantry": true
+    },
+    {
+     "item": "low-sodium soy sauce",
+     "qty": 3,
+     "unit": "tbsp",
+     "aisle": "sauces",
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
+    },
+    {
+     "item": "garlic",
+     "qty": 4,
+     "unit": "clove",
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
+    },
+    {
+     "item": "cornstarch",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "baking",
+     "cents": 3.2,
+     "pack": 56,
+     "pack_name": "16 oz box",
+     "pantry": true
+    },
+    {
+     "item": "butter",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "dairy & eggs",
+     "cents": 14.03,
+     "pack": 32,
+     "pack_name": "1 lb (4 sticks)"
+    }
+   ],
+   "steps": [
+    "Cook the rice. Whisk the honey, soy sauce, cornstarch and 1/4 cup water.",
+    "Steam the broccoli florets 4 minutes.",
+    "Cook the shrimp in the butter 2 minutes a side, add the garlic for 30 seconds, then the sauce until glossy.",
+    "Pack rice, broccoli and honey garlic shrimp into 4 containers."
+   ],
+   "photo": "honey garlic shrimp",
+   "photo_must": "shrimp",
+   "cost_note": "estimate",
+   "guide": {
+    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
+    "tools": [
+     "Saucepan with lid (for rice)",
+     "Large skillet",
+     "Steamer or saucepan with a lid",
+     "Small bowl"
+    ],
+    "prep": [
+     "Start the rice.",
+     "Thaw the shrimp in cold water 10 minutes, peel if needed and pat dry.",
+     "Cut the broccoli into florets. Mince the 4 garlic cloves.",
+     "Whisk 3 tbsp honey, 3 tbsp soy sauce, 1 tbsp cornstarch and 1/4 cup water."
+    ],
+    "steps": [
+     "Cook the 1.25 cups rice with 2.5 cups water: boil, cover, low 18 minutes, rest 5.",
+     "Steam the broccoli 4 minutes until bright green and just tender.",
+     "Melt the 1 tbsp butter in the skillet on medium-high. Add the shrimp in one layer and cook 2 minutes a side until pink and opaque.",
+     "Add the garlic and stir 30 seconds.",
+     "Stir the sauce, pour it in and toss about 1 minute until it thickens and coats the shrimp.",
+     "Pack rice, broccoli and shrimp with sauce into 4 containers."
+    ],
+    "tips": [
+     "Take the pan off the heat as soon as the sauce is glossy; shrimp go rubbery if they keep cooking."
+    ],
+    "safe": "Fish is done at 145°F, or when it turns opaque and flakes easily with a fork. Shrimp are done when they turn pink and opaque and curl into a loose C shape.",
+    "store": "Refrigerate within 2 hours and eat within 3 days.",
+    "reheat": "Microwave covered 1.5 to 2 minutes, just until hot."
+   }
+  },
+  {
+   "id": "chicken_fried_rice",
+   "name": "Chicken Fried Rice",
+   "cuisine": "chinese",
+   "protein_type": "chicken",
+   "contains": [
+    "egg",
+    "gluten",
+    "meat"
+   ],
+   "keys": [
+    "chicken_breast",
+    "eggs",
+    "garlic",
+    "green_onions",
+    "mixed_veg",
+    "rice",
+    "sesame_oil",
+    "soy"
+   ],
+   "tags": [
+    "chinese",
+    "chicken",
+    "high-protein",
+    "budget",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 25,
+   "servings": 5,
+   "cost_cents": 928,
+   "kcal": 458,
+   "protein": 37,
+   "carbs": 56,
+   "fat": 8,
+   "fiber": 4,
+   "ingredients": [
+    {
+     "item": "chicken breast",
+     "qty": 1.25,
+     "unit": "lb",
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
+    },
+    {
+     "item": "long-grain white rice",
+     "qty": 1.5,
+     "unit": "cup",
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
+    },
+    {
+     "item": "eggs",
+     "qty": 3,
+     "unit": "egg",
+     "aisle": "dairy & eggs",
+     "cents": 19,
+     "pack": 12,
+     "pack_name": "dozen"
+    },
+    {
+     "item": "frozen mixed vegetables (12 oz)",
+     "qty": 1,
+     "unit": "bag",
+     "aisle": "frozen",
+     "cents": 119,
+     "pack": 1
+    },
+    {
+     "item": "low-sodium soy sauce",
+     "qty": 4,
+     "unit": "tbsp",
+     "aisle": "sauces",
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
+    },
+    {
+     "item": "green onions",
+     "qty": 1,
+     "unit": "bunch",
+     "aisle": "produce",
+     "cents": 89,
+     "pack": 1
+    },
+    {
+     "item": "garlic",
+     "qty": 3,
+     "unit": "clove",
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
+    },
+    {
+     "item": "toasted sesame oil",
+     "qty": 2,
+     "unit": "tsp",
+     "aisle": "oils & spices",
+     "cents": 11.63,
+     "pack": 30,
+     "pack_name": "5 oz bottle",
+     "pantry": true
+    }
+   ],
+   "steps": [
+    "Cook the rice ahead and chill it.",
+    "Stir-fry small pieces of chicken 5 to 6 minutes until 165°F; set aside.",
+    "Scramble the eggs, then stir-fry the vegetables and garlic 3 minutes.",
+    "Add the rice, soy sauce and sesame oil; fry 4 minutes, return the chicken and add green onions."
+   ],
+   "photo": "chicken fried rice",
+   "photo_must": "fried rice",
+   "cost_note": "estimate",
+   "guide": {
+    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
+    "tools": [
+     "Saucepan with lid (cook the rice ahead)",
+     "Wok or very large skillet"
+    ],
+    "prep": [
+     "Cook the 1.5 cups rice ahead and chill it, ideally the day before.",
+     "Cut the chicken into small pieces. Beat the 3 eggs.",
+     "Mince the garlic and slice the green onions."
+    ],
+    "steps": [
+     "Heat 1 tbsp oil in the wok on high. Stir-fry the chicken 5 to 6 minutes until 165°F. Move it to a plate.",
+     "Add a little oil, pour in the eggs and scramble until just set. Push them to the side.",
+     "Add the frozen vegetables and garlic and stir-fry 3 minutes.",
+     "Add the cold rice, breaking up clumps, with 4 tbsp soy sauce and 2 tsp sesame oil. Fry 4 minutes, tossing.",
+     "Return the chicken, add the green onions, toss 1 minute and divide into 5."
+    ],
+    "tips": [
+     "Cold rice fries into separate grains; fresh rice goes sticky."
+    ],
+    "safe": "Chicken is safe at 165°F in the thickest part. No thermometer? Cut the thickest piece: the juices run clear and there is no pink.",
+    "store": "Cool fast and refrigerate within 1 hour. Eat within 3 days.",
+    "reheat": "Microwave covered, stirring halfway, until steaming hot all the way through (165°F), about 2 to 3 minutes per container. Thaw frozen portions overnight in the fridge first."
+   }
+  },
+  {
+   "id": "spaghetti_meat_sauce",
+   "name": "Spaghetti with Meat Sauce",
+   "cuisine": "italian",
+   "protein_type": "red meat",
+   "contains": [
+    "dairy",
+    "gluten",
+    "meat",
+    "red meat"
+   ],
+   "keys": [
+    "garlic",
+    "ground_beef",
+    "italian",
+    "marinara",
+    "onion",
+    "parmesan",
+    "ww_pasta"
+   ],
+   "tags": [
+    "italian",
+    "red meat",
+    "pasta",
+    "high-protein",
+    "budget",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 30,
+   "servings": 6,
+   "cost_cents": 1445,
+   "kcal": 517,
+   "protein": 33,
+   "carbs": 66,
+   "fat": 14,
+   "fiber": 10,
+   "ingredients": [
+    {
+     "item": "lean ground beef (90%)",
+     "qty": 1.25,
+     "unit": "lb",
+     "aisle": "meat",
+     "cents": 799,
+     "pack": 1
+    },
+    {
+     "item": "marinara sauce (24 oz)",
+     "qty": 1,
+     "unit": "jar",
+     "aisle": "canned",
+     "cents": 199,
+     "pack": 1
+    },
+    {
+     "item": "whole wheat pasta",
+     "qty": 1,
+     "unit": "lb",
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
+    },
+    {
+     "item": "yellow onion",
+     "qty": 1,
+     "unit": "onion",
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
+    },
+    {
+     "item": "garlic",
+     "qty": 3,
+     "unit": "clove",
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
+    },
+    {
+     "item": "Italian seasoning",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices",
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
+    },
+    {
+     "item": "grated parmesan",
+     "qty": 4,
+     "unit": "tbsp",
+     "aisle": "dairy & eggs",
+     "cents": 8.87,
+     "pack": 45,
+     "pack_name": "8 oz tub"
+    }
+   ],
+   "steps": [
+    "Brown the beef with the chopped onion 8 minutes; add the garlic for 1 minute.",
+    "Add the marinara and Italian seasoning and simmer 10 minutes.",
+    "Boil the spaghetti meanwhile.",
+    "Toss with the sauce, top with parmesan and divide into 6."
+   ],
+   "photo": "spaghetti meat sauce",
+   "photo_must": "spaghetti|bolognese",
+   "cost_note": "estimate",
+   "guide": {
+    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
+    "tools": [
+     "Large deep pan",
+     "Large pot",
+     "Colander"
+    ],
+    "prep": [
+     "Chop the onion and mince the 3 garlic cloves."
+    ],
+    "steps": [
+     "Brown the beef with the onion in the deep pan on medium-high, breaking it up, about 8 minutes until no pink is left (160°F). Spoon off extra fat.",
+     "Add the garlic and stir 1 minute.",
+     "Add the marinara and Italian seasoning. Simmer 10 minutes, stirring now and then.",
+     "Meanwhile boil the spaghetti in salted water as the package says and drain.",
+     "Toss the spaghetti with the sauce, top with the 4 tbsp parmesan and divide into 6."
+    ],
+    "tips": [
+     "A splash of the pasta water helps the sauce cling to the spaghetti."
+    ],
+    "safe": "Ground beef and pork are safe at 160°F (no pink left). Whole cuts like steak, pork chops and tenderloin are safe at 145°F, then rest 3 minutes before slicing.",
+    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
+    "reheat": "Microwave covered, stirring halfway, until steaming hot all the way through (165°F), about 2 to 3 minutes per container. Thaw frozen portions overnight in the fridge first."
+   }
+  },
+  {
+   "id": "sesame_chicken",
+   "name": "Sesame Chicken & Broccoli",
+   "cuisine": "chinese",
+   "protein_type": "chicken",
+   "contains": [
+    "gluten",
+    "honey",
+    "meat"
+   ],
+   "keys": [
+    "chicken_breast",
+    "cornstarch",
+    "frozen_broccoli",
+    "garlic",
+    "green_onions",
+    "honey",
+    "rice",
+    "rice_vinegar",
+    "sesame_oil",
+    "soy"
+   ],
+   "tags": [
+    "chinese",
+    "chicken",
+    "high-protein",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 30,
+   "servings": 5,
+   "cost_cents": 1272,
+   "kcal": 516,
+   "protein": 45,
+   "carbs": 68,
+   "fat": 7,
+   "fiber": 5,
+   "ingredients": [
+    {
+     "item": "chicken breast",
+     "qty": 1.75,
+     "unit": "lb",
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
+    },
+    {
+     "item": "long-grain white rice",
+     "qty": 1.5,
+     "unit": "cup",
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
+    },
+    {
+     "item": "frozen broccoli (12 oz)",
+     "qty": 2,
+     "unit": "bag",
+     "aisle": "frozen",
+     "cents": 129,
+     "pack": 1
+    },
+    {
+     "item": "honey",
+     "qty": 3,
+     "unit": "tbsp",
+     "aisle": "sauces",
+     "cents": 28.06,
+     "pack": 16,
+     "pack_name": "12 oz bottle",
+     "pantry": true
+    },
+    {
+     "item": "low-sodium soy sauce",
+     "qty": 4,
+     "unit": "tbsp",
+     "aisle": "sauces",
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
+    },
+    {
+     "item": "rice vinegar",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "sauces",
+     "cents": 10.38,
+     "pack": 24,
+     "pack_name": "12 oz bottle",
+     "pantry": true
+    },
+    {
+     "item": "toasted sesame oil",
+     "qty": 2,
+     "unit": "tsp",
+     "aisle": "oils & spices",
+     "cents": 11.63,
+     "pack": 30,
+     "pack_name": "5 oz bottle",
+     "pantry": true
+    },
+    {
+     "item": "cornstarch",
+     "qty": 3,
+     "unit": "tbsp",
+     "aisle": "baking",
+     "cents": 3.2,
+     "pack": 56,
+     "pack_name": "16 oz box",
+     "pantry": true
+    },
+    {
+     "item": "garlic",
+     "qty": 2,
+     "unit": "clove",
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
+    },
+    {
+     "item": "green onions",
+     "qty": 0.5,
+     "unit": "bunch",
+     "aisle": "produce",
+     "cents": 89,
+     "pack": 1
+    }
+   ],
+   "steps": [
+    "Cook the rice. Toss bite-size chicken with 2 tablespoons cornstarch.",
+    "Pan-fry the chicken 6 to 7 minutes until golden and 165°F.",
+    "Whisk honey, soy sauce, vinegar, sesame oil, garlic, the last tablespoon of cornstarch and 1/4 cup water; simmer with the chicken 2 minutes.",
+    "Steam the broccoli and pack with rice and sesame chicken; top with green onions."
+   ],
+   "photo": "sesame chicken",
+   "photo_must": "chicken",
+   "cost_note": "estimate",
+   "guide": {
+    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
+    "tools": [
+     "Saucepan with lid (for rice)",
+     "Large non-stick skillet",
+     "Small bowl",
+     "Steamer or microwave-safe bowl"
+    ],
+    "prep": [
+     "Start the rice.",
+     "Cut the chicken into bite-size pieces and toss with 2 tbsp of the cornstarch and a pinch of salt.",
+     "Mince the 2 garlic cloves; slice the green onions.",
+     "Whisk 3 tbsp honey, 4 tbsp soy sauce, 1 tbsp rice vinegar, 2 tsp sesame oil, the garlic, the last 1 tbsp cornstarch and 1/4 cup water."
+    ],
+    "steps": [
+     "Cook the 1.5 cups rice: Rinse the rice in a sieve until the water runs mostly clear. Bring the rice and twice its volume of water (for example 1.5 cups rice + 3 cups water) and a pinch of salt to a boil, cover, turn the heat to low and cook 18 minutes. Take it off the heat and leave the lid on 5 more minutes, then fluff with a fork.",
+     "Heat 2 tbsp oil in the skillet on medium-high. Fry the chicken 6 to 7 minutes, turning, until golden and 165°F.",
+     "Stir the sauce, pour it over the chicken and simmer 2 minutes, stirring, until thick and glossy.",
+     "Steam the broccoli (or microwave per the bag) until tender.",
+     "Pack rice, broccoli and sesame chicken in 5 containers and top with green onions."
+    ],
+    "tips": [
+     "Fry the chicken in two batches if it doesn't fit in one layer."
+    ],
+    "safe": "Chicken is safe at 165°F in the thickest part. No thermometer? Cut the thickest piece: the juices run clear and there is no pink.",
+    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
+    "reheat": "Microwave covered, stirring halfway, until steaming hot all the way through (165°F), about 2 to 3 minutes per container. Thaw frozen portions overnight in the fridge first."
+   }
+  },
+  {
+   "id": "tuscan_chicken_pasta",
+   "name": "Creamy Tuscan Chicken Pasta",
+   "cuisine": "italian",
+   "protein_type": "chicken",
+   "contains": [
+    "dairy",
+    "gluten",
+    "meat"
+   ],
+   "keys": [
+    "cherry_tomatoes",
+    "chicken_breast",
+    "cornstarch",
+    "garlic",
+    "italian",
+    "milk",
+    "olive_oil",
+    "parmesan",
+    "spinach",
+    "ww_pasta"
+   ],
+   "tags": [
+    "italian",
+    "chicken",
+    "pasta",
+    "high-protein",
+    "budget",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 30,
+   "servings": 6,
+   "cost_cents": 1375,
+   "kcal": 500,
+   "protein": 41,
+   "carbs": 62,
+   "fat": 10,
+   "fiber": 8,
+   "ingredients": [
+    {
+     "item": "chicken breast",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
+    },
+    {
+     "item": "whole wheat pasta",
+     "qty": 1,
+     "unit": "lb",
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
+    },
+    {
+     "item": "baby spinach",
+     "qty": 5,
+     "unit": "oz",
+     "aisle": "produce",
+     "cents": 30,
+     "pack": 5,
+     "pack_name": "5 oz box"
+    },
+    {
+     "item": "cherry tomatoes",
+     "qty": 1,
+     "unit": "pint",
+     "aisle": "produce",
+     "cents": 299,
+     "pack": 1
+    },
+    {
+     "item": "milk (2%)",
+     "qty": 1.5,
+     "unit": "cup",
+     "aisle": "dairy & eggs",
+     "cents": 26,
+     "pack": 8,
+     "pack_name": "half gallon"
+    },
+    {
+     "item": "cornstarch",
+     "qty": 1.5,
+     "unit": "tbsp",
+     "aisle": "baking",
+     "cents": 3.2,
+     "pack": 56,
+     "pack_name": "16 oz box",
+     "pantry": true
+    },
+    {
+     "item": "grated parmesan",
+     "qty": 6,
+     "unit": "tbsp",
+     "aisle": "dairy & eggs",
+     "cents": 8.87,
+     "pack": 45,
+     "pack_name": "8 oz tub"
+    },
+    {
+     "item": "garlic",
+     "qty": 4,
+     "unit": "clove",
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
+    },
+    {
+     "item": "Italian seasoning",
+     "qty": 2,
+     "unit": "tsp",
+     "aisle": "oils & spices",
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
+    },
+    {
+     "item": "olive oil",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "oils & spices",
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
+    }
+   ],
+   "steps": [
+    "Boil the pasta. Cook bite-size chicken with Italian seasoning in the oil 7 minutes.",
+    "Add garlic and halved tomatoes for 2 minutes.",
+    "Stir in the milk whisked with cornstarch until it thickens, then the spinach and parmesan.",
+    "Toss with the pasta and divide into 6."
+   ],
+   "photo": "creamy chicken pasta",
+   "photo_must": "pasta",
+   "cost_note": "estimate",
+   "guide": {
+    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
+    "tools": [
+     "Large pot",
+     "Colander",
+     "Large deep skillet",
+     "Whisk"
+    ],
+    "prep": [
+     "Cut the chicken into bite-size pieces. Mince the 4 garlic cloves. Halve the cherry tomatoes.",
+     "Whisk the 1.5 cups milk with the 1.5 tbsp cornstarch until smooth."
+    ],
+    "steps": [
+     "Boil the pasta in salted water as the package says and drain.",
+     "Heat the 1 tbsp oil in the skillet on medium-high. Cook the chicken with the Italian seasoning and 1/2 tsp salt about 7 minutes until 165°F.",
+     "Add the garlic and tomatoes and cook 2 minutes.",
+     "Whisk the milk mix again, pour it in and stir until it simmers and thickens, about 3 minutes.",
+     "Stir in the spinach until it wilts, then take the pan off the heat and stir in the 6 tbsp parmesan.",
+     "Toss with the pasta and divide into 6."
+    ],
+    "tips": [
+     "Keep stirring while the milk heats so it doesn't catch on the bottom."
+    ],
+    "safe": "Chicken is safe at 165°F in the thickest part. No thermometer? Cut the thickest piece: the juices run clear and there is no pink.",
+    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
+    "reheat": "Add a splash of milk and microwave at medium power 2 to 3 minutes, stirring halfway, until steaming."
+   }
+  },
+  {
+   "id": "cheesesteak_bowls",
+   "name": "Philly Cheesesteak Rice Bowls",
+   "cuisine": "american",
+   "protein_type": "red meat",
+   "contains": [
+    "dairy",
+    "gluten",
+    "meat",
+    "red meat"
+   ],
+   "keys": [
+    "garlic_powder",
+    "mozzarella",
+    "mushrooms",
+    "olive_oil",
+    "onion",
+    "pepper",
+    "rice",
+    "sirloin",
+    "soy"
+   ],
+   "tags": [
+    "american",
+    "red meat",
+    "bowl",
+    "high-protein",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 30,
+   "servings": 5,
+   "cost_cents": 2203,
+   "kcal": 509,
+   "protein": 40,
+   "carbs": 46,
+   "fat": 17,
+   "fiber": 3,
+   "ingredients": [
+    {
+     "item": "sirloin steak",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "meat",
+     "cents": 999,
+     "pack": 1
+    },
+    {
+     "item": "bell pepper",
+     "qty": 2,
+     "unit": "pepper",
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
+    },
+    {
+     "item": "yellow onion",
+     "qty": 1,
+     "unit": "onion",
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
+    },
+    {
+     "item": "mushrooms (8 oz)",
+     "qty": 1,
+     "unit": "pack",
+     "aisle": "produce",
+     "cents": 199,
+     "pack": 1
+    },
+    {
+     "item": "shredded part-skim mozzarella",
+     "qty": 4,
+     "unit": "oz",
+     "aisle": "dairy & eggs",
+     "cents": 35,
+     "pack": 8,
+     "pack_name": "8 oz bag"
+    },
+    {
+     "item": "long-grain white rice",
+     "qty": 1.25,
+     "unit": "cup",
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
+    },
+    {
+     "item": "olive oil",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "oils & spices",
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
+    },
+    {
+     "item": "garlic powder",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices",
+     "cents": 4.81,
+     "pack": 31,
+     "pack_name": "3.4 oz jar",
+     "pantry": true
+    },
+    {
+     "item": "low-sodium soy sauce",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "sauces",
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
+    }
+   ],
+   "steps": [
+    "Cook the rice. Slice the steak very thin (easier if it's half-frozen).",
+    "Cook the sliced peppers, onion and mushrooms in the oil 7 minutes.",
+    "Push aside, sear the steak 2 to 3 minutes with the garlic powder and soy sauce, and toss together.",
+    "Top with mozzarella, cover 1 minute to melt, and pack over rice."
+   ],
+   "photo": "cheesesteak",
+   "photo_must": "cheese ?steak",
+   "cost_note": "estimate",
+   "guide": {
+    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
+    "tools": [
+     "Saucepan with lid (for rice)",
+     "Large skillet with a lid",
+     "Sharp knife"
+    ],
+    "prep": [
+     "Start the rice.",
+     "Freeze the steak 20 minutes, then slice it as thin as you can across the grain.",
+     "Slice the 2 peppers, the onion and the mushrooms."
+    ],
+    "steps": [
+     "Cook the 1.25 cups rice with 2.5 cups water: boil, cover, low 18 minutes, rest 5.",
+     "Heat the 1 tbsp oil in the skillet on medium-high. Cook the peppers, onion and mushrooms 7 minutes until soft and browned.",
+     "Push the vegetables to the side. Add the steak, garlic powder, 1 tbsp soy sauce and a pinch of pepper. Sear 2 to 3 minutes, stirring, until no longer pink.",
+     "Toss everything together, scatter the mozzarella on top, cover 1 minute until melted.",
+     "Pack over rice in 5 containers."
+    ],
+    "tips": [
+     "Thin slices are the secret: they cook in 2 minutes and stay tender."
+    ],
+    "safe": "Thin steak slices are safe once browned with no pink left; whole-muscle beef is safe at 145°F.",
+    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
+    "reheat": "Microwave covered, stirring halfway, until steaming hot all the way through (165°F), about 2 to 3 minutes per container. Thaw frozen portions overnight in the fridge first."
+   }
+  },
+  {
+   "id": "veggie_lo_mein",
+   "name": "Vegetable Lo Mein with Egg",
+   "cuisine": "chinese",
+   "protein_type": "vegetarian",
+   "contains": [
+    "egg",
+    "gluten"
+   ],
+   "keys": [
+    "cabbage",
+    "carrots",
+    "eggs",
+    "garlic",
+    "green_onions",
+    "hoisin",
+    "mushrooms",
+    "pepper",
+    "sesame_oil",
+    "soy",
+    "ww_pasta"
+   ],
+   "tags": [
+    "vegetarian",
+    "chinese",
+    "pasta",
+    "budget",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 25,
+   "servings": 5,
+   "cost_cents": 781,
+   "kcal": 384,
+   "protein": 19,
+   "carbs": 63,
+   "fat": 8,
+   "fiber": 10,
+   "ingredients": [
+    {
+     "item": "whole wheat pasta",
+     "qty": 0.75,
+     "unit": "lb",
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
+    },
+    {
+     "item": "eggs",
+     "qty": 4,
+     "unit": "egg",
+     "aisle": "dairy & eggs",
+     "cents": 19,
+     "pack": 12,
+     "pack_name": "dozen"
+    },
+    {
+     "item": "green cabbage",
+     "qty": 0.25,
+     "unit": "head",
+     "aisle": "produce",
+     "cents": 159,
+     "pack": 1
+    },
+    {
+     "item": "carrots",
+     "qty": 2,
+     "unit": "carrot",
+     "aisle": "produce",
+     "cents": 14,
+     "pack": 1
+    },
+    {
+     "item": "bell pepper",
+     "qty": 1,
+     "unit": "pepper",
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
+    },
+    {
+     "item": "mushrooms (8 oz)",
+     "qty": 1,
+     "unit": "pack",
+     "aisle": "produce",
+     "cents": 199,
+     "pack": 1
+    },
+    {
+     "item": "green onions",
+     "qty": 1,
+     "unit": "bunch",
+     "aisle": "produce",
+     "cents": 89,
+     "pack": 1
+    },
+    {
+     "item": "low-sodium soy sauce",
+     "qty": 5,
+     "unit": "tbsp",
+     "aisle": "sauces",
+     "cents": 8.3,
+     "pack": 30,
+     "pack_name": "15 oz bottle",
+     "pantry": true
+    },
+    {
+     "item": "hoisin sauce",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "sauces",
+     "cents": 18.6,
+     "pack": 15,
+     "pack_name": "8.5 oz jar",
+     "pantry": true
+    },
+    {
+     "item": "toasted sesame oil",
+     "qty": 2,
+     "unit": "tsp",
+     "aisle": "oils & spices",
+     "cents": 11.63,
+     "pack": 30,
+     "pack_name": "5 oz bottle",
+     "pantry": true
+    },
+    {
+     "item": "garlic",
+     "qty": 3,
+     "unit": "clove",
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
+    }
+   ],
+   "steps": [
+    "Boil the spaghetti, drain and toss with 1 teaspoon sesame oil.",
+    "Scramble the eggs and set aside.",
+    "Stir-fry the mushrooms, cabbage, carrots, pepper and garlic 4 minutes.",
+    "Add noodles, soy sauce, hoisin, the rest of the sesame oil and the eggs; toss 2 minutes and add green onions."
+   ],
+   "photo": "vegetable lo mein",
+   "photo_must": "lo ?mein|noodle",
+   "cost_note": "estimate",
+   "guide": {
+    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
+    "tools": [
+     "Large pot",
+     "Colander",
+     "Wok or very large skillet"
+    ],
+    "prep": [
+     "Shred the cabbage, cut the 2 carrots into matchsticks, slice the pepper and mushrooms.",
+     "Mince the 3 garlic cloves, slice the green onions. Beat the 4 eggs."
+    ],
+    "steps": [
+     "Boil the spaghetti until just tender. Drain and toss with 1 tsp of the sesame oil.",
+     "Heat a little oil in the wok on medium. Scramble the eggs until just set and move them to a plate.",
+     "Turn the heat to high. Stir-fry the mushrooms 2 minutes, then add the cabbage, carrots, pepper and garlic for 3 to 4 minutes, until crisp-tender.",
+     "Add the noodles, 5 tbsp soy sauce, 2 tbsp hoisin and the last 1 tsp sesame oil. Toss 2 minutes until coated.",
+     "Fold the eggs back in with the green onions and divide into 5."
+    ],
+    "tips": [
+     "Use tongs to toss the noodles so the sauce coats them evenly."
+    ],
+    "safe": "Eggs are done when the whites are firm and the yolks are thickened. Baked egg dishes are safe at 160°F in the middle.",
+    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
+    "reheat": "Microwave covered, stirring halfway, until steaming hot all the way through (165°F), about 2 to 3 minutes per container. Thaw frozen portions overnight in the fridge first."
+   }
+  },
+  {
+   "id": "black_bean_tacos",
+   "name": "Crispy Black Bean Tacos",
+   "cuisine": "mexican",
+   "protein_type": "vegetarian",
+   "contains": [
+    "dairy"
+   ],
+   "keys": [
+    "avocado",
+    "black_beans",
+    "cabbage",
+    "cheddar",
+    "chili_powder",
+    "corn_tortillas",
+    "cumin",
+    "greek_yogurt",
+    "lime",
+    "olive_oil",
+    "salsa"
+   ],
+   "tags": [
+    "vegetarian",
+    "mexican",
+    "budget",
+    "quick"
+   ],
+   "minutes": 25,
+   "servings": 4,
+   "cost_cents": 814,
+   "kcal": 538,
+   "protein": 24,
+   "carbs": 69,
+   "fat": 21,
+   "fiber": 19,
+   "ingredients": [
+    {
+     "item": "canned black beans (15 oz)",
+     "qty": 2,
+     "unit": "can",
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
+    },
+    {
+     "item": "corn tortillas",
+     "qty": 12,
+     "unit": "tortilla",
+     "aisle": "bakery",
+     "cents": 8,
+     "pack": 10,
+     "pack_name": "pack of 10"
+    },
+    {
+     "item": "shredded cheddar",
+     "qty": 4,
+     "unit": "oz",
+     "aisle": "dairy & eggs",
+     "cents": 37,
+     "pack": 8,
+     "pack_name": "8 oz bag"
+    },
+    {
+     "item": "green cabbage",
+     "qty": 0.25,
+     "unit": "head",
+     "aisle": "produce",
+     "cents": 159,
+     "pack": 1
+    },
+    {
+     "item": "plain nonfat Greek yogurt",
+     "qty": 0.5,
+     "unit": "cup",
+     "aisle": "dairy & eggs",
+     "cents": 121,
+     "pack": 3.75,
+     "pack_name": "32 oz tub"
+    },
+    {
+     "item": "lime",
+     "qty": 2,
+     "unit": "lime",
+     "aisle": "produce",
+     "cents": 33,
+     "pack": 1
+    },
+    {
+     "item": "avocado",
+     "qty": 1,
+     "unit": "avocado",
+     "aisle": "produce",
+     "cents": 100,
+     "pack": 1
+    },
+    {
+     "item": "ground cumin",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices",
+     "cents": 8.95,
+     "pack": 20,
+     "pack_name": "1.5 oz jar",
+     "pantry": true
+    },
+    {
+     "item": "chili powder",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices",
+     "cents": 5.73,
+     "pack": 26,
+     "pack_name": "2.5 oz jar",
+     "pantry": true
+    },
+    {
+     "item": "salsa",
+     "qty": 0.5,
+     "unit": "cup",
+     "aisle": "canned",
+     "cents": 142,
+     "pack": 1.75,
+     "pack_name": "16 oz jar"
+    },
+    {
+     "item": "olive oil",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "oils & spices",
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
+    }
+   ],
+   "steps": [
+    "Mash the drained beans with the cumin, chili powder and a pinch of salt.",
+    "Fill warmed tortillas with beans and cheese, fold, and crisp in a lightly oiled pan 2 to 3 minutes a side.",
+    "Toss the shredded cabbage with yogurt, the juice of one lime and salt.",
+    "Pack 3 tacos each with slaw, salsa, sliced avocado and lime on the side."
+   ],
+   "photo": "black bean tacos",
+   "photo_must": "taco",
+   "cost_note": "estimate",
+   "guide": {
+    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
+    "tools": [
+     "Large skillet",
+     "Bowl and fork",
+     "Can opener and sieve",
+     "Spatula"
+    ],
+    "prep": [
+     "Drain and rinse the 2 cans of black beans.",
+     "Shred the cabbage. Juice one lime and cut the other into wedges."
+    ],
+    "steps": [
+     "Mash the beans with the cumin, chili powder and 1/2 tsp salt until mostly smooth.",
+     "Warm the tortillas 20 seconds in the microwave under a damp paper towel so they bend without cracking.",
+     "Spread beans on half of each tortilla, add a little cheddar and fold over.",
+     "Brush the skillet with the 1 tbsp oil and heat on medium. Cook the tacos 2 to 3 minutes a side until crisp and the cheese has melted.",
+     "Toss the cabbage with the Greek yogurt, lime juice and a pinch of salt for slaw.",
+     "Pack 3 tacos each with slaw, salsa, avocado and a lime wedge on the side."
+    ],
+    "tips": [
+     "Slice the avocado on the day you eat it so it stays green."
+    ],
+    "safe": "No meat or eggs to undercook: cook until the vegetables are tender and the sauce is hot all the way through.",
+    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
+    "reheat": "Reheat the tacos in a dry pan 2 minutes a side (crispest) or microwave 45 to 60 seconds. Add the cold slaw after."
+   }
+  },
+  {
+   "id": "tomato_mozzarella_pasta",
+   "name": "Garlic Tomato Pasta with Mozzarella",
+   "cuisine": "italian",
+   "protein_type": "vegetarian",
+   "contains": [
+    "dairy",
+    "gluten"
+   ],
+   "keys": [
+    "cherry_tomatoes",
+    "garlic",
+    "italian",
+    "mozzarella",
+    "olive_oil",
+    "parmesan",
+    "spinach",
+    "white_beans",
+    "ww_pasta"
+   ],
+   "tags": [
+    "vegetarian",
+    "italian",
+    "pasta",
+    "budget",
+    "quick",
+    "classic prep"
+   ],
+   "minutes": 25,
+   "servings": 6,
+   "cost_cents": 1358,
+   "kcal": 506,
+   "protein": 25,
+   "carbs": 68,
+   "fat": 16,
+   "fiber": 10,
+   "ingredients": [
+    {
+     "item": "whole wheat pasta",
+     "qty": 1,
+     "unit": "lb",
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
+    },
+    {
+     "item": "cherry tomatoes",
+     "qty": 2,
+     "unit": "pint",
+     "aisle": "produce",
+     "cents": 299,
+     "pack": 1
+    },
+    {
+     "item": "shredded part-skim mozzarella",
+     "qty": 8,
+     "unit": "oz",
+     "aisle": "dairy & eggs",
+     "cents": 35,
+     "pack": 8,
+     "pack_name": "8 oz bag"
+    },
+    {
+     "item": "baby spinach",
+     "qty": 3,
+     "unit": "oz",
+     "aisle": "produce",
+     "cents": 30,
+     "pack": 5,
+     "pack_name": "5 oz box"
+    },
+    {
+     "item": "garlic",
+     "qty": 5,
+     "unit": "clove",
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
+    },
+    {
+     "item": "olive oil",
+     "qty": 3,
+     "unit": "tbsp",
+     "aisle": "oils & spices",
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
+    },
+    {
+     "item": "grated parmesan",
+     "qty": 4,
+     "unit": "tbsp",
+     "aisle": "dairy & eggs",
+     "cents": 8.87,
+     "pack": 45,
+     "pack_name": "8 oz tub"
+    },
+    {
+     "item": "Italian seasoning",
+     "qty": 1,
+     "unit": "tsp",
+     "aisle": "oils & spices",
+     "cents": 5.16,
+     "pack": 25,
+     "pack_name": "0.87 oz jar",
+     "pantry": true
+    },
+    {
+     "item": "canned white beans (15 oz)",
+     "qty": 1,
+     "unit": "can",
+     "aisle": "canned",
+     "cents": 109,
+     "pack": 1
+    }
+   ],
+   "steps": [
+    "Boil the pasta; keep a cup of the water.",
+    "Cook the sliced garlic in the oil 1 minute, add the tomatoes and cook 6 minutes until they burst.",
+    "Add the beans, spinach, Italian seasoning, pasta, parmesan and a splash of pasta water.",
+    "Off the heat, stir in the mozzarella so it goes melty, and divide into 6."
+   ],
+   "photo": "tomato mozzarella pasta",
+   "photo_must": "pasta",
+   "cost_note": "estimate",
+   "guide": {
+    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
+    "tools": [
+     "Large pot",
+     "Colander",
+     "Large deep skillet",
+     "Mug for pasta water"
+    ],
+    "prep": [
+     "Slice the 5 garlic cloves thin.",
+     "Drain and rinse the white beans."
+    ],
+    "steps": [
+     "Boil the pasta in salted water as the package says. Save a mug of the water, then drain.",
+     "Heat the 3 tbsp olive oil in the skillet on medium. Cook the garlic 1 minute until fragrant, not brown.",
+     "Add the 2 pints of cherry tomatoes and a pinch of salt. Cook about 6 minutes, stirring, until they burst and turn saucy (press them with a spoon).",
+     "Add the beans, spinach and Italian seasoning and stir until the spinach wilts.",
+     "Add the pasta, the 4 tbsp parmesan and a splash of pasta water and toss.",
+     "Take the pan off the heat and stir in the mozzarella so it goes melty. Divide into 6."
+    ],
+    "tips": [
+     "Tear the mozzarella into small pieces so it melts evenly."
+    ],
+    "safe": "No meat or eggs to undercook: cook until the tomatoes burst and everything is hot.",
+    "store": "Cool it within 2 hours of cooking, then seal in containers in the fridge. Eat within 4 days, or freeze for up to 3 months (best quality).",
+    "reheat": "Microwave covered, stirring halfway, until steaming hot all the way through (165°F), about 2 to 3 minutes per container. Thaw frozen portions overnight in the fridge first."
+   }
+  },
+  {
+   "id": "bang_bang_shrimp_bowls",
+   "name": "Bang Bang Shrimp Bowls",
+   "cuisine": "asian",
+   "protein_type": "seafood",
+   "contains": [
+    "dairy",
+    "honey",
+    "seafood"
+   ],
+   "keys": [
+    "carrots",
+    "cornstarch",
+    "cucumber",
+    "greek_yogurt",
+    "green_onions",
+    "honey",
+    "olive_oil",
+    "rice",
+    "shrimp",
+    "sriracha"
+   ],
+   "tags": [
+    "asian",
+    "seafood",
+    "bowl",
+    "high-protein",
+    "quick"
+   ],
+   "minutes": 25,
+   "servings": 4,
+   "cost_cents": 1415,
+   "kcal": 482,
+   "protein": 43,
+   "carbs": 67,
+   "fat": 5,
+   "fiber": 2,
+   "ingredients": [
+    {
+     "item": "frozen raw shrimp",
+     "qty": 1.5,
+     "unit": "lb",
+     "aisle": "seafood",
+     "cents": 699,
+     "pack": 1
+    },
+    {
+     "item": "long-grain white rice",
+     "qty": 1.25,
+     "unit": "cup",
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
+    },
+    {
+     "item": "cucumber",
+     "qty": 1,
+     "unit": "cucumber",
+     "aisle": "produce",
+     "cents": 79,
+     "pack": 1
+    },
+    {
+     "item": "carrots",
+     "qty": 2,
+     "unit": "carrot",
+     "aisle": "produce",
+     "cents": 14,
+     "pack": 1
+    },
+    {
+     "item": "plain nonfat Greek yogurt",
+     "qty": 0.5,
+     "unit": "cup",
+     "aisle": "dairy & eggs",
+     "cents": 121,
+     "pack": 3.75,
+     "pack_name": "32 oz tub"
+    },
+    {
+     "item": "sriracha",
+     "qty": 3,
+     "unit": "tsp",
+     "aisle": "sauces",
+     "cents": 4.99,
+     "pack": 80,
+     "pack_name": "17 oz bottle",
+     "pantry": true
+    },
+    {
+     "item": "honey",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "sauces",
+     "cents": 28.06,
+     "pack": 16,
+     "pack_name": "12 oz bottle",
+     "pantry": true
+    },
+    {
+     "item": "cornstarch",
+     "qty": 2,
+     "unit": "tbsp",
+     "aisle": "baking",
+     "cents": 3.2,
+     "pack": 56,
+     "pack_name": "16 oz box",
+     "pantry": true
+    },
+    {
+     "item": "olive oil",
+     "qty": 1,
+     "unit": "tbsp",
+     "aisle": "oils & spices",
+     "cents": 20.56,
+     "pack": 34,
+     "pack_name": "17 oz bottle",
+     "pantry": true
+    },
+    {
+     "item": "green onions",
+     "qty": 0.5,
+     "unit": "bunch",
+     "aisle": "produce",
+     "cents": 89,
+     "pack": 1
+    }
+   ],
+   "steps": [
+    "Cook the rice. Stir the yogurt, sriracha and honey for the sauce.",
+    "Toss the shrimp in cornstarch and a pinch of salt; pan-fry in the oil 2 minutes a side until pink and crisp.",
+    "Slice the cucumber and grate the carrots.",
+    "Pack rice, shrimp and vegetables with the sauce on the side; top with green onions."
+   ],
+   "photo": "shrimp rice bowl",
+   "photo_must": "shrimp",
+   "cost_note": "estimate",
+   "guide": {
+    "pantry": "You'll also need salt, black pepper, water and a little cooking oil or spray.",
+    "tools": [
+     "Saucepan with lid (for rice)",
+     "Large non-stick skillet",
+     "2 bowls",
+     "Box grater"
+    ],
+    "prep": [
+     "Start the rice.",
+     "Thaw the shrimp in cold water 10 minutes, peel if needed and pat very dry.",
+     "Slice the cucumber, grate the 2 carrots, slice the green onions.",
+     "Stir the Greek yogurt with the 3 tsp sriracha and 2 tbsp honey for the sauce."
+    ],
+    "steps": [
+     "Cook the 1.25 cups rice with 2.5 cups water: boil, cover, low 18 minutes, rest 5.",
+     "Toss the shrimp with the 2 tbsp cornstarch and 1/2 tsp salt.",
+     "Heat the 1 tbsp oil in the skillet on medium-high. Cook the shrimp in one layer 2 minutes a side until pink, opaque and lightly crisp.",
+     "Pack rice, shrimp, cucumber and carrots in 4 containers.",
+     "Put the sauce in small cups on the side and top with green onions."
+    ],
+    "tips": [
+     "Real bang bang sauce uses mayo; Greek yogurt keeps the creamy kick with more protein."
+    ],
+    "safe": "Fish is done at 145°F, or when it turns opaque and flakes easily with a fork. Shrimp are done when they turn pink and opaque and curl into a loose C shape.",
+    "store": "Refrigerate within 2 hours and eat within 3 days.",
+    "reheat": "Take out the vegetables and sauce. Microwave the rice and shrimp covered 1 to 1.5 minutes, just until hot, then add them back."
    }
   }
  ],

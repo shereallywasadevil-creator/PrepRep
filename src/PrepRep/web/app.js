@@ -117,10 +117,26 @@
   }
   function goTab(t) {
     tab = t; stack = [];
-    document.querySelectorAll(".tabs button").forEach(b => { b.classList.toggle("on", b.dataset.tab === t); b.toggleAttribute("aria-current", b.dataset.tab === t); });
+    document.querySelectorAll(".tabs button").forEach(b => {
+      const on = b.dataset.tab === t, was = b.classList.contains("on");
+      b.classList.toggle("on", on); b.toggleAttribute("aria-current", on);
+      if (on && !was) { b.classList.remove("pop"); void b.offsetWidth; b.classList.add("pop"); }   // restart the little bounce
+    });
+    moveTabInd();
     go(t);
   }
   document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => goTab(b.dataset.tab)));
+  // A green bar that slides under the selected tab.
+  const tabInd = document.createElement("i"); tabInd.className = "tab-ind"; tabInd.setAttribute("aria-hidden", "true");
+  document.querySelector(".tabs").append(tabInd);
+  function moveTabInd() {
+    const on = document.querySelector(".tabs button.on"), bar = document.querySelector(".tabs");
+    if (!on || !bar) return;
+    const a = on.getBoundingClientRect(), b = bar.getBoundingClientRect();
+    tabInd.style.transform = `translateX(${a.left - b.left + a.width / 2 - 18}px)`;
+    tabInd.classList.add("ready");
+  }
+  window.addEventListener("resize", moveTabInd);
   $("back").addEventListener("click", () => { stack.pop(); const [v, a] = stack[stack.length - 1] || [tab]; go(v, a, false); $("back").hidden = stack.length < 2; });
   $("search-btn").addEventListener("click", () => go("search"));
 
@@ -240,7 +256,6 @@
         h("small", {class: "muted", text: "Or tap + on meals you like, then Build plan."}));
     }
     main.append(h("div", {class: "hero"}, ph, info));
-    main.append(budgetCard());
     main.append(h("div", {class: "catrow", role: "list", "aria-label": "Browse by category"}, ...CATS.map(([key, name, emo, keep]) =>
       h("button", {class: "catchip", role: "listitem", onclick: () => go("category", key)}, h("span", {text: emo}), name, h("small", {text: RECIPES.filter(keep).length})))));
     const ok = RECIPES.filter(fits), rows = [
@@ -264,16 +279,7 @@
       photo(t, r); return t;
     }), h("button", {class: "tile more", onclick: () => go("category", "all")}, h("span", {text: "And more!"}))));
   };
-  function budgetCard() {
-    const per = budgetPer(), n = RECIPES.filter(fits).length;
-    const inp = h("input", {type: "range", min: "20", max: "200", step: "5", value: String(Math.round(S.get("budget") / 100)), "aria-label": "Weekly grocery budget"});
-    const val = h("b", {class: "bval", text: money(S.get("budget"))});
-    inp.addEventListener("input", () => { val.textContent = "$" + inp.value + ".00"; });
-    inp.addEventListener("change", () => { S.set("budget", +inp.value * 100); go("plans", null, false); });
-    return h("div", {class: "budgetcard"},
-      h("div", {class: "bline"}, h("span", {text: "Weekly budget"}), val, h("small", {class: "muted", text: `for ${S.get("portions")} servings = ${money(per)} a serving`})), inp,
-      h("small", {class: "muted", text: `${n} of ${RECIPES.length} meals fit. Slide to change it; everything below follows.`}));
-  }
+
   function weekRange() { const a = new Date(); a.setDate(a.getDate() - todayIdx()); const b = new Date(a); b.setDate(a.getDate() + 6);
     const f = d => d.toLocaleDateString(undefined, {month: "long", day: "numeric"}); return `${f(a)} – ${f(b)}`; }
 
@@ -314,49 +320,58 @@
     [820, 831, "WY"], [832, 838, "ID"], [840, 847, "UT"], [850, 865, "AZ"], [870, 884, "NM"], [885, 885, "TX"], [889, 898, "NV"],
     [900, 961, "CA"], [967, 968, "HI"], [970, 979, "OR"], [980, 994, "WA"], [995, 999, "AK"]];
   const stateOf = zip => { const n = parseInt(String(zip || "").slice(0, 3), 10); const z = ZIP3.find(([a, b]) => n >= a && n <= b); return z ? z[2] : ""; };
-  // For people x meals servings: what the food you use costs, and what you'd really pay (whole packages, pantry spices prorated).
-  function priceFor(r, servings) {
+  // For n servings: what the food you use costs, and what you'd really pay at the store. Every item is bought as whole
+  // packages (a 2 lb bag of rice, a jar of cumin), except pantry staples you say you already have.
+  function priceFor(r, servings, havePantry) {
     const k = servings / r.servings; let used = 0, store = 0;
-    const buy = r.ingredients.map(i => {
-      const need = i.qty * k, c = i.cents || 0; used += need * c;
-      if (!i.pack) { store += need * c; return null; }                         // a spoon of a spice: you pay for what you use
-      const packs = Math.ceil(need / i.pack - 1e-9); store += packs * i.pack * c;
-      return {item: i.item, packs, pack: i.pack, unit: i.unit, name: i.pack_name};
-    }).filter(Boolean);
+    const buy = [];
+    r.ingredients.forEach(i => {
+      const need = i.qty * k, c = i.cents || 0, pack = i.pack || 1; used += need * c;
+      if (i.pantry && havePantry) return;                                        // already in the cupboard
+      const packs = Math.ceil(need / pack - 1e-9); store += packs * pack * c;
+      buy.push({item: i.item, packs, pack, unit: i.unit, name: i.pack_name, cost: Math.round(packs * pack * c), pantry: !!i.pantry});
+    });
     return {used: Math.round(used), store: Math.round(store), buy};
   }
   function priceCard(r) {
     const st = S.get("calc") || {}, stc = stateOf(S.get("zip"));
-    let people = st.people || 1, meals = st.meals || 1, rate = st.rate ?? (FOOD_TAX[stc] || 0);
+    let people = st.people || 1, meals = st.meals || 1, rate = st.rate ?? (FOOD_TAX[stc] || 0), big = !!st.big, have = st.have ?? false;
     const out = h("div", {class: "pc-out", "aria-live": "polite"});
+    const packWord = b => b.unit === "lb" ? `${b.packs} lb` : b.name ? `${b.packs} × ${b.name}` : `${b.packs} ${b.unit}${b.packs > 1 && !/s$/.test(b.unit) ? "s" : ""}`;
     const draw = () => {
-      S.set("calc", {people, meals, rate});
-      const n = people * meals, p = priceFor(r, n), tax = Math.round(p.store * rate / 100), total = p.store + tax;
-      const packWord = b => b.unit === "lb" ? `${b.packs} lb` : b.name ? `${b.packs} × ${b.name}` : `${b.packs} ${b.unit}${b.packs > 1 && !/s$/.test(b.unit) ? "s" : ""}`;
+      S.set("calc", {people, meals, rate, big, have});
+      const n = people * meals, portions = n * (big ? 1.5 : 1), p = priceFor(r, portions, have);
+      const tax = Math.round(p.store * rate / 100), total = p.store + tax;
       out.replaceChildren(
         h("div", {class: "pc-big"}, h("div", {}, h("b", {text: money(total)}), h("small", {text: "at the store, with tax"})),
-          h("div", {}, h("b", {text: money(Math.round(total / n))}), h("small", {text: "a serving"})),
-          h("div", {}, h("b", {text: n}), h("small", {text: n === 1 ? "serving" : "servings"}))),
+          h("div", {}, h("b", {text: money(Math.round(total / n))}), h("small", {text: "a meal"})),
+          h("div", {}, h("b", {text: money(Math.round(p.used / n))}), h("small", {text: "a meal, once your pantry is stocked"}))),
         h("div", {class: "pc-lines"},
-          h("div", {}, h("span", {text: "Groceries (whole packages)"}), h("b", {text: money(p.store)})),
+          h("div", {}, h("span", {text: `Groceries for ${n} ${n === 1 ? "meal" : "meals"}${big ? " (hearty portions)" : ""}`}), h("b", {text: money(p.store)})),
           h("div", {}, h("span", {text: `Tax (${rate}%)`}), h("b", {text: money(tax)})),
           h("div", {}, h("span", {text: "Food you actually use"}), h("b", {text: money(p.used)})),
-          h("div", {class: "muted"}, h("span", {text: "Left over for next time"}), h("b", {text: money(p.store - p.used)}))),
-        h("details", {class: "pc-buy"}, h("summary", {text: "What to buy"}), h("ul", {}, ...p.buy.map(b => h("li", {text: `${packWord(b)} · ${b.item}`})))));
+          h("div", {class: "muted"}, h("span", {text: "Left over for next time"}), h("b", {text: money(Math.max(0, p.store - p.used))}))),
+        h("details", {class: "pc-buy", open: true}, h("summary", {text: "What to buy"}),
+          h("ul", {}, ...p.buy.map(b => h("li", {}, h("span", {text: `${packWord(b)} · ${b.item}`}), h("b", {text: money(b.cost)})))),
+          have ? h("p", {class: "muted", text: "Spices, oils and sauces are left out because you already have them."}) : null));
     };
-    const step = (label, get, set, min, max) => {
-      const v = h("b", {class: "pc-n", text: get()});
-      const btn = (d, t) => h("button", {class: "pc-btn", "aria-label": `${t} ${label.toLowerCase()}`, onclick: () => { set(Math.min(max, Math.max(min, get() + d))); v.textContent = get(); draw(); }, text: d < 0 ? "−" : "+"});
-      return h("div", {class: "pc-step"}, h("span", {text: label}), h("div", {class: "pc-ctl"}, btn(-1, "Fewer"), v, btn(1, "More")));
+    const num = (label, get, set, min, max, step = 1) => {
+      const inp = h("input", {type: "number", inputmode: step < 1 ? "decimal" : "numeric", min: String(min), max: String(max), step: String(step), value: String(get()), class: "pc-in", "aria-label": label});
+      inp.addEventListener("input", () => { const x = parseFloat(inp.value); if (isFinite(x) && x >= min && x <= max) { set(step < 1 ? x : Math.round(x)); draw(); } });
+      inp.addEventListener("blur", () => { inp.value = String(get()); });
+      return h("label", {class: "pc-step"}, h("span", {text: label}), inp);
     };
-    const rateIn = h("input", {type: "number", min: "0", max: "15", step: "0.025", value: String(rate), "aria-label": "Grocery tax rate in percent", class: "pc-rate"});
-    rateIn.addEventListener("input", () => { const x = parseFloat(rateIn.value); rate = isFinite(x) && x >= 0 && x <= 15 ? x : 0; draw(); });
+    const size = h("select", {class: "pc-in pc-sel", "aria-label": "Portion size"}, h("option", {value: "0", text: `Standard (${r.kcal} kcal)`}), h("option", {value: "1", text: `Hearty (${Math.round(r.kcal * 1.5)} kcal)`}));
+    size.value = big ? "1" : "0"; size.addEventListener("change", () => { big = size.value === "1"; draw(); });
+    const haveBox = h("input", {type: "checkbox", checked: have}); haveBox.addEventListener("change", () => { have = haveBox.checked; draw(); });
     draw();
     return h("div", {class: "pc"}, h("h2", {text: "Price it"}),
-      h("div", {class: "pc-row"}, step("People", () => people, x => people = x, 1, 12), step("Meals each", () => meals, x => meals = x, 1, 14),
-        h("label", {class: "pc-step"}, h("span", {text: "Grocery tax %"}), rateIn)),
-      h("p", {class: "muted pc-note", text: stc ? (FOOD_TAX[stc] ? `${stc} taxes groceries at ${FOOD_TAX[stc]}% statewide; your city or county may add more.` : `${stc} doesn't tax groceries statewide; some cities and counties do. Change the rate if yours does.`) : "Add your ZIP code in You to fill in your state's grocery tax."}),
-      out);
+      h("div", {class: "pc-row"}, num("People", () => people, x => people = x, 1, 50), num("Meals each", () => meals, x => meals = x, 1, 21),
+        h("label", {class: "pc-step"}, h("span", {text: "Portion size"}), size), num("Grocery tax %", () => rate, x => rate = x, 0, 15, 0.001)),
+      h("label", {class: "pc-check"}, haveBox, h("span", {text: "I already have spices, oils and sauces"})),
+      h("p", {class: "muted pc-note", text: (stc ? (FOOD_TAX[stc] ? `${stc} taxes groceries at ${FOOD_TAX[stc]}% statewide; your city or county may add more.` : `${stc} doesn't tax groceries statewide; some cities and counties do.`) : "Add your ZIP code in You to fill in your state's grocery tax.") + " Type the percent, like 7.5 for 7.5%."}),
+      out,
+      h("p", {class: "muted pc-note", text: "Prices are US averages for store-brand items (Bureau of Labor Statistics data where it exists, late 2026). Your store may be higher or lower."}));
   }
 
   VIEWS.recipe = async (main, id) => {
