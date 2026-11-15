@@ -185,7 +185,8 @@ body.wizopen{overflow:hidden}
 .wcard.center h2{font:800 28px var(--head);margin:6px 0 0}
 @media (prefers-reduced-motion:reduce){.wmascot,.wiz{animation:none}}
 /* categories, labels, plan parts */
-.catrow{display:flex;gap:8px;overflow-x:auto;padding:14px 2px 6px;scrollbar-width:none}.catrow::-webkit-scrollbar{display:none}
+.catrow{display:flex;flex-wrap:wrap;gap:8px;padding:14px 2px 6px}
+@media(max-width:760px){.catrow{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent)}}.catrow::-webkit-scrollbar{display:none}
 .catchip{flex:none;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 14px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font:600 14px var(--font);color:var(--ink);cursor:pointer}
 .catchip:hover{border-color:var(--green)}.catchip.on{background:var(--green);border-color:var(--green);color:#fff}.catchip small{color:var(--dim);font-weight:500}.catchip.on small{color:#fff}
 .labels{display:flex;flex-wrap:wrap;gap:6px;margin:-6px 0 14px}.label{padding:4px 10px;border-radius:999px;background:var(--green-soft);color:var(--green-dark);font:700 12px var(--font)}
@@ -200,3 +201,29 @@ body.wizopen{overflow:hidden}
 /* small round/square photo holders: keep the photo inside them (the You page price list showed one photo over the whole screen) */
 .li .ic,.thumbs span{position:relative;overflow:hidden}
 .li .ic>*:not(.phimg){position:relative;z-index:1}
+
+/* prep buddy */
+.buddy{display:flex;align-items:center;gap:14px;margin:4px 0 18px}
+.buddy-face{width:72px;height:72px;flex:none;filter:drop-shadow(0 8px 14px rgba(0,0,0,.08));animation:wbob 3s ease-in-out infinite}
+.buddy-face svg{width:100%;height:100%}
+.buddy-say{position:relative;background:#fff;border-radius:16px;padding:10px 14px;box-shadow:0 4px 16px -8px rgba(0,0,0,.25);display:grid;gap:2px}
+.buddy-say::before{content:"";position:absolute;left:-7px;top:50%;width:14px;height:14px;background:#fff;transform:translateY(-50%) rotate(45deg)}
+.buddy-say small{color:var(--dim)}
+@media (prefers-reduced-motion:reduce){.buddy-face{animation:none}}
+/* price it */
+.pc{background:#fff;border:1px solid var(--line,#e8e8e3);border-radius:18px;padding:16px 18px;margin:18px 0}
+.pc h2{margin:0 0 10px}
+.pc-row{display:flex;flex-wrap:wrap;gap:16px}
+.pc-step{display:grid;gap:6px;color:var(--dim);font-size:13px}
+.pc-ctl{display:flex;align-items:center;gap:10px}
+.pc-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--line,#e8e8e3);background:#fff;font-size:20px;line-height:1;cursor:pointer;transition:background .12s}
+.pc-btn:hover{background:var(--green-soft,#eef6e8)}
+.pc-n{min-width:24px;text-align:center;font:700 18px var(--head);color:var(--ink);font-variant-numeric:tabular-nums}
+.pc-rate{width:96px}
+.pc-note{margin:10px 0 0}
+.pc-big{display:flex;gap:28px;margin:14px 0 8px;flex-wrap:wrap}
+.pc-big b{display:block;font:800 26px var(--head);font-variant-numeric:tabular-nums}
+.pc-big small{color:var(--dim)}
+.pc-lines{display:grid;gap:4px;max-width:420px}
+.pc-lines div{display:flex;justify-content:space-between;font-variant-numeric:tabular-nums}
+.pc-buy{margin-top:10px}.pc-buy summary{cursor:pointer;font-weight:700}.pc-buy ul{margin:8px 0 0;padding-left:18px;color:var(--ink)}

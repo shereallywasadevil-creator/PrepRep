@@ -690,6 +690,20 @@ PHOTO = {
 LIMITS = {"kcal": (250, 750), "protein": (12, 75)}
 
 
+# How much of each unit the smallest normal store package holds, for "what you'd really pay at the store".
+# Units not listed come one at a time (a can, a bag, an onion). tbsp/tsp are pantry staples: priced by what you use.
+PACK_BY_UNIT = {"lb": 1, "egg": 12, "tortilla": 10, "bun": 8, "pita": 6, "clove": 10, "stalk": 8, "tbsp": 0, "tsp": 0}
+PACK = {"greek_yogurt": 3.75, "cottage": 2, "cheddar": 8, "mozzarella": 8, "feta": 4, "milk": 8, "red_lentils": 2.3,
+        "brown_lentils": 2.3, "rice": 4.9, "brown_rice": 4.8, "quinoa": 2, "oats": 6.4, "spinach": 5, "peanuts": 16,
+        "cashews": 8, "broth": 4, "salsa": 1.75}
+PACK_NAME = {"greek_yogurt": "32 oz tub", "cottage": "16 oz tub", "cheddar": "8 oz bag", "mozzarella": "8 oz bag",
+             "feta": "4 oz tub", "milk": "half gallon", "red_lentils": "1 lb bag", "brown_lentils": "1 lb bag",
+             "rice": "2 lb bag", "brown_rice": "2 lb bag", "quinoa": "12 oz bag", "oats": "18 oz canister",
+             "spinach": "5 oz box", "peanuts": "16 oz jar", "cashews": "8 oz bag", "broth": "32 oz carton",
+             "salsa": "16 oz jar", "garlic": "head", "celery": "bunch", "eggs": "dozen", "tortillas": "pack of 10", "corn_tortillas": "pack of 10",
+             "buns": "pack of 8", "pita": "pack of 6"}
+
+
 def build():
     out, bad = [], []
     for rid, name, minutes, servings, tags, ings, steps, photo, must in R:
@@ -701,7 +715,9 @@ def build():
             tot["cost"] += amt * cents
             for k, v in (("kcal", kcal), ("protein", p), ("carbs", c), ("fat", f), ("fiber", fib)):
                 tot[k] += g * v / 100
-            rows.append({"item": label, "qty": round(amt, 2), "unit": unit, "aisle": aisle})
+            rows.append({"item": label, "qty": round(amt, 2), "unit": unit, "aisle": aisle, "cents": cents,
+                         "pack": PACK.get(key, PACK_BY_UNIT.get(unit, 1)),
+                         **({"pack_name": PACK_NAME[key]} if key in PACK_NAME else {})})
         per = {k: tot[k] / servings for k in tot}
         all_tags = list(tags)
         keys = {k for k, _ in ings}

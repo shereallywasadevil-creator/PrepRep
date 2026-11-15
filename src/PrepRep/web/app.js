@@ -217,6 +217,9 @@
   VIEWS.plans = async main => {
     main.append(h("h1", {text: "Build a meal plan"}));
     const plan = S.get("plan");
+    { const nm = ((S.get("profile") || {}).name || "").trim();
+      main.append(plan ? buddy(`Your week is planned${nm ? ", " + nm : ""}!`, `${plan.servings} servings for ${money(plan.cost)}. Tap a meal to see how to make it.`)
+                       : buddy(`Hi${nm ? " " + nm : ""}! Let's plan your week.`, "Answer a few quick questions and I'll pick meals that fit your budget.")); }
     const first = plan ? byName(plan.recipes[0]) : RECIPES[0];
     const ph = h("div", {class: "ph", style: `--c:${colorOf(first)}`}, h("div", {class: "label"}, h("b", {text: plan ? "This Week" : "Your week"}), h("small", {text: weekRange()})));
     photo(ph, first);
@@ -281,6 +284,7 @@
     main.append(h("h1", {text: cat ? `${cat[2]} ${cat[1]}`.trim() : "All meals"}),
       h("div", {class: "catrow", role: "list", "aria-label": "Other categories"}, ...CATS.map(([k, n, e]) => h("button", {class: "catchip" + (k === key ? " on" : ""), role: "listitem", onclick: () => go("category", k, false)}, h("span", {text: e}), n))), h("p", {class: "muted", text: `Meals that fit your ${money(budgetPer())} a serving come first.`}),
       h("div", {class: "grid", role: "list"}, ...list.map(foodCard)));
+    requestAnimationFrame(() => { const on = main.querySelector(".catchip.on"); if (on) on.scrollIntoView({block: "nearest", inline: "center"}); });
   };
   VIEWS.search = async main => {
     const box = h("input", {class: "searchbox", type: "search", placeholder: "Search meals or ingredients", "aria-label": "Search meals"});
@@ -290,6 +294,71 @@
     box.addEventListener("input", run);
     main.append(h("h1", {text: "Search"}), box, out); run(); setTimeout(() => box.focus(), 50);
   };
+
+  /* ---- Prep buddy: the little meal-prep box from Plan my week, shown with a speech bubble ---- */
+  function buddy(text, small) {
+    const m = h("div", {class: "buddy-face", "aria-hidden": "true"});
+    m.innerHTML = window.PREP_WIZARD.MASCOT;                     // our own fixed SVG, no user text in it
+    return h("div", {class: "buddy"}, m, h("div", {class: "buddy-say"}, h("b", {text}), small ? h("small", {text: small}) : null));
+  }
+
+  /* ---- Price it: realistic cost for any number of people, with grocery tax ---- */
+  // State grocery tax (state level, late 2026). Local city/county tax can add more, so the rate can be changed.
+  const FOOD_TAX = {AL: 2, HI: 4, ID: 6, MS: 5, MO: 1.225, SD: 4.2, TN: 4, UT: 3};
+  const ZIP3 = [[5, 5, "NY"], [6, 9, "PR"], [10, 27, "MA"], [28, 29, "RI"], [30, 38, "NH"], [39, 49, "ME"], [50, 59, "VT"], [60, 69, "CT"],
+    [70, 89, "NJ"], [100, 149, "NY"], [150, 196, "PA"], [197, 199, "DE"], [200, 205, "DC"], [206, 219, "MD"], [220, 246, "VA"],
+    [247, 268, "WV"], [270, 289, "NC"], [290, 299, "SC"], [300, 319, "GA"], [320, 349, "FL"], [350, 369, "AL"], [370, 385, "TN"],
+    [386, 397, "MS"], [398, 399, "GA"], [400, 427, "KY"], [430, 459, "OH"], [460, 479, "IN"], [480, 499, "MI"], [500, 528, "IA"],
+    [530, 549, "WI"], [550, 567, "MN"], [570, 577, "SD"], [580, 588, "ND"], [590, 599, "MT"], [600, 629, "IL"], [630, 658, "MO"],
+    [660, 679, "KS"], [680, 693, "NE"], [700, 714, "LA"], [716, 729, "AR"], [730, 749, "OK"], [750, 799, "TX"], [800, 816, "CO"],
+    [820, 831, "WY"], [832, 838, "ID"], [840, 847, "UT"], [850, 865, "AZ"], [870, 884, "NM"], [885, 885, "TX"], [889, 898, "NV"],
+    [900, 961, "CA"], [967, 968, "HI"], [970, 979, "OR"], [980, 994, "WA"], [995, 999, "AK"]];
+  const stateOf = zip => { const n = parseInt(String(zip || "").slice(0, 3), 10); const z = ZIP3.find(([a, b]) => n >= a && n <= b); return z ? z[2] : ""; };
+  // For people x meals servings: what the food you use costs, and what you'd really pay (whole packages, pantry spices prorated).
+  function priceFor(r, servings) {
+    const k = servings / r.servings; let used = 0, store = 0;
+    const buy = r.ingredients.map(i => {
+      const need = i.qty * k, c = i.cents || 0; used += need * c;
+      if (!i.pack) { store += need * c; return null; }                         // a spoon of a spice: you pay for what you use
+      const packs = Math.ceil(need / i.pack - 1e-9); store += packs * i.pack * c;
+      return {item: i.item, packs, pack: i.pack, unit: i.unit, name: i.pack_name};
+    }).filter(Boolean);
+    return {used: Math.round(used), store: Math.round(store), buy};
+  }
+  function priceCard(r) {
+    const st = S.get("calc") || {}, stc = stateOf(S.get("zip"));
+    let people = st.people || 1, meals = st.meals || 1, rate = st.rate ?? (FOOD_TAX[stc] || 0);
+    const out = h("div", {class: "pc-out", "aria-live": "polite"});
+    const draw = () => {
+      S.set("calc", {people, meals, rate});
+      const n = people * meals, p = priceFor(r, n), tax = Math.round(p.store * rate / 100), total = p.store + tax;
+      const packWord = b => b.unit === "lb" ? `${b.packs} lb` : b.name ? `${b.packs} × ${b.name}` : `${b.packs} ${b.unit}${b.packs > 1 && !/s$/.test(b.unit) ? "s" : ""}`;
+      out.replaceChildren(
+        h("div", {class: "pc-big"}, h("div", {}, h("b", {text: money(total)}), h("small", {text: "at the store, with tax"})),
+          h("div", {}, h("b", {text: money(Math.round(total / n))}), h("small", {text: "a serving"})),
+          h("div", {}, h("b", {text: n}), h("small", {text: n === 1 ? "serving" : "servings"}))),
+        h("div", {class: "pc-lines"},
+          h("div", {}, h("span", {text: "Groceries (whole packages)"}), h("b", {text: money(p.store)})),
+          h("div", {}, h("span", {text: `Tax (${rate}%)`}), h("b", {text: money(tax)})),
+          h("div", {}, h("span", {text: "Food you actually use"}), h("b", {text: money(p.used)})),
+          h("div", {class: "muted"}, h("span", {text: "Left over for next time"}), h("b", {text: money(p.store - p.used)}))),
+        h("details", {class: "pc-buy"}, h("summary", {text: "What to buy"}), h("ul", {}, ...p.buy.map(b => h("li", {text: `${packWord(b)} · ${b.item}`})))));
+    };
+    const step = (label, get, set, min, max) => {
+      const v = h("b", {class: "pc-n", text: get()});
+      const btn = (d, t) => h("button", {class: "pc-btn", "aria-label": `${t} ${label.toLowerCase()}`, onclick: () => { set(Math.min(max, Math.max(min, get() + d))); v.textContent = get(); draw(); }, text: d < 0 ? "−" : "+"});
+      return h("div", {class: "pc-step"}, h("span", {text: label}), h("div", {class: "pc-ctl"}, btn(-1, "Fewer"), v, btn(1, "More")));
+    };
+    const rateIn = h("input", {type: "number", min: "0", max: "15", step: "0.025", value: String(rate), "aria-label": "Grocery tax rate in percent", class: "pc-rate"});
+    rateIn.addEventListener("input", () => { const x = parseFloat(rateIn.value); rate = isFinite(x) && x >= 0 && x <= 15 ? x : 0; draw(); });
+    draw();
+    return h("div", {class: "pc"}, h("h2", {text: "Price it"}),
+      h("div", {class: "pc-row"}, step("People", () => people, x => people = x, 1, 12), step("Meals each", () => meals, x => meals = x, 1, 14),
+        h("label", {class: "pc-step"}, h("span", {text: "Grocery tax %"}), rateIn)),
+      h("p", {class: "muted pc-note", text: stc ? (FOOD_TAX[stc] ? `${stc} taxes groceries at ${FOOD_TAX[stc]}% statewide; your city or county may add more.` : `${stc} doesn't tax groceries statewide; some cities and counties do. Change the rate if yours does.`) : "Add your ZIP code in You to fill in your state's grocery tax."}),
+      out);
+  }
+
   VIEWS.recipe = async (main, id) => {
     const r = byId(id); if (!r) return goTab("plans");
     const on = S.get("picks").includes(id);
@@ -306,6 +375,7 @@
       h("p", {class: fits(r) ? "fitnote" : "fitnote over", text: fits(r) ? `✓ Fits your budget (${money(budgetPer())} a serving)` : `${money(perServing(r) - budgetPer())} a serving over your budget`}),
       h("p", {class: "muted", style: "margin:0", text: `Whole batch about ${money(cost(r))}. Costs use 2026 US average prices; nutrition from USDA data. Both are estimates.`}),
       h("button", {class: on ? "btn line" : "btn", style: "margin-top:auto", onclick: () => { togglePick(id); go("recipe", id, false); }, text: on ? "Remove from my plan" : "Add to my plan"}))));
+    main.append(priceCard(r));
     main.append(h("div", {class: "sec"}, h("h2", {text: `Ingredients · for ${r.servings} servings`}), extLink(myStores().length ? nearStore(myStores()[0]) : nearUrl(), `📍 ${myStores()[0] || "Grocery stores"} near you`, "seeall")));
     main.append(h("p", {class: "muted", style: "margin:-4px 0 8px", text: "Tap an ingredient to find it at a store near you."}));
     const list = h("div", {class: "list"});
@@ -507,7 +577,7 @@
   VIEWS.you = async (main, first) => {
     const p = S.get("profile") || {sex: "male", age: "", height_cm: "", weight_kg: "", goal: "lose", activity: "light", rate: 0.5, name: ""}, w = S.get("workout");
     const sel = (id, opts, val) => h("select", {id}, ...opts.map(([v, t]) => { const o = h("option", {value: v, text: t}); o.selected = String(v) === String(val); return o; }));
-    main.append(h("h1", {text: first ? "Welcome to PrepRep" : "You"}), first ? h("p", {class: "muted", text: "A few details and PrepRep plans your meals, calories and workouts. Everything stays on this PC."}) : null);
+    main.append(h("h1", {text: first ? "Welcome to PrepRep" : "You"}), first ? buddy("Hi! I'm your prep buddy.", "Tell me a little about you and I'll plan your meals, calories and workouts. Everything stays on this device.") : null);
     const form = h("form", {class: "form", novalidate: true},
       h("label", {for: "name"}, "First name (optional)", h("input", {id: "name", value: p.name || ""})),
       h("label", {for: "sex"}, "Body (for the calorie formula)", sel("sex", [["male", "Male"], ["female", "Female"]], p.sex)),
@@ -536,7 +606,7 @@
         ...(US() ? {height_ft: s => +s >= 3 && +s <= 8 && Number.isInteger(+s) ? "" : "Feet: a whole number from 3 to 8.", height_in: s => s === "" || (+s >= 0 && +s < 12) ? "" : "Inches: 0 to 11."}
                  : {height_cm: s => +s >= 100 && +s <= 250 ? "" : "Height in cm, 100 to 250."}),
         weight_kg: s => toKg(s) >= 30 && toKg(s) <= 300 ? "" : US() ? "Weight in pounds, 66 to 660." : "Weight in kg, 30 to 300.",
-        budget: s => +s >= 5 ? "" : "At least $5.", zip: s => !s.trim() || /^\d{5}(-\d{4})?$/.test(s.trim()) ? "" : "A 5-digit ZIP, or leave it empty.", portions: s => +s >= 1 && +s <= 21 ? "" : "1 to 21 servings."});
+        budget: s => +s >= 5 ? "" : "At least $5.", zip: s => !s.trim() || /^\d{5}(-\d{4})?$/.test(s.trim()) ? "" : "A 5-digit ZIP, or leave it empty.", portions: s => +s >= 1 && +s <= 100 ? "" : "1 to 100 servings."});
       if (!v) return;
       const all = {}; form.querySelectorAll("input[id], select[id]").forEach(el => { all[el.id] = el.value; });
       const cm = US() ? Math.round(((+all.height_ft) * 12 + (+all.height_in || 0)) * 2.54) : +all.height_cm;
@@ -573,6 +643,8 @@
     RECIPES = rec.recipes || []; EXERCISES = ex.exercises || []; CREDITS = cr || {};
     S.set("picks", S.get("picks").filter(byId));               // the recipe list changed: drop picks and plans for meals that are gone
     const pl = S.get("plan"); if (pl && !pl.recipes.every(byName)) S.set("plan", null);
+    const ans = S.get("answers");                               // plans made before the servings fix kept an old "servings a week"
+    if (ans && ans.days && ans.meals && window.PREP_WIZARD) { const sv = window.PREP_WIZARD.servingsFor(ans); S.set("portions", Math.max(1, sv.breakfast + sv.mains)); }
     if (S.get("profile")) targets().catch(() => {});
     goTab("plans");
   })();

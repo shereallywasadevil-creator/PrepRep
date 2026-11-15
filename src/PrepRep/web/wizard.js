@@ -109,7 +109,7 @@ window.PREP_WIZARD = (() => {
     };
     ov.addEventListener("keydown", e => { if (e.key === "Escape") close(); });
     async function finish() {
-      S.set("answers", a); S.set("budget", a.budget); if (a.country !== "us" && S.get("units") === "us" && a.country !== "uk") S.set("units", "metric");
+      S.set("answers", a); S.set("budget", a.budget); { const sv = servingsFor(a); S.set("portions", Math.max(1, sv.breakfast + sv.mains)); } if (a.country !== "us" && S.get("units") === "us" && a.country !== "uk") S.set("units", "metric");
       const ring = h("div", {class: "wbuild"}), msg = h("small", {text: "Analysing your answers"});
       const card = h("div", {class: "wcard center"}, h("div", {class: "wbuildring"}, h("div", {class: "wmascot chef"}), ring),
         h("h2", {text: "Building your meal plan"}), msg);
@@ -125,5 +125,5 @@ window.PREP_WIZARD = (() => {
     }
     draw();
   }
-  return {open, allowed, favScore, servingsFor, STORES, DIETS, MEALS};
+  return {open, allowed, favScore, servingsFor, STORES, DIETS, MEALS, MASCOT};
 })();

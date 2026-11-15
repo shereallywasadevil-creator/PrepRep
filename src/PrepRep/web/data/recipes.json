@@ -40,43 +40,60 @@
      "item": "rolled oats",
      "qty": 2.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 22,
+     "pack": 6.4,
+     "pack_name": "18 oz canister"
     },
     {
      "item": "plain nonfat Greek yogurt",
      "qty": 2.5,
      "unit": "cup",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 121,
+     "pack": 3.75,
+     "pack_name": "32 oz tub"
     },
     {
      "item": "milk (2%)",
      "qty": 2.5,
      "unit": "cup",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 26,
+     "pack": 8,
+     "pack_name": "half gallon"
     },
     {
      "item": "frozen mixed berries (16 oz)",
      "qty": 0.6,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 414,
+     "pack": 1
     },
     {
      "item": "chia seeds",
      "qty": 2.5,
      "unit": "tbsp",
-     "aisle": "baking"
+     "aisle": "baking",
+     "cents": 17,
+     "pack": 0
     },
     {
      "item": "honey",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 31,
+     "pack": 0
     },
     {
      "item": "ground cinnamon",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     }
    ],
    "steps": [
@@ -125,37 +142,52 @@
      "item": "eggs",
      "qty": 12,
      "unit": "egg",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 19,
+     "pack": 12,
+     "pack_name": "dozen"
     },
     {
      "item": "baby spinach",
      "qty": 3,
      "unit": "oz",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 30,
+     "pack": 5,
+     "pack_name": "5 oz box"
     },
     {
      "item": "bell pepper",
      "qty": 1,
      "unit": "pepper",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 0.5,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "shredded cheddar",
      "qty": 3,
      "unit": "oz",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 37,
+     "pack": 8,
+     "pack_name": "8 oz bag"
     },
     {
      "item": "garlic powder",
      "qty": 0.5,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     }
    ],
    "steps": [
@@ -208,37 +240,53 @@
      "item": "eggs",
      "qty": 10,
      "unit": "egg",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 19,
+     "pack": 12,
+     "pack_name": "dozen"
     },
     {
      "item": "canned black beans (15 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "salsa",
      "qty": 0.75,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 142,
+     "pack": 1.75,
+     "pack_name": "16 oz jar"
     },
     {
      "item": "shredded cheddar",
      "qty": 4,
      "unit": "oz",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 37,
+     "pack": 8,
+     "pack_name": "8 oz bag"
     },
     {
      "item": "whole wheat tortillas (8 in)",
      "qty": 6,
      "unit": "tortilla",
-     "aisle": "bakery"
+     "aisle": "bakery",
+     "cents": 37,
+     "pack": 10,
+     "pack_name": "pack of 10"
     },
     {
      "item": "ground cumin",
      "qty": 0.5,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     }
    ],
    "steps": [
@@ -292,43 +340,60 @@
      "item": "rolled oats",
      "qty": 3,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 22,
+     "pack": 6.4,
+     "pack_name": "18 oz canister"
     },
     {
      "item": "eggs",
      "qty": 2,
      "unit": "egg",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 19,
+     "pack": 12,
+     "pack_name": "dozen"
     },
     {
      "item": "milk (2%)",
      "qty": 2,
      "unit": "cup",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 26,
+     "pack": 8,
+     "pack_name": "half gallon"
     },
     {
      "item": "bananas",
      "qty": 2,
      "unit": "banana",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 13,
+     "pack": 1
     },
     {
      "item": "peanut butter",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 10,
+     "pack": 0
     },
     {
      "item": "honey",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 31,
+     "pack": 0
     },
     {
      "item": "ground cinnamon",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     }
    ],
    "steps": [
@@ -377,37 +442,50 @@
      "item": "sweet potatoes",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 129,
+     "pack": 1
     },
     {
      "item": "eggs",
      "qty": 8,
      "unit": "egg",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 19,
+     "pack": 12,
+     "pack_name": "dozen"
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "bell pepper",
      "qty": 1,
      "unit": "pepper",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
     },
     {
      "item": "olive oil",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     },
     {
      "item": "smoked paprika",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 8,
+     "pack": 0
     }
    ],
    "steps": [
@@ -461,37 +539,51 @@
      "item": "plain nonfat Greek yogurt",
      "qty": 4,
      "unit": "cup",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 121,
+     "pack": 3.75,
+     "pack_name": "32 oz tub"
     },
     {
      "item": "frozen mixed berries (16 oz)",
      "qty": 1,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 414,
+     "pack": 1
     },
     {
      "item": "rolled oats",
      "qty": 1,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 22,
+     "pack": 6.4,
+     "pack_name": "18 oz canister"
     },
     {
      "item": "peanut butter",
      "qty": 3,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 10,
+     "pack": 0
     },
     {
      "item": "honey",
      "qty": 2.5,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 31,
+     "pack": 0
     },
     {
      "item": "chia seeds",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "baking"
+     "aisle": "baking",
+     "cents": 17,
+     "pack": 0
     }
    ],
    "steps": [
@@ -544,49 +636,67 @@
      "item": "chicken breast",
      "qty": 2,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "canned black beans (15 oz)",
      "qty": 2,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "frozen corn (12 oz)",
      "qty": 1,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 119,
+     "pack": 1
     },
     {
      "item": "salsa",
      "qty": 1,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 142,
+     "pack": 1.75,
+     "pack_name": "16 oz jar"
     },
     {
      "item": "lime",
      "qty": 1,
      "unit": "lime",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 33,
+     "pack": 1
     },
     {
      "item": "taco seasoning",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 25,
+     "pack": 0
     },
     {
      "item": "olive oil",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     }
    ],
    "steps": [
@@ -635,37 +745,49 @@
      "item": "chicken breast",
      "qty": 2,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
     },
     {
      "item": "sweet potatoes",
      "qty": 2,
      "unit": "lb",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 129,
+     "pack": 1
     },
     {
      "item": "broccoli",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 199,
+     "pack": 1
     },
     {
      "item": "olive oil",
      "qty": 3,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     },
     {
      "item": "smoked paprika",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "garlic powder",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     }
    ],
    "steps": [
@@ -718,43 +840,59 @@
      "item": "boneless chicken thighs",
      "qty": 2.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 329,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "frozen green beans (12 oz)",
      "qty": 2,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 129,
+     "pack": 1
     },
     {
      "item": "honey",
      "qty": 3,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 31,
+     "pack": 0
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 4,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "cornstarch",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "baking"
+     "aisle": "baking",
+     "cents": 3,
+     "pack": 0
     }
    ],
    "steps": [
@@ -811,67 +949,91 @@
      "item": "chicken breast",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
     },
     {
      "item": "broccoli",
      "qty": 1,
      "unit": "lb",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 199,
+     "pack": 1
     },
     {
      "item": "bell pepper",
      "qty": 2,
      "unit": "pepper",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
     },
     {
      "item": "carrots",
      "qty": 2,
      "unit": "carrot",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 14,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "honey",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 31,
+     "pack": 0
     },
     {
      "item": "fresh ginger (grated)",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "cornstarch",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "baking"
+     "aisle": "baking",
+     "cents": 3,
+     "pack": 0
     },
     {
      "item": "toasted sesame oil",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 9,
+     "pack": 0
     }
    ],
    "steps": [
@@ -925,61 +1087,84 @@
      "item": "chicken breast",
      "qty": 2,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "cucumber",
      "qty": 1,
      "unit": "cucumber",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 79,
+     "pack": 1
     },
     {
      "item": "cherry tomatoes",
      "qty": 1,
      "unit": "pint",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 299,
+     "pack": 1
     },
     {
      "item": "red onion",
      "qty": 0.5,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 60,
+     "pack": 1
     },
     {
      "item": "plain nonfat Greek yogurt",
      "qty": 1,
      "unit": "cup",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 121,
+     "pack": 3.75,
+     "pack_name": "32 oz tub"
     },
     {
      "item": "lemon",
      "qty": 1,
      "unit": "lemon",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 59,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 2,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "dried oregano",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     },
     {
      "item": "olive oil",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     }
    ],
    "steps": [
@@ -1030,43 +1215,58 @@
      "item": "chicken breast",
      "qty": 2,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
     },
     {
      "item": "bell pepper",
      "qty": 3,
      "unit": "pepper",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "whole wheat tortillas (8 in)",
      "qty": 10,
      "unit": "tortilla",
-     "aisle": "bakery"
+     "aisle": "bakery",
+     "cents": 37,
+     "pack": 10,
+     "pack_name": "pack of 10"
     },
     {
      "item": "taco seasoning",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 25,
+     "pack": 0
     },
     {
      "item": "lime",
      "qty": 1,
      "unit": "lime",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 33,
+     "pack": 1
     },
     {
      "item": "olive oil",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     }
    ],
    "steps": [
@@ -1120,61 +1320,84 @@
      "item": "boneless chicken thighs",
      "qty": 2,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 329,
+     "pack": 1
     },
     {
      "item": "crushed tomatoes (28 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 179,
+     "pack": 1
     },
     {
      "item": "light coconut milk (13.5 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 179,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 4,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "fresh ginger (grated)",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "curry powder",
      "qty": 3,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "frozen peas (12 oz)",
      "qty": 1,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 119,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "plain nonfat Greek yogurt",
      "qty": 0.5,
      "unit": "cup",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 121,
+     "pack": 3.75,
+     "pack_name": "32 oz tub"
     }
    ],
    "steps": [
@@ -1222,37 +1445,49 @@
      "item": "chicken breast",
      "qty": 2,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
     },
     {
      "item": "potatoes",
      "qty": 2,
      "unit": "lb",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 98,
+     "pack": 1
     },
     {
      "item": "frozen green beans (12 oz)",
      "qty": 2,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 129,
+     "pack": 1
     },
     {
      "item": "lemon",
      "qty": 2,
      "unit": "lemon",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 59,
+     "pack": 1
     },
     {
      "item": "olive oil",
      "qty": 3,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     },
     {
      "item": "garlic powder",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     }
    ],
    "steps": [
@@ -1301,37 +1536,50 @@
      "item": "chicken breast",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
     },
     {
      "item": "sweet potatoes",
      "qty": 2,
      "unit": "lb",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 129,
+     "pack": 1
     },
     {
      "item": "hot sauce",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 6,
+     "pack": 0
     },
     {
      "item": "plain nonfat Greek yogurt",
      "qty": 0.75,
      "unit": "cup",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 121,
+     "pack": 3.75,
+     "pack_name": "32 oz tub"
     },
     {
      "item": "green onions",
      "qty": 0.5,
      "unit": "bunch",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 89,
+     "pack": 1
     },
     {
      "item": "garlic powder",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     }
    ],
    "steps": [
@@ -1387,49 +1635,67 @@
      "item": "chicken breast",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
     },
     {
      "item": "whole wheat pasta",
      "qty": 1,
      "unit": "lb",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
     },
     {
      "item": "baby spinach",
      "qty": 5,
      "unit": "oz",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 30,
+     "pack": 5,
+     "pack_name": "5 oz box"
     },
     {
      "item": "cherry tomatoes",
      "qty": 1,
      "unit": "pint",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 299,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 4,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "grated parmesan",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 10,
+     "pack": 0
     },
     {
      "item": "olive oil",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     },
     {
      "item": "Italian seasoning",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     }
    ],
    "steps": [
@@ -1485,49 +1751,67 @@
      "item": "boneless chicken thighs",
      "qty": 2,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 329,
+     "pack": 1
     },
     {
      "item": "frozen broccoli (12 oz)",
      "qty": 2,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 129,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 5,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "honey",
      "qty": 3,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 31,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "fresh ginger (grated)",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "cornstarch",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "baking"
+     "aisle": "baking",
+     "cents": 3,
+     "pack": 0
     }
    ],
    "steps": [
@@ -1581,49 +1865,68 @@
      "item": "chicken breast",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
     },
     {
      "item": "carrots",
      "qty": 3,
      "unit": "carrot",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 14,
+     "pack": 1
     },
     {
      "item": "celery",
      "qty": 3,
      "unit": "stalk",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 10,
+     "pack": 8,
+     "pack_name": "bunch"
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "low-sodium broth",
      "qty": 8,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 62,
+     "pack": 4,
+     "pack_name": "32 oz carton"
     },
     {
      "item": "whole wheat pasta",
      "qty": 0.5,
      "unit": "lb",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "Italian seasoning",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     }
    ],
    "steps": [
@@ -1671,37 +1974,49 @@
      "item": "chicken breast",
      "qty": 2,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
     },
     {
      "item": "potatoes",
      "qty": 2,
      "unit": "lb",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 98,
+     "pack": 1
     },
     {
      "item": "frozen corn (12 oz)",
      "qty": 1,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 119,
+     "pack": 1
     },
     {
      "item": "BBQ sauce",
      "qty": 6,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 9,
+     "pack": 0
     },
     {
      "item": "olive oil",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     },
     {
      "item": "smoked paprika",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 8,
+     "pack": 0
     }
    ],
    "steps": [
@@ -1756,55 +2071,75 @@
      "item": "chicken breast",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
     },
     {
      "item": "canned black beans (15 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "frozen corn (12 oz)",
      "qty": 1,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 119,
+     "pack": 1
     },
     {
      "item": "tomato sauce (15 oz)",
      "qty": 2,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 89,
+     "pack": 1
     },
     {
      "item": "chili powder",
      "qty": 3,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "ground cumin",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "shredded cheddar",
      "qty": 4,
      "unit": "oz",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 37,
+     "pack": 8,
+     "pack_name": "8 oz bag"
     },
     {
      "item": "whole wheat tortillas (8 in)",
      "qty": 4,
      "unit": "tortilla",
-     "aisle": "bakery"
+     "aisle": "bakery",
+     "cents": 37,
+     "pack": 10,
+     "pack_name": "pack of 10"
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     }
    ],
    "steps": [
@@ -1857,55 +2192,74 @@
      "item": "lean ground turkey (93%)",
      "qty": 2,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 499,
+     "pack": 1
     },
     {
      "item": "canned black beans (15 oz)",
      "qty": 2,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "canned kidney beans (15 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "crushed tomatoes (28 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 179,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "bell pepper",
      "qty": 1,
      "unit": "pepper",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "chili powder",
      "qty": 4,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "ground cumin",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     }
    ],
    "steps": [
@@ -1956,49 +2310,69 @@
      "item": "lean ground turkey (93%)",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 499,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "salsa",
      "qty": 1,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 142,
+     "pack": 1.75,
+     "pack_name": "16 oz jar"
     },
     {
      "item": "canned black beans (15 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "frozen corn (12 oz)",
      "qty": 1,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 119,
+     "pack": 1
     },
     {
      "item": "shredded cheddar",
      "qty": 3,
      "unit": "oz",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 37,
+     "pack": 8,
+     "pack_name": "8 oz bag"
     },
     {
      "item": "taco seasoning",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 25,
+     "pack": 0
     },
     {
      "item": "low-sodium broth",
      "qty": 3,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 62,
+     "pack": 4,
+     "pack_name": "32 oz carton"
     }
    ],
    "steps": [
@@ -2054,61 +2428,83 @@
      "item": "lean ground turkey (93%)",
      "qty": 2,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 499,
+     "pack": 1
     },
     {
      "item": "green cabbage",
      "qty": 0.6,
      "unit": "head",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 159,
+     "pack": 1
     },
     {
      "item": "carrots",
      "qty": 2,
      "unit": "carrot",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 14,
+     "pack": 1
     },
     {
      "item": "green onions",
      "qty": 1,
      "unit": "bunch",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 89,
+     "pack": 1
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "fresh ginger (grated)",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "sriracha",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 5,
+     "pack": 0
     },
     {
      "item": "toasted sesame oil",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 9,
+     "pack": 0
     },
     {
      "item": "long-grain white rice",
      "qty": 1,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     }
    ],
    "steps": [
@@ -2163,49 +2559,68 @@
      "item": "lean ground turkey (93%)",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 499,
+     "pack": 1
     },
     {
      "item": "eggs",
      "qty": 1,
      "unit": "egg",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 19,
+     "pack": 12,
+     "pack_name": "dozen"
     },
     {
      "item": "rolled oats",
      "qty": 0.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 22,
+     "pack": 6.4,
+     "pack_name": "18 oz canister"
     },
     {
      "item": "grated parmesan",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 10,
+     "pack": 0
     },
     {
      "item": "Italian seasoning",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 2,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "marinara sauce (24 oz)",
      "qty": 1,
      "unit": "jar",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 199,
+     "pack": 1
     },
     {
      "item": "whole wheat pasta",
      "qty": 1,
      "unit": "lb",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
     }
    ],
    "steps": [
@@ -2260,49 +2675,67 @@
      "item": "lean ground beef (90%)",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 799,
+     "pack": 1
     },
     {
      "item": "broccoli",
      "qty": 2,
      "unit": "lb",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 199,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "honey",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 31,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "fresh ginger (grated)",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "cornstarch",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "baking"
+     "aisle": "baking",
+     "cents": 3,
+     "pack": 0
     }
    ],
    "steps": [
@@ -2357,55 +2790,74 @@
      "item": "lean ground beef (90%)",
      "qty": 1,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 799,
+     "pack": 1
     },
     {
      "item": "carrots",
      "qty": 2,
      "unit": "carrot",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 14,
+     "pack": 1
     },
     {
      "item": "zucchini",
      "qty": 1,
      "unit": "zucchini",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 66,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "crushed tomatoes (28 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 179,
+     "pack": 1
     },
     {
      "item": "whole wheat pasta",
      "qty": 1,
      "unit": "lb",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
     },
     {
      "item": "Italian seasoning",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     },
     {
      "item": "grated parmesan",
      "qty": 3,
      "unit": "tbsp",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 10,
+     "pack": 0
     }
    ],
    "steps": [
@@ -2454,43 +2906,59 @@
      "item": "bell pepper",
      "qty": 6,
      "unit": "pepper",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
     },
     {
      "item": "lean ground turkey (93%)",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 499,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "tomato sauce (15 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 89,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "shredded cheddar",
      "qty": 3,
      "unit": "oz",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 37,
+     "pack": 8,
+     "pack_name": "8 oz bag"
     },
     {
      "item": "Italian seasoning",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     }
    ],
    "steps": [
@@ -2542,55 +3010,76 @@
      "item": "lean ground turkey (93%)",
      "qty": 2,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 499,
+     "pack": 1
     },
     {
      "item": "frozen mixed vegetables (12 oz)",
      "qty": 2,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 119,
+     "pack": 1
     },
     {
      "item": "potatoes",
      "qty": 3,
      "unit": "lb",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 98,
+     "pack": 1
     },
     {
      "item": "milk (2%)",
      "qty": 0.5,
      "unit": "cup",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 26,
+     "pack": 8,
+     "pack_name": "half gallon"
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "low-sodium broth",
      "qty": 1,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 62,
+     "pack": 4,
+     "pack_name": "32 oz carton"
     },
     {
      "item": "tomato sauce (15 oz)",
      "qty": 0.5,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 89,
+     "pack": 1
     },
     {
      "item": "cornstarch",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "baking"
+     "aisle": "baking",
+     "cents": 3,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 2,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     }
    ],
    "steps": [
@@ -2643,43 +3132,58 @@
      "item": "pork tenderloin",
      "qty": 2,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 399,
+     "pack": 1
     },
     {
      "item": "potatoes",
      "qty": 2,
      "unit": "lb",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 98,
+     "pack": 1
     },
     {
      "item": "carrots",
      "qty": 6,
      "unit": "carrot",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 14,
+     "pack": 1
     },
     {
      "item": "olive oil",
      "qty": 3,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 4,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "Dijon mustard",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 12,
+     "pack": 0
     },
     {
      "item": "honey",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 31,
+     "pack": 0
     }
    ],
    "steps": [
@@ -2735,55 +3239,76 @@
      "item": "pork tenderloin",
      "qty": 2.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 399,
+     "pack": 1
     },
     {
      "item": "lime",
      "qty": 2,
      "unit": "lime",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 33,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 4,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "ground cumin",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "dried oregano",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     },
     {
      "item": "long-grain white rice",
      "qty": 1.75,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "canned black beans (15 oz)",
      "qty": 2,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "salsa",
      "qty": 1,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 142,
+     "pack": 1.75,
+     "pack_name": "16 oz jar"
     },
     {
      "item": "cilantro",
      "qty": 1,
      "unit": "bunch",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 79,
+     "pack": 1
     }
    ],
    "steps": [
@@ -2833,49 +3358,65 @@
      "item": "canned tuna in water (5 oz)",
      "qty": 4,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 119,
+     "pack": 1
     },
     {
      "item": "canned white beans (15 oz)",
      "qty": 2,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 109,
+     "pack": 1
     },
     {
      "item": "cucumber",
      "qty": 1,
      "unit": "cucumber",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 79,
+     "pack": 1
     },
     {
      "item": "cherry tomatoes",
      "qty": 1,
      "unit": "pint",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 299,
+     "pack": 1
     },
     {
      "item": "red onion",
      "qty": 0.5,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 60,
+     "pack": 1
     },
     {
      "item": "lemon",
      "qty": 1,
      "unit": "lemon",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 59,
+     "pack": 1
     },
     {
      "item": "olive oil",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     },
     {
      "item": "dried oregano",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     }
    ],
    "steps": [
@@ -2929,49 +3470,68 @@
      "item": "frozen raw shrimp",
      "qty": 1,
      "unit": "lb",
-     "aisle": "seafood"
+     "aisle": "seafood",
+     "cents": 699,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "eggs",
      "qty": 4,
      "unit": "egg",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 19,
+     "pack": 12,
+     "pack_name": "dozen"
     },
     {
      "item": "frozen mixed vegetables (12 oz)",
      "qty": 1,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 119,
+     "pack": 1
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "green onions",
      "qty": 1,
      "unit": "bunch",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 89,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "toasted sesame oil",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 9,
+     "pack": 0
     }
    ],
    "steps": [
@@ -3022,43 +3582,59 @@
      "item": "frozen salmon fillets",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "seafood"
+     "aisle": "seafood",
+     "cents": 599,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "broccoli",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 199,
+     "pack": 1
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 3,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "honey",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 31,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 2,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "olive oil",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     }
    ],
    "steps": [
@@ -3113,43 +3689,59 @@
      "item": "frozen raw shrimp",
      "qty": 1,
      "unit": "lb",
-     "aisle": "seafood"
+     "aisle": "seafood",
+     "cents": 699,
+     "pack": 1
     },
     {
      "item": "whole wheat pasta",
      "qty": 0.75,
      "unit": "lb",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
     },
     {
      "item": "baby spinach",
      "qty": 5,
      "unit": "oz",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 30,
+     "pack": 5,
+     "pack_name": "5 oz box"
     },
     {
      "item": "garlic",
      "qty": 5,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "lemon",
      "qty": 1,
      "unit": "lemon",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 59,
+     "pack": 1
     },
     {
      "item": "grated parmesan",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 10,
+     "pack": 0
     },
     {
      "item": "olive oil",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     }
    ],
    "steps": [
@@ -3204,49 +3796,67 @@
      "item": "whole wheat pasta",
      "qty": 0.75,
      "unit": "lb",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
     },
     {
      "item": "canned tuna in water (5 oz)",
      "qty": 3,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 119,
+     "pack": 1
     },
     {
      "item": "plain nonfat Greek yogurt",
      "qty": 1,
      "unit": "cup",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 121,
+     "pack": 3.75,
+     "pack_name": "32 oz tub"
     },
     {
      "item": "frozen peas (12 oz)",
      "qty": 1,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 119,
+     "pack": 1
     },
     {
      "item": "celery",
      "qty": 2,
      "unit": "stalk",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 10,
+     "pack": 8,
+     "pack_name": "bunch"
     },
     {
      "item": "red onion",
      "qty": 0.5,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 60,
+     "pack": 1
     },
     {
      "item": "lemon",
      "qty": 1,
      "unit": "lemon",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 59,
+     "pack": 1
     },
     {
      "item": "Dijon mustard",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 12,
+     "pack": 0
     }
    ],
    "steps": [
@@ -3295,55 +3905,77 @@
      "item": "red lentils (dry)",
      "qty": 2,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 76,
+     "pack": 2.3,
+     "pack_name": "1 lb bag"
     },
     {
      "item": "light coconut milk (13.5 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 179,
+     "pack": 1
     },
     {
      "item": "crushed tomatoes (28 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 179,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 4,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "fresh ginger (grated)",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "curry powder",
      "qty": 3,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "baby spinach",
      "qty": 5,
      "unit": "oz",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 30,
+     "pack": 5,
+     "pack_name": "5 oz box"
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     }
    ],
    "steps": [
@@ -3393,55 +4025,77 @@
      "item": "brown lentils (dry)",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 76,
+     "pack": 2.3,
+     "pack_name": "1 lb bag"
     },
     {
      "item": "sweet potatoes",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 129,
+     "pack": 1
     },
     {
      "item": "carrots",
      "qty": 2,
      "unit": "carrot",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 14,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "low-sodium broth",
      "qty": 8,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 62,
+     "pack": 4,
+     "pack_name": "32 oz carton"
     },
     {
      "item": "ground cumin",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "smoked paprika",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "baby spinach",
      "qty": 4,
      "unit": "oz",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 30,
+     "pack": 5,
+     "pack_name": "5 oz box"
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     }
    ],
    "steps": [
@@ -3495,67 +4149,92 @@
      "item": "sweet potatoes",
      "qty": 2,
      "unit": "lb",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 129,
+     "pack": 1
     },
     {
      "item": "canned black beans (15 oz)",
      "qty": 3,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "plain nonfat Greek yogurt",
      "qty": 1,
      "unit": "cup",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 121,
+     "pack": 3.75,
+     "pack_name": "32 oz tub"
     },
     {
      "item": "frozen corn (12 oz)",
      "qty": 1,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 119,
+     "pack": 1
     },
     {
      "item": "salsa",
      "qty": 1,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 142,
+     "pack": 1.75,
+     "pack_name": "16 oz jar"
     },
     {
      "item": "lime",
      "qty": 1,
      "unit": "lime",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 33,
+     "pack": 1
     },
     {
      "item": "avocado",
      "qty": 2,
      "unit": "avocado",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 100,
+     "pack": 1
     },
     {
      "item": "ground cumin",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "chili powder",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "olive oil",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     }
    ],
    "steps": [
@@ -3605,55 +4284,76 @@
      "item": "canned chickpeas (15 oz)",
      "qty": 3,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "crushed tomatoes (28 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 179,
+     "pack": 1
     },
     {
      "item": "light coconut milk (13.5 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 179,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 4,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "fresh ginger (grated)",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "curry powder",
      "qty": 3,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "baby spinach",
      "qty": 5,
      "unit": "oz",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 30,
+     "pack": 5,
+     "pack_name": "5 oz box"
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     }
    ],
    "steps": [
@@ -3709,67 +4409,91 @@
      "item": "extra-firm tofu (14 oz)",
      "qty": 2,
      "unit": "block",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 229,
+     "pack": 1
     },
     {
      "item": "broccoli",
      "qty": 1,
      "unit": "lb",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 199,
+     "pack": 1
     },
     {
      "item": "bell pepper",
      "qty": 2,
      "unit": "pepper",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
     },
     {
      "item": "carrots",
      "qty": 2,
      "unit": "carrot",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 14,
+     "pack": 1
     },
     {
      "item": "peanut butter",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 10,
+     "pack": 0
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 3,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "honey",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 31,
+     "pack": 0
     },
     {
      "item": "lime",
      "qty": 1,
      "unit": "lime",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 33,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "cornstarch",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "baking"
+     "aisle": "baking",
+     "cents": 3,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     }
    ],
    "steps": [
@@ -3819,61 +4543,84 @@
      "item": "canned chickpeas (15 oz)",
      "qty": 2,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "canned diced tomatoes (14.5 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "bell pepper",
      "qty": 1,
      "unit": "pepper",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
     },
     {
      "item": "smoked paprika",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "low-sodium broth",
      "qty": 3,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 62,
+     "pack": 4,
+     "pack_name": "32 oz carton"
     },
     {
      "item": "frozen peas (12 oz)",
      "qty": 1,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 119,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "olive oil",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     }
    ],
    "steps": [
@@ -3925,43 +4672,60 @@
      "item": "long-grain white rice",
      "qty": 2,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "eggs",
      "qty": 6,
      "unit": "egg",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 19,
+     "pack": 12,
+     "pack_name": "dozen"
     },
     {
      "item": "frozen mixed vegetables (12 oz)",
      "qty": 2,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 119,
+     "pack": 1
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "green onions",
      "qty": 1,
      "unit": "bunch",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 89,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "toasted sesame oil",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 9,
+     "pack": 0
     }
    ],
    "steps": [
@@ -4014,55 +4778,75 @@
      "item": "quinoa",
      "qty": 1,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 150,
+     "pack": 2,
+     "pack_name": "12 oz bag"
     },
     {
      "item": "canned chickpeas (15 oz)",
      "qty": 2,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "cucumber",
      "qty": 1,
      "unit": "cucumber",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 79,
+     "pack": 1
     },
     {
      "item": "cherry tomatoes",
      "qty": 1,
      "unit": "pint",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 299,
+     "pack": 1
     },
     {
      "item": "red onion",
      "qty": 0.5,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 60,
+     "pack": 1
     },
     {
      "item": "crumbled feta",
      "qty": 4,
      "unit": "oz",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 61,
+     "pack": 4,
+     "pack_name": "4 oz tub"
     },
     {
      "item": "lemon",
      "qty": 1,
      "unit": "lemon",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 59,
+     "pack": 1
     },
     {
      "item": "olive oil",
      "qty": 3,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     },
     {
      "item": "dried oregano",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     }
    ],
    "steps": [
@@ -4114,55 +4898,75 @@
      "item": "canned white beans (15 oz)",
      "qty": 4,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 109,
+     "pack": 1
     },
     {
      "item": "kale",
      "qty": 1,
      "unit": "bunch",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 199,
+     "pack": 1
     },
     {
      "item": "carrots",
      "qty": 2,
      "unit": "carrot",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 14,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 4,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "canned diced tomatoes (14.5 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "low-sodium broth",
      "qty": 6,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 62,
+     "pack": 4,
+     "pack_name": "32 oz carton"
     },
     {
      "item": "grated parmesan",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 10,
+     "pack": 0
     },
     {
      "item": "Italian seasoning",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     }
    ],
    "steps": [
@@ -4211,43 +5015,61 @@
      "item": "canned black beans (15 oz)",
      "qty": 2,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "frozen corn (12 oz)",
      "qty": 0.5,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 119,
+     "pack": 1
     },
     {
      "item": "shredded cheddar",
      "qty": 6,
      "unit": "oz",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 37,
+     "pack": 8,
+     "pack_name": "8 oz bag"
     },
     {
      "item": "whole wheat tortillas (8 in)",
      "qty": 8,
      "unit": "tortilla",
-     "aisle": "bakery"
+     "aisle": "bakery",
+     "cents": 37,
+     "pack": 10,
+     "pack_name": "pack of 10"
     },
     {
      "item": "salsa",
      "qty": 1,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 142,
+     "pack": 1.75,
+     "pack_name": "16 oz jar"
     },
     {
      "item": "baby spinach",
      "qty": 3,
      "unit": "oz",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 30,
+     "pack": 5,
+     "pack_name": "5 oz box"
     },
     {
      "item": "ground cumin",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     }
    ],
    "steps": [
@@ -4299,55 +5121,76 @@
      "item": "brown lentils (dry)",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 76,
+     "pack": 2.3,
+     "pack_name": "1 lb bag"
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "bell pepper",
      "qty": 1,
      "unit": "pepper",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
     },
     {
      "item": "tomato sauce (15 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 89,
+     "pack": 1
     },
     {
      "item": "honey",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 31,
+     "pack": 0
     },
     {
      "item": "Dijon mustard",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 12,
+     "pack": 0
     },
     {
      "item": "chili powder",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "whole wheat buns",
      "qty": 6,
      "unit": "bun",
-     "aisle": "bakery"
+     "aisle": "bakery",
+     "cents": 42,
+     "pack": 8,
+     "pack_name": "pack of 8"
     },
     {
      "item": "garlic",
      "qty": 2,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     }
    ],
    "steps": [
@@ -4402,61 +5245,85 @@
      "item": "whole wheat pasta",
      "qty": 0.5,
      "unit": "lb",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
     },
     {
      "item": "canned white beans (15 oz)",
      "qty": 2,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 109,
+     "pack": 1
     },
     {
      "item": "canned diced tomatoes (14.5 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "carrots",
      "qty": 2,
      "unit": "carrot",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 14,
+     "pack": 1
     },
     {
      "item": "celery",
      "qty": 2,
      "unit": "stalk",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 10,
+     "pack": 8,
+     "pack_name": "bunch"
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "low-sodium broth",
      "qty": 6,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 62,
+     "pack": 4,
+     "pack_name": "32 oz carton"
     },
     {
      "item": "baby spinach",
      "qty": 3,
      "unit": "oz",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 30,
+     "pack": 5,
+     "pack_name": "5 oz box"
     },
     {
      "item": "grated parmesan",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 10,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     }
    ],
    "steps": [
@@ -4508,43 +5375,61 @@
      "item": "whole wheat pasta",
      "qty": 1,
      "unit": "lb",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
     },
     {
      "item": "marinara sauce (24 oz)",
      "qty": 1.5,
      "unit": "jar",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 199,
+     "pack": 1
     },
     {
      "item": "low-fat cottage cheese",
      "qty": 3,
      "unit": "cup",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 109,
+     "pack": 2,
+     "pack_name": "16 oz tub"
     },
     {
      "item": "shredded part-skim mozzarella",
      "qty": 8,
      "unit": "oz",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 35,
+     "pack": 8,
+     "pack_name": "8 oz bag"
     },
     {
      "item": "baby spinach",
      "qty": 5,
      "unit": "oz",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 30,
+     "pack": 5,
+     "pack_name": "5 oz box"
     },
     {
      "item": "Italian seasoning",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     },
     {
      "item": "eggs",
      "qty": 1,
      "unit": "egg",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 19,
+     "pack": 12,
+     "pack_name": "dozen"
     }
    ],
    "steps": [
@@ -4596,55 +5481,76 @@
      "item": "lean ground turkey (93%)",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 499,
+     "pack": 1
     },
     {
      "item": "quinoa",
      "qty": 1,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 150,
+     "pack": 2,
+     "pack_name": "12 oz bag"
     },
     {
      "item": "zucchini",
      "qty": 2,
      "unit": "zucchini",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 66,
+     "pack": 1
     },
     {
      "item": "canned diced tomatoes (14.5 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "low-sodium broth",
      "qty": 2,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 62,
+     "pack": 4,
+     "pack_name": "32 oz carton"
     },
     {
      "item": "ground cumin",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "smoked paprika",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 2,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     }
    ],
    "steps": [
@@ -4699,55 +5605,76 @@
      "item": "chicken breast",
      "qty": 1.75,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
     },
     {
      "item": "quinoa",
      "qty": 1,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 150,
+     "pack": 2,
+     "pack_name": "12 oz bag"
     },
     {
      "item": "cherry tomatoes",
      "qty": 1,
      "unit": "pint",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 299,
+     "pack": 1
     },
     {
      "item": "cucumber",
      "qty": 1,
      "unit": "cucumber",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 79,
+     "pack": 1
     },
     {
      "item": "baby spinach",
      "qty": 3,
      "unit": "oz",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 30,
+     "pack": 5,
+     "pack_name": "5 oz box"
     },
     {
      "item": "lemon",
      "qty": 1,
      "unit": "lemon",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 59,
+     "pack": 1
     },
     {
      "item": "olive oil",
      "qty": 3,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     },
     {
      "item": "Italian seasoning",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     },
     {
      "item": "crumbled feta",
      "qty": 3,
      "unit": "oz",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 61,
+     "pack": 4,
+     "pack_name": "4 oz tub"
     }
    ],
    "steps": [
@@ -4799,61 +5726,84 @@
      "item": "canned black beans (15 oz)",
      "qty": 3,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "quinoa",
      "qty": 0.75,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 150,
+     "pack": 2,
+     "pack_name": "12 oz bag"
     },
     {
      "item": "crushed tomatoes (28 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 179,
+     "pack": 1
     },
     {
      "item": "frozen corn (12 oz)",
      "qty": 1,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 119,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "bell pepper",
      "qty": 1,
      "unit": "pepper",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "chili powder",
      "qty": 4,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "ground cumin",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "low-sodium broth",
      "qty": 3,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 62,
+     "pack": 4,
+     "pack_name": "32 oz carton"
     }
    ],
    "steps": [
@@ -4906,67 +5856,91 @@
      "item": "canned chickpeas (15 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "canned black beans (15 oz)",
      "qty": 2,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1.25,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "frozen corn (12 oz)",
      "qty": 1,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 119,
+     "pack": 1
     },
     {
      "item": "salsa",
      "qty": 1,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 142,
+     "pack": 1.75,
+     "pack_name": "16 oz jar"
     },
     {
      "item": "avocado",
      "qty": 2,
      "unit": "avocado",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 100,
+     "pack": 1
     },
     {
      "item": "lime",
      "qty": 2,
      "unit": "lime",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 33,
+     "pack": 1
     },
     {
      "item": "ground cumin",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "chili powder",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "cilantro",
      "qty": 1,
      "unit": "bunch",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 79,
+     "pack": 1
     },
     {
      "item": "olive oil",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     }
    ],
    "steps": [
@@ -5018,67 +5992,93 @@
      "item": "canned chickpeas (15 oz)",
      "qty": 2,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "sweet potatoes",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 129,
+     "pack": 1
     },
     {
      "item": "light coconut milk (13.5 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 179,
+     "pack": 1
     },
     {
      "item": "canned diced tomatoes (14.5 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "baby spinach",
      "qty": 5,
      "unit": "oz",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 30,
+     "pack": 5,
+     "pack_name": "5 oz box"
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 4,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "fresh ginger (grated)",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "curry powder",
      "qty": 3,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "low-sodium broth",
      "qty": 2,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 62,
+     "pack": 4,
+     "pack_name": "32 oz carton"
     },
     {
      "item": "long-grain white rice",
      "qty": 1.25,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     }
    ],
    "steps": [
@@ -5130,55 +6130,75 @@
      "item": "brown lentils (dry)",
      "qty": 1.25,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 76,
+     "pack": 2.3,
+     "pack_name": "1 lb bag"
     },
     {
      "item": "mushrooms (8 oz)",
      "qty": 1,
      "unit": "pack",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 199,
+     "pack": 1
     },
     {
      "item": "carrots",
      "qty": 2,
      "unit": "carrot",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 14,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 4,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "crushed tomatoes (28 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 179,
+     "pack": 1
     },
     {
      "item": "whole wheat pasta",
      "qty": 1,
      "unit": "lb",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
     },
     {
      "item": "Italian seasoning",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     },
     {
      "item": "olive oil",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     }
    ],
    "steps": [
@@ -5237,73 +6257,100 @@
      "item": "chicken breast",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
     },
     {
      "item": "bell pepper",
      "qty": 2,
      "unit": "pepper",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
     },
     {
      "item": "roasted peanuts",
      "qty": 2,
      "unit": "oz",
-     "aisle": "nuts"
+     "aisle": "nuts",
+     "cents": 22,
+     "pack": 16,
+     "pack_name": "16 oz jar"
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "honey",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 31,
+     "pack": 0
     },
     {
      "item": "rice vinegar",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 6,
+     "pack": 0
     },
     {
      "item": "chili garlic sauce",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 5,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "fresh ginger (grated)",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "cornstarch",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "baking"
+     "aisle": "baking",
+     "cents": 3,
+     "pack": 0
     },
     {
      "item": "green onions",
      "qty": 0.5,
      "unit": "bunch",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 89,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     }
    ],
    "steps": [
@@ -5360,61 +6407,83 @@
      "item": "chicken breast",
      "qty": 2,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
     },
     {
      "item": "orange",
      "qty": 2,
      "unit": "orange",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 79,
+     "pack": 1
     },
     {
      "item": "honey",
      "qty": 3,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 31,
+     "pack": 0
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 3,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "rice vinegar",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 6,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 2,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "fresh ginger (grated)",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "cornstarch",
      "qty": 3,
      "unit": "tbsp",
-     "aisle": "baking"
+     "aisle": "baking",
+     "cents": 3,
+     "pack": 0
     },
     {
      "item": "frozen broccoli (12 oz)",
      "qty": 2,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 129,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     }
    ],
    "steps": [
@@ -5470,61 +6539,82 @@
      "item": "whole wheat pasta",
      "qty": 0.75,
      "unit": "lb",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
     },
     {
      "item": "chicken breast",
      "qty": 1.25,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
     },
     {
      "item": "green cabbage",
      "qty": 0.25,
      "unit": "head",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 159,
+     "pack": 1
     },
     {
      "item": "carrots",
      "qty": 2,
      "unit": "carrot",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 14,
+     "pack": 1
     },
     {
      "item": "bell pepper",
      "qty": 1,
      "unit": "pepper",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
     },
     {
      "item": "green onions",
      "qty": 1,
      "unit": "bunch",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 89,
+     "pack": 1
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 5,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "hoisin sauce",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 12,
+     "pack": 0
     },
     {
      "item": "toasted sesame oil",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 9,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     }
    ],
    "steps": [
@@ -5581,61 +6671,84 @@
      "item": "extra-firm tofu (14 oz)",
      "qty": 2,
      "unit": "block",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 229,
+     "pack": 1
     },
     {
      "item": "ground pork",
      "qty": 0.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 399,
+     "pack": 1
     },
     {
      "item": "chili garlic sauce",
      "qty": 3,
      "unit": "tsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 5,
+     "pack": 0
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 3,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "fresh ginger (grated)",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "low-sodium broth",
      "qty": 1,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 62,
+     "pack": 4,
+     "pack_name": "32 oz carton"
     },
     {
      "item": "cornstarch",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "baking"
+     "aisle": "baking",
+     "cents": 3,
+     "pack": 0
     },
     {
      "item": "green onions",
      "qty": 0.5,
      "unit": "bunch",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 89,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     }
    ],
    "steps": [
@@ -5687,49 +6800,67 @@
      "item": "eggs",
      "qty": 10,
      "unit": "egg",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 19,
+     "pack": 12,
+     "pack_name": "dozen"
     },
     {
      "item": "tomatoes",
      "qty": 5,
      "unit": "tomato",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 60,
+     "pack": 1
     },
     {
      "item": "green onions",
      "qty": 1,
      "unit": "bunch",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 89,
+     "pack": 1
     },
     {
      "item": "honey",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 31,
+     "pack": 0
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "cornstarch",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "baking"
+     "aisle": "baking",
+     "cents": 3,
+     "pack": 0
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "olive oil",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     }
    ],
    "steps": [
@@ -5784,61 +6915,84 @@
      "item": "chicken breast",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
     },
     {
      "item": "cashews",
      "qty": 3,
      "unit": "oz",
-     "aisle": "nuts"
+     "aisle": "nuts",
+     "cents": 55,
+     "pack": 8,
+     "pack_name": "8 oz bag"
     },
     {
      "item": "bell pepper",
      "qty": 1,
      "unit": "pepper",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "broccoli",
      "qty": 1,
      "unit": "lb",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 199,
+     "pack": 1
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "hoisin sauce",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 12,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "cornstarch",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "baking"
+     "aisle": "baking",
+     "cents": 3,
+     "pack": 0
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     }
    ],
    "steps": [
@@ -5895,61 +7049,83 @@
      "item": "ground pork",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 399,
+     "pack": 1
     },
     {
      "item": "green cabbage",
      "qty": 0.5,
      "unit": "head",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 159,
+     "pack": 1
     },
     {
      "item": "carrots",
      "qty": 2,
      "unit": "carrot",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 14,
+     "pack": 1
     },
     {
      "item": "green onions",
      "qty": 1,
      "unit": "bunch",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 89,
+     "pack": 1
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "rice vinegar",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 6,
+     "pack": 0
     },
     {
      "item": "fresh ginger (grated)",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "toasted sesame oil",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 9,
+     "pack": 0
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     }
    ],
    "steps": [
@@ -6006,61 +7182,82 @@
      "item": "pork tenderloin",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 399,
+     "pack": 1
     },
     {
      "item": "canned pineapple chunks (20 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 149,
+     "pack": 1
     },
     {
      "item": "bell pepper",
      "qty": 2,
      "unit": "pepper",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "rice vinegar",
      "qty": 3,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 6,
+     "pack": 0
     },
     {
      "item": "honey",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 31,
+     "pack": 0
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "tomato paste",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 6,
+     "pack": 0
     },
     {
      "item": "cornstarch",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "baking"
+     "aisle": "baking",
+     "cents": 3,
+     "pack": 0
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     }
    ],
    "steps": [
@@ -6119,67 +7316,89 @@
      "item": "whole wheat pasta",
      "qty": 0.75,
      "unit": "lb",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
     },
     {
      "item": "chicken breast",
      "qty": 1.25,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
     },
     {
      "item": "peanut butter",
      "qty": 5,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 10,
+     "pack": 0
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "honey",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 31,
+     "pack": 0
     },
     {
      "item": "rice vinegar",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 6,
+     "pack": 0
     },
     {
      "item": "sriracha",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 5,
+     "pack": 0
     },
     {
      "item": "green cabbage",
      "qty": 0.25,
      "unit": "head",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 159,
+     "pack": 1
     },
     {
      "item": "carrots",
      "qty": 3,
      "unit": "carrot",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 14,
+     "pack": 1
     },
     {
      "item": "cucumber",
      "qty": 1,
      "unit": "cucumber",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 79,
+     "pack": 1
     },
     {
      "item": "green onions",
      "qty": 1,
      "unit": "bunch",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 89,
+     "pack": 1
     }
    ],
    "steps": [
@@ -6235,73 +7454,100 @@
      "item": "chicken breast",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
     },
     {
      "item": "canned black beans (15 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "frozen corn (12 oz)",
      "qty": 1,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 119,
+     "pack": 1
     },
     {
      "item": "canned diced tomatoes (14.5 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "low-sodium broth",
      "qty": 6,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 62,
+     "pack": 4,
+     "pack_name": "32 oz carton"
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "jalapeño",
      "qty": 1,
      "unit": "pepper",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 15,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "ground cumin",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "chili powder",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "lime",
      "qty": 1,
      "unit": "lime",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 33,
+     "pack": 1
     },
     {
      "item": "corn tortillas",
      "qty": 6,
      "unit": "tortilla",
-     "aisle": "bakery"
+     "aisle": "bakery",
+     "cents": 8,
+     "pack": 10,
+     "pack_name": "pack of 10"
     }
    ],
    "steps": [
@@ -6353,55 +7599,75 @@
      "item": "boneless chicken thighs",
      "qty": 2,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 329,
+     "pack": 1
     },
     {
      "item": "canned diced tomatoes (14.5 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "chipotle peppers in adobo",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 15,
+     "pack": 0
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "corn tortillas",
      "qty": 16,
      "unit": "tortilla",
-     "aisle": "bakery"
+     "aisle": "bakery",
+     "cents": 8,
+     "pack": 10,
+     "pack_name": "pack of 10"
     },
     {
      "item": "green cabbage",
      "qty": 0.25,
      "unit": "head",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 159,
+     "pack": 1
     },
     {
      "item": "lime",
      "qty": 2,
      "unit": "lime",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 33,
+     "pack": 1
     },
     {
      "item": "dried oregano",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     }
    ],
    "steps": [
@@ -6449,43 +7715,60 @@
      "item": "canned black beans (15 oz)",
      "qty": 2,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "frozen corn (12 oz)",
      "qty": 1,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 119,
+     "pack": 1
     },
     {
      "item": "baby spinach",
      "qty": 3,
      "unit": "oz",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 30,
+     "pack": 5,
+     "pack_name": "5 oz box"
     },
     {
      "item": "red enchilada sauce (10 oz)",
      "qty": 2,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 149,
+     "pack": 1
     },
     {
      "item": "shredded cheddar",
      "qty": 6,
      "unit": "oz",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 37,
+     "pack": 8,
+     "pack_name": "8 oz bag"
     },
     {
      "item": "whole wheat tortillas (8 in)",
      "qty": 8,
      "unit": "tortilla",
-     "aisle": "bakery"
+     "aisle": "bakery",
+     "cents": 37,
+     "pack": 10,
+     "pack_name": "pack of 10"
     },
     {
      "item": "ground cumin",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     }
    ],
    "steps": [
@@ -6538,49 +7821,67 @@
      "item": "lean ground beef (90%)",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 799,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "canned black beans (15 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "frozen corn (12 oz)",
      "qty": 1,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 119,
+     "pack": 1
     },
     {
      "item": "salsa",
      "qty": 1,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 142,
+     "pack": 1.75,
+     "pack_name": "16 oz jar"
     },
     {
      "item": "taco seasoning",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 25,
+     "pack": 0
     },
     {
      "item": "lime",
      "qty": 1,
      "unit": "lime",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 33,
+     "pack": 1
     },
     {
      "item": "cilantro",
      "qty": 1,
      "unit": "bunch",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 79,
+     "pack": 1
     }
    ],
    "steps": [
@@ -6632,55 +7933,75 @@
      "item": "frozen raw shrimp",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "seafood"
+     "aisle": "seafood",
+     "cents": 699,
+     "pack": 1
     },
     {
      "item": "corn tortillas",
      "qty": 12,
      "unit": "tortilla",
-     "aisle": "bakery"
+     "aisle": "bakery",
+     "cents": 8,
+     "pack": 10,
+     "pack_name": "pack of 10"
     },
     {
      "item": "green cabbage",
      "qty": 0.25,
      "unit": "head",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 159,
+     "pack": 1
     },
     {
      "item": "plain nonfat Greek yogurt",
      "qty": 0.5,
      "unit": "cup",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 121,
+     "pack": 3.75,
+     "pack_name": "32 oz tub"
     },
     {
      "item": "lime",
      "qty": 2,
      "unit": "lime",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 33,
+     "pack": 1
     },
     {
      "item": "chili powder",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "ground cumin",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "avocado",
      "qty": 1,
      "unit": "avocado",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 100,
+     "pack": 1
     },
     {
      "item": "olive oil",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     }
    ],
    "steps": [
@@ -6733,49 +8054,69 @@
      "item": "lean ground beef (90%)",
      "qty": 1,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 799,
+     "pack": 1
     },
     {
      "item": "canned black beans (15 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "red enchilada sauce (10 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 149,
+     "pack": 1
     },
     {
      "item": "salsa",
      "qty": 0.5,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 142,
+     "pack": 1.75,
+     "pack_name": "16 oz jar"
     },
     {
      "item": "shredded cheddar",
      "qty": 4,
      "unit": "oz",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 37,
+     "pack": 8,
+     "pack_name": "8 oz bag"
     },
     {
      "item": "whole wheat tortillas (8 in)",
      "qty": 4,
      "unit": "tortilla",
-     "aisle": "bakery"
+     "aisle": "bakery",
+     "cents": 37,
+     "pack": 10,
+     "pack_name": "pack of 10"
     },
     {
      "item": "taco seasoning",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 25,
+     "pack": 0
     }
    ],
    "steps": [
@@ -6827,43 +8168,58 @@
      "item": "sirloin steak",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 999,
+     "pack": 1
     },
     {
      "item": "bell pepper",
      "qty": 3,
      "unit": "pepper",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1.25,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "lime",
      "qty": 2,
      "unit": "lime",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 33,
+     "pack": 1
     },
     {
      "item": "taco seasoning",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 25,
+     "pack": 0
     },
     {
      "item": "olive oil",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     }
    ],
    "steps": [
@@ -6919,61 +8275,83 @@
      "item": "lean ground beef (90%)",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 799,
+     "pack": 1
     },
     {
      "item": "low-sodium soy sauce",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "honey",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 31,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "fresh ginger (grated)",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "toasted sesame oil",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 9,
+     "pack": 0
     },
     {
      "item": "green onions",
      "qty": 1,
      "unit": "bunch",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 89,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "cucumber",
      "qty": 1,
      "unit": "cucumber",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 79,
+     "pack": 1
     },
     {
      "item": "carrots",
      "qty": 2,
      "unit": "carrot",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 14,
+     "pack": 1
     }
    ],
    "steps": [
@@ -7027,61 +8405,83 @@
      "item": "beef stew meat",
      "qty": 2,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 799,
+     "pack": 1
     },
     {
      "item": "potatoes",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 98,
+     "pack": 1
     },
     {
      "item": "carrots",
      "qty": 4,
      "unit": "carrot",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 14,
+     "pack": 1
     },
     {
      "item": "celery",
      "qty": 3,
      "unit": "stalk",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 10,
+     "pack": 8,
+     "pack_name": "bunch"
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "tomato paste",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 6,
+     "pack": 0
     },
     {
      "item": "low-sodium broth",
      "qty": 4,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 62,
+     "pack": 4,
+     "pack_name": "32 oz carton"
     },
     {
      "item": "cornstarch",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "baking"
+     "aisle": "baking",
+     "cents": 3,
+     "pack": 0
     },
     {
      "item": "Italian seasoning",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     },
     {
      "item": "olive oil",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     }
    ],
    "steps": [
@@ -7134,55 +8534,74 @@
      "item": "lean ground beef (90%)",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 799,
+     "pack": 1
     },
     {
      "item": "canned kidney beans (15 oz)",
      "qty": 2,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "canned black beans (15 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "crushed tomatoes (28 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 179,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "bell pepper",
      "qty": 1,
      "unit": "pepper",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "chili powder",
      "qty": 4,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "ground cumin",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     }
    ],
    "steps": [
@@ -7237,55 +8656,76 @@
      "item": "lean ground beef (90%)",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 799,
+     "pack": 1
     },
     {
      "item": "rolled oats",
      "qty": 0.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 22,
+     "pack": 6.4,
+     "pack_name": "18 oz canister"
     },
     {
      "item": "eggs",
      "qty": 1,
      "unit": "egg",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 19,
+     "pack": 12,
+     "pack_name": "dozen"
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "tomato sauce (15 oz)",
      "qty": 0.5,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 89,
+     "pack": 1
     },
     {
      "item": "potatoes",
      "qty": 2,
      "unit": "lb",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 98,
+     "pack": 1
     },
     {
      "item": "milk (2%)",
      "qty": 0.5,
      "unit": "cup",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 26,
+     "pack": 8,
+     "pack_name": "half gallon"
     },
     {
      "item": "frozen green beans (12 oz)",
      "qty": 2,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 129,
+     "pack": 1
     },
     {
      "item": "Italian seasoning",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     }
    ],
    "steps": [
@@ -7341,55 +8781,76 @@
      "item": "lean ground beef (90%)",
      "qty": 1.25,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 799,
+     "pack": 1
     },
     {
      "item": "mushrooms (8 oz)",
      "qty": 2,
      "unit": "pack",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 199,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "low-sodium broth",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 62,
+     "pack": 4,
+     "pack_name": "32 oz carton"
     },
     {
      "item": "plain nonfat Greek yogurt",
      "qty": 1,
      "unit": "cup",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 121,
+     "pack": 3.75,
+     "pack_name": "32 oz tub"
     },
     {
      "item": "Dijon mustard",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 12,
+     "pack": 0
     },
     {
      "item": "cornstarch",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "baking"
+     "aisle": "baking",
+     "cents": 3,
+     "pack": 0
     },
     {
      "item": "whole wheat pasta",
      "qty": 0.75,
      "unit": "lb",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 2,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     }
    ],
    "steps": [
@@ -7442,43 +8903,58 @@
      "item": "pork tenderloin",
      "qty": 2,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 399,
+     "pack": 1
     },
     {
      "item": "sweet potatoes",
      "qty": 2,
      "unit": "lb",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 129,
+     "pack": 1
     },
     {
      "item": "frozen green beans (12 oz)",
      "qty": 2,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 129,
+     "pack": 1
     },
     {
      "item": "honey",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 31,
+     "pack": 0
     },
     {
      "item": "Dijon mustard",
      "qty": 3,
      "unit": "tbsp",
-     "aisle": "sauces"
+     "aisle": "sauces",
+     "cents": 12,
+     "pack": 0
     },
     {
      "item": "olive oil",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     }
    ],
    "steps": [
@@ -7533,49 +9009,68 @@
      "item": "chicken breast",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
     },
     {
      "item": "whole wheat pasta",
      "qty": 1,
      "unit": "lb",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
     },
     {
      "item": "milk (2%)",
      "qty": 2,
      "unit": "cup",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 26,
+     "pack": 8,
+     "pack_name": "half gallon"
     },
     {
      "item": "grated parmesan",
      "qty": 8,
      "unit": "tbsp",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 10,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 4,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "cornstarch",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "baking"
+     "aisle": "baking",
+     "cents": 3,
+     "pack": 0
     },
     {
      "item": "frozen broccoli (12 oz)",
      "qty": 1,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 129,
+     "pack": 1
     },
     {
      "item": "plain nonfat Greek yogurt",
      "qty": 0.5,
      "unit": "cup",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 121,
+     "pack": 3.75,
+     "pack_name": "32 oz tub"
     }
    ],
    "steps": [
@@ -7629,43 +9124,60 @@
      "item": "lean ground turkey (93%)",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 499,
+     "pack": 1
     },
     {
      "item": "whole wheat pasta",
      "qty": 0.75,
      "unit": "lb",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
     },
     {
      "item": "salsa",
      "qty": 1,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 142,
+     "pack": 1.75,
+     "pack_name": "16 oz jar"
     },
     {
      "item": "low-sodium broth",
      "qty": 2.5,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 62,
+     "pack": 4,
+     "pack_name": "32 oz carton"
     },
     {
      "item": "canned black beans (15 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "shredded cheddar",
      "qty": 4,
      "unit": "oz",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 37,
+     "pack": 8,
+     "pack_name": "8 oz bag"
     },
     {
      "item": "taco seasoning",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 25,
+     "pack": 0
     }
    ],
    "steps": [
@@ -7718,43 +9230,60 @@
      "item": "lean ground turkey (93%)",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 499,
+     "pack": 1
     },
     {
      "item": "whole wheat pasta",
      "qty": 0.75,
      "unit": "lb",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
     },
     {
      "item": "marinara sauce (24 oz)",
      "qty": 1,
      "unit": "jar",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 199,
+     "pack": 1
     },
     {
      "item": "low-fat cottage cheese",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 109,
+     "pack": 2,
+     "pack_name": "16 oz tub"
     },
     {
      "item": "shredded part-skim mozzarella",
      "qty": 4,
      "unit": "oz",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 35,
+     "pack": 8,
+     "pack_name": "8 oz bag"
     },
     {
      "item": "baby spinach",
      "qty": 3,
      "unit": "oz",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 30,
+     "pack": 5,
+     "pack_name": "5 oz box"
     },
     {
      "item": "Italian seasoning",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     }
    ],
    "steps": [
@@ -7809,49 +9338,68 @@
      "item": "chicken breast",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
     },
     {
      "item": "orzo",
      "qty": 0.75,
      "unit": "lb",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 169,
+     "pack": 1
     },
     {
      "item": "baby spinach",
      "qty": 4,
      "unit": "oz",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 30,
+     "pack": 5,
+     "pack_name": "5 oz box"
     },
     {
      "item": "lemon",
      "qty": 2,
      "unit": "lemon",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 59,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 4,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "low-sodium broth",
      "qty": 3,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 62,
+     "pack": 4,
+     "pack_name": "32 oz carton"
     },
     {
      "item": "grated parmesan",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 10,
+     "pack": 0
     },
     {
      "item": "olive oil",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     }
    ],
    "steps": [
@@ -7905,55 +9453,74 @@
      "item": "whole wheat pasta",
      "qty": 1,
      "unit": "lb",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
     },
     {
      "item": "zucchini",
      "qty": 2,
      "unit": "zucchini",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 66,
+     "pack": 1
     },
     {
      "item": "bell pepper",
      "qty": 1,
      "unit": "pepper",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
     },
     {
      "item": "cherry tomatoes",
      "qty": 1,
      "unit": "pint",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 299,
+     "pack": 1
     },
     {
      "item": "canned white beans (15 oz)",
      "qty": 2,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 109,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 4,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "grated parmesan",
      "qty": 6,
      "unit": "tbsp",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 10,
+     "pack": 0
     },
     {
      "item": "olive oil",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     },
     {
      "item": "lemon",
      "qty": 1,
      "unit": "lemon",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 59,
+     "pack": 1
     }
    ],
    "steps": [
@@ -8006,43 +9573,59 @@
      "item": "chicken breast",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 417,
+     "pack": 1
     },
     {
      "item": "whole wheat pasta",
      "qty": 1,
      "unit": "lb",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
     },
     {
      "item": "marinara sauce (24 oz)",
      "qty": 1,
      "unit": "jar",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 199,
+     "pack": 1
     },
     {
      "item": "shredded part-skim mozzarella",
      "qty": 6,
      "unit": "oz",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 35,
+     "pack": 8,
+     "pack_name": "8 oz bag"
     },
     {
      "item": "grated parmesan",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 10,
+     "pack": 0
     },
     {
      "item": "Italian seasoning",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 2,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     }
    ],
    "steps": [
@@ -8094,43 +9677,59 @@
      "item": "red lentils (dry)",
      "qty": 1,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 76,
+     "pack": 2.3,
+     "pack_name": "1 lb bag"
     },
     {
      "item": "marinara sauce (24 oz)",
      "qty": 1,
      "unit": "jar",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 199,
+     "pack": 1
     },
     {
      "item": "whole wheat pasta",
      "qty": 1,
      "unit": "lb",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 149,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "Italian seasoning",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     },
     {
      "item": "grated parmesan",
      "qty": 4,
      "unit": "tbsp",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 10,
+     "pack": 0
     }
    ],
    "steps": [
@@ -8184,61 +9783,85 @@
      "item": "boneless chicken thighs",
      "qty": 2,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 329,
+     "pack": 1
     },
     {
      "item": "crushed tomatoes (28 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 179,
+     "pack": 1
     },
     {
      "item": "plain nonfat Greek yogurt",
      "qty": 1,
      "unit": "cup",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 121,
+     "pack": 3.75,
+     "pack_name": "32 oz tub"
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 4,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "fresh ginger (grated)",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "curry powder",
      "qty": 3,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "tomato paste",
      "qty": 2,
      "unit": "tbsp",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 6,
+     "pack": 0
     },
     {
      "item": "milk (2%)",
      "qty": 0.5,
      "unit": "cup",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 26,
+     "pack": 8,
+     "pack_name": "half gallon"
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     }
    ],
    "steps": [
@@ -8290,49 +9913,67 @@
      "item": "lean ground turkey (93%)",
      "qty": 2,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 499,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 4,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "fresh ginger (grated)",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "curry powder",
      "qty": 3,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "canned diced tomatoes (14.5 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "frozen peas (12 oz)",
      "qty": 1,
      "unit": "bag",
-     "aisle": "frozen"
+     "aisle": "frozen",
+     "cents": 119,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     }
    ],
    "steps": [
@@ -8387,61 +10028,85 @@
      "item": "eggs",
      "qty": 12,
      "unit": "egg",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 19,
+     "pack": 12,
+     "pack_name": "dozen"
     },
     {
      "item": "crushed tomatoes (28 oz)",
      "qty": 1,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 179,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "bell pepper",
      "qty": 2,
      "unit": "pepper",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 4,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "ground cumin",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "smoked paprika",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "crumbled feta",
      "qty": 3,
      "unit": "oz",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 61,
+     "pack": 4,
+     "pack_name": "4 oz tub"
     },
     {
      "item": "whole wheat pita",
      "qty": 6,
      "unit": "pita",
-     "aisle": "bakery"
+     "aisle": "bakery",
+     "cents": 50,
+     "pack": 6,
+     "pack_name": "pack of 6"
     },
     {
      "item": "olive oil",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     }
    ],
    "steps": [
@@ -8497,67 +10162,92 @@
      "item": "boneless chicken thighs",
      "qty": 2,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 329,
+     "pack": 1
     },
     {
      "item": "plain nonfat Greek yogurt",
      "qty": 1,
      "unit": "cup",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 121,
+     "pack": 3.75,
+     "pack_name": "32 oz tub"
     },
     {
      "item": "lemon",
      "qty": 2,
      "unit": "lemon",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 59,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 4,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "ground cumin",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "smoked paprika",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 8,
+     "pack": 0
     },
     {
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "cucumber",
      "qty": 1,
      "unit": "cucumber",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 79,
+     "pack": 1
     },
     {
      "item": "tomatoes",
      "qty": 2,
      "unit": "tomato",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 60,
+     "pack": 1
     },
     {
      "item": "red onion",
      "qty": 0.5,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 60,
+     "pack": 1
     },
     {
      "item": "olive oil",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     }
    ],
    "steps": [
@@ -8613,61 +10303,86 @@
      "item": "lean ground turkey (93%)",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "meat"
+     "aisle": "meat",
+     "cents": 499,
+     "pack": 1
     },
     {
      "item": "rolled oats",
      "qty": 0.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 22,
+     "pack": 6.4,
+     "pack_name": "18 oz canister"
     },
     {
      "item": "eggs",
      "qty": 1,
      "unit": "egg",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 19,
+     "pack": 12,
+     "pack_name": "dozen"
     },
     {
      "item": "dried oregano",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "whole wheat pita",
      "qty": 6,
      "unit": "pita",
-     "aisle": "bakery"
+     "aisle": "bakery",
+     "cents": 50,
+     "pack": 6,
+     "pack_name": "pack of 6"
     },
     {
      "item": "plain nonfat Greek yogurt",
      "qty": 1,
      "unit": "cup",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 121,
+     "pack": 3.75,
+     "pack_name": "32 oz tub"
     },
     {
      "item": "cucumber",
      "qty": 1,
      "unit": "cucumber",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 79,
+     "pack": 1
     },
     {
      "item": "tomatoes",
      "qty": 2,
      "unit": "tomato",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 60,
+     "pack": 1
     },
     {
      "item": "lemon",
      "qty": 1,
      "unit": "lemon",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 59,
+     "pack": 1
     }
    ],
    "steps": [
@@ -8720,61 +10435,85 @@
      "item": "long-grain white rice",
      "qty": 1.5,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "canned black beans (15 oz)",
      "qty": 2,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "bell pepper",
      "qty": 1,
      "unit": "pepper",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 118,
+     "pack": 1
     },
     {
      "item": "garlic",
      "qty": 3,
      "unit": "clove",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 6,
+     "pack": 10,
+     "pack_name": "head"
     },
     {
      "item": "ground cumin",
      "qty": 2,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     },
     {
      "item": "dried oregano",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 6,
+     "pack": 0
     },
     {
      "item": "eggs",
      "qty": 6,
      "unit": "egg",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 19,
+     "pack": 12,
+     "pack_name": "dozen"
     },
     {
      "item": "salsa",
      "qty": 0.5,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 142,
+     "pack": 1.75,
+     "pack_name": "16 oz jar"
     },
     {
      "item": "olive oil",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     }
    ],
    "steps": [
@@ -8824,37 +10563,52 @@
      "item": "eggs",
      "qty": 12,
      "unit": "egg",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 19,
+     "pack": 12,
+     "pack_name": "dozen"
     },
     {
      "item": "potatoes",
      "qty": 1.5,
      "unit": "lb",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 98,
+     "pack": 1
     },
     {
      "item": "baby spinach",
      "qty": 4,
      "unit": "oz",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 30,
+     "pack": 5,
+     "pack_name": "5 oz box"
     },
     {
      "item": "yellow onion",
      "qty": 1,
      "unit": "onion",
-     "aisle": "produce"
+     "aisle": "produce",
+     "cents": 40,
+     "pack": 1
     },
     {
      "item": "shredded cheddar",
      "qty": 3,
      "unit": "oz",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 37,
+     "pack": 8,
+     "pack_name": "8 oz bag"
     },
     {
      "item": "olive oil",
      "qty": 1,
      "unit": "tbsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 26,
+     "pack": 0
     }
    ],
    "steps": [
@@ -8904,37 +10658,53 @@
      "item": "canned black beans (15 oz)",
      "qty": 3,
      "unit": "can",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 99,
+     "pack": 1
     },
     {
      "item": "long-grain white rice",
      "qty": 1,
      "unit": "cup",
-     "aisle": "grains & pasta"
+     "aisle": "grains & pasta",
+     "cents": 45,
+     "pack": 4.9,
+     "pack_name": "2 lb bag"
     },
     {
      "item": "salsa",
      "qty": 1,
      "unit": "cup",
-     "aisle": "canned"
+     "aisle": "canned",
+     "cents": 142,
+     "pack": 1.75,
+     "pack_name": "16 oz jar"
     },
     {
      "item": "shredded cheddar",
      "qty": 6,
      "unit": "oz",
-     "aisle": "dairy & eggs"
+     "aisle": "dairy & eggs",
+     "cents": 37,
+     "pack": 8,
+     "pack_name": "8 oz bag"
     },
     {
      "item": "whole wheat tortillas (8 in)",
      "qty": 10,
      "unit": "tortilla",
-     "aisle": "bakery"
+     "aisle": "bakery",
+     "cents": 37,
+     "pack": 10,
+     "pack_name": "pack of 10"
     },
     {
      "item": "ground cumin",
      "qty": 1,
      "unit": "tsp",
-     "aisle": "oils & spices"
+     "aisle": "oils & spices",
+     "cents": 7,
+     "pack": 0
     }
    ],
    "steps": [
