@@ -51,9 +51,17 @@
   const cost = r => S.get("prices")[r.id] ?? r.cost_cents;
   const colorOf = r => COLORS[RECIPES.indexOf(r) % COLORS.length];
   function photo(el, r) { const img = new Image(); img.onload = () => { el.style.backgroundImage = `url(photos/${r.id}.jpg)`; const m = el.querySelector(".mono"); if (m) m.remove(); }; img.src = `photos/${r.id}.jpg`; }
-  const CATS = [["high", "High Protein", r => r.tags.includes("high-protein")], ["budget", "Budget Friendly", r => r.tags.includes("budget")],
-    ["quick", "30 Minute", r => r.minutes <= 30], ["veg", "Vegetarian", r => r.tags.includes("vegetarian")], ["breakfast", "Breakfast", r => r.tags.includes("breakfast")],
-    ["prep", "Classic Meal Prep", r => r.tags.includes("classic prep") || r.servings >= 5]];
+  const CATS = [["budget", "Budget Meals", "💵", r => cost(r) / r.servings <= 200], ["chicken", "Chicken", "🍗", r => r.protein_type === "chicken"],
+    ["redmeat", "Red Meat", "🥩", r => r.protein_type === "red meat"], ["turkey", "Turkey", "🦃", r => r.protein_type === "turkey"],
+    ["seafood", "Seafood", "🍤", r => r.protein_type === "seafood"], ["veg", "Vegetarian", "🥗", r => r.tags.includes("vegetarian")],
+    ["vegan", "Vegan", "🌱", r => !(r.contains || []).some(c => ["meat", "seafood", "dairy", "egg", "honey"].includes(c))],
+    ["chinese", "Chinese", "🥡", r => r.cuisine === "chinese"], ["asian", "Asian", "🍜", r => r.cuisine === "asian"], ["mexican", "Mexican", "🌮", r => r.cuisine === "mexican"],
+    ["pasta", "Pasta", "🍝", r => r.tags.includes("pasta")], ["italian", "Italian", "🍅", r => r.cuisine === "italian"], ["indian", "Indian", "🍛", r => r.cuisine === "indian"],
+    ["mediterranean", "Mediterranean", "🫒", r => r.cuisine === "mediterranean"], ["american", "American", "🍔", r => r.cuisine === "american"],
+    ["soup", "Soups & Chili", "🍲", r => r.tags.includes("soup")], ["bowl", "Bowls", "🥙", r => r.tags.includes("bowl")], ["breakfast", "Breakfast", "🍳", r => r.tags.includes("breakfast")],
+    ["high", "High Protein", "💪", r => r.tags.includes("high-protein")], ["quick", "30 Minutes", "⏱️", r => r.minutes <= 30],
+    ["glutenfree", "Gluten-Free", "🌾", r => !(r.contains || []).includes("gluten")], ["dairyfree", "Dairy-Free", "🥛", r => !(r.contains || []).includes("dairy")]];
+  const catKeep = key => (CATS.find(c => c[0] === key) || [])[3];
 
   /* ---- budget: every screen follows the weekly budget ----
      Your budget per serving = weekly budget / servings to prep. A meal "fits" when one serving costs that or less. */
@@ -72,9 +80,19 @@
   const shopQuery = item => encodeURIComponent(item.replace(/\s*\(.*?\)\s*/g, " ").trim());
   const nearUrl = () => { const z = (S.get("zip") || "").trim(); return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("grocery stores near " + (z || "me"))}`; };
   const extLink = (href, text, cls) => h("a", {class: cls || "chip", href, target: "_blank", rel: "noopener", text});
+  const STORE_SEARCH = {Walmart: q => `https://www.walmart.com/search?q=${q}`, Target: q => `https://www.target.com/s?searchTerm=${q}`,
+    Kroger: q => `https://www.kroger.com/search?query=${q}`, Costco: q => `https://www.costco.com/CatalogSearch?keyword=${q}`,
+    Instacart: q => `https://www.instacart.com/store/s?k=${q}`};
+  const myStores = () => ((S.get("answers") || {}).stores || []);
+  function storeLink(name, item) {                       // the store's own search when we know it, otherwise a web search for that store
+    const q = shopQuery(item), f = STORE_SEARCH[name];
+    return extLink(f ? f(q) : `https://www.google.com/search?q=${encodeURIComponent(name + " " + decodeURIComponent(q))}`, name);
+  }
+  function nearStore(name) { const z = (S.get("zip") || "").trim(); return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name + " near " + (z || "me"))}`; }
   function whereToBuy(item) {
-    return h("div", {class: "buy"}, h("small", {class: "muted", text: `Find ${item.replace(/\s*\(.*?\)/g, "")}:`}),
-      ...STORES.map(([n, u]) => extLink(u(shopQuery(item)), n)), extLink(nearUrl(), "📍 Stores near you", "chip near"));
+    const mine = myStores(), names = mine.length ? mine : STORES.map(s => s[0]);
+    return h("div", {class: "buy"}, h("small", {class: "muted", text: `Find ${item.replace(/\s*\(.*?\)/g, "")}${mine.length ? " at your stores" : ""}:`}),
+      ...names.map(n => storeLink(n, item)), ...(mine.length ? mine.slice(0, 3).map(n => extLink(nearStore(n), `📍 ${n} near you`, "chip near")) : [extLink(nearUrl(), "📍 Stores near you", "chip near")]));
   }
 
   /* ---- navigation ---- */
@@ -137,6 +155,56 @@
     } catch (e) { titan.toast(e instanceof Missing ? "Your AI is still building the meal planner (step s6)." : String(e.message), "warn"); }
   }
 
+  /* ---- Plan my week: the questions (wizard.js), then plan_meals (the Local AI's brain) on the meals that fit ---- */
+  function planWizard() { window.PREP_WIZARD.open({h, S, build: planWith, onDone: res => {
+    if (res.error) titan.toast(res.error, "warn");
+    else titan.toast(`Planned ${res.servings} servings for ${money(res.cost)}`);
+    goTab("plans"); }}); }
+  async function planWith(a) {
+    const W = window.PREP_WIZARD, need = W.servingsFor(a), total = need.breakfast + need.mains;
+    if (!total) return {error: "Pick at least one meal and one day."};
+    const rank = list => list.sort((x, y) => (W.favScore(y, a) - W.favScore(x, a)) || best(x, y));
+    const parts = [];
+    try {
+      for (const [meal, n, pool] of [["Breakfast", need.breakfast, RECIPES.filter(r => r.tags.includes("breakfast") && W.allowed(r, a))],
+                                     [a.meals.filter(m => m !== "breakfast").map(m => m[0].toUpperCase() + m.slice(1)).join(" & "), need.mains, RECIPES.filter(r => MAINS(r) && W.allowed(r, a))]]) {
+        if (!n) continue;
+        const budget = Math.round(a.budget * n / total);
+        // a few smaller plans instead of one, so the week isn't one meal over and over (each is still plan_meals' choice)
+        const toBrain = list => list.map(r => ({name: r.name, servings: r.servings, cost_cents: cost(r), protein: r.protein}));
+        const single = async () => {             // one plan for all n servings: always the fallback
+          const fit = pool.filter(r => perServing(r) <= budget / n + 50);
+          const pick = rank(fit.length ? fit : pool.slice().sort((x, y) => perServing(x) - perServing(y))).slice(0, 8);
+          return pick.length ? brain("plan_meals", toBrain(pick), budget, n) : null;
+        };
+        const slots = Math.max(1, Math.min(3, Math.floor(n / 8))), used = new Set();   // chunks of 8+ servings, for variety
+        let cooked = {recipes: [], cost: 0, servings: 0, protein: 0}, failed = "";
+        for (let k = 0; k < slots && slots > 1; k++) {
+          const sn = Math.round(n * (k + 1) / slots) - Math.round(n * k / slots), sb = Math.round(budget * (k + 1) / slots) - Math.round(budget * k / slots);
+          const fitting = pool.filter(r => !used.has(r.id) && perServing(r) <= sb / sn + 50);
+          const pick = rank(fitting.length ? fitting : pool.filter(r => !used.has(r.id)).sort((x, y) => perServing(x) - perServing(y))).slice(0, 8);
+          if (!pick.length) { failed = "No meals match your diet for this."; break; }
+          const p = await brain("plan_meals", toBrain(pick), sb, sn);
+          if (!p) { failed = "slot"; break; }
+          p.recipes.forEach(nm => { const r = byName(nm); if (r) used.add(r.id); });
+          cooked = {recipes: [...cooked.recipes, ...p.recipes], cost: cooked.cost + p.cost, servings: cooked.servings + p.servings, protein: cooked.protein + p.protein};
+        }
+        if (slots === 1 || failed || cooked.cost > budget) {
+          const p = await single();
+          if (!p) { parts.push({meal, error: `Nothing fits ${money(budget)} for ${n} servings. Raise the budget or plan fewer days.`}); continue; }
+          cooked = {recipes: p.recipes, cost: p.cost, servings: p.servings, protein: p.protein};
+        }
+        parts.push({meal, ...cooked});
+      }
+    } catch (e) { return {error: e instanceof Missing ? "Your AI is still building the meal planner (step s6)." : String(e.message || e)}; }
+    const ok = parts.filter(p => !p.error);
+    if (!ok.length) return {error: parts.map(p => p.error).join(" ")};
+    const plan = {recipes: ok.flatMap(p => p.recipes), cost: ok.reduce((t, p) => t + p.cost, 0), servings: ok.reduce((t, p) => t + p.servings, 0),
+      protein: ok.reduce((t, p) => t + p.protein, 0), parts, people: a.people, days: a.days};
+    S.set("plan", plan); S.set("got", []); $("list-dot").hidden = false;
+    return plan;
+  }
+
   /* ---- Meal Plans (home) ---- */
   VIEWS.plans = async main => {
     main.append(h("h1", {text: "Build a meal plan"}));
@@ -151,18 +219,26 @@
         h("div", {class: "stats"}, h("div", {}, h("b", {text: money(plan.cost)}), h("small", {text: `of ${money(S.get("budget"))} budget`})),
           h("div", {}, h("b", {text: plan.servings}), h("small", {text: "servings"})), h("div", {}, h("b", {text: Math.round(plan.protein / plan.servings) + "g"}), h("small", {text: "protein each"}))),
         h("div", {class: "bar"}, h("i", {style: `width:${pct}%`})),
-        ...[...new Set(plan.recipes)].map(n => h("div", {class: "muted", text: `${plan.recipes.filter(x => x === n).length}× ${n}`})),
-        h("div", {style: "display:flex;gap:10px;margin-top:auto"}, h("button", {class: "btn", onclick: () => goTab("list"), text: "Shopping list"}), h("button", {class: "btn line", onclick: buildPlan, text: "Re-plan"})));
+        ...(plan.parts && plan.parts.length ? plan.parts.map(pt => h("div", {class: "part"}, h("b", {text: pt.meal + (pt.servings ? ` · ${pt.servings} servings` : "")}),
+            pt.error ? h("small", {class: "muted", text: pt.error}) : h("div", {}, ...[...new Set(pt.recipes)].map(n => h("button", {class: "planitem", onclick: () => { const r = byName(n); if (r) go("recipe", r.id); }, text: `${pt.recipes.filter(x => x === n).length}× ${n}`})))))
+          : [...new Set(plan.recipes)].map(n => h("div", {class: "muted", text: `${plan.recipes.filter(x => x === n).length}× ${n}`}))),
+        h("div", {style: "display:flex;gap:10px;margin-top:auto;flex-wrap:wrap"}, h("button", {class: "btn", onclick: () => goTab("list"), text: "Shopping list"}), h("button", {class: "btn line", onclick: planWizard, text: "Plan my week again"})));
     } else {
-      info.append(h("h3", {text: "Plan your week"}), h("p", {class: "muted", style: "margin:0", text: `Tap + on meals you like, then Build plan. PrepRep fits them into your ${money(S.get("budget"))} weekly budget.`}),
-        h("button", {class: "btn", style: "margin-top:auto;align-self:flex-start", onclick: buildPlan, text: "Build my plan"}));
+      info.append(h("h3", {text: "Plan your week"}), h("p", {class: "muted", style: "margin:0", text: "Answer 8 quick questions (stores, people, budget, diet, meals, days) and PrepRep builds your week and your shopping list."}),
+        h("button", {class: "btn", style: "margin-top:auto;align-self:flex-start", onclick: planWizard, text: "Plan my week"}),
+        h("small", {class: "muted", text: "Or tap + on meals you like, then Build plan."}));
     }
     main.append(h("div", {class: "hero"}, ph, info));
     main.append(budgetCard());
+    main.append(h("div", {class: "catrow", role: "list", "aria-label": "Browse by category"}, ...CATS.map(([key, name, emo, keep]) =>
+      h("button", {class: "catchip", role: "listitem", onclick: () => go("category", key)}, h("span", {text: emo}), name, h("small", {text: RECIPES.filter(keep).length})))));
     const ok = RECIPES.filter(fits), rows = [
+      ["Budget Meals · $2 or less a serving", RECIPES.filter(catKeep("budget")).sort((a, b) => perServing(a) - perServing(b)), "budget"],
       [tight() ? "Best value for your budget" : "Healthiest picks in your budget", ok.filter(MAINS).sort(best), "fit"],
       ["Most Protein", ok.filter(r => r.tags.includes("high-protein")).sort((a, b) => b.protein - a.protein), "high"],
       ["30 Minute Meals", ok.filter(r => r.minutes <= 30 && MAINS(r)), "quick"],
+      ["Chinese", ok.filter(catKeep("chinese")), "chinese"], ["Mexican", ok.filter(catKeep("mexican")), "mexican"],
+      ["Pasta", ok.filter(catKeep("pasta")), "pasta"], ["Chicken", ok.filter(catKeep("chicken")), "chicken"], ["Red Meat", ok.filter(catKeep("redmeat")), "redmeat"],
       ["Breakfast to prep", ok.filter(r => r.tags.includes("breakfast")), "breakfast"],
       ["Vegetarian", ok.filter(r => r.tags.includes("vegetarian") && MAINS(r)), "veg"]];
     if (!ok.length) main.append(h("div", {class: "waiting"}, h("b", {text: "Nothing fits " + money(budgetPer()) + " a serving yet"}), "The cheapest meals here start around " + money(Math.min(...RECIPES.map(perServing))) + " a serving. Raise your budget or prep fewer servings."));
@@ -171,9 +247,9 @@
       main.append(h("div", {class: "sec"}, h("h2", {text: name}), h("button", {class: "seeall", onclick: () => go("category", key), text: `See all ${list.length}`})),
         h("div", {class: "row", role: "list", "aria-label": name}, ...list.map(foodCard)));
     }
-    main.append(h("div", {class: "sec"}, h("h2", {text: "Meal plan options"})));
-    main.append(h("div", {class: "tiles"}, ...CATS.map(([key, name, keep]) => {
-      const r = RECIPES.find(keep) || RECIPES[0], t = h("button", {class: "tile", style: `--c:${colorOf(r)}`, onclick: () => go("category", key)}, h("i", {class: "mono", "aria-hidden": "true", text: name[0]}), h("span", {text: name}));
+    main.append(h("div", {class: "sec"}, h("h2", {text: "All categories"})));
+    main.append(h("div", {class: "tiles"}, ...CATS.map(([key, name, emo, keep]) => {
+      const r = RECIPES.find(keep) || RECIPES[0], t = h("button", {class: "tile", style: `--c:${colorOf(r)}`, onclick: () => go("category", key)}, h("i", {class: "mono", "aria-hidden": "true", text: emo}), h("span", {text: name}));
       photo(t, r); return t;
     }), h("button", {class: "tile more", onclick: () => go("category", "all")}, h("span", {text: "And more!"}))));
   };
@@ -191,17 +267,18 @@
     const f = d => d.toLocaleDateString(undefined, {month: "long", day: "numeric"}); return `${f(a)} – ${f(b)}`; }
 
   VIEWS.category = async (main, key) => {
-    const extra = {fit: ["Best for your budget", r => MAINS(r) && fits(r)], breakfast: ["Breakfast to prep", r => r.tags.includes("breakfast")]};
+    const extra = {fit: ["Best for your budget", "", r => MAINS(r) && fits(r)]};
     const cat = CATS.find(c => c[0] === key) || (extra[key] && [key, ...extra[key]]);
-    const list = (cat ? RECIPES.filter(cat[2]) : RECIPES.slice()).sort((a, b) => (fits(b) - fits(a)) || best(a, b));
-    main.append(h("h1", {text: cat ? cat[1] : "All meals"}), h("p", {class: "muted", text: `Meals that fit your ${money(budgetPer())} a serving come first.`}),
+    const list = (cat ? RECIPES.filter(cat[3]) : RECIPES.slice()).sort(key === "budget" ? (a, b) => perServing(a) - perServing(b) : (a, b) => (fits(b) - fits(a)) || best(a, b));
+    main.append(h("h1", {text: cat ? `${cat[2]} ${cat[1]}`.trim() : "All meals"}),
+      h("div", {class: "catrow", role: "list", "aria-label": "Other categories"}, ...CATS.map(([k, n, e]) => h("button", {class: "catchip" + (k === key ? " on" : ""), role: "listitem", onclick: () => go("category", k, false)}, h("span", {text: e}), n))), h("p", {class: "muted", text: `Meals that fit your ${money(budgetPer())} a serving come first.`}),
       h("div", {class: "grid", role: "list"}, ...list.map(foodCard)));
   };
   VIEWS.search = async main => {
     const box = h("input", {class: "searchbox", type: "search", placeholder: "Search meals or ingredients", "aria-label": "Search meals"});
     const out = h("div", {class: "grid", role: "list", style: "margin-top:20px"});
     const run = () => { const q = box.value.trim().toLowerCase();
-      out.replaceChildren(...RECIPES.filter(r => !q || r.name.toLowerCase().includes(q) || r.ingredients.some(i => i.item.toLowerCase().includes(q)) || r.tags.some(t => t.includes(q))).map(foodCard)); };
+      out.replaceChildren(...RECIPES.filter(r => !q || r.name.toLowerCase().includes(q) || r.ingredients.some(i => i.item.toLowerCase().includes(q)) || r.tags.some(t => t.includes(q)) || (r.cuisine || "").includes(q)).map(foodCard)); };
     box.addEventListener("input", run);
     main.append(h("h1", {text: "Search"}), box, out); run(); setTimeout(() => box.focus(), 50);
   };
@@ -209,13 +286,19 @@
     const r = byId(id); if (!r) return goTab("plans");
     const on = S.get("picks").includes(id);
     const ph = h("div", {class: "ph", style: `--c:${colorOf(r)}`}, h("div", {class: "label"}, h("b", {text: `${r.minutes} min`}), h("small", {text: `${r.servings} servings`}))); photo(ph, r);
-    main.append(h("h1", {text: r.name}), h("div", {class: "hero"}, ph, h("div", {class: "info"},
+    const diet = [["Vegan", c => !c.some(x => ["meat", "seafood", "dairy", "egg", "honey"].includes(x))], ["Vegetarian", c => !c.some(x => ["meat", "seafood"].includes(x))],
+      ["Gluten-free", c => !c.includes("gluten")], ["Dairy-free", c => !c.includes("dairy")], ["Nut-free", c => !c.includes("nuts")]].filter(([, f]) => f(r.contains || [])).map(([n]) => n);
+    if (diet.includes("Vegan")) diet.splice(diet.indexOf("Vegetarian"), 1);
+    if (r.protein_type === "vegetarian") diet.splice(diet.indexOf("Vegetarian") >= 0 ? diet.indexOf("Vegetarian") : diet.length, 1);
+    const cap = t => t ? t[0].toUpperCase() + t.slice(1) : "";
+    main.append(h("h1", {text: r.name}), h("div", {class: "labels"}, ...[cap(r.cuisine), r.protein_type && r.protein_type !== "eggs & dairy" ? cap(r.protein_type) : "", ...diet].filter(Boolean).map(t => h("span", {class: "label", text: t}))),
+      h("div", {class: "hero"}, ph, h("div", {class: "info"},
       h("div", {class: "stats"}, h("div", {}, h("b", {text: money(perServing(r))}), h("small", {text: "a serving"})), h("div", {}, h("b", {text: r.kcal}), h("small", {text: "kcal"})), h("div", {}, h("b", {text: r.protein + "g"}), h("small", {text: "protein"}))),
       h("div", {class: "macros"}, ...[["Carbs", r.carbs], ["Fat", r.fat], ["Fiber", r.fiber]].map(([k, v]) => h("span", {}, h("b", {text: (v ?? "?") + "g"}), " " + k.toLowerCase()))),
       h("p", {class: fits(r) ? "fitnote" : "fitnote over", text: fits(r) ? `✓ Fits your budget (${money(budgetPer())} a serving)` : `${money(perServing(r) - budgetPer())} a serving over your budget`}),
       h("p", {class: "muted", style: "margin:0", text: `Whole batch about ${money(cost(r))}. Costs use 2026 US average prices; nutrition from USDA data. Both are estimates.`}),
       h("button", {class: on ? "btn line" : "btn", style: "margin-top:auto", onclick: () => { togglePick(id); go("recipe", id, false); }, text: on ? "Remove from my plan" : "Add to my plan"}))));
-    main.append(h("div", {class: "sec"}, h("h2", {text: "Ingredients"}), extLink(nearUrl(), "📍 Grocery stores near you", "seeall")));
+    main.append(h("div", {class: "sec"}, h("h2", {text: `Ingredients · for ${r.servings} servings`}), extLink(myStores().length ? nearStore(myStores()[0]) : nearUrl(), `📍 ${myStores()[0] || "Grocery stores"} near you`, "seeall")));
     main.append(h("p", {class: "muted", style: "margin:-4px 0 8px", text: "Tap an ingredient to find it at a store near you."}));
     const list = h("div", {class: "list"});
     r.ingredients.forEach(i => {
@@ -226,7 +309,10 @@
       list.append(row);
     });
     main.append(list);
-    if (r.steps && r.steps.length) main.append(h("div", {class: "sec"}, h("h2", {text: "Steps"})), h("ol", {class: "steps"}, ...r.steps.map(t => h("li", {text: t}))));
+    if (r.steps && r.steps.length) main.append(h("div", {class: "sec"}, h("h2", {text: "How to make it"})),
+      h("p", {class: "muted", style: "margin:-6px 0 12px", text: `${r.minutes} minutes · makes ${r.servings} servings · ${r.steps.length} steps. Season with salt and pepper as you go.`}),
+      h("ol", {class: "steps"}, ...r.steps.map(t => h("li", {text: t}))),
+      h("p", {class: "muted", text: "Keeps 4 days in the fridge in sealed containers; most freeze for up to 3 months. Reheat until steaming hot."}));
     const c = CREDITS[id]; if (c) main.append(h("p", {class: "credits"}, `Photo: ${c.artist}, ${c.license}, Wikimedia Commons (`, h("a", {href: c.page, target: "_blank", rel: "noopener", text: "source"}), ")"));
   };
 
