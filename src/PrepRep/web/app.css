@@ -227,3 +227,11 @@ body.wizopen{overflow:hidden}
 .pc-lines{display:grid;gap:4px;max-width:420px}
 .pc-lines div{display:flex;justify-content:space-between;font-variant-numeric:tabular-nums}
 .pc-buy{margin-top:10px}.pc-buy summary{cursor:pointer;font-weight:700}.pc-buy ul{margin:8px 0 0;padding-left:18px;color:var(--ink)}
+
+/* recipe guide */
+.guide{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:0 0 16px}
+.gbox{background:#fff;border:1px solid var(--line,#e8e8e3);border-radius:16px;padding:12px 16px}
+.gbox h3{margin:0 0 6px;font:700 15px var(--head)}
+.gbox ul{margin:0;padding-left:18px;display:grid;gap:4px}
+.gbox p{margin:0}
+.gbox .muted{margin-top:8px;font-size:13px}

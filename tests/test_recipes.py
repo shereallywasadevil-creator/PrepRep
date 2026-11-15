@@ -30,6 +30,28 @@ class Recipes(unittest.TestCase):
             for k in ("kcal", "protein", "carbs", "fat", "fiber"):
                 self.assertIsInstance(r[k], int, (r["id"], k))
 
+    def test_every_recipe_has_a_full_guide(self):
+        for r in self.data:
+            g = r.get("guide")
+            self.assertTrue(g, r["id"])
+            for k in ("tools", "prep", "steps", "safe", "store", "reheat"):
+                self.assertTrue(g.get(k), (r["id"], k))
+            self.assertGreaterEqual(len(g["steps"]), 4, r["id"])
+
+    def test_guides_only_name_ingredients_the_recipe_has(self):
+        # words for ingredients that appear in some recipes; a guide may only mention the ones its recipe uses
+        words = {"chicken": "chicken", "turkey": "turkey", "beef": "beef", "pork": "pork", "salmon": "salmon", "shrimp": "shrimp",
+                 "tuna": "tuna", "tofu": "tofu", "quinoa": "quinoa", "orzo": "orzo", "cashews": "cashews", "peanuts": "peanuts",
+                 "feta": "feta", "mozzarella": "mozzarella", "cheddar": "cheddar", "parmesan": "parmesan", "avocado": "avocado",
+                 "kale": "kale", "mushrooms": "mushrooms", "pineapple": "pineapple", "chickpeas": "chickpeas", "lentils": "lentils",
+                 "zucchini": "zucchini", "cabbage": "cabbage", "spinach": "spinach", "broccoli": "broccoli", "coconut": "coconut"}
+        for r in self.data:
+            have = " ".join(i["item"].lower() for i in r["ingredients"])
+            text = " ".join(r["guide"]["prep"] + r["guide"]["steps"]).lower()
+            for w, item in words.items():
+                if w in text:
+                    self.assertIn(item, have, f"{r['id']} guide mentions {w}")
+
 
 if __name__ == "__main__":
     unittest.main()

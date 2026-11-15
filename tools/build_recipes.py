@@ -704,6 +704,11 @@ PACK_NAME = {"greek_yogurt": "32 oz tub", "cottage": "16 oz tub", "cheddar": "8 
              "buns": "pack of 8", "pita": "pack of 6"}
 
 
+import sys as _sys, pathlib as _pl
+_sys.path.insert(0, str(_pl.Path(__file__).resolve().parent))
+from recipe_guides import guide_for  # noqa: E402
+
+
 def build():
     out, bad = [], []
     for rid, name, minutes, servings, tags, ings, steps, photo, must in R:
@@ -739,7 +744,7 @@ def build():
              "keys": sorted(keys), "tags": all_tags, "minutes": minutes, "servings": servings,
              "cost_cents": int(round(tot["cost"])), "kcal": int(round(per["kcal"])), "protein": int(round(per["protein"])),
              "carbs": int(round(per["carbs"])), "fat": int(round(per["fat"])), "fiber": int(round(per["fiber"])),
-             "ingredients": rows, "steps": steps, "photo": photo, "photo_must": must, "cost_note": "estimate"}
+             "ingredients": rows, "steps": steps, "photo": photo, "photo_must": must, "cost_note": "estimate", "guide": guide_for({"id": rid, "protein_type": protein_type})}
         if rid in PHOTO:
             r["photo"], r["photo_must"], r["photo_not"] = PHOTO[rid]
         for k, (lo, hi) in LIMITS.items():

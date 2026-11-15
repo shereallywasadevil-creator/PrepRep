@@ -387,10 +387,19 @@
       list.append(row);
     });
     main.append(list);
-    if (r.steps && r.steps.length) main.append(h("div", {class: "sec"}, h("h2", {text: "How to make it"})),
-      h("p", {class: "muted", style: "margin:-6px 0 12px", text: `${r.minutes} minutes · makes ${r.servings} servings · ${r.steps.length} steps. Season with salt and pepper as you go.`}),
-      h("ol", {class: "steps"}, ...r.steps.map(t => h("li", {text: t}))),
-      h("p", {class: "muted", text: "Keeps 4 days in the fridge in sealed containers; most freeze for up to 3 months. Reheat until steaming hot."}));
+    const g = r.guide;
+    if (g) {
+      const box = (title, ...kids) => h("div", {class: "gbox"}, h("h3", {text: title}), ...kids);
+      main.append(h("div", {class: "sec"}, h("h2", {text: "How to make it"})),
+        h("p", {class: "muted", style: "margin:-6px 0 12px", text: `${r.minutes} minutes · makes ${r.servings} servings · ${g.steps.length} steps`}),
+        h("div", {class: "guide"},
+          box("What you need", h("ul", {}, ...g.tools.map(t => h("li", {text: t}))), h("p", {class: "muted", text: g.pantry})),
+          box("Before you start", h("ul", {}, ...g.prep.map(t => h("li", {text: t}))))),
+        h("ol", {class: "steps"}, ...g.steps.map(t => h("li", {text: t}))),
+        g.tips && g.tips.length ? box("Tips", h("ul", {}, ...g.tips.map(t => h("li", {text: t})))) : null,
+        h("div", {class: "guide"}, box("Is it done?", h("p", {text: g.safe})), box("Storing", h("p", {text: g.store})), box("Reheating", h("p", {text: g.reheat}))),
+        h("p", {class: "muted", text: "Food-safety temperatures follow USDA guidance. Cooking times are a guide: stoves and pans vary, so go by the signs in each step."}));
+    } else if (r.steps && r.steps.length) main.append(h("div", {class: "sec"}, h("h2", {text: "How to make it"})), h("ol", {class: "steps"}, ...r.steps.map(t => h("li", {text: t}))));
   };
 
   /* ---- List ---- */
