@@ -1,4 +1,7 @@
-"""Fetch one free-licensed photo per recipe from Wikimedia Commons, with credits. Runs in the GitHub build.
+"""Pack one photo per recipe, with credits. Runs in the GitHub build.
+
+First choice: our own photo in tools/generated_photos (made on Dilan's PC, homemade look). Otherwise a free-licensed
+photo from Wikimedia Commons / Flickr picked by hand in photo_picks.json.
 
 Only licenses that allow use in an app are kept: public domain, CC0, CC BY and CC BY-SA (credit shown in the app).
 Writes web/photos/<recipe id>.jpg and web/photos/credits.json. A recipe with no good photo keeps its colour block.
@@ -65,7 +68,17 @@ def main():
     credits, got = {}, 0
     picks_file = Path(__file__).resolve().parent / "photo_picks.json"
     picks = json.loads(picks_file.read_text(encoding="utf-8")) if picks_file.exists() else {}
+    gen = Path(__file__).resolve().parent / "generated_photos"
     for r in recipes:
+        made = gen / f"{r['id']}.jpg"
+        if made.exists():                              # our own photo made for PrepRep: homemade look, checked by eye
+            (OUT / f"{r['id']}.jpg").write_bytes(made.read_bytes())
+            credits[r["id"]] = {"artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+                                "license": "CreativeML Open RAIL++-M", "source": "AI-generated",
+                                "page": "https://huggingface.co/SG161222/RealVisXL_V5.0", "title": r["name"]}
+            got += 1
+            print(f"OK   {r['id']}: generated photo")
+            continue
         if picks:                                      # hand-picked photos only: every one was looked at for how appetizing it is
             pk = picks.get(r["id"])
             if not pk or pk == "none":
