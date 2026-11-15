@@ -1,0 +1,283 @@
+/* PrepRep, styled after the meal-planner screenshots Dilan picked: clean white, fresh green, big rounded food
+   photos in swipeable rows, a "+" on every card, plan-type tiles with white labels, a floating Build plan pill,
+   simple list rows with chevrons, and a phone-style tab bar. */
+[hidden]{display:none!important}
+:root{--green:#56b13f;--green-dark:#3f8f2c;--green-soft:#eef8ea;--ink:#1c1f1d;--dim:#6b716c;--line:#ececec;--bg:#ffffff;--soft:#f6f7f5;
+ --font:"Segoe UI Variable Text","Segoe UI",system-ui,sans-serif;--head:"Segoe UI Variable Display","Segoe UI",system-ui,sans-serif;--ease:cubic-bezier(.22,1,.36,1)}
+html,body{background:var(--bg);color:var(--ink)}
+body{margin:0;font:16px/1.5 var(--font);padding-bottom:96px}
+:focus-visible{outline:2px solid var(--green);outline-offset:2px}
+button{font-family:inherit}
+.appbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:14px;height:64px;padding:0 max(20px,calc((100vw - 1180px)/2));background:rgba(255,255,255,.92);backdrop-filter:blur(12px)}
+.logo{display:flex;align-items:center;gap:8px;font:700 22px var(--head);letter-spacing:-.03em;color:var(--green-dark)}.logo svg{width:28px;height:28px}.logo circle{fill:var(--green)}
+.kcal{margin-left:auto;font-size:14px;color:var(--dim)}.kcal b{color:var(--ink);font-size:16px}
+.iconbtn{width:44px;height:44px;min-height:0;padding:0;border:0;border-radius:50%;background:none;display:grid;place-items:center;color:var(--ink)}
+.iconbtn:hover{background:var(--soft)}.iconbtn svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+#search-btn{margin-left:auto}.kcal:not([hidden])~#search-btn{margin-left:0}
+main{max-width:1180px;margin:0 auto;padding:8px 20px 40px;outline:none}
+main>*{animation:in .45s var(--ease) both}
+@keyframes in{from{opacity:0;transform:translateY(8px)}}
+h1{font:800 clamp(30px,3.4vw,40px)/1.1 var(--head);letter-spacing:-.03em;margin:10px 0 18px}
+.sec{display:flex;align-items:baseline;justify-content:space-between;margin:30px 0 12px}
+.sec h2{font:700 22px var(--head);letter-spacing:-.02em;margin:0}
+.seeall{border:0;background:none;padding:0;min-height:0;color:var(--green);font:700 15px var(--font);cursor:pointer}.seeall:hover{color:var(--green-dark)}
+.muted{color:var(--dim)}
+
+/* the week hero (like the "Dinner Plan" card) */
+.hero{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:0;border-radius:22px;overflow:hidden;background:var(--soft);box-shadow:0 10px 30px -18px rgba(0,0,0,.35)}
+.hero .ph{position:relative;min-height:260px;background:var(--c) center/cover}
+.hero .ph .label{position:absolute;left:18px;bottom:18px;background:rgba(255,255,255,.95);border-radius:12px;padding:10px 14px}
+.hero .ph .label b{display:block;font:700 18px var(--head)}.hero .ph .label small{color:var(--dim)}
+.hero .info{padding:24px 26px;display:flex;flex-direction:column;gap:10px;background:#fff}
+.hero .info h3{margin:0;font:800 26px var(--head);letter-spacing:-.02em}
+.bar{height:8px;border-radius:5px;background:var(--line);overflow:hidden}.bar i{display:block;height:100%;background:var(--green);border-radius:5px;transition:width 1s var(--ease)}
+.stats{display:flex;gap:26px}.stats b{display:block;font:800 22px var(--head)}.stats small{color:var(--dim);font-size:13px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 24px;border-radius:999px;border:0;background:var(--green);color:#fff;font-weight:700;font-size:15px;cursor:pointer;transition:background .2s,transform .15s}
+.btn:hover{background:var(--green-dark)}.btn:active{transform:scale(.97)}
+.btn.line{background:#fff;color:var(--green-dark);border:2px solid var(--green)}.btn.line:hover{background:var(--green-soft)}
+
+/* swipeable rows of food cards */
+.row{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(170px,17vw,210px);gap:16px;overflow-x:auto;padding:2px 2px 10px;scroll-snap-type:x mandatory;scrollbar-width:none}
+.row::-webkit-scrollbar{display:none}
+.food{scroll-snap-align:start;display:flex;flex-direction:column;gap:8px;cursor:pointer;min-width:0}
+.food .ph{position:relative;aspect-ratio:1/1;border-radius:18px;background:var(--c) center/cover;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.08);transition:transform .35s var(--ease),box-shadow .35s}
+.food:hover .ph{transform:translateY(-3px);box-shadow:0 12px 24px -12px rgba(0,0,0,.35)}
+.food .ph .mono{position:absolute;inset:0;display:grid;place-items:center;font:800 46px var(--head);color:rgba(255,255,255,.85)}
+.food .plus{position:absolute;top:10px;right:10px;width:34px;height:34px;min-height:0;padding:0;border:0;border-radius:50%;background:#fff;color:var(--ink);font:400 24px/1 var(--font);
+ display:grid;place-items:center;box-shadow:0 2px 6px rgba(0,0,0,.18);transition:transform .3s var(--ease),background .2s,color .2s}
+.food.on .plus{background:var(--green);color:#fff;transform:rotate(45deg)}
+.food.on .ph{box-shadow:0 0 0 3px var(--green)}
+.food .badge{position:absolute;top:12px;left:10px;background:#fff;color:var(--green);font:800 12px var(--font);padding:3px 9px;border-radius:999px;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.food b{font:600 15px/1.3 var(--font);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.food small{color:var(--dim);font-size:13px}
+
+/* plan-type tiles */
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr));gap:16px}
+.tile{position:relative;aspect-ratio:1/1;border-radius:20px;overflow:hidden;border:0;padding:0;min-height:0;cursor:pointer;background:var(--c) center/cover;box-shadow:0 4px 14px -8px rgba(0,0,0,.35);transition:transform .35s var(--ease)}
+.tile:hover{transform:translateY(-3px)}
+.tile .mono{position:absolute;inset:0 0 40px;display:grid;place-items:center;font:800 40px var(--head);color:rgba(255,255,255,.8)}
+.tile span{position:absolute;left:10px;right:10px;bottom:10px;background:#fff;border-radius:12px;padding:8px;font:700 15px var(--head);color:var(--ink);text-align:center}
+.tile.more{background:var(--green)}.tile.more span{background:none;color:#fff;inset:0;display:grid;place-items:center;font-size:18px}
+
+/* list rows (like the store list) */
+.list{border-top:1px solid var(--line)}
+.li{display:flex;align-items:center;gap:14px;min-height:64px;padding:8px 4px;border-bottom:1px solid var(--line);background:none;border-left:0;border-right:0;border-top:0;width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer}
+.li:hover{background:var(--soft)}
+.li .ic{width:44px;height:44px;border-radius:12px;flex:none;background:var(--c,var(--green-soft)) center/cover;display:grid;place-items:center;font:800 18px var(--head);color:#fff}
+.li .tx{flex:1;min-width:0}.li .tx b{display:block;font-weight:600}.li .tx small{color:var(--dim);font-size:13px}
+.li .chev{color:#b5b9b6;font-size:22px}
+.li input[type=checkbox]{width:24px;height:24px;min-height:0;accent-color:var(--green);flex:none}
+.li.done .tx b{color:var(--dim);text-decoration:line-through}
+.aisle{margin:22px 0 4px;font:700 13px var(--font);color:var(--dim);text-transform:capitalize}
+
+/* workouts */
+.days{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(150px,14vw,180px);gap:14px;overflow-x:auto;padding:2px 2px 10px;scrollbar-width:none}
+.daycard{display:flex;flex-direction:column;justify-content:flex-end;aspect-ratio:1/1.1;border-radius:20px;padding:14px;border:0;cursor:pointer;color:#fff;text-align:left;min-height:0;
+ background:linear-gradient(160deg,var(--c1),var(--c2));box-shadow:0 8px 20px -12px rgba(0,0,0,.4);transition:transform .35s var(--ease),box-shadow .3s}
+.daycard:hover{transform:translateY(-3px)}.daycard.rest{background:var(--soft);color:var(--dim);box-shadow:none}
+.daycard.sel{box-shadow:0 0 0 3px #fff,0 0 0 6px var(--green)}
+.daycard small{opacity:.85;font-weight:600}.daycard b{font:800 24px var(--head);letter-spacing:-.02em}
+.daycard .mins{margin-top:4px;font-size:13px;font-weight:600;opacity:.9}
+
+/* floating Build plan pill */
+.buildbar{position:fixed;right:max(20px,calc((100vw - 1180px)/2));bottom:96px;z-index:25;display:flex;align-items:center;gap:12px;padding:8px 8px 8px 12px;background:#fff;border-radius:999px;box-shadow:0 12px 30px -10px rgba(0,0,0,.35);animation:in .35s var(--ease)}
+.buildbar[hidden]{display:none}
+.thumbs{display:flex}.thumbs span{width:36px;height:36px;border-radius:50%;margin-left:-10px;border:2px solid #fff;background:var(--c) center/cover}.thumbs span:first-child{margin-left:0}
+.build{min-height:44px;padding:0 22px;border:0;border-radius:999px;background:var(--green);color:#fff;font-weight:700;cursor:pointer}.build:hover{background:var(--green-dark)}
+
+/* tab bar */
+.tabs{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;justify-content:center;gap:clamp(6px,4vw,48px);height:76px;padding-bottom:4px;background:#fff;border-top:1px solid var(--line)}
+.tabs button{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;min-width:84px;border:0;background:none;color:#8b908c;font:600 12.5px var(--font);cursor:pointer;min-height:0}
+.tabs svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.tabs button.on{color:var(--green)}
+
+.dot{position:absolute;top:14px;right:24px;width:9px;height:9px;border-radius:50%;background:#ef5a3c}
+
+/* forms, search, misc */
+.form{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:16px 20px}
+.form label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:14px}
+input,select{font:16px var(--font);border:1.5px solid #dedfdc;border-radius:12px;padding:10px 12px;min-height:46px;background:#fff;color:var(--ink)}
+input:focus,select:focus{border-color:var(--green);outline:none}
+.field-error{color:#c0392b;font-size:13px;font-weight:500}
+.searchbox{width:100%;font-size:18px;padding:14px 18px;border-radius:16px;background:var(--soft);border:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,190px),1fr));gap:18px}
+.panel{background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px}
+.big{font:800 46px/1 var(--head);letter-spacing:-.03em}
+.pill{display:inline-block;padding:4px 12px;border-radius:999px;background:var(--green-soft);color:var(--green-dark);font-size:13px;font-weight:700}
+.waiting{border:2px dashed var(--line);border-radius:18px;padding:18px;color:var(--dim)}.waiting b{display:block;color:var(--ink)}
+.chart{height:230px}
+.credits{font-size:12.5px;color:var(--dim)}.credits a{color:inherit}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.hero .ph{min-height:200px}.tabs button{min-width:60px}.tabs span{font-size:11px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+/* workouts: setup, swaps, own picks, review */
+.setup{background:var(--green-soft,#eef7ea);border-radius:20px;padding:16px 18px;display:grid;gap:12px;margin:6px 0 22px}
+.setuprow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.setuprow>b{min-width:120px;font-family:var(--head)}
+.setuprow.say input{flex:1;min-width:220px;min-height:42px;border-radius:999px;border:1px solid var(--line);padding:0 16px;font:inherit;background:#fff}
+.setuprow select{min-height:40px;border-radius:999px;border:1px solid var(--line);padding:0 12px;font:inherit;background:#fff}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;min-height:36px;padding:0 14px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--ink);font:600 14px var(--font);cursor:pointer;transition:background .15s,border-color .15s}
+.chip:hover{border-color:var(--green)}.chip.on{background:var(--green);border-color:var(--green);color:#fff}.chip.fixed{cursor:default;opacity:.85}
+.btn.small{min-height:42px;padding:0 18px;font-size:14px}
+.seg{display:inline-flex;background:#fff;border-radius:999px;padding:4px;border:1px solid var(--line);justify-self:start}
+.seg button{border:0;background:none;border-radius:999px;min-height:38px;padding:0 18px;font:600 14px var(--font);color:var(--dim);cursor:pointer}
+.seg button.on{background:var(--green);color:#fff}
+.mini{min-height:32px;padding:0 12px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font:600 13px var(--font);cursor:pointer;margin-left:6px}
+.mini:hover{border-color:var(--green)}.mini.x{padding:0 10px;color:var(--dim)}
+.swapbox{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 0 14px 46px;border-bottom:1px solid var(--line)}
+.addbox{margin-top:18px;display:grid;gap:8px}.addgrp{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.addgrp .lab{min-width:44px;color:var(--dim);font-weight:700}
+.warn{color:#c2410c;font-weight:600}
+.review{margin-top:30px;border:1.5px solid var(--line);border-radius:20px;padding:16px 18px}
+.review h2{font:700 20px var(--head);margin:0 0 8px}.tips{margin:0;padding-left:20px;line-height:1.6}.good{color:var(--green-dark);font-weight:600;margin:0}
+.pair{display:flex;align-items:center;gap:8px}.pair input{width:90px}.pair .unit{color:var(--dim);font-weight:600}
+/* budget, buying, recipe page */
+.budgetcard{margin:22px 0 4px;padding:16px 18px;border-radius:20px;background:var(--green-soft);display:grid;gap:8px}
+.budgetcard .bline{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px}.budgetcard .bline span{font:700 17px var(--head)}
+.budgetcard .bval{font:800 26px var(--head);color:var(--green-dark)}
+.budgetcard input[type=range]{width:100%;accent-color:var(--green)}
+.badge.over{background:#fff;color:#b45309}
+.buy{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:10px 0 14px}
+.buy .chip{text-decoration:none}.chip.near{border-color:var(--green);color:var(--green-dark)}
+.li.ing{width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);cursor:pointer;font:inherit;color:inherit}
+.li.ing:hover{background:var(--soft)}
+.macros{display:flex;gap:16px;color:var(--dim)}.macros b{color:var(--ink)}
+.fitnote{margin:0;font-weight:700;color:var(--green-dark)}.fitnote.over{color:#b45309}
+.steps{padding-left:22px;line-height:1.65;max-width:760px}.steps li{margin-bottom:8px}
+a.seeall{text-decoration:none}
+/* ---- Plan my week (wizard) ---- */
+body.wizopen{overflow:hidden}
+.wiz{position:fixed;inset:0;z-index:50;background:#f5f3ee;display:grid;place-items:center;overflow:auto;padding:24px 12px;animation:wfade .25s var(--ease,ease)}
+@keyframes wfade{from{opacity:0}to{opacity:1}}
+.wcard{width:min(460px,100%);display:grid;gap:14px;justify-items:center;padding:8px 8px 28px}
+.wcard.center{align-content:center;min-height:70vh;text-align:center}
+.wtop{width:100%;display:grid;grid-template-columns:40px 1fr 40px;align-items:center}
+.wback{width:40px;height:40px;border-radius:50%;border:0;background:#fff;font-size:22px;cursor:pointer;color:var(--dim)}
+.wbrand{text-align:center;font:800 22px var(--head);letter-spacing:-.03em;color:var(--ink)}
+.wring{width:32px;height:32px;border-radius:50%;justify-self:end;background:conic-gradient(var(--green) calc(var(--p)*1%),#e6e6e0 0);-webkit-mask:radial-gradient(circle 11px,transparent 98%,#000);mask:radial-gradient(circle 11px,transparent 98%,#000)}
+.wmascot{width:120px;height:120px;filter:drop-shadow(0 10px 18px rgba(0,0,0,.08));animation:wbob 3s ease-in-out infinite}
+.wmascot svg{width:100%;height:100%}
+@keyframes wbob{50%{transform:translateY(-5px)}}
+.wbubble{position:relative;background:#fff;border-radius:22px;padding:14px 22px;text-align:center;box-shadow:0 6px 18px -10px rgba(0,0,0,.25);display:grid;gap:4px;max-width:380px}
+.wbubble::before{content:"";position:absolute;top:-8px;left:50%;width:16px;height:16px;background:#fff;transform:translateX(-50%) rotate(45deg);border-radius:3px}
+.wbubble b{font:700 19px var(--head);position:relative}.wbubble small{color:var(--dim)}
+.wbody{width:100%}
+.wgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.wgrid.three{grid-template-columns:repeat(3,1fr)}
+.wtile{display:grid;justify-items:center;align-content:center;gap:8px;min-height:104px;padding:12px;border-radius:20px;border:2px solid transparent;background:#fff;cursor:pointer;
+  box-shadow:0 4px 14px -10px rgba(0,0,0,.3);font:600 14px var(--font);color:var(--ink);transition:transform .15s,border-color .15s}
+.wtile:hover{transform:translateY(-2px)}.wtile.on{border-color:var(--green);background:var(--green-soft)}
+.wtile .wemo{font-size:38px;line-height:1}.wtile.store{min-height:76px}.wtile.store .wlab{font:800 17px var(--head)}
+.wchips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.wtile.chip{min-height:0;grid-auto-flow:column;padding:8px 14px;border-radius:999px;gap:6px}.wtile.chip .wemo{font-size:20px}
+.wadd{margin-top:12px;width:100%;min-height:44px;border-radius:999px;border:1px solid var(--line);padding:0 16px;font:inherit;background:#fff}
+.wbig{display:grid;justify-items:center;margin:10px 0}.wbig b{font:800 56px var(--head);line-height:1}.wbig small{color:var(--dim)}
+.wpeople,.wdays,.wbudget{display:grid;justify-items:center;gap:16px}
+.wdots{display:flex;gap:10px}.wdot{width:44px;height:44px;border-radius:50%;border:2px dashed #cfd3cb;background:none;cursor:pointer;font-size:20px}
+.wdot.on{border:2px solid var(--green);background:var(--green-soft)}
+.wbudget input{width:100%;accent-color:var(--green)}.wends{width:100%;display:flex;justify-content:space-between;color:var(--dim)}
+.wdaylist{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.wday{min-width:56px;min-height:44px;border-radius:999px;border:2px solid var(--line);background:#fff;font:700 14px var(--font);cursor:pointer}
+.wday.on{background:var(--green);border-color:var(--green);color:#fff}
+.wnote{color:var(--dim);font-size:13px;text-align:center;margin:0}
+.wnext{margin-top:8px;min-width:200px;min-height:52px;border-radius:999px;border:0;background:linear-gradient(180deg,#6cc457,var(--green));color:#fff;font:700 16px var(--font);cursor:pointer;box-shadow:0 10px 20px -10px var(--green)}
+.wnext:disabled{opacity:.45;cursor:not-allowed}
+.wbuildring{position:relative;width:220px;height:220px;display:grid;place-items:center}
+.wbuild{position:absolute;inset:0;border-radius:50%;--p:5;background:conic-gradient(var(--green) calc(var(--p)*1%),#ebe8e1 0);-webkit-mask:radial-gradient(circle 104px,transparent 98%,#000);mask:radial-gradient(circle 104px,transparent 98%,#000);transition:--p .5s}
+.wcard.center h2{font:800 28px var(--head);margin:6px 0 0}
+@media (prefers-reduced-motion:reduce){.wmascot,.wiz{animation:none}}
+/* categories, labels, plan parts */
+.catrow{display:flex;flex-wrap:wrap;gap:8px;padding:14px 2px 6px}
+@media(max-width:760px){.catrow{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent)}}.catrow::-webkit-scrollbar{display:none}
+.catchip{flex:none;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 14px;border-radius:999px;border:1.5px solid var(--line);background:#fff;font:600 14px var(--font);color:var(--ink);cursor:pointer}
+.catchip:hover{border-color:var(--green)}.catchip.on{background:var(--green);border-color:var(--green);color:#fff}.catchip small{color:var(--dim);font-weight:500}.catchip.on small{color:#fff}
+.labels{display:flex;flex-wrap:wrap;gap:6px;margin:-6px 0 14px}.label{padding:4px 10px;border-radius:999px;background:var(--green-soft);color:var(--green-dark);font:700 12px var(--font)}
+.part{display:grid;gap:4px}.part b{font-size:14px}
+.planitem{border:0;background:none;padding:2px 0;color:var(--dim);font:inherit;cursor:pointer;text-align:left;display:block}.planitem:hover{color:var(--green-dark);text-decoration:underline}
+.wnext{position:sticky;bottom:14px;z-index:2}
+/* photos: a little warmer and brighter so food looks fresh; a calm icon tile when there's no good photo */
+.phimg{position:absolute;inset:0;background:center/cover no-repeat;filter:saturate(1.15) contrast(1.05) brightness(1.04);border-radius:inherit}
+.ph,.tile{background-image:linear-gradient(135deg,color-mix(in srgb,var(--c) 70%,#fff),var(--c))!important}
+.mono.icon{font-size:54px!important;color:inherit!important;filter:drop-shadow(0 6px 10px rgba(0,0,0,.18))}
+.ph>*:not(.phimg),.tile>*:not(.phimg){z-index:1}
+/* small round/square photo holders: keep the photo inside them (the You page price list showed one photo over the whole screen) */
+.li .ic,.thumbs span{position:relative;overflow:hidden}
+.li .ic>*:not(.phimg){position:relative;z-index:1}
+
+/* prep buddy */
+.buddy{display:flex;align-items:center;gap:14px;margin:4px 0 18px}
+.buddy-face{width:72px;height:72px;flex:none;filter:drop-shadow(0 8px 14px rgba(0,0,0,.08));animation:wbob 3s ease-in-out infinite}
+.buddy-face svg{width:100%;height:100%}
+.buddy-say{position:relative;background:#fff;border-radius:16px;padding:10px 14px;box-shadow:0 4px 16px -8px rgba(0,0,0,.25);display:grid;gap:2px}
+.buddy-say::before{content:"";position:absolute;left:-7px;top:50%;width:14px;height:14px;background:#fff;transform:translateY(-50%) rotate(45deg)}
+.buddy-say small{color:var(--dim)}
+@media (prefers-reduced-motion:reduce){.buddy-face{animation:none}}
+/* price it */
+.pc{background:#fff;border:1px solid var(--line,#e8e8e3);border-radius:18px;padding:16px 18px;margin:18px 0}
+.pc h2{margin:0 0 10px}
+.pc-row{display:flex;flex-wrap:wrap;gap:16px}
+.pc-step{display:grid;gap:6px;color:var(--dim);font-size:13px}
+.pc-ctl{display:flex;align-items:center;gap:10px}
+.pc-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--line,#e8e8e3);background:#fff;font-size:20px;line-height:1;cursor:pointer;transition:background .12s}
+.pc-btn:hover{background:var(--green-soft,#eef6e8)}
+.pc-n{min-width:24px;text-align:center;font:700 18px var(--head);color:var(--ink);font-variant-numeric:tabular-nums}
+.pc-rate{width:96px}
+.pc-note{margin:10px 0 0}
+.pc-big{display:flex;gap:28px;margin:14px 0 8px;flex-wrap:wrap}
+.pc-big b{display:block;font:800 26px var(--head);font-variant-numeric:tabular-nums}
+.pc-big small{color:var(--dim)}
+.pc-lines{display:grid;gap:4px;max-width:420px}
+.pc-lines div{display:flex;justify-content:space-between;font-variant-numeric:tabular-nums}
+.pc-buy{margin-top:10px}.pc-buy summary{cursor:pointer;font-weight:700}.pc-buy ul{margin:8px 0 0;padding-left:18px;color:var(--ink)}
+
+/* recipe guide */
+.guide{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:0 0 16px}
+.gbox{background:#fff;border:1px solid var(--line,#e8e8e3);border-radius:16px;padding:12px 16px}
+.gbox h3{margin:0 0 6px;font:700 15px var(--head)}
+.gbox ul{margin:0;padding-left:18px;display:grid;gap:4px}
+.gbox p{margin:0}
+.gbox .muted{margin-top:8px;font-size:13px}
+.pc-in{width:110px;min-height:42px;border:1px solid var(--line,#e8e8e3);border-radius:10px;padding:0 10px;font:600 16px var(--font);font-variant-numeric:tabular-nums}
+.pc-sel{width:auto}
+.pc-check{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:15px;cursor:pointer}.pc-check input{width:18px;height:18px;accent-color:var(--green)}
+.pc-buy li{display:flex;justify-content:space-between;gap:12px;max-width:520px}.pc-buy li b{font-variant-numeric:tabular-nums}
+
+/* tab bar motion: a sliding indicator and a small bounce on the chosen icon */
+.tab-ind{position:absolute;top:0;left:0;width:36px;height:3px;border-radius:0 0 3px 3px;background:var(--green);opacity:0;transition:transform .35s var(--ease),opacity .2s}
+.tab-ind.ready{opacity:1}
+.tabs button{transition:color .2s}
+.tabs button svg{transition:transform .2s var(--ease)}
+.tabs button:hover svg{transform:translateY(-2px)}
+.tabs button.pop svg{animation:tabpop .45s var(--ease)}
+@keyframes tabpop{0%{transform:scale(1)}35%{transform:scale(1.25) translateY(-3px)}70%{transform:scale(.95)}100%{transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){.tab-ind{transition:none}.tabs button.pop svg{animation:none}}
+/* logo: the prep buddy's face next to the word */
+.logo-face{width:34px;height:34px;display:inline-block;margin-top:-4px}.logo-face svg{width:100%;height:100%}
+
+/* workout icons */
+.wicon{display:inline-grid;place-items:center}
+.wicon svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.daycard{position:relative}
+.daycard .wicon{position:absolute;top:14px;right:14px;width:40px;height:40px;padding:7px;border-radius:12px;background:rgba(255,255,255,.22);color:#fff}
+.daycard.rest .wicon{background:#fff;color:var(--dim)}
+.daycard:hover .wicon{transform:rotate(-6deg) scale(1.05)}
+.daycard .wicon{transition:transform .25s var(--ease)}
+.dayhead h2{display:flex;align-items:center;gap:10px}
+.wicon.inline{width:34px;height:34px;padding:6px;border-radius:10px;background:var(--green-soft);color:var(--green-dark)}
+.wicon.inline.rest{background:var(--soft);color:var(--dim)}
+
+/* motion: screens slide in, photos fade in, cards and buttons respond to touch */
+#main.enter{animation:viewin .32s var(--ease)}
+@keyframes viewin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.phimg{animation:phin .4s ease}
+@keyframes phin{from{opacity:0}to{opacity:1}}
+.food:active .ph,.tile:active,.daycard:active,.catchip:active,.btn:active,.chip:active{transform:scale(.97)}
+.btn,.chip,.catchip,.mini,.seeall,.planitem{transition:background .15s,color .15s,border-color .15s,transform .12s,box-shadow .15s}
+.catchip:hover{transform:translateY(-1px)}
+.li{transition:background .15s}
+.li.ing:hover,.list label.li:hover{background:var(--soft)}
+.food .plus{transition:transform .25s var(--ease),background .2s,color .2s}
+.food .plus:hover{transform:scale(1.1)}.food.on .plus:hover{transform:rotate(45deg) scale(1.1)}
+@media (prefers-reduced-motion:reduce){#main.enter,.phimg{animation:none}.food:active .ph,.tile:active,.daycard:active,.catchip:active,.btn:active,.chip:active{transform:none}}
+.macrosbig{display:flex;gap:18px;font-size:inherit!important}.macrosbig span{display:grid}.macrosbig b{font:800 28px var(--head);letter-spacing:-.02em}.macrosbig small{color:var(--dim);font:500 13px var(--font)}
+.kcal{white-space:nowrap}
+.tabs span{white-space:nowrap}
+@media(max-width:520px){.kcal .kt{display:none}.logo{font-size:19px}.tabs button{min-width:0;flex:1}.tabs{gap:0}}

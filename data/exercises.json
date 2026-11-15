@@ -1,0 +1,263 @@
+{
+ "exercises": [
+  {
+   "name": "Push-ups",
+   "muscle": "push",
+   "equipment": "none",
+   "minutes": 8,
+   "how": "3 sets of as many as you can with good form; rest 60s."
+  },
+  {
+   "name": "Pike push-ups",
+   "muscle": "push",
+   "equipment": "none",
+   "minutes": 8,
+   "how": "3 sets of 8-12. Hips high, lower your head toward the floor."
+  },
+  {
+   "name": "Dumbbell bench press",
+   "muscle": "push",
+   "equipment": "dumbbells",
+   "minutes": 10,
+   "how": "3 sets of 8-12."
+  },
+  {
+   "name": "Dumbbell shoulder press",
+   "muscle": "push",
+   "equipment": "dumbbells",
+   "minutes": 8,
+   "how": "3 sets of 8-12, seated or standing."
+  },
+  {
+   "name": "Barbell bench press",
+   "muscle": "push",
+   "equipment": "barbell",
+   "minutes": 15,
+   "how": "4 sets of 5-8. Use a spotter or safety bars."
+  },
+  {
+   "name": "Overhead press",
+   "muscle": "push",
+   "equipment": "barbell",
+   "minutes": 12,
+   "how": "3 sets of 5-8."
+  },
+  {
+   "name": "Dips",
+   "muscle": "push",
+   "equipment": "none",
+   "minutes": 8,
+   "how": "3 sets of 6-12 on parallel bars or a sturdy chair."
+  },
+  {
+   "name": "Chin-ups",
+   "muscle": "pull",
+   "equipment": "pull-up bar",
+   "minutes": 8,
+   "how": "3 sets of as many as you can; use a band if needed."
+  },
+  {
+   "name": "Inverted rows",
+   "muscle": "pull",
+   "equipment": "none",
+   "minutes": 8,
+   "how": "3 sets of 8-15 under a sturdy table or bar."
+  },
+  {
+   "name": "Dumbbell rows",
+   "muscle": "pull",
+   "equipment": "dumbbells",
+   "minutes": 10,
+   "how": "3 sets of 10 each arm."
+  },
+  {
+   "name": "Dumbbell curls",
+   "muscle": "pull",
+   "equipment": "dumbbells",
+   "minutes": 6,
+   "how": "3 sets of 10-15."
+  },
+  {
+   "name": "Barbell rows",
+   "muscle": "pull",
+   "equipment": "barbell",
+   "minutes": 12,
+   "how": "4 sets of 6-10."
+  },
+  {
+   "name": "Deadlifts",
+   "muscle": "pull",
+   "equipment": "barbell",
+   "minutes": 15,
+   "how": "3 sets of 5. Keep your back flat."
+  },
+  {
+   "name": "Superman holds",
+   "muscle": "pull",
+   "equipment": "none",
+   "minutes": 5,
+   "how": "3 holds of 30 seconds."
+  },
+  {
+   "name": "Squats",
+   "muscle": "legs",
+   "equipment": "none",
+   "minutes": 8,
+   "how": "3 sets of 15-20 bodyweight squats."
+  },
+  {
+   "name": "Lunges",
+   "muscle": "legs",
+   "equipment": "none",
+   "minutes": 8,
+   "how": "3 sets of 10 each leg."
+  },
+  {
+   "name": "Goblet squats",
+   "muscle": "legs",
+   "equipment": "dumbbells",
+   "minutes": 10,
+   "how": "3 sets of 10-15 holding one dumbbell."
+  },
+  {
+   "name": "Romanian deadlifts",
+   "muscle": "legs",
+   "equipment": "dumbbells",
+   "minutes": 10,
+   "how": "3 sets of 10. Hinge at the hips."
+  },
+  {
+   "name": "Back squats",
+   "muscle": "legs",
+   "equipment": "barbell",
+   "minutes": 15,
+   "how": "4 sets of 5-8."
+  },
+  {
+   "name": "Glute bridges",
+   "muscle": "legs",
+   "equipment": "none",
+   "minutes": 6,
+   "how": "3 sets of 15."
+  },
+  {
+   "name": "Calf raises",
+   "muscle": "legs",
+   "equipment": "none",
+   "minutes": 5,
+   "how": "3 sets of 20."
+  },
+  {
+   "name": "Plank",
+   "muscle": "legs",
+   "equipment": "none",
+   "minutes": 5,
+   "how": "3 holds of 30-60 seconds (core)."
+  },
+  {
+   "name": "Pull-ups",
+   "muscle": "pull",
+   "equipment": "pull-up bar",
+   "minutes": 8,
+   "how": "3 sets of as many as you can; use a band or a jump to help if needed."
+  },
+  {
+   "name": "Hanging knee raises",
+   "muscle": "legs",
+   "equipment": "pull-up bar",
+   "minutes": 6,
+   "how": "3 sets of 10; lift the knees slowly, no swinging."
+  },
+  {
+   "name": "Band pull-aparts",
+   "muscle": "pull",
+   "equipment": "bands",
+   "minutes": 6,
+   "how": "3 sets of 15; squeeze the shoulder blades together."
+  },
+  {
+   "name": "Band rows",
+   "muscle": "pull",
+   "equipment": "bands",
+   "minutes": 8,
+   "how": "Anchor the band; 3 sets of 15, elbows close to your sides."
+  },
+  {
+   "name": "Band chest press",
+   "muscle": "push",
+   "equipment": "bands",
+   "minutes": 8,
+   "how": "Band behind your back; 3 sets of 12 pushes forward."
+  },
+  {
+   "name": "Band squats",
+   "muscle": "legs",
+   "equipment": "bands",
+   "minutes": 8,
+   "how": "Stand on the band, handles at shoulders; 3 sets of 15."
+  },
+  {
+   "name": "Kettlebell swings",
+   "muscle": "legs",
+   "equipment": "kettlebell",
+   "minutes": 10,
+   "how": "5 sets of 15; drive with the hips, arms just guide it."
+  },
+  {
+   "name": "Kettlebell press",
+   "muscle": "push",
+   "equipment": "kettlebell",
+   "minutes": 8,
+   "how": "3 sets of 8 each arm; brace your stomach."
+  },
+  {
+   "name": "Kettlebell rows",
+   "muscle": "pull",
+   "equipment": "kettlebell",
+   "minutes": 8,
+   "how": "3 sets of 10 each arm; back flat."
+  },
+  {
+   "name": "Bench dips",
+   "muscle": "push",
+   "equipment": "bench",
+   "minutes": 6,
+   "how": "3 sets of 10-15; shoulders down, elbows back."
+  },
+  {
+   "name": "Step-ups",
+   "muscle": "legs",
+   "equipment": "bench",
+   "minutes": 10,
+   "how": "3 sets of 10 each leg; push through the front heel."
+  },
+  {
+   "name": "Chest press machine",
+   "muscle": "push",
+   "equipment": "machines",
+   "minutes": 10,
+   "how": "3 sets of 10-12; control the way back."
+  },
+  {
+   "name": "Lat pulldown",
+   "muscle": "pull",
+   "equipment": "machines",
+   "minutes": 10,
+   "how": "3 sets of 10-12; pull to the top of your chest."
+  },
+  {
+   "name": "Seated cable row",
+   "muscle": "pull",
+   "equipment": "machines",
+   "minutes": 10,
+   "how": "3 sets of 12; chest up, pull to your stomach."
+  },
+  {
+   "name": "Leg press",
+   "muscle": "legs",
+   "equipment": "machines",
+   "minutes": 12,
+   "how": "3 sets of 10-12; don't lock your knees at the top."
+  }
+ ]
+}

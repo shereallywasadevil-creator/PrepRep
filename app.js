@@ -1,0 +1,705 @@
+/* PrepRep (screens by Claude), styled after the meal-planner apps Dilan picked. The thinking (calories, budget meal
+   prep, groceries, workouts, schedule) is prepwise.py, built step by step by Dilan's Local AI; a feature whose
+   function isn't built yet says which step it's waiting for and switches on once that step passes. */
+{
+  "use strict";
+  const $ = id => document.getElementById(id);
+  function h(tag, attrs, ...kids) {
+    const e = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs || {})) {
+      if (v == null || v === false) continue;
+      if (k === "class") e.className = v; else if (k === "text") e.textContent = v;
+      else if (k.startsWith("on")) e.addEventListener(k.slice(2), v); else if (k === "style") e.style.cssText = v; else e.setAttribute(k, v);
+    }
+    for (const c of kids.flat()) if (c != null && c !== false) e.append(c.nodeType ? c : document.createTextNode(String(c)));
+    return e;
+  }
+  const money = c => "$" + (c / 100).toFixed(2);
+  const iso = d => d.toISOString().slice(0, 10);
+  const DAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], DAYNAMES = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+  const todayIdx = () => (new Date().getDay() + 6) % 7;
+  const WORKOUT_DAYS = {1: [0], 2: [0, 3], 3: [0, 2, 4], 4: [0, 1, 3, 4], 5: [0, 1, 2, 3, 4], 6: [0, 1, 2, 3, 4, 5]};
+  const COLORS = ["#d9a25f", "#8cbf6e", "#de8b6b", "#c2a676", "#7fb59a", "#cf7f57", "#a9c06a", "#e09a7c"];
+  // Workout icons (our own simple line drawings): push = pressing a bar up, pull = pull-up, legs = squat, full body, rest = moon
+  const ICONS = {
+    Push: '<svg viewBox="0 0 32 32"><path d="M6 9h20M9 6v6M23 6v6"/><path d="M16 9v6"/><circle cx="16" cy="18" r="2.5"/><path d="M16 21v5M12 30l4-4 4 4M11 15l5 0 5 0"/></svg>',
+    Pull: '<svg viewBox="0 0 32 32"><path d="M4 5h24"/><path d="M10 5v5l4 4M22 5v5l-4 4"/><circle cx="16" cy="15" r="2.5"/><path d="M16 18v6M13 30l3-6 3 6"/></svg>',
+    Legs: '<svg viewBox="0 0 32 32"><circle cx="16" cy="5" r="2.5"/><path d="M16 8v8M10 11h12M16 16l-5 4 1 8M16 16l5 4-1 8"/></svg>',
+    "Full body": '<svg viewBox="0 0 32 32"><circle cx="16" cy="5" r="2.5"/><path d="M16 8v10M8 9l8 4 8-4M16 18l-5 10M16 18l5 10"/></svg>',
+    Rest: '<svg viewBox="0 0 32 32"><path d="M21 6a10 10 0 1 0 6 15A8 8 0 0 1 21 6z"/><path d="M8 8h3l-3 3h3"/></svg>'};
+  const icon = (name, cls) => { const e = document.createElement("span"); e.className = "wicon" + (cls ? " " + cls : ""); e.setAttribute("aria-hidden", "true"); e.innerHTML = ICONS[name] || ""; return e; };
+  const FOCUS_COLORS = {Push: ["#ff7a59", "#e8453c"], Pull: ["#5b8def", "#3a5bd9"], Legs: ["#56b13f", "#2f8a3b"], "Full body": ["#a46bf0", "#6a45d6"]};
+
+  /* ---- the brain (prepwise.py, built by the Local AI) ---- */
+  const STEP = {bmr: "s1", start_tdee: "s2", daily_target: "s3", estimate_tdee: "s4", macros: "s5", plan_meals: "s6",
+    grocery_list: "s7", build_workout: "s8", parse_equipment: "s8b", swap_options: "s8c", review_workout: "s8d", schedule: "s9", adherence: "s10"};
+  class Missing extends Error {}
+  async function brain(fn, ...args) {
+    const r = await titan.call("logic", {fn, args});
+    if (r && r.missing) throw new Missing(fn);
+    if (!r || r.error) throw new Error(r && r.error || "No answer from the brain.");
+    return r.ok;
+  }
+  const oops = (e, what) => h("div", {class: "waiting"}, h("b", {text: e instanceof Missing ? what : what + " didn't work"}),
+    e instanceof Missing ? `Your Local AI is still building this part of PrepRep's brain (step ${STEP[e.message]}). It switches on by itself once that step passes.` : String(e.message || e));
+
+  /* ---- data ---- */
+  const S = titan.store("prepwise", {profile: null, units: "us", zip: "", budget: 6000, portions: 10, picks: [], plan: null, got: [],
+    workout: {days: 3, equipment: [], minutes: 40}, free: [["Mon", "18:00", "19:30"], ["Wed", "18:00", "19:30"], ["Fri", "18:00", "19:30"], ["Sun", "10:00", "14:00"]],
+    weighins: [], done: {}, prices: {}});
+  let RECIPES = [], EXERCISES = [], CREDITS = {};
+  /* units: everything is stored metric (the brain works in kg and cm); people see and type pounds and feet if they like */
+  const US = () => (S.get("units") || "us") === "us";
+  const LB = 2.20462;
+  const showW = kg => US() ? Math.round(kg * LB * 10) / 10 : Math.round(kg * 10) / 10;
+  const wUnit = () => US() ? "lb" : "kg";
+  const toKg = v => US() ? +v / LB : +v;
+  const ftIn = cm => { const t = Math.round(cm / 2.54); return [Math.floor(t / 12), t % 12]; };
+  const byName = n => RECIPES.find(r => r.name === n), byId = id => RECIPES.find(r => r.id === id);
+  const cost = r => S.get("prices")[r.id] ?? r.cost_cents;
+  const colorOf = r => COLORS[RECIPES.indexOf(r) % COLORS.length];
+  const ICON = r => !r ? "🍽️" : r.tags.includes("breakfast") ? "🍳" : r.tags.includes("soup") ? "🍲" : r.tags.includes("pasta") ? "🍝" :
+    ({chinese: "🥡", mexican: "🌮", indian: "🍛", mediterranean: "🫒", asian: "🍜"})[r.cuisine] || ({chicken: "🍗", "red meat": "🥩", turkey: "🦃", seafood: "🍤", vegetarian: "🥗"})[r.protein_type] || "🍽️";
+  function photo(el, r) {
+    const m = el.querySelector(".mono"); if (m && r) { m.textContent = ICON(r); m.classList.add("icon"); }
+    if (!r) return;
+    if (Object.keys(CREDITS).length && !CREDITS[r.id]) return;   // credits.json lists every packed photo: don't ask for missing ones
+    const img = new Image();
+    img.onload = () => { const i = h("i", {class: "phimg", "aria-hidden": "true"}); i.style.backgroundImage = `url(photos/${r.id}.jpg)`; el.prepend(i); if (m) m.remove(); };
+    img.src = `photos/${r.id}.jpg`;
+  }
+  const CATS = [["budget", "Budget Meals", "💵", r => cost(r) / r.servings <= 200], ["chicken", "Chicken", "🍗", r => r.protein_type === "chicken"],
+    ["redmeat", "Red Meat", "🥩", r => r.protein_type === "red meat"], ["turkey", "Turkey", "🦃", r => r.protein_type === "turkey"],
+    ["seafood", "Seafood", "🍤", r => r.protein_type === "seafood"], ["veg", "Vegetarian", "🥗", r => r.tags.includes("vegetarian")],
+    ["vegan", "Vegan", "🌱", r => !(r.contains || []).some(c => ["meat", "seafood", "dairy", "egg", "honey"].includes(c))],
+    ["chinese", "Chinese", "🥡", r => r.cuisine === "chinese"], ["asian", "Asian", "🍜", r => r.cuisine === "asian"], ["mexican", "Mexican", "🌮", r => r.cuisine === "mexican"],
+    ["pasta", "Pasta", "🍝", r => r.tags.includes("pasta")], ["italian", "Italian", "🍅", r => r.cuisine === "italian"], ["indian", "Indian", "🍛", r => r.cuisine === "indian"],
+    ["mediterranean", "Mediterranean", "🫒", r => r.cuisine === "mediterranean"], ["american", "American", "🍔", r => r.cuisine === "american"],
+    ["soup", "Soups & Chili", "🍲", r => r.tags.includes("soup")], ["bowl", "Bowls", "🥙", r => r.tags.includes("bowl")], ["breakfast", "Breakfast", "🍳", r => r.tags.includes("breakfast")],
+    ["high", "High Protein", "💪", r => r.tags.includes("high-protein")], ["quick", "30 Minutes", "⏱️", r => r.minutes <= 30],
+    ["glutenfree", "Gluten-Free", "🌾", r => !(r.contains || []).includes("gluten")], ["dairyfree", "Dairy-Free", "🥛", r => !(r.contains || []).includes("dairy")]];
+  const catKeep = key => (CATS.find(c => c[0] === key) || [])[3];
+
+  /* ---- budget: every screen follows the weekly budget ----
+     Your budget per serving = weekly budget / servings to prep. A meal "fits" when one serving costs that or less. */
+  const perServing = r => cost(r) / r.servings;
+  const budgetPer = () => S.get("budget") / Math.max(1, S.get("portions"));
+  const fits = r => perServing(r) <= budgetPer() + 0.5;
+  const value = r => r.protein / Math.max(1, perServing(r));            // grams of protein per cent
+  const health = r => r.protein + 2 * (r.fiber || 0) - Math.abs(r.kcal - 500) / 25;   // filling, high-fiber, sensible portions
+  const tight = () => budgetPer() < 300;                                                // under $3 a serving: money matters most
+  const best = (a, b) => tight() ? value(b) - value(a) : health(b) - health(a);
+  const MAINS = r => !r.tags.includes("breakfast");
+
+  /* ---- where to buy: open a store's own search, or a map of stores near you, in the normal browser ---- */
+  const STORES = [["Walmart", q => `https://www.walmart.com/search?q=${q}`], ["Target", q => `https://www.target.com/s?searchTerm=${q}`],
+    ["Kroger", q => `https://www.kroger.com/search?query=${q}`], ["Instacart", q => `https://www.instacart.com/store/s?k=${q}`]];
+  const shopQuery = item => encodeURIComponent(item.replace(/\s*\(.*?\)\s*/g, " ").trim());
+  const nearUrl = () => { const z = (S.get("zip") || "").trim(); return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("grocery stores near " + (z || "me"))}`; };
+  const extLink = (href, text, cls) => h("a", {class: cls || "chip", href, target: "_blank", rel: "noopener", text});
+  const STORE_SEARCH = {Walmart: q => `https://www.walmart.com/search?q=${q}`, Target: q => `https://www.target.com/s?searchTerm=${q}`,
+    Kroger: q => `https://www.kroger.com/search?query=${q}`, Costco: q => `https://www.costco.com/CatalogSearch?keyword=${q}`,
+    Instacart: q => `https://www.instacart.com/store/s?k=${q}`};
+  const myStores = () => ((S.get("answers") || {}).stores || []);
+  function storeLink(name, item) {                       // the store's own search when we know it, otherwise a web search for that store
+    const q = shopQuery(item), f = STORE_SEARCH[name];
+    return extLink(f ? f(q) : `https://www.google.com/search?q=${encodeURIComponent(name + " " + decodeURIComponent(q))}`, name);
+  }
+  function nearStore(name) { const z = (S.get("zip") || "").trim(); return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name + " near " + (z || "me"))}`; }
+  function whereToBuy(item) {
+    const mine = myStores(), names = mine.length ? mine : STORES.map(s => s[0]);
+    return h("div", {class: "buy"}, h("small", {class: "muted", text: `Find ${item.replace(/\s*\(.*?\)/g, "")}${mine.length ? " at your stores" : ""}:`}),
+      ...names.map(n => storeLink(n, item)), ...(mine.length ? mine.slice(0, 3).map(n => extLink(nearStore(n), `📍 ${n} near you`, "chip near")) : [extLink(nearUrl(), "📍 Stores near you", "chip near")]));
+  }
+
+  /* ---- navigation ---- */
+  let tab = "plans", stack = [];
+  const VIEWS = {};
+  // Views draw into an off-screen holder and swap in when ready, so the page never flashes blank. Redrawing the same
+  // screen (a chip, a swap, "Add to my plan") keeps your scroll position; a new screen starts at the top and slides in.
+  let shown = "", drawing = 0;
+  async function go(view, arg, push = true) {
+    if (push && stack.length && stack[stack.length - 1][0] === view && stack[stack.length - 1][1] === arg) return;
+    if (push) stack.push([view, arg]);
+    $("back").hidden = stack.length < 2;
+    const key = view + "|" + (arg ?? ""), same = key === shown, y = window.scrollY, my = ++drawing;
+    const stage = document.createElement("div");
+    if (!S.get("profile") && view !== "you") await VIEWS.you(stage, true); else await VIEWS[view](stage, arg);
+    if (my !== drawing) return;                          // a newer screen was asked for while this one loaded
+    const main = $("main");
+    main.replaceChildren(...stage.childNodes);
+    shown = key;
+    if (same) window.scrollTo({top: y});
+    else { window.scrollTo({top: 0}); main.classList.remove("enter"); void main.offsetWidth; main.classList.add("enter"); }
+    drawBuildbar();
+  }
+  function goTab(t) {
+    tab = t; stack = [];
+    document.querySelectorAll(".tabs button").forEach(b => {
+      const on = b.dataset.tab === t, was = b.classList.contains("on");
+      b.classList.toggle("on", on); b.toggleAttribute("aria-current", on);
+      if (on && !was) { b.classList.remove("pop"); void b.offsetWidth; b.classList.add("pop"); }   // restart the little bounce
+    });
+    moveTabInd();
+    go(t);
+  }
+  document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => goTab(b.dataset.tab)));
+  // A green bar that slides under the selected tab.
+  const tabInd = document.createElement("i"); tabInd.className = "tab-ind"; tabInd.setAttribute("aria-hidden", "true");
+  document.querySelector(".tabs").append(tabInd);
+  function moveTabInd() {
+    const on = document.querySelector(".tabs button.on"), bar = document.querySelector(".tabs");
+    if (!on || !bar) return;
+    const a = on.getBoundingClientRect(), b = bar.getBoundingClientRect();
+    tabInd.style.transform = `translateX(${a.left - b.left + a.width / 2 - 18}px)`;
+    tabInd.classList.add("ready");
+  }
+  window.addEventListener("resize", moveTabInd);
+  $("back").addEventListener("click", () => { stack.pop(); const [v, a] = stack[stack.length - 1] || [tab]; go(v, a, false); $("back").hidden = stack.length < 2; });
+  $("search-btn").addEventListener("click", () => go("search"));
+
+  /* ---- food cards ---- */
+  function foodCard(r) {
+    const on = S.get("picks").includes(r.id);
+    const ph = h("div", {class: "ph", style: `--c:${colorOf(r)}`}, h("span", {class: "mono", "aria-hidden": "true", text: r.name[0]}));
+    ph.append(h("span", {class: "badge" + (fits(r) ? "" : " over"), text: fits(r) ? `${r.protein}g PROTEIN` : "OVER BUDGET"}));
+    const plus = h("button", {class: "plus", "aria-pressed": String(on), "aria-label": (on ? "Remove " : "Add ") + r.name, text: "+"});
+    ph.append(plus); photo(ph, r);
+    const card = h("div", {class: "food" + (on ? " on" : ""), "data-id": r.id, role: "listitem"}, ph, h("b", {text: r.name}), h("small", {text: `${money(perServing(r))}/serving · ${r.kcal} kcal · ${r.minutes} min`}));
+    plus.addEventListener("click", e => { e.stopPropagation(); togglePick(r.id); });
+    card.addEventListener("click", () => go("recipe", r.id));
+    return card;
+  }
+  function togglePick(id) {
+    const p = new Set(S.get("picks")); p.has(id) ? p.delete(id) : p.add(id); S.set("picks", [...p]);
+    document.querySelectorAll(`.food[data-id="${id}"]`).forEach(c => { const on = p.has(id), b = c.querySelector(".plus");
+      c.classList.toggle("on", on); b.setAttribute("aria-pressed", String(on)); b.setAttribute("aria-label", (on ? "Remove " : "Add ") + byId(id).name); });
+    drawBuildbar();
+  }
+  function drawBuildbar() {
+    const picks = S.get("picks"), bar = $("buildbar");
+    bar.hidden = tab !== "plans" || !picks.length;
+    $("thumbs").replaceChildren(...picks.slice(-4).map(id => { const r = byId(id), s = h("span", {style: `--c:${colorOf(r)}`}); photo(s, r); return s; }));
+    $("build").textContent = `Build plan (${picks.length})`;
+  }
+  $("build").addEventListener("click", () => buildPlan());
+  async function buildPlan() {
+    const picks = S.get("picks").filter(byId);
+    if (picks.length > 8) titan.toast("PrepRep plans with up to 8 meals at a time: using your first 8 picks.");
+    const auto = RECIPES.filter(r => MAINS(r) && fits(r)).sort((a, b) => value(b) - value(a));
+    const pool = (picks.length ? picks.map(byId) : auto.length ? auto : RECIPES.filter(MAINS).sort((a, b) => perServing(a) - perServing(b))).slice(0, 8)
+      .map(r => ({name: r.name, servings: r.servings, cost_cents: cost(r), protein: r.protein}));   // protein = grams per serving
+    try {
+      const plan = await brain("plan_meals", pool, S.get("budget"), S.get("portions"));
+      if (!plan) { titan.toast("Nothing fits your budget. Raise it or prep fewer servings in You.", "warn"); return; }
+      S.set("plan", plan); S.set("got", []); $("list-dot").hidden = false;
+      titan.toast(`Planned ${plan.servings} servings for ${money(plan.cost)}`); goTab("plans");
+    } catch (e) { titan.toast(e instanceof Missing ? "Your AI is still building the meal planner (step s6)." : String(e.message), "warn"); }
+  }
+
+  /* ---- Plan my week: the questions (wizard.js), then plan_meals (the Local AI's brain) on the meals that fit ---- */
+  function planWizard() { window.PREP_WIZARD.open({h, S, build: planWith, onDone: res => {
+    if (res.error) titan.toast(res.error, "warn");
+    else titan.toast(`Planned ${res.servings} servings for ${money(res.cost)}`);
+    goTab("plans"); }}); }
+  async function planWith(a) {
+    const W = window.PREP_WIZARD, need = W.servingsFor(a), total = need.breakfast + need.mains;
+    if (!total) return {error: "Pick at least one meal and one day."};
+    const rank = list => list.sort((x, y) => (W.favScore(y, a) - W.favScore(x, a)) || best(x, y));
+    const parts = [];
+    try {
+      for (const [meal, n, pool] of [["Breakfast", need.breakfast, RECIPES.filter(r => r.tags.includes("breakfast") && W.allowed(r, a))],
+                                     [a.meals.filter(m => m !== "breakfast").map(m => m[0].toUpperCase() + m.slice(1)).join(" & "), need.mains, RECIPES.filter(r => MAINS(r) && W.allowed(r, a))]]) {
+        if (!n) continue;
+        const budget = Math.round(a.budget * n / total);
+        // a few smaller plans instead of one, so the week isn't one meal over and over (each is still plan_meals' choice)
+        const toBrain = list => list.map(r => ({name: r.name, servings: r.servings, cost_cents: cost(r), protein: r.protein}));
+        const single = async () => {             // one plan for all n servings: always the fallback
+          const fit = pool.filter(r => perServing(r) <= budget / n + 50);
+          const pick = rank(fit.length ? fit : pool.slice().sort((x, y) => perServing(x) - perServing(y))).slice(0, 8);
+          return pick.length ? brain("plan_meals", toBrain(pick), budget, n) : null;
+        };
+        const slots = Math.max(1, Math.min(3, Math.floor(n / 8))), used = new Set();   // chunks of 8+ servings, for variety
+        let cooked = {recipes: [], cost: 0, servings: 0, protein: 0}, failed = "";
+        for (let k = 0; k < slots && slots > 1; k++) {
+          const sn = Math.round(n * (k + 1) / slots) - Math.round(n * k / slots), sb = Math.round(budget * (k + 1) / slots) - Math.round(budget * k / slots);
+          const fitting = pool.filter(r => !used.has(r.id) && perServing(r) <= sb / sn + 50);
+          const pick = rank(fitting.length ? fitting : pool.filter(r => !used.has(r.id)).sort((x, y) => perServing(x) - perServing(y))).slice(0, 8);
+          if (!pick.length) { failed = "No meals match your diet for this."; break; }
+          const p = await brain("plan_meals", toBrain(pick), sb, sn);
+          if (!p) { failed = "slot"; break; }
+          p.recipes.forEach(nm => { const r = byName(nm); if (r) used.add(r.id); });
+          cooked = {recipes: [...cooked.recipes, ...p.recipes], cost: cooked.cost + p.cost, servings: cooked.servings + p.servings, protein: cooked.protein + p.protein};
+        }
+        if (slots === 1 || failed || cooked.cost > budget) {
+          const p = await single();
+          if (!p) { parts.push({meal, error: `Nothing fits ${money(budget)} for ${n} servings. Raise the budget or plan fewer days.`}); continue; }
+          cooked = {recipes: p.recipes, cost: p.cost, servings: p.servings, protein: p.protein};
+        }
+        parts.push({meal, ...cooked});
+      }
+    } catch (e) { return {error: e instanceof Missing ? "Your AI is still building the meal planner (step s6)." : String(e.message || e)}; }
+    const ok = parts.filter(p => !p.error);
+    if (!ok.length) return {error: parts.map(p => p.error).join(" ")};
+    const plan = {recipes: ok.flatMap(p => p.recipes), cost: ok.reduce((t, p) => t + p.cost, 0), servings: ok.reduce((t, p) => t + p.servings, 0),
+      protein: ok.reduce((t, p) => t + p.protein, 0), parts, people: a.people, days: a.days};
+    S.set("plan", plan); S.set("got", []); $("list-dot").hidden = false;
+    return plan;
+  }
+
+  /* ---- Meal Plans (home) ---- */
+  VIEWS.plans = async main => {
+    main.append(h("h1", {text: "Build a meal plan"}));
+    const plan = S.get("plan");
+    { const nm = ((S.get("profile") || {}).name || "").trim();
+      main.append(plan ? buddy(`Your week is planned${nm ? ", " + nm : ""}!`, `${plan.servings} servings for ${money(plan.cost)}. Tap a meal to see how to make it.`)
+                       : buddy(`Hi${nm ? " " + nm : ""}! Let's plan your week.`, "Answer a few quick questions and I'll pick meals that fit your budget.")); }
+    const first = plan ? byName(plan.recipes[0]) : RECIPES[0];
+    const ph = h("div", {class: "ph", style: `--c:${colorOf(first)}`}, h("div", {class: "label"}, h("b", {text: plan ? "This Week" : "Your week"}), h("small", {text: weekRange()})));
+    photo(ph, first);
+    const info = h("div", {class: "info"});
+    if (plan) {
+      const pct = Math.min(100, Math.round(100 * plan.cost / S.get("budget")));
+      info.append(h("h3", {text: "Meal prep plan"}),
+        h("div", {class: "stats"}, h("div", {}, h("b", {text: money(plan.cost)}), h("small", {text: `of ${money(S.get("budget"))} budget`})),
+          h("div", {}, h("b", {text: plan.servings}), h("small", {text: "servings"})), h("div", {}, h("b", {text: Math.round(plan.protein / plan.servings) + "g"}), h("small", {text: "protein each"}))),
+        h("div", {class: "bar"}, h("i", {style: `width:${pct}%`})),
+        ...(plan.parts && plan.parts.length ? plan.parts.map(pt => h("div", {class: "part"}, h("b", {text: pt.meal + (pt.servings ? ` · ${pt.servings} servings` : "")}),
+            pt.error ? h("small", {class: "muted", text: pt.error}) : h("div", {}, ...[...new Set(pt.recipes)].map(n => h("button", {class: "planitem", onclick: () => { const r = byName(n); if (r) go("recipe", r.id); }, text: `${pt.recipes.filter(x => x === n).length}× ${n}`})))))
+          : [...new Set(plan.recipes)].map(n => h("div", {class: "muted", text: `${plan.recipes.filter(x => x === n).length}× ${n}`}))),
+        h("div", {style: "display:flex;gap:10px;margin-top:auto;flex-wrap:wrap"}, h("button", {class: "btn", onclick: () => goTab("list"), text: "Shopping list"}), h("button", {class: "btn line", onclick: planWizard, text: "Plan my week again"})));
+    } else {
+      info.append(h("h3", {text: "Plan your week"}), h("p", {class: "muted", style: "margin:0", text: "Answer 8 quick questions (stores, people, budget, diet, meals, days) and PrepRep builds your week and your shopping list."}),
+        h("button", {class: "btn", style: "margin-top:auto;align-self:flex-start", onclick: planWizard, text: "Plan my week"}),
+        h("small", {class: "muted", text: "Or tap + on meals you like, then Build plan."}));
+    }
+    main.append(h("div", {class: "hero"}, ph, info));
+    main.append(h("div", {class: "catrow", role: "list", "aria-label": "Browse by category"}, ...CATS.map(([key, name, emo, keep]) =>
+      h("button", {class: "catchip", role: "listitem", onclick: () => go("category", key)}, h("span", {text: emo}), name, h("small", {text: RECIPES.filter(keep).length})))));
+    const ok = RECIPES.filter(fits), rows = [
+      ["Budget Meals · $2 or less a serving", RECIPES.filter(catKeep("budget")).sort((a, b) => perServing(a) - perServing(b)), "budget"],
+      [tight() ? "Best value for your budget" : "Healthiest picks in your budget", ok.filter(MAINS).sort(best), "fit"],
+      ["Most Protein", ok.filter(r => r.tags.includes("high-protein")).sort((a, b) => b.protein - a.protein), "high"],
+      ["30 Minute Meals", ok.filter(r => r.minutes <= 30 && MAINS(r)), "quick"],
+      ["Chinese", ok.filter(catKeep("chinese")), "chinese"], ["Mexican", ok.filter(catKeep("mexican")), "mexican"],
+      ["Pasta", ok.filter(catKeep("pasta")), "pasta"], ["Chicken", ok.filter(catKeep("chicken")), "chicken"], ["Red Meat", ok.filter(catKeep("redmeat")), "redmeat"],
+      ["Breakfast to prep", ok.filter(r => r.tags.includes("breakfast")), "breakfast"],
+      ["Vegetarian", ok.filter(r => r.tags.includes("vegetarian") && MAINS(r)), "veg"]];
+    if (!ok.length) main.append(h("div", {class: "waiting"}, h("b", {text: "Nothing fits " + money(budgetPer()) + " a serving yet"}), "The cheapest meals here start around " + money(Math.min(...RECIPES.map(perServing))) + " a serving. Raise your budget or prep fewer servings."));
+    for (const [name, list, key] of rows) {
+      if (!list.length) continue;
+      main.append(h("div", {class: "sec"}, h("h2", {text: name}), h("button", {class: "seeall", onclick: () => go("category", key), text: `See all ${list.length}`})),
+        h("div", {class: "row", role: "list", "aria-label": name}, ...list.map(foodCard)));
+    }
+    main.append(h("div", {class: "sec"}, h("h2", {text: "All categories"})));
+    main.append(h("div", {class: "tiles"}, ...CATS.map(([key, name, emo, keep]) => {
+      const r = RECIPES.find(keep) || RECIPES[0], t = h("button", {class: "tile", style: `--c:${colorOf(r)}`, onclick: () => go("category", key)}, h("i", {class: "mono", "aria-hidden": "true", text: emo}), h("span", {text: name}));
+      photo(t, r); return t;
+    }), h("button", {class: "tile more", onclick: () => go("category", "all")}, h("span", {text: "And more!"}))));
+  };
+
+  function weekRange() { const a = new Date(); a.setDate(a.getDate() - todayIdx()); const b = new Date(a); b.setDate(a.getDate() + 6);
+    const f = d => d.toLocaleDateString(undefined, {month: "long", day: "numeric"}); return `${f(a)} – ${f(b)}`; }
+
+  VIEWS.category = async (main, key) => {
+    const extra = {fit: ["Best for your budget", "", r => MAINS(r) && fits(r)]};
+    const cat = CATS.find(c => c[0] === key) || (extra[key] && [key, ...extra[key]]);
+    const list = (cat ? RECIPES.filter(cat[3]) : RECIPES.slice()).sort(key === "budget" ? (a, b) => perServing(a) - perServing(b) : (a, b) => (fits(b) - fits(a)) || best(a, b));
+    main.append(h("h1", {text: cat ? `${cat[2]} ${cat[1]}`.trim() : "All meals"}),
+      h("div", {class: "catrow", role: "list", "aria-label": "Other categories"}, ...CATS.map(([k, n, e]) => h("button", {class: "catchip" + (k === key ? " on" : ""), role: "listitem", onclick: () => go("category", k, false)}, h("span", {text: e}), n))), h("p", {class: "muted", text: `Meals that fit your ${money(budgetPer())} a serving come first.`}),
+      h("div", {class: "grid", role: "list"}, ...list.map(foodCard)));
+    setTimeout(() => { const on = document.querySelector("#main .catchip.on"); if (on) on.scrollIntoView({block: "nearest", inline: "center"}); }, 0);
+  };
+  VIEWS.search = async main => {
+    const box = h("input", {class: "searchbox", type: "search", placeholder: "Search meals or ingredients", "aria-label": "Search meals"});
+    const out = h("div", {class: "grid", role: "list", style: "margin-top:20px"});
+    const run = () => { const q = box.value.trim().toLowerCase();
+      out.replaceChildren(...RECIPES.filter(r => !q || r.name.toLowerCase().includes(q) || r.ingredients.some(i => i.item.toLowerCase().includes(q)) || r.tags.some(t => t.includes(q)) || (r.cuisine || "").includes(q)).map(foodCard)); };
+    box.addEventListener("input", run);
+    main.append(h("h1", {text: "Search"}), box, out); run(); setTimeout(() => box.focus(), 50);
+  };
+
+  /* ---- Prep buddy: the little meal-prep box from Plan my week, shown with a speech bubble ---- */
+  function buddy(text, small) {
+    const m = h("div", {class: "buddy-face", "aria-hidden": "true"});
+    m.innerHTML = window.PREP_WIZARD.MASCOT;                     // our own fixed SVG, no user text in it
+    return h("div", {class: "buddy"}, m, h("div", {class: "buddy-say"}, h("b", {text}), small ? h("small", {text: small}) : null));
+  }
+
+  /* ---- Price it: realistic cost for any number of people, with grocery tax ---- */
+  // Typical grocery tax by state, late 2026: the state's food rate plus the average local rate where cities and counties
+  // also tax groceries (Tax Foundation average local rates, midyear 2026). Your exact city can differ, so it stays editable.
+  // [rate %, how sure: "state" = set statewide, "typical" = state + average local, varies by city]
+  const FOOD_TAX = {AL: [7.46, "typical"], TN: [6.61, "typical"], MO: [5.45, "typical"], MS: [5, "state"], ID: [6, "state"],
+    HI: [4.5, "typical"], SD: [6.2, "typical"], UT: [3, "state"], VA: [1, "state"], NC: [2, "state"], IL: [1, "typical"],
+    AR: [3, "typical"], OK: [4.5, "typical"], KS: [2.2, "typical"], LA: [5, "typical"], GA: [3, "typical"]};
+  const taxOf = st => (FOOD_TAX[st] || [0])[0];
+  const ZIP3 = [[5, 5, "NY"], [6, 9, "PR"], [10, 27, "MA"], [28, 29, "RI"], [30, 38, "NH"], [39, 49, "ME"], [50, 59, "VT"], [60, 69, "CT"],
+    [70, 89, "NJ"], [100, 149, "NY"], [150, 196, "PA"], [197, 199, "DE"], [200, 205, "DC"], [206, 219, "MD"], [220, 246, "VA"],
+    [247, 268, "WV"], [270, 289, "NC"], [290, 299, "SC"], [300, 319, "GA"], [320, 349, "FL"], [350, 369, "AL"], [370, 385, "TN"],
+    [386, 397, "MS"], [398, 399, "GA"], [400, 427, "KY"], [430, 459, "OH"], [460, 479, "IN"], [480, 499, "MI"], [500, 528, "IA"],
+    [530, 549, "WI"], [550, 567, "MN"], [570, 577, "SD"], [580, 588, "ND"], [590, 599, "MT"], [600, 629, "IL"], [630, 658, "MO"],
+    [660, 679, "KS"], [680, 693, "NE"], [700, 714, "LA"], [716, 729, "AR"], [730, 749, "OK"], [750, 799, "TX"], [800, 816, "CO"],
+    [820, 831, "WY"], [832, 838, "ID"], [840, 847, "UT"], [850, 865, "AZ"], [870, 884, "NM"], [885, 885, "TX"], [889, 898, "NV"],
+    [900, 961, "CA"], [967, 968, "HI"], [970, 979, "OR"], [980, 994, "WA"], [995, 999, "AK"]];
+  const stateOf = zip => { const n = parseInt(String(zip || "").slice(0, 3), 10); const z = ZIP3.find(([a, b]) => n >= a && n <= b); return z ? z[2] : ""; };
+  // For n servings: what the food you use costs, and what you'd really pay at the store. Every item is bought as whole
+  // packages (a 2 lb bag of rice, a jar of cumin), except pantry staples you say you already have.
+  function priceFor(r, servings, havePantry) {
+    const k = servings / r.servings; let used = 0, store = 0;
+    const buy = [];
+    r.ingredients.forEach(i => {
+      const need = i.qty * k, c = i.cents || 0, pack = i.pack || 1; used += need * c;
+      if (i.pantry && havePantry) return;                                        // already in the cupboard
+      const packs = Math.ceil(need / pack - 1e-9); store += packs * pack * c;
+      buy.push({item: i.item, packs, pack, unit: i.unit, name: i.pack_name, cost: Math.round(packs * pack * c), pantry: !!i.pantry});
+    });
+    return {used: Math.round(used), store: Math.round(store), buy};
+  }
+  function priceCard(r) {
+    const st = S.get("calc") || {}, stc = stateOf(S.get("zip"));
+    let people = st.people || 1, meals = st.meals || 1, rate = st.zip === S.get("zip") && st.rate != null ? st.rate : taxOf(stc), big = !!st.big, have = st.have ?? false;
+    const out = h("div", {class: "pc-out", "aria-live": "polite"});
+    const packWord = b => b.unit === "lb" ? `${b.packs} lb` : b.name ? `${b.packs} × ${b.name}` : `${b.packs} ${b.unit}${b.packs > 1 && !/s$/.test(b.unit) ? "s" : ""}`;
+    const draw = () => {
+      S.set("calc", {people, meals, rate, big, have, zip: S.get("zip")});
+      const n = people * meals, portions = n * (big ? 1.5 : 1), p = priceFor(r, portions, have);
+      const tax = Math.round(p.store * rate / 100), total = p.store + tax;
+      out.replaceChildren(
+        h("div", {class: "pc-big"}, h("div", {}, h("b", {text: money(total)}), h("small", {text: "at the store, with tax"})),
+          h("div", {}, h("b", {text: money(Math.round(total / n))}), h("small", {text: "a meal"})),
+          h("div", {}, h("b", {text: money(Math.round(p.used / n))}), h("small", {text: "a meal, once your pantry is stocked"}))),
+        h("div", {class: "pc-lines"},
+          h("div", {}, h("span", {text: `Groceries for ${n} ${n === 1 ? "meal" : "meals"}${big ? " (hearty portions)" : ""}`}), h("b", {text: money(p.store)})),
+          h("div", {}, h("span", {text: `Tax (${rate}%)`}), h("b", {text: money(tax)})),
+          h("div", {}, h("span", {text: "Food you actually use"}), h("b", {text: money(p.used)})),
+          h("div", {class: "muted"}, h("span", {text: "Left over for next time"}), h("b", {text: money(Math.max(0, p.store - p.used))}))),
+        h("details", {class: "pc-buy", open: true}, h("summary", {text: "What to buy"}),
+          h("ul", {}, ...p.buy.map(b => h("li", {}, h("span", {text: `${packWord(b)} · ${b.item}`}), h("b", {text: money(b.cost)})))),
+          have ? h("p", {class: "muted", text: "Spices, oils and sauces are left out because you already have them."}) : null));
+    };
+    const num = (label, get, set, min, max, step = 1) => {
+      const inp = h("input", {type: "number", inputmode: step < 1 ? "decimal" : "numeric", min: String(min), max: String(max), step: String(step), value: String(get()), class: "pc-in", "aria-label": label});
+      inp.addEventListener("input", () => { const x = parseFloat(inp.value); if (isFinite(x) && x >= min && x <= max) { set(step < 1 ? x : Math.round(x)); draw(); } });
+      inp.addEventListener("blur", () => { inp.value = String(get()); });
+      return h("label", {class: "pc-step"}, h("span", {text: label}), inp);
+    };
+    const size = h("select", {class: "pc-in pc-sel", "aria-label": "Portion size"}, h("option", {value: "0", text: `Standard (${r.kcal} kcal)`}), h("option", {value: "1", text: `Hearty (${Math.round(r.kcal * 1.5)} kcal)`}));
+    size.value = big ? "1" : "0"; size.addEventListener("change", () => { big = size.value === "1"; draw(); });
+    const haveBox = h("input", {type: "checkbox", checked: have}); haveBox.addEventListener("change", () => { have = haveBox.checked; draw(); });
+    draw();
+    return h("div", {class: "pc"}, h("h2", {text: "Price it"}),
+      h("div", {class: "pc-row"}, num("People", () => people, x => people = x, 1, 50), num("Meals each", () => meals, x => meals = x, 1, 21),
+        h("label", {class: "pc-step"}, h("span", {text: "Portion size"}), size), num("Grocery tax %", () => rate, x => rate = x, 0, 15, 0.001)),
+      h("label", {class: "pc-check"}, haveBox, h("span", {text: "I already have spices, oils and sauces"})),
+      h("p", {class: "muted pc-note", text: !stc ? "Add your ZIP code in You and PrepRep fills in your grocery tax. Or type the percent, like 7.5." :
+        !FOOD_TAX[stc] ? `Groceries aren't taxed in ${stc}, so tax is 0%. If your city adds one, type it in.` :
+        FOOD_TAX[stc][1] === "state" ? `${stc} grocery tax is ${FOOD_TAX[stc][0]}%. Filled in for you.` :
+        `${stc} grocery tax is about ${FOOD_TAX[stc][0]}% (state plus the average city and county rate). Filled in for you; type your exact rate if you know it.`}),
+      out,
+      h("p", {class: "muted pc-note", text: "Prices are US averages for store-brand items (Bureau of Labor Statistics data where it exists, late 2026). Your store may be higher or lower."}));
+  }
+
+  VIEWS.recipe = async (main, id) => {
+    const r = byId(id); if (!r) return goTab("plans");
+    const on = S.get("picks").includes(id);
+    const ph = h("div", {class: "ph", style: `--c:${colorOf(r)}`}, h("div", {class: "label"}, h("b", {text: `${r.minutes} min`}), h("small", {text: `${r.servings} servings`}))); photo(ph, r);
+    const diet = [["Vegan", c => !c.some(x => ["meat", "seafood", "dairy", "egg", "honey"].includes(x))], ["Vegetarian", c => !c.some(x => ["meat", "seafood"].includes(x))],
+      ["Gluten-free", c => !c.includes("gluten")], ["Dairy-free", c => !c.includes("dairy")], ["Nut-free", c => !c.includes("nuts")]].filter(([, f]) => f(r.contains || [])).map(([n]) => n);
+    if (diet.includes("Vegan")) diet.splice(diet.indexOf("Vegetarian"), 1);
+    if (r.protein_type === "vegetarian") diet.splice(diet.indexOf("Vegetarian") >= 0 ? diet.indexOf("Vegetarian") : diet.length, 1);
+    const cap = t => t ? t[0].toUpperCase() + t.slice(1) : "";
+    main.append(h("h1", {text: r.name}), h("div", {class: "labels"}, ...[cap(r.cuisine), r.protein_type && r.protein_type !== "eggs & dairy" ? cap(r.protein_type) : "", ...diet].filter(Boolean).map(t => h("span", {class: "label", text: t}))),
+      h("div", {class: "hero"}, ph, h("div", {class: "info"},
+      h("div", {class: "stats"}, h("div", {}, h("b", {text: money(perServing(r))}), h("small", {text: "a serving"})), h("div", {}, h("b", {text: r.kcal}), h("small", {text: "kcal"})), h("div", {}, h("b", {text: r.protein + "g"}), h("small", {text: "protein"}))),
+      h("div", {class: "macros"}, ...[["Carbs", r.carbs], ["Fat", r.fat], ["Fiber", r.fiber]].map(([k, v]) => h("span", {}, h("b", {text: (v ?? "?") + "g"}), " " + k.toLowerCase()))),
+      h("p", {class: fits(r) ? "fitnote" : "fitnote over", text: fits(r) ? `✓ Fits your budget (${money(budgetPer())} a serving)` : `${money(perServing(r) - budgetPer())} a serving over your budget`}),
+      h("p", {class: "muted", style: "margin:0", text: `Whole batch about ${money(cost(r))}. Costs use 2026 US average prices; nutrition from USDA data. Both are estimates.`}),
+      (() => { const b = h("button", {class: on ? "btn line" : "btn", style: "margin-top:auto", text: on ? "Remove from my plan" : "Add to my plan"});
+        b.addEventListener("click", () => { togglePick(id); const now = S.get("picks").includes(id); b.className = now ? "btn line" : "btn"; b.textContent = now ? "Remove from my plan" : "Add to my plan";
+          titan.toast(now ? `Added ${r.name}` : `Removed ${r.name}`); }); return b; })())));
+    main.append(priceCard(r));
+    main.append(h("div", {class: "sec"}, h("h2", {text: `Ingredients · for ${r.servings} servings`}), extLink(myStores().length ? nearStore(myStores()[0]) : nearUrl(), `📍 ${myStores()[0] || "Grocery stores"} near you`, "seeall")));
+    main.append(h("p", {class: "muted", style: "margin:-4px 0 8px", text: "Tap an ingredient to find it at a store near you."}));
+    const list = h("div", {class: "list"});
+    r.ingredients.forEach(i => {
+      const row = h("button", {class: "li ing", "aria-expanded": "false"}, h("div", {class: "tx"}, h("b", {text: i.item}), h("small", {text: `${i.qty} ${i.unit}${i.qty > 1 && !/s$|oz|lb|tbsp|tsp/.test(i.unit) ? "s" : ""} · ${i.aisle}`})), h("span", {class: "muted", text: "Find ›"}));
+      let open = null;
+      row.addEventListener("click", () => { if (open) { open.remove(); open = null; row.setAttribute("aria-expanded", "false"); return; }
+        open = whereToBuy(i.item); row.after(open); row.setAttribute("aria-expanded", "true"); });
+      list.append(row);
+    });
+    main.append(list);
+    const g = r.guide;
+    if (g) {
+      const box = (title, ...kids) => h("div", {class: "gbox"}, h("h3", {text: title}), ...kids);
+      main.append(h("div", {class: "sec"}, h("h2", {text: "How to make it"})),
+        h("p", {class: "muted", style: "margin:-6px 0 12px", text: `${r.minutes} minutes · makes ${r.servings} servings · ${g.steps.length} steps`}),
+        h("div", {class: "guide"},
+          box("What you need", h("ul", {}, ...g.tools.map(t => h("li", {text: t}))), h("p", {class: "muted", text: g.pantry})),
+          box("Before you start", h("ul", {}, ...g.prep.map(t => h("li", {text: t}))))),
+        h("ol", {class: "steps"}, ...g.steps.map(t => h("li", {text: t}))),
+        g.tips && g.tips.length ? box("Tips", h("ul", {}, ...g.tips.map(t => h("li", {text: t})))) : null,
+        h("div", {class: "guide"}, box("Is it done?", h("p", {text: g.safe})), box("Storing", h("p", {text: g.store})), box("Reheating", h("p", {text: g.reheat}))),
+        h("p", {class: "muted", text: "Food-safety temperatures follow USDA guidance. Cooking times are a guide: stoves and pans vary, so go by the signs in each step."}));
+    } else if (r.steps && r.steps.length) main.append(h("div", {class: "sec"}, h("h2", {text: "How to make it"})), h("ol", {class: "steps"}, ...r.steps.map(t => h("li", {text: t}))));
+  };
+
+  /* ---- List ---- */
+  VIEWS.list = async main => {
+    $("list-dot").hidden = true;
+    main.append(h("h1", {text: "Shopping List"}));
+    const plan = S.get("plan");
+    if (!plan) { main.append(h("p", {class: "muted", text: "Build a meal plan and everything you need shows up here, by aisle."}), h("button", {class: "btn", onclick: () => goTab("plans"), text: "Build a meal plan"})); return; }
+    main.append(h("p", {class: "muted", text: `About ${money(plan.cost)} for ${plan.servings} servings. Tap "Find" on any item to look it up at a store.`}),
+      h("div", {class: "buy", style: "margin-bottom:8px"}, extLink(nearUrl(), "📍 Grocery stores near you", "chip near"), ...STORES.map(([n, u]) => extLink(new URL(u("x")).origin, n))));
+    try {
+      const items = await brain("grocery_list", plan.recipes.map(byName).filter(Boolean).map(r => ({ingredients: r.ingredients})));
+      const got = new Set(S.get("got")); let aisle = "", list = null;
+      items.forEach((it, i) => {
+        if (it.aisle !== aisle) { aisle = it.aisle; main.append(h("div", {class: "aisle", text: aisle})); list = h("div", {class: "list"}); main.append(list); }
+        const key = it.item + "|" + it.unit, cb = h("input", {type: "checkbox", id: "g" + i}); cb.checked = got.has(key);
+        const find = h("button", {class: "mini", type: "button", text: "Find"});
+        const row = h("label", {class: "li" + (cb.checked ? " done" : ""), for: "g" + i}, cb, h("div", {class: "tx"}, h("b", {text: it.item}), h("small", {text: `${it.qty} ${it.unit}`})), find);
+        cb.addEventListener("change", () => { cb.checked ? got.add(key) : got.delete(key); S.set("got", [...got]); row.classList.toggle("done", cb.checked); });
+        let open = null;
+        find.addEventListener("click", e => { e.preventDefault(); if (open) { open.remove(); open = null; return; } open = whereToBuy(it.item); row.after(open); });
+        list.append(row);
+      });
+    } catch (e) { main.append(oops(e, "Your combined shopping list")); }
+  };
+
+  /* ---- Workouts ----
+     People choose: tell PrepRep their equipment (chips, or in their own words), then either let it build the week
+     or pick every exercise themselves. Swap any exercise, and "Check my workout" gives plain tips.
+     The thinking is prepwise.py (Local AI): build_workout, parse_equipment, swap_options, review_workout. */
+  let selDay = todayIdx(), swapFor = null;
+  const EQUIP = [["dumbbells", "Dumbbells"], ["barbell", "Barbell"], ["pull-up bar", "Pull-up bar"], ["bands", "Bands"],
+    ["kettlebell", "Kettlebell"], ["bench", "Bench"], ["machines", "Gym machines"]];
+  const exList = () => EXERCISES.map(({name, muscle, equipment, minutes}) => ({name, muscle, equipment, minutes}));
+  const setW = patch => S.set("workout", {...S.get("workout"), ...patch});
+  function setupCard(w) {
+    const chips = h("div", {class: "chips", role: "group", "aria-label": "Your equipment"},
+      h("span", {class: "chip on fixed", title: "Always included", text: "Bodyweight"}),
+      ...EQUIP.map(([k, label]) => { const on = w.equipment.includes(k);
+        return h("button", {class: "chip" + (on ? " on" : ""), "aria-pressed": String(on), onclick: () => {
+          const eq = new Set(S.get("workout").equipment); on ? eq.delete(k) : eq.add(k); setW({equipment: EQUIP.map(x => x[0]).filter(x => eq.has(x))}); go("train", null, false); }, text: label}); }));
+    const say = h("input", {id: "eqtext", placeholder: "Or just tell us: \"dumbbells and a pull-up bar\", \"I go to the gym\"", "aria-label": "Describe your equipment"});
+    const use = h("button", {class: "btn small", text: "Use this", onclick: async () => {
+      const t = say.value.trim(); if (!t) return say.focus();
+      try { const tags = await brain("parse_equipment", t); setW({equipment: tags}); titan.toast(tags.length ? "Got it: " + tags.map(x => EQUIP.find(e => e[0] === x)[1]).join(", ") : "Got it: bodyweight only"); go("train", null, false); }
+      catch (e) { titan.toast(e instanceof Missing ? "Your Local AI is still building this (step s8b). Use the buttons for now." : String(e.message || e)); } }});
+    say.addEventListener("keydown", e => { if (e.key === "Enter") use.click(); });
+    const sel = (id, opts, v, key) => { const s = h("select", {id, "aria-label": id}, ...opts.map(([val, t]) => { const o = h("option", {value: val, text: t}); o.selected = String(val) === String(v); return o; }));
+      s.addEventListener("change", () => { setW({[key]: +s.value}); go("train", null, false); }); return s; };
+    return h("div", {class: "setup"},
+      h("div", {class: "setuprow"}, h("b", {text: "What you have"}), chips),
+      h("div", {class: "setuprow say"}, say, use),
+      h("div", {class: "setuprow"}, h("b", {text: "Your week"}),
+        sel("Workouts a week", [1, 2, 3, 4, 5, 6].map(n => [n, `${n} day${n > 1 ? "s" : ""}`]), w.days, "days"),
+        sel("Minutes a workout", [20, 30, 40, 45, 50, 60, 75, 90].map(n => [n, `${n} min`]), w.minutes, "minutes")),
+      h("div", {class: "seg", role: "tablist", "aria-label": "Who picks the exercises"},
+        ...[["auto", "Build it for me"], ["custom", "I'll pick my own"]].map(([k, t]) => h("button", {role: "tab", "aria-selected": String((w.mode || "auto") === k), class: (w.mode || "auto") === k ? "on" : "",
+          onclick: () => { const cur = S.get("workout"); if (k === "custom" && !(cur.custom || []).length && lastAuto) setW({mode: k, custom: lastAuto.map(d => [...d])}); else setW({mode: k}); go("train", null, false); }, text: t}))));
+  }
+  let lastAuto = null;
+  VIEWS.train = async main => {
+    const w = S.get("workout"), when = WORKOUT_DAYS[w.days] || [];
+    const FOCUS = w.days <= 2 ? () => "Full body" : i => ["Push", "Pull", "Legs"][i % 3];
+    main.append(h("h1", {text: "Workouts"}), setupCard(w));
+    const custom = (w.mode || "auto") === "custom";
+    let plan;
+    if (custom) {
+      plan = Array.from({length: when.length}, (_, i) => [...((w.custom || [])[i] || [])]);
+    } else {
+      try { plan = await brain("build_workout", exList(), w.days, w.equipment, w.minutes); lastAuto = plan; }
+      catch (e) { main.append(oops(e, "Your weekly workout"), h("p", {class: "muted", text: "Meanwhile you can pick your own exercises: choose \"I'll pick my own\" above."})); return; }
+    }
+    let times = [];
+    try { times = await placeWeek(when, FOCUS); } catch (e) { /* schedule step not built yet */ }
+    const strip = h("div", {class: "days", role: "list"});
+    DAYS.forEach((d, i) => {
+      const wi = when.indexOf(i), f = wi >= 0 ? FOCUS(wi) : null, [c1, c2] = f ? FOCUS_COLORS[f] : ["", ""];
+      const at = times.find(p => p.day === d && p.task.startsWith("Workout"));
+      strip.append(h("button", {class: "daycard" + (f ? "" : " rest") + (i === selDay ? " sel" : ""), style: f ? `--c1:${c1};--c2:${c2}` : "", "aria-pressed": String(i === selDay),
+        onclick: () => { selDay = i; swapFor = null; go("train", null, false); }}, icon(f || "Rest"), h("small", {text: i === todayIdx() ? `${d} · Today` : d}), h("b", {text: f || "Rest"}),
+        f ? h("span", {class: "mins", text: at ? `${at.start}–${at.end}` : `${w.minutes} min`}) : null));
+    });
+    main.append(strip);
+    const wi = when.indexOf(selDay);
+    main.append(h("div", {class: "sec dayhead"}, h("h2", {}, icon(wi >= 0 ? FOCUS(wi) : "Rest", "inline" + (wi >= 0 ? "" : " rest")), wi >= 0 ? `${DAYNAMES[selDay]} · ${FOCUS(wi)}` : `${DAYNAMES[selDay]} · Rest day`)));
+    const saveCustom = p => setW({mode: "custom", custom: p});
+    if (wi < 0) { main.append(h("p", {class: "muted", text: "Recovery is part of training. Walk, stretch, sleep well."})); }
+    else {
+      const names = plan[wi] || [];
+      const id = `workout-${selDay}`, done = (S.get("done")[weekKey()] || []).includes(id);
+      const total = names.reduce((t, n) => t + ((EXERCISES.find(x => x.name === n) || {}).minutes || 0), 0);
+      const list = h("div", {class: "list"});
+      names.forEach((n, k) => {
+        const ex = EXERCISES.find(x => x.name === n) || {};
+        const row = h("div", {class: "li"}, h("span", {class: "ic", style: `--c:${FOCUS_COLORS[FOCUS(wi)][0]}`, text: k + 1}),
+          h("div", {class: "tx"}, h("b", {text: n}), h("small", {text: ex.how || ""})), h("span", {class: "muted", text: `${ex.minutes || "?"} min`}),
+          h("button", {class: "mini", "aria-label": "Swap " + n, onclick: () => { swapFor = swapFor === n ? null : n; go("train", null, false); }, text: "Swap"}),
+          custom ? h("button", {class: "mini x", "aria-label": "Remove " + n, onclick: () => { const p = plan.map(d => [...d]); p[wi].splice(k, 1); saveCustom(p); go("train", null, false); }, text: "✕"}) : null);
+        list.append(row);
+        if (swapFor === n) {
+          const box = h("div", {class: "swapbox"}, h("small", {class: "muted", text: "Loading swaps…"})); list.append(box);
+          brain("swap_options", exList(), n, w.equipment).then(opts => {
+            box.replaceChildren(opts.length ? h("small", {class: "muted", text: "Swap for (same muscles, your equipment):"}) : h("small", {class: "muted", text: "No other exercise for these muscles with your equipment. Add equipment above for more choices."}),
+              ...opts.filter(o => !names.includes(o)).map(o => h("button", {class: "chip", onclick: () => { const p = plan.map(d => [...d]); p[wi][k] = o; swapFor = null; saveCustom(p); titan.toast("Swapped. Your changes are kept as your own plan."); go("train", null, false); }, text: o})));
+          }).catch(e => box.replaceChildren(h("small", {class: "muted", text: e instanceof Missing ? "Swaps switch on when your Local AI finishes step s8c." : String(e.message || e)})));
+        }
+      });
+      if (!names.length) list.append(h("p", {class: "muted", style: "padding:14px 0", text: custom ? "Nothing here yet. Add exercises below." : "Nothing fits this day with your time and equipment. Try more minutes or add equipment."}));
+      main.append(list, h("p", {class: total > w.minutes ? "warn" : "muted", style: "margin:8px 0 0", text: `${total} of your ${w.minutes} minutes`}));
+      if (custom) {
+        const muscle = FOCUS(wi) === "Full body" ? null : FOCUS(wi).toLowerCase();
+        const have = new Set(["none", ...w.equipment]);
+        const pool = EXERCISES.filter(x => have.has(x.equipment) && !names.includes(x.name));
+        const groups = ["push", "pull", "legs"].map(m => [m, pool.filter(x => x.muscle === m)]).filter(([m, xs]) => xs.length);
+        main.append(h("div", {class: "addbox"}, h("b", {text: "Add an exercise"}), h("small", {class: "muted", text: muscle ? ` Today is ${FOCUS(wi)}; those come first.` : " Full body: mix push, pull and legs."}),
+          ...groups.sort(([a], [b]) => (b === muscle) - (a === muscle)).map(([m, xs]) => h("div", {class: "addgrp"}, h("small", {class: "lab", text: m[0].toUpperCase() + m.slice(1)}),
+            ...xs.map(x => h("button", {class: "chip", onclick: () => { const p = plan.map(d => [...d]); p[wi].push(x.name); saveCustom(p); go("train", null, false); }, text: `+ ${x.name} · ${x.minutes}m`}))))));
+      }
+      main.append(h("button", {class: done ? "btn line" : "btn", style: "margin-top:18px", onclick: () => { setDone(id, !done); if (!done) titan.toast("Workout done. Strong work."); go("train", null, false); }, text: done ? "Done ✓" : "Mark workout done"}));
+    }
+    // check the whole week
+    const rev = h("div", {class: "review"}, h("h2", {text: "Check my workout"}), h("small", {class: "muted", text: "Checking your week…"}));
+    main.append(rev);
+    brain("review_workout", exList(), plan, w.minutes).then(tips => {
+      rev.replaceChildren(h("h2", {text: "Check my workout"}), tips.length ? h("ul", {class: "tips"}, ...tips.map(t => h("li", {text: t})))
+        : h("p", {class: "good", text: "✓ Looks balanced: push, pull and legs are covered and every day fits your time."}));
+    }).catch(e => rev.replaceChildren(h("h2", {text: "Check my workout"}), h("p", {class: "muted", text: e instanceof Missing ? "Tips switch on when your Local AI finishes step s8d." : String(e.message || e)})));
+    const prep = times.find(p => p.task === "Meal prep");
+    if (prep) main.append(h("p", {class: "muted", style: "margin-top:22px", text: `Meal prep is set for ${prep.day} ${prep.start}–${prep.end}.`}));
+  };
+  async function placeWeek(when, FOCUS) {
+    const order = s => DAYS.indexOf(s[0]) * 1440 + (+s[1].slice(0, 2)) * 60 + (+s[1].slice(3));
+    const left = S.get("free").map(f => [...f]).sort((x, y) => order(x) - order(y)), out = [], w = S.get("workout");
+    const place = async (task, slots) => { const r = await brain("schedule", slots, [task]); if (!r.placed.length) return false;
+      const p = r.placed[0]; out.push(p); const s = left.find(x => x[0] === p.day && x[1] <= p.start && x[2] >= p.end); if (s) s[1] = p.end; return true; };
+    for (let i = 0; i < when.length; i++) { const t = [`Workout · ${FOCUS(i)}`, w.minutes]; if (!(await place(t, left.filter(x => x[0] === DAYS[when[i]])))) await place(t, left); }
+    if (S.get("plan")) await place(["Meal prep", Math.min(240, 30 + 30 * new Set(S.get("plan").recipes).size)], left);
+    return out;
+  }
+  const weekKey = () => { const d = new Date(); d.setDate(d.getDate() - todayIdx()); return iso(d); };
+  function setDone(id, on) { const all = S.get("done"), cur = new Set(all[weekKey()] || []); on ? cur.add(id) : cur.delete(id); all[weekKey()] = [...cur]; S.set("done", all); }
+
+  /* ---- Progress ---- */
+  async function targets() {
+    const p = S.get("profile");
+    const base = await brain("bmr", p.sex, +p.age, +p.height_cm, +p.weight_kg), start = await brain("start_tdee", base, p.activity);
+    let burn = start, learned = false;
+    try { const log = S.get("weighins").slice(-28).map((w, i) => [i, +w.weight, +w.kcal]); const est = log.length >= 7 ? await brain("estimate_tdee", log) : null; if (est) { burn = est; learned = true; } }
+    catch (e) { if (!(e instanceof Missing)) throw e; }
+    const target = await brain("daily_target", burn, p.goal, p.sex, +p.rate || 0.5);
+    $("kcal").textContent = target.toLocaleString(); $("kcalchip").hidden = false;
+    return {target, burn, learned};
+  }
+  VIEWS.progress = async main => {
+    main.append(h("h1", {text: "Progress"}));
+    const top = h("div", {class: "grid"}); main.append(top);
+    try {
+      const t = await targets();
+      top.append(h("div", {class: "panel"}, h("small", {class: "muted", text: "Eat each day"}), h("div", {class: "big", text: t.target.toLocaleString()}), h("small", {class: "muted", text: "kcal"})),
+        h("div", {class: "panel"}, h("small", {class: "muted", text: "You burn"}), h("div", {class: "big", text: t.burn.toLocaleString()}), h("span", {class: "pill", text: t.learned ? "Learned from your weigh-ins" : "Starting estimate"})));
+      try { const m = await brain("macros", t.target, +S.get("profile").weight_kg, S.get("profile").goal);
+        top.append(h("div", {class: "panel"}, h("small", {class: "muted", text: "Daily macros"}), h("div", {class: "big macrosbig"}, h("span", {}, h("b", {text: m.protein + "g"}), h("small", {text: "protein"})), h("span", {}, h("b", {text: m.carbs + "g"}), h("small", {text: "carbs"})), h("span", {}, h("b", {text: m.fat + "g"}), h("small", {text: "fat"}))))); }
+      catch (e) { if (!(e instanceof Missing)) top.append(oops(e, "Macros")); }
+    } catch (e) { top.append(oops(e, "Your daily calories")); }
+    const form = h("form", {class: "form panel", style: "margin-top:20px", novalidate: true},
+      h("label", {for: "weight"}, `Weight this morning (${wUnit()})`, h("input", {id: "weight", type: "number", step: "0.1"})),
+      h("label", {for: "eaten"}, "Calories eaten yesterday", h("input", {id: "eaten", type: "number", step: "10"})),
+      h("label", {}, " ", h("button", {class: "btn", text: "Save weigh-in"})));
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      const v = titan.validate(form, {weight: s => toKg(s) >= 30 && toKg(s) <= 300 ? "" : US() ? "Weight in pounds, 66 to 660." : "Weight in kg, 30 to 300.", eaten: s => +s >= 500 && +s <= 8000 ? "" : "A rough number, 500 to 8000."});
+      if (!v) return;
+      const log = S.get("weighins").filter(w => w.date !== iso(new Date())); log.push({date: iso(new Date()), weight: Math.round(toKg(v.weight) * 100) / 100, kcal: +v.eaten}); S.set("weighins", log);
+      titan.toast("Saved. Consistency beats perfection."); go("progress", null, false);
+    });
+    const wchart = h("div", {class: "chart panel", id: "wchart"});
+    main.append(form, h("div", {class: "sec"}, h("h2", {text: "Weight trend"})), wchart);
+    const log = S.get("weighins");
+    if (log.length < 2) titan.state(wchart, "empty", {title: "Two weigh-ins and your trend appears here"});
+    else titan.chart(wchart, {type: "line", title: `Weight (${wUnit()})`, data: log.slice(-30).map(w => ({label: w.date.slice(5), value: showW(w.weight)}))});
+    main.append(h("p", {class: "muted", text: log.length >= 7 ? "A week of data: your calories now use your real burn." : `${7 - log.length} more weigh-in${7 - log.length === 1 ? "" : "s"} until PrepRep learns your real burn.`}));
+  };
+
+  /* ---- You ---- */
+  VIEWS.you = async (main, first) => {
+    const p = S.get("profile") || {sex: "male", age: "", height_cm: "", weight_kg: "", goal: "lose", activity: "light", rate: 0.5, name: ""}, w = S.get("workout");
+    const sel = (id, opts, val) => h("select", {id}, ...opts.map(([v, t]) => { const o = h("option", {value: v, text: t}); o.selected = String(v) === String(val); return o; }));
+    main.append(h("h1", {text: first ? "Welcome to PrepRep" : "You"}));
+    if (first) main.append(buddy("Hi! I'm your prep buddy.", "Tell me a little about you and I'll plan your meals, calories and workouts. Everything stays on this device."));
+    const form = h("form", {class: "form", novalidate: true},
+      h("label", {for: "name"}, "First name (optional)", h("input", {id: "name", value: p.name || ""})),
+      h("label", {for: "sex"}, "Body (for the calorie formula)", sel("sex", [["male", "Male"], ["female", "Female"]], p.sex)),
+      h("label", {for: "age"}, "Age", h("input", {id: "age", type: "number", value: p.age})),
+      h("label", {for: "units"}, "Units", (() => { const u = sel("units", [["us", "Pounds, feet and inches"], ["metric", "Kilograms and centimetres"]], S.get("units") || "us");
+        u.addEventListener("change", () => { S.set("units", u.value); go("you", null, false); }); return u; })()),
+      US() ? h("label", {for: "height_ft"}, "Height", h("span", {class: "pair"},
+          h("input", {id: "height_ft", type: "number", min: "3", max: "8", value: p.height_cm ? ftIn(p.height_cm)[0] : "", "aria-label": "Feet"}), h("span", {class: "unit", text: "ft"}),
+          h("input", {id: "height_in", type: "number", min: "0", max: "11", value: p.height_cm ? ftIn(p.height_cm)[1] : "", "aria-label": "Inches"}), h("span", {class: "unit", text: "in"})))
+        : h("label", {for: "height_cm"}, "Height (cm)", h("input", {id: "height_cm", type: "number", value: p.height_cm})),
+      h("label", {for: "weight_kg"}, `Weight (${wUnit()})`, h("input", {id: "weight_kg", type: "number", step: "0.1", value: p.weight_kg ? showW(p.weight_kg) : ""})),
+      h("label", {for: "goal"}, "Goal", sel("goal", [["lose", "Lose fat"], ["maintain", "Stay the same"], ["gain", "Build muscle"]], p.goal)),
+      h("label", {for: "activity"}, "Daily activity", sel("activity", [["sedentary", "Mostly sitting"], ["light", "Light (some walking)"], ["moderate", "On my feet / training 3x"], ["active", "Training most days"], ["very", "Physical job + training"]], p.activity)),
+      h("label", {for: "rate"}, "If losing: how fast", (() => { const opts = US() ? [[0.227, "Gently (0.5 lb a week)"], [0.454, "Steady (1 lb a week)"], [0.68, "Faster (1.5 lb a week)"]]
+          : [[0.25, "Gently (0.25 kg a week)"], [0.5, "Steady (0.5 kg a week)"], [0.75, "Faster (0.75 kg a week)"]];
+        const near = opts.reduce((a, o) => Math.abs(o[0] - (+p.rate || 0.5)) < Math.abs(a[0] - (+p.rate || 0.5)) ? o : a)[0]; return sel("rate", opts, near); })()),
+      h("label", {for: "zip"}, "ZIP code (optional, for stores near you)", h("input", {id: "zip", inputmode: "numeric", maxlength: "10", value: S.get("zip") || "", autocomplete: "postal-code"})),
+      h("label", {for: "budget"}, "Weekly grocery budget ($)", h("input", {id: "budget", type: "number", value: S.get("budget") / 100})),
+      h("label", {for: "portions"}, "Servings to prep a week", h("input", {id: "portions", type: "number", value: S.get("portions")})),
+      h("label", {for: "w-days"}, "Workouts a week", sel("w-days", [1, 2, 3, 4, 5, 6].map(n => [n, `${n} day${n > 1 ? "s" : ""}`]), w.days)),
+      h("label", {for: "w-min"}, "Minutes a workout", sel("w-min", [20, 30, 40, 50, 60].map(n => [n, `${n} min`]), w.minutes)),
+      h("label", {}, " ", h("button", {class: "btn", text: first ? "Get started" : "Save"})));
+    form.addEventListener("submit", e => {
+      e.preventDefault();
+      const v = titan.validate(form, {age: s => +s >= 13 && +s <= 100 && Number.isInteger(+s) ? "" : "Age must be a whole number from 13 to 100.",
+        ...(US() ? {height_ft: s => +s >= 3 && +s <= 8 && Number.isInteger(+s) ? "" : "Feet: a whole number from 3 to 8.", height_in: s => s === "" || (+s >= 0 && +s < 12) ? "" : "Inches: 0 to 11."}
+                 : {height_cm: s => +s >= 100 && +s <= 250 ? "" : "Height in cm, 100 to 250."}),
+        weight_kg: s => toKg(s) >= 30 && toKg(s) <= 300 ? "" : US() ? "Weight in pounds, 66 to 660." : "Weight in kg, 30 to 300.",
+        budget: s => +s >= 5 ? "" : "At least $5.", zip: s => !s.trim() || /^\d{5}(-\d{4})?$/.test(s.trim()) ? "" : "A 5-digit ZIP, or leave it empty.", portions: s => +s >= 1 && +s <= 100 ? "" : "1 to 100 servings."});
+      if (!v) return;
+      const all = {}; form.querySelectorAll("input[id], select[id]").forEach(el => { all[el.id] = el.value; });
+      const cm = US() ? Math.round(((+all.height_ft) * 12 + (+all.height_in || 0)) * 2.54) : +all.height_cm;
+      S.set("profile", {name: all.name, sex: all.sex, age: +all.age, height_cm: cm, weight_kg: Math.round(toKg(all.weight_kg) * 10) / 10, goal: all.goal, activity: all.activity, rate: +all.rate});
+      S.set("budget", Math.round(+all.budget * 100)); S.set("portions", Math.round(+all.portions)); S.set("zip", (all.zip || "").trim());
+      S.set("workout", {...S.get("workout"), days: +all["w-days"], minutes: +all["w-min"]});   // equipment is set on the Workouts tab
+      titan.toast(first ? "You're all set." : "Saved"); targets().catch(() => {}); goTab("plans");
+    });
+    main.append(form);
+    if (first) return;
+    main.append(h("div", {class: "sec"}, h("h2", {text: "When you're free"}), h("button", {class: "seeall", onclick: () => { const f = S.get("free"); f.push(["Sat", "09:00", "10:00"]); S.set("free", f); go("you", null, false); }, text: "Add time"})));
+    const free = S.get("free"), fl = h("div", {class: "list"});
+    free.forEach((f, i) => {
+      const d = h("select", {"aria-label": "Day", style: "width:100px"}, ...DAYS.map(x => { const o = h("option", {text: x}); o.selected = x === f[0]; return o; }));
+      const a = h("input", {type: "time", value: f[1], "aria-label": "From"}), b = h("input", {type: "time", value: f[2], "aria-label": "To"});
+      [d, a, b].forEach(x => x.addEventListener("change", () => { free[i] = [d.value, a.value, b.value]; S.set("free", free); }));
+      fl.append(h("div", {class: "li"}, d, a, b, h("button", {class: "seeall", style: "margin-left:auto", onclick: () => { free.splice(i, 1); S.set("free", free); go("you", null, false); }, text: "Remove"})));
+    });
+    main.append(fl, h("div", {class: "sec"}, h("h2", {text: "Prices at your store"})));
+    const pl = h("div", {class: "list"});
+    RECIPES.forEach(r => {
+      const inp = h("input", {type: "number", step: "0.01", value: (cost(r) / 100).toFixed(2), "aria-label": `Price of ${r.name}`, style: "max-width:120px"});
+      inp.addEventListener("change", () => { const all = S.get("prices"); all[r.id] = Math.round(+inp.value * 100); S.set("prices", all); });
+      const ic = h("span", {class: "ic", style: `--c:${colorOf(r)}`, text: r.name[0]}); photo(ic, r);
+      pl.append(h("div", {class: "li"}, ic, h("div", {class: "tx"}, h("b", {text: r.name}), h("small", {text: `${r.servings} servings`})), inp));
+    });
+    main.append(pl);
+  };
+
+  /* ---- start ---- */
+  (async () => {
+    const load = f => fetch(f).then(r => r.ok ? r.json() : {}).catch(() => ({}));
+    const [rec, ex, cr] = await Promise.all([load("data/recipes.json"), load("data/exercises.json"), load("photos/credits.json"), S.ready]);
+    RECIPES = rec.recipes || []; EXERCISES = ex.exercises || []; CREDITS = cr || {};
+    S.set("picks", S.get("picks").filter(byId));               // the recipe list changed: drop picks and plans for meals that are gone
+    const pl = S.get("plan"); if (pl && !pl.recipes.every(byName)) S.set("plan", null);
+    const ans = S.get("answers");                               // plans made before the servings fix kept an old "servings a week"
+    if (ans && ans.days && ans.meals && window.PREP_WIZARD) { const sv = window.PREP_WIZARD.servingsFor(ans); S.set("portions", Math.max(1, sv.breakfast + sv.mains)); }
+    if (S.get("profile")) targets().catch(() => {});
+    goTab("plans");
+  })();
+}

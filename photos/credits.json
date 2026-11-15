@@ -1,0 +1,436 @@
+{
+ "berry_overnight_oats": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Berry Greek Yogurt Overnight Oats"
+ },
+ "egg_muffins": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Veggie Cheddar Egg Muffins"
+ },
+ "breakfast_burritos": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Black Bean Breakfast Burritos"
+ },
+ "pb_banana_baked_oats": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Peanut Butter Banana Baked Oatmeal"
+ },
+ "yogurt_parfait_jars": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "High-Protein Yogurt Parfait Jars"
+ },
+ "chicken_burrito_bowls": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Chicken Burrito Bowls"
+ },
+ "sheet_pan_chicken_sweet_potato": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Sheet-Pan Chicken, Sweet Potatoes & Broccoli"
+ },
+ "honey_garlic_chicken": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Honey Garlic Chicken, Rice & Green Beans"
+ },
+ "chicken_veggie_stir_fry": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Chicken & Veggie Stir-Fry"
+ },
+ "greek_chicken_bowls": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Greek Chicken Bowls with Yogurt Sauce"
+ },
+ "chicken_fajitas": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Sheet-Pan Chicken Fajitas"
+ },
+ "chicken_tikka_curry": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Easy Chicken Tikka-Style Curry"
+ },
+ "lemon_pepper_chicken": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Lemon Pepper Chicken, Potatoes & Green Beans"
+ },
+ "chicken_spinach_pasta": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Chicken, Spinach & Tomato Pasta"
+ },
+ "teriyaki_chicken_bowls": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Teriyaki Chicken & Broccoli Bowls"
+ },
+ "chicken_noodle_soup": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Hearty Chicken Noodle Soup"
+ },
+ "bbq_chicken_potatoes": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "BBQ Chicken, Corn & Roasted Potatoes"
+ },
+ "turkey_chili": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Turkey & Three-Bean Chili"
+ },
+ "turkey_taco_rice": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "One-Pot Turkey Taco Rice"
+ },
+ "turkey_meatballs_spaghetti": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Turkey Meatballs & Whole Wheat Spaghetti"
+ },
+ "beef_broccoli": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Beef & Broccoli Rice Bowls"
+ },
+ "veggie_bolognese": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Hidden-Veggie Beef Bolognese"
+ },
+ "turkey_shepherds_pie": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Turkey Shepherd's Pie"
+ },
+ "pork_tenderloin_roast": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Pork Tenderloin with Roasted Carrots & Potatoes"
+ },
+ "pork_carnitas_bowls": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Cilantro-Lime Pork Carnitas Bowls"
+ },
+ "shrimp_fried_rice": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Shrimp Fried Rice"
+ },
+ "salmon_rice_broccoli": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Soy-Honey Salmon, Rice & Broccoli"
+ },
+ "garlic_shrimp_pasta": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Garlic Shrimp & Spinach Pasta"
+ },
+ "black_bean_sweet_potato_bowls": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Black Bean & Sweet Potato Burrito Bowls"
+ },
+ "veggie_egg_fried_rice": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Veggie Egg Fried Rice"
+ },
+ "greek_chickpea_quinoa_jars": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Greek Chickpea Quinoa Salad Jars"
+ },
+ "white_bean_kale_soup": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "White Bean & Kale Soup"
+ },
+ "lentil_sloppy_joes": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Lentil Sloppy Joes"
+ },
+ "pasta_fagioli": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Pasta e Fagioli"
+ },
+ "spinach_baked_ziti": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Cottage Cheese & Spinach Baked Ziti"
+ },
+ "chicken_quinoa_bowls": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Herby Lemon Chicken Quinoa Bowls"
+ },
+ "vegan_burrito_bowls": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Chickpea & Black Bean Burrito Bowls (Vegan)"
+ },
+ "chickpea_sweet_potato_stew": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Coconut Chickpea & Sweet Potato Stew (Vegan)"
+ },
+ "lentil_veggie_bolognese": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Lentil & Mushroom Bolognese (Vegan)"
+ },
+ "orange_chicken": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Lighter Orange Chicken & Broccoli"
+ },
+ "chicken_lo_mein": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Chicken Lo Mein"
+ },
+ "mapo_tofu": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Mapo-Style Tofu with Pork"
+ },
+ "cashew_chicken": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Cashew Chicken"
+ },
+ "pork_cabbage_bowls": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Pork & Cabbage Dumpling Bowls"
+ },
+ "sweet_sour_pork": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Sweet & Sour Pork with Pineapple"
+ },
+ "peanut_chicken_noodles": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Peanut Noodles with Chicken & Veggies"
+ },
+ "black_bean_enchiladas": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Black Bean & Spinach Enchiladas"
+ },
+ "beef_burrito_bowls": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Beef Burrito Bowls"
+ },
+ "shrimp_tacos": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Shrimp Tacos with Lime Slaw"
+ },
+ "steak_fajita_bowls": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Steak Fajita Bowls"
+ },
+ "beef_stew": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Hearty Beef & Vegetable Stew"
+ },
+ "honey_mustard_pork": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Honey Mustard Pork, Sweet Potatoes & Green Beans"
+ },
+ "chicken_alfredo": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Lighter Chicken Alfredo with Broccoli"
+ },
+ "lasagna_skillet": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Turkey Lasagna Skillet"
+ },
+ "lemon_chicken_orzo": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Lemon Garlic Chicken Orzo"
+ },
+ "pasta_primavera": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Pasta Primavera with White Beans"
+ },
+ "chicken_parm_bake": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Chicken Parmesan Pasta Bake"
+ },
+ "butter_chicken": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Lighter Butter Chicken"
+ },
+ "shakshuka": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Shakshuka with Feta"
+ },
+ "chicken_shawarma_bowls": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Chicken Shawarma Bowls"
+ },
+ "potato_spinach_frittata": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Potato, Spinach & Cheddar Frittata"
+ },
+ "bean_cheese_burritos": {
+  "artist": "Made for PrepRep with RealVisXL V5.0 (Stable Diffusion XL)",
+  "license": "CreativeML Open RAIL++-M",
+  "source": "AI-generated",
+  "page": "https://huggingface.co/SG161222/RealVisXL_V5.0",
+  "title": "Freezer Bean & Cheese Burritos"
+ }
+}
