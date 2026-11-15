@@ -58,6 +58,7 @@ def main():
     (SITE / ".nojekyll").write_text("", encoding="utf-8")
     icons = ROOT / "tools" / "web_icons"
     shutil.copytree(icons, SITE / "icons")
+    shutil.copytree(ROOT / "tools" / "web_download", SITE / "download")     # the page with the PC and phone links
     print(f"web app built in {SITE} ({sum(1 for _ in SITE.rglob('*'))} files)")
 
 
