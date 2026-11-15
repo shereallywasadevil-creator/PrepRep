@@ -20,6 +20,14 @@
   const todayIdx = () => (new Date().getDay() + 6) % 7;
   const WORKOUT_DAYS = {1: [0], 2: [0, 3], 3: [0, 2, 4], 4: [0, 1, 3, 4], 5: [0, 1, 2, 3, 4], 6: [0, 1, 2, 3, 4, 5]};
   const COLORS = ["#d9a25f", "#8cbf6e", "#de8b6b", "#c2a676", "#7fb59a", "#cf7f57", "#a9c06a", "#e09a7c"];
+  // Workout icons (our own simple line drawings): push = pressing a bar up, pull = pull-up, legs = squat, full body, rest = moon
+  const ICONS = {
+    Push: '<svg viewBox="0 0 32 32"><path d="M6 9h20M9 6v6M23 6v6"/><path d="M16 9v6"/><circle cx="16" cy="18" r="2.5"/><path d="M16 21v5M12 30l4-4 4 4M11 15l5 0 5 0"/></svg>',
+    Pull: '<svg viewBox="0 0 32 32"><path d="M4 5h24"/><path d="M10 5v5l4 4M22 5v5l-4 4"/><circle cx="16" cy="15" r="2.5"/><path d="M16 18v6M13 30l3-6 3 6"/></svg>',
+    Legs: '<svg viewBox="0 0 32 32"><circle cx="16" cy="5" r="2.5"/><path d="M16 8v8M10 11h12M16 16l-5 4 1 8M16 16l5 4-1 8"/></svg>',
+    "Full body": '<svg viewBox="0 0 32 32"><circle cx="16" cy="5" r="2.5"/><path d="M16 8v10M8 9l8 4 8-4M16 18l-5 10M16 18l5 10"/></svg>',
+    Rest: '<svg viewBox="0 0 32 32"><path d="M21 6a10 10 0 1 0 6 15A8 8 0 0 1 21 6z"/><path d="M8 8h3l-3 3h3"/></svg>'};
+  const icon = (name, cls) => { const e = document.createElement("span"); e.className = "wicon" + (cls ? " " + cls : ""); e.setAttribute("aria-hidden", "true"); e.innerHTML = ICONS[name] || ""; return e; };
   const FOCUS_COLORS = {Push: ["#ff7a59", "#e8453c"], Pull: ["#5b8def", "#3a5bd9"], Legs: ["#56b13f", "#2f8a3b"], "Full body": ["#a46bf0", "#6a45d6"]};
 
   /* ---- the brain (prepwise.py, built by the Local AI) ---- */
@@ -55,6 +63,7 @@
   function photo(el, r) {
     const m = el.querySelector(".mono"); if (m && r) { m.textContent = ICON(r); m.classList.add("icon"); }
     if (!r) return;
+    if (Object.keys(CREDITS).length && !CREDITS[r.id]) return;   // credits.json lists every packed photo: don't ask for missing ones
     const img = new Image();
     img.onload = () => { const i = h("i", {class: "phimg", "aria-hidden": "true"}); i.style.backgroundImage = `url(photos/${r.id}.jpg)`; el.prepend(i); if (m) m.remove(); };
     img.src = `photos/${r.id}.jpg`;
@@ -106,13 +115,22 @@
   /* ---- navigation ---- */
   let tab = "plans", stack = [];
   const VIEWS = {};
+  // Views draw into an off-screen holder and swap in when ready, so the page never flashes blank. Redrawing the same
+  // screen (a chip, a swap, "Add to my plan") keeps your scroll position; a new screen starts at the top and slides in.
+  let shown = "", drawing = 0;
   async function go(view, arg, push = true) {
     if (push && stack.length && stack[stack.length - 1][0] === view && stack[stack.length - 1][1] === arg) return;
     if (push) stack.push([view, arg]);
     $("back").hidden = stack.length < 2;
-    const main = $("main"); main.replaceChildren(); window.scrollTo({top: 0});
-    if (!S.get("profile") && view !== "you") return VIEWS.you(main, true);
-    await VIEWS[view](main, arg);
+    const key = view + "|" + (arg ?? ""), same = key === shown, y = window.scrollY, my = ++drawing;
+    const stage = document.createElement("div");
+    if (!S.get("profile") && view !== "you") await VIEWS.you(stage, true); else await VIEWS[view](stage, arg);
+    if (my !== drawing) return;                          // a newer screen was asked for while this one loaded
+    const main = $("main");
+    main.replaceChildren(...stage.childNodes);
+    shown = key;
+    if (same) window.scrollTo({top: y});
+    else { window.scrollTo({top: 0}); main.classList.remove("enter"); void main.offsetWidth; main.classList.add("enter"); }
     drawBuildbar();
   }
   function goTab(t) {
@@ -290,7 +308,7 @@
     main.append(h("h1", {text: cat ? `${cat[2]} ${cat[1]}`.trim() : "All meals"}),
       h("div", {class: "catrow", role: "list", "aria-label": "Other categories"}, ...CATS.map(([k, n, e]) => h("button", {class: "catchip" + (k === key ? " on" : ""), role: "listitem", onclick: () => go("category", k, false)}, h("span", {text: e}), n))), h("p", {class: "muted", text: `Meals that fit your ${money(budgetPer())} a serving come first.`}),
       h("div", {class: "grid", role: "list"}, ...list.map(foodCard)));
-    requestAnimationFrame(() => { const on = main.querySelector(".catchip.on"); if (on) on.scrollIntoView({block: "nearest", inline: "center"}); });
+    setTimeout(() => { const on = document.querySelector("#main .catchip.on"); if (on) on.scrollIntoView({block: "nearest", inline: "center"}); }, 0);
   };
   VIEWS.search = async main => {
     const box = h("input", {class: "searchbox", type: "search", placeholder: "Search meals or ingredients", "aria-label": "Search meals"});
@@ -397,7 +415,9 @@
       h("div", {class: "macros"}, ...[["Carbs", r.carbs], ["Fat", r.fat], ["Fiber", r.fiber]].map(([k, v]) => h("span", {}, h("b", {text: (v ?? "?") + "g"}), " " + k.toLowerCase()))),
       h("p", {class: fits(r) ? "fitnote" : "fitnote over", text: fits(r) ? `✓ Fits your budget (${money(budgetPer())} a serving)` : `${money(perServing(r) - budgetPer())} a serving over your budget`}),
       h("p", {class: "muted", style: "margin:0", text: `Whole batch about ${money(cost(r))}. Costs use 2026 US average prices; nutrition from USDA data. Both are estimates.`}),
-      h("button", {class: on ? "btn line" : "btn", style: "margin-top:auto", onclick: () => { togglePick(id); go("recipe", id, false); }, text: on ? "Remove from my plan" : "Add to my plan"}))));
+      (() => { const b = h("button", {class: on ? "btn line" : "btn", style: "margin-top:auto", text: on ? "Remove from my plan" : "Add to my plan"});
+        b.addEventListener("click", () => { togglePick(id); const now = S.get("picks").includes(id); b.className = now ? "btn line" : "btn"; b.textContent = now ? "Remove from my plan" : "Add to my plan";
+          titan.toast(now ? `Added ${r.name}` : `Removed ${r.name}`); }); return b; })())));
     main.append(priceCard(r));
     main.append(h("div", {class: "sec"}, h("h2", {text: `Ingredients · for ${r.servings} servings`}), extLink(myStores().length ? nearStore(myStores()[0]) : nearUrl(), `📍 ${myStores()[0] || "Grocery stores"} near you`, "seeall")));
     main.append(h("p", {class: "muted", style: "margin:-4px 0 8px", text: "Tap an ingredient to find it at a store near you."}));
@@ -502,12 +522,12 @@
       const wi = when.indexOf(i), f = wi >= 0 ? FOCUS(wi) : null, [c1, c2] = f ? FOCUS_COLORS[f] : ["", ""];
       const at = times.find(p => p.day === d && p.task.startsWith("Workout"));
       strip.append(h("button", {class: "daycard" + (f ? "" : " rest") + (i === selDay ? " sel" : ""), style: f ? `--c1:${c1};--c2:${c2}` : "", "aria-pressed": String(i === selDay),
-        onclick: () => { selDay = i; swapFor = null; go("train", null, false); }}, h("small", {text: i === todayIdx() ? `${d} · Today` : d}), h("b", {text: f || "Rest"}),
+        onclick: () => { selDay = i; swapFor = null; go("train", null, false); }}, icon(f || "Rest"), h("small", {text: i === todayIdx() ? `${d} · Today` : d}), h("b", {text: f || "Rest"}),
         f ? h("span", {class: "mins", text: at ? `${at.start}–${at.end}` : `${w.minutes} min`}) : null));
     });
     main.append(strip);
     const wi = when.indexOf(selDay);
-    main.append(h("div", {class: "sec"}, h("h2", {text: wi >= 0 ? `${DAYNAMES[selDay]} · ${FOCUS(wi)}` : `${DAYNAMES[selDay]} · Rest day`})));
+    main.append(h("div", {class: "sec dayhead"}, h("h2", {}, icon(wi >= 0 ? FOCUS(wi) : "Rest", "inline" + (wi >= 0 ? "" : " rest")), wi >= 0 ? `${DAYNAMES[selDay]} · ${FOCUS(wi)}` : `${DAYNAMES[selDay]} · Rest day`)));
     const saveCustom = p => setW({mode: "custom", custom: p});
     if (wi < 0) { main.append(h("p", {class: "muted", text: "Recovery is part of training. Walk, stretch, sleep well."})); }
     else {
@@ -584,7 +604,7 @@
       top.append(h("div", {class: "panel"}, h("small", {class: "muted", text: "Eat each day"}), h("div", {class: "big", text: t.target.toLocaleString()}), h("small", {class: "muted", text: "kcal"})),
         h("div", {class: "panel"}, h("small", {class: "muted", text: "You burn"}), h("div", {class: "big", text: t.burn.toLocaleString()}), h("span", {class: "pill", text: t.learned ? "Learned from your weigh-ins" : "Starting estimate"})));
       try { const m = await brain("macros", t.target, +S.get("profile").weight_kg, S.get("profile").goal);
-        top.append(h("div", {class: "panel"}, h("small", {class: "muted", text: "Protein · carbs · fat"}), h("div", {class: "big", style: "font-size:32px", text: `${m.protein}g · ${m.carbs}g · ${m.fat}g`}))); }
+        top.append(h("div", {class: "panel"}, h("small", {class: "muted", text: "Daily macros"}), h("div", {class: "big macrosbig"}, h("span", {}, h("b", {text: m.protein + "g"}), h("small", {text: "protein"})), h("span", {}, h("b", {text: m.carbs + "g"}), h("small", {text: "carbs"})), h("span", {}, h("b", {text: m.fat + "g"}), h("small", {text: "fat"}))))); }
       catch (e) { if (!(e instanceof Missing)) top.append(oops(e, "Macros")); }
     } catch (e) { top.append(oops(e, "Your daily calories")); }
     const form = h("form", {class: "form panel", style: "margin-top:20px", novalidate: true},
@@ -598,10 +618,11 @@
       const log = S.get("weighins").filter(w => w.date !== iso(new Date())); log.push({date: iso(new Date()), weight: Math.round(toKg(v.weight) * 100) / 100, kcal: +v.eaten}); S.set("weighins", log);
       titan.toast("Saved. Consistency beats perfection."); go("progress", null, false);
     });
-    main.append(form, h("div", {class: "sec"}, h("h2", {text: "Weight trend"})), h("div", {class: "chart panel", id: "wchart"}));
+    const wchart = h("div", {class: "chart panel", id: "wchart"});
+    main.append(form, h("div", {class: "sec"}, h("h2", {text: "Weight trend"})), wchart);
     const log = S.get("weighins");
-    if (log.length < 2) titan.state($("wchart"), "empty", {title: "Two weigh-ins and your trend appears here"});
-    else titan.chart($("wchart"), {type: "line", title: `Weight (${wUnit()})`, data: log.slice(-30).map(w => ({label: w.date.slice(5), value: showW(w.weight)}))});
+    if (log.length < 2) titan.state(wchart, "empty", {title: "Two weigh-ins and your trend appears here"});
+    else titan.chart(wchart, {type: "line", title: `Weight (${wUnit()})`, data: log.slice(-30).map(w => ({label: w.date.slice(5), value: showW(w.weight)}))});
     main.append(h("p", {class: "muted", text: log.length >= 7 ? "A week of data: your calories now use your real burn." : `${7 - log.length} more weigh-in${7 - log.length === 1 ? "" : "s"} until PrepRep learns your real burn.`}));
   };
 
@@ -609,7 +630,8 @@
   VIEWS.you = async (main, first) => {
     const p = S.get("profile") || {sex: "male", age: "", height_cm: "", weight_kg: "", goal: "lose", activity: "light", rate: 0.5, name: ""}, w = S.get("workout");
     const sel = (id, opts, val) => h("select", {id}, ...opts.map(([v, t]) => { const o = h("option", {value: v, text: t}); o.selected = String(v) === String(val); return o; }));
-    main.append(h("h1", {text: first ? "Welcome to PrepRep" : "You"}), first ? buddy("Hi! I'm your prep buddy.", "Tell me a little about you and I'll plan your meals, calories and workouts. Everything stays on this device.") : null);
+    main.append(h("h1", {text: first ? "Welcome to PrepRep" : "You"}));
+    if (first) main.append(buddy("Hi! I'm your prep buddy.", "Tell me a little about you and I'll plan your meals, calories and workouts. Everything stays on this device."));
     const form = h("form", {class: "form", novalidate: true},
       h("label", {for: "name"}, "First name (optional)", h("input", {id: "name", value: p.name || ""})),
       h("label", {for: "sex"}, "Body (for the calorie formula)", sel("sex", [["male", "Male"], ["female", "Female"]], p.sex)),
